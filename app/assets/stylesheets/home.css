@@ -1,0 +1,46 @@
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.container-1 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47%;
+  box-sizing: border-box;
+}
+
+.container-2 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(229, 234, 212);
+}
+
+.team-section {
+  border: 3px solid black;
+}
+
+.board-section {
+  border: 3px solid black;
+}
+
+.news-section {
+  border: 3px solid black;
+}
+
+#team-btn {
+  background-color: royalblue;
+  color: white;
+}

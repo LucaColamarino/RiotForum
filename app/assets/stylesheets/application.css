@@ -13,12 +13,49 @@
  *= require_tree .
  *= require_self
  */
- 
+
  body {
-    background-image: url('/assets/Immagine1.png');
-    background-color: rgba(255,255,255,0.6);
-    background-size: cover; /* opzionale: copri l'intero elemento */
-    background-repeat: no-repeat; /* opzionale: impedisce la ripetizione dell'immagine */
-    /* Puoi anche utilizzare background-position per regolare la posizione dell'immagine */
+    padding-top: 56px;
   }
-  h1{text-align:center;color: orange;}
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color:blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer {
+    background-color:royalblue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .sito{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(227, 34, 34);
+    margin-right: 20px;
+  }
+
+  .profilo {
+    padding-left: 10px; 
+    padding-right: 10px; 
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
