@@ -335,3 +335,37 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 18125)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-25 11:00:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1141.8ms | Allocations: 79138)
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 122)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 1196.5ms | Allocations: 96689)
+Completed 200 OK in 1542ms (Views: 1260.7ms | ActiveRecord: 0.0ms | Allocations: 104361)
+
+
+Started GET "/create_team" for 127.0.0.1 at 2024-01-25 11:01:07 +0100
+Processing by PagesController#create_team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/create_team.html.erb within layouts/application
+  Rendered pages/create_team.html.erb within layouts/application (Duration: 3.4ms | Allocations: 144)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 205.1ms | Allocations: 8820)
+Completed 200 OK in 213ms (Views: 212.0ms | ActiveRecord: 0.0ms | Allocations: 9125)
+
+
+Started GET "/" for 127.0.0.1 at 2024-01-25 11:01:08 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.0ms | Allocations: 762)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 2032)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
