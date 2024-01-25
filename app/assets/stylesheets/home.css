@@ -25,8 +25,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(229, 234, 212);
-}
+ }
 
 .team-section {
   border: 3px solid black;
@@ -44,10 +43,11 @@
   background-color: royalblue;
   color: white;
 }
-body {
-  background-image: url('/assets/Immagine1.png'); /* Sostituisci con il nome effettivo dell'immagine */
-  background-size: cover; /* opzionale: copri l'intero elemento */
-  background-repeat: no-repeat; /* opzionale: impedisce la ripetizione dell'immagine */
-  background-color: rgba(255, 255, 255, 0.5); /* Imposta l'opacità del colore di sfondo */
-  /* Puoi anche utilizzare background-position per regolare la posizione dell'immagine */
-}
+body { 
+  background-image: url('/assets/Sfondolol.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color: rgba(69, 49, 160, 0.2); 
+  background-blend-mode: lighten;
+
+} 
