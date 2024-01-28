@@ -1410,3 +1410,1055 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 47ms (Views: 39.4ms | ActiveRecord: 2.4ms | Allocations: 23187)
 
 
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:37:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 870)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2210)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-28 18:37:23 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 43ms (ActiveRecord: 0.2ms | Allocations: 7055)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 870)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2210)
+Completed 200 OK in 217ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 4286)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:39:20 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1099)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2461)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3133)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:40:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 117)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 873)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2218)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2826)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-28 18:40:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 212)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1539)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2892)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3801)
+
+
+Started POST "/users" for ::1 at 2024-01-28 18:41:00 +0100
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "colamarino01@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-01-28 17:41:00.979679"], ["updated_at", "2024-01-28 17:41:00.979679"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 203ms (ActiveRecord: 5.8ms | Allocations: 7682)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:41:01 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 822)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 2216)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 2521)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:42:02 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.5ms | Allocations: 6275)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 22002)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 2.3ms | Allocations: 22932)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:42:31 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1622)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2753)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 3016)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:42:41 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1724)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:42:42 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1641)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2772)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3037)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:42:45 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1500)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:42:45 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1622)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2753)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 3018)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:42:45 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1446)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:42:45 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1625)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2756)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 3021)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:44:50 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1639)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2781)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 3044)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:45:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1471)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:45:24 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1610)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2749)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 3014)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 18:45:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1455)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:45:25 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:12
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1617)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2751)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 3016)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:46:21 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 6286)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 22097)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 2.2ms | Allocations: 23027)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:46:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:48:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:48:39 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 6279)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 22006)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 2.1ms | Allocations: 22899)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:48:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:53:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:53:05 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1660)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 102.6ms | Allocations: 19481)
+Completed 200 OK in 105ms (Views: 103.2ms | ActiveRecord: 0.1ms | Allocations: 19747)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:53:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:53:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:55:19 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.1ms | Allocations: 6247)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 21974)
+Completed 200 OK in 43ms (Views: 37.2ms | ActiveRecord: 2.1ms | Allocations: 22904)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:55:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:55:30 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1639)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2783)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 3047)
+
+
+Started GET "/" for ::1 at 2024-01-28 18:56:13 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.4ms | Allocations: 6253)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 21978)
+Completed 200 OK in 44ms (Views: 38.6ms | ActiveRecord: 2.2ms | Allocations: 22908)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:56:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:58:02 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.3ms | Allocations: 6283)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 212)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 22106)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 2.0ms | Allocations: 23036)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 18:58:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 18:58:21 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 10.3ms | Allocations: 6277)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 186)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 22074)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 2.9ms | Allocations: 23004)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:00:07 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.3ms | Allocations: 6253)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 22058)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 2.1ms | Allocations: 22988)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:01:03 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1625)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2761)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 3024)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 19:01:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 19:01:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 186.9ms | Allocations: 45917)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 206)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 220.0ms | Allocations: 61954)
+Completed 200 OK in 253ms (Views: 228.9ms | ActiveRecord: 2.0ms | Allocations: 66943)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 19:01:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 19:02:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 194.6ms | Allocations: 47556)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 204)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 219.4ms | Allocations: 63588)
+Completed 200 OK in 252ms (Views: 227.8ms | ActiveRecord: 2.0ms | Allocations: 68578)
+
+
+Started GET "/users/sign_out" for ::1 at 2024-01-28 19:02:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/" for ::1 at 2024-01-28 19:02:41 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1650)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2793)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 3063)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:03:55 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:14
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6354)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 194)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 22187)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 1.9ms | Allocations: 23118)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-28 19:03:58 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 12ms (ActiveRecord: 0.1ms | Allocations: 3288)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:03:58 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1174)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2401)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2706)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:04:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 577)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3149)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4630)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 6002)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:04:55 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1086)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 47)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2257)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2523)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:05:47 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1510)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 229)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 17348)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 18278)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:05:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1789)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3270)
+Completed 200 OK in 22ms (Views: 15.1ms | ActiveRecord: 2.1ms | Allocations: 8442)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:06:18 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1074)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 299)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 17225)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 18155)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:06:44 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1070)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 297)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 17165)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 18095)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:08:26 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4337)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 4600)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:08:46 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 298)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 17199)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 18129)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:09:30 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 298)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 17172)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 18102)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:11:37 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 297)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 19138)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 20068)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:11:52 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4180)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 4443)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:11:54 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 795)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2209)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2472)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:13:46 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 323)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 17188)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 18118)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:14:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 324)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 17211)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 18141)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:16:26 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1069)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 330)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 17201)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 18131)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:16:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1789)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3295)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 2.1ms | Allocations: 8464)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:19:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2617)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 302)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 18509)
+Completed 200 OK in 45ms (Views: 37.8ms | ActiveRecord: 1.9ms | Allocations: 23942)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-28 19:19:41 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 203ms (ActiveRecord: 0.1ms | Allocations: 3911)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:19:42 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1047)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 647)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3125)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 3839)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:21:17 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1069)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 5003)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 21887)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 2.1ms | Allocations: 22817)
+
+
+Started GET "/profile" for ::1 at 2024-01-28 19:21:25 +0100
+Processing by PagesController#profile as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.6ms | Allocations: 145)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2312)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 2638)
+
+
+Started GET "/settings" for ::1 at 2024-01-28 19:21:27 +0100
+Processing by PagesController#settings as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/settings.html.erb within layouts/application
+  Rendered pages/settings.html.erb within layouts/application (Duration: 0.6ms | Allocations: 140)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2316)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 2642)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:21:30 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 795)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2747)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3012)
+
+
+Started GET "/profile" for ::1 at 2024-01-28 19:21:32 +0100
+Processing by PagesController#profile as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2190)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2455)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:21:33 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2732)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 2997)
+
+
+Started GET "/settings" for ::1 at 2024-01-28 19:21:34 +0100
+Processing by PagesController#settings as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/settings.html.erb within layouts/application
+  Rendered pages/settings.html.erb within layouts/application (Duration: 0.2ms | Allocations: 35)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2214)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 2479)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:21:35 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2735)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3000)
+
+
+Started GET "/settings" for ::1 at 2024-01-28 19:21:37 +0100
+Processing by PagesController#settings as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/settings.html.erb within layouts/application
+  Rendered pages/settings.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2202)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 2467)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:21:38 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 802)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2739)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 3004)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:22:30 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1069)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 6.6ms | Allocations: 5138)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 22034)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 2.2ms | Allocations: 22964)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-28 19:22:42 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 2087)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:22:42 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 798)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2294)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:22:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2580)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3833)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4974)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-28 19:22:47 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 194ms (ActiveRecord: 0.1ms | Allocations: 2648)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:22:47 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 795)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 709)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2844)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 3113)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-28 19:22:50 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.1ms | Allocations: 1727)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:22:50 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 795)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2222)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:22:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1628)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2846)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3474)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-28 19:22:54 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 186ms (ActiveRecord: 0.1ms | Allocations: 2293)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:22:54 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 808)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 709)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2844)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 3113)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:23:41 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 6.7ms | Allocations: 5146)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 22026)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 2.1ms | Allocations: 22956)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-28 19:23:46 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 2109)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:23:46 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 798)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2294)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:23:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2580)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 104)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3833)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 4980)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-28 19:23:55 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 193ms (ActiveRecord: 0.1ms | Allocations: 2663)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:23:56 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 795)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 715)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2832)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3101)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:23:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 796)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:9
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 715)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2860)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 3123)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-28 19:24:04 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 1716)
+
+
+Started GET "/" for ::1 at 2024-01-28 19:24:04 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 796)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2243)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2511)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-28 19:24:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1614)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2824)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3450)
+
+

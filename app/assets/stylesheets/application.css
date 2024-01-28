@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 56px;
-    background-color:blue;
+    background-color:rgb(187, 187, 190);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,9 +46,11 @@
   .sito{
     font-size: 2.5em;
     font-weight: bold;
-    color: rgb(227, 34, 34);
+    color: #df7e23;
     margin-right: 20px;
   }
+
+
 
   .profilo {
     padding-left: 10px; 
