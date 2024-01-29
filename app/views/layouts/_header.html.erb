@@ -10,12 +10,16 @@
         <!-- | x x x x Profilo| -->
       <div class="header-right">
         <div class="dropdown">
-          <button class="btn btn-warning dropdown-toggle profilo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.email %>
+
+
+
+          <button class="btn  dropdown-toggle profilo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false", style= "background-color: #fff; width: 130px; height: 100px;">
+            <img src='/assets/profileimg.png'>
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <p><%= current_user.email %></p>
             <a class="dropdown-item" href="/profile">Profilo</a>
-            <a class="dropdown-item" href="/settings">Impostazioni</a>
+         <!--   <a class="dropdown-item" href="/settings">Impostazioni</a> -->
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#"><%= button_to "Logout", destroy_user_session_path, method: :delete, form_class: "d-inline" , class: "btn btn-primary ", style: "background-color: #df7e23;" %></a>
           </div>

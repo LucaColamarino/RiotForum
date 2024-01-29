@@ -6,17 +6,43 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="container-1" style="height:300px;">
 
-            <!-- CREA TEAM -->
+
+
+
+
+
+    <div class="main-container">
+
+ <div class="container-1" style="height:600px;">
+            <div class="w3-display-left team-section">
+                <%= link_to create_team_path do %>
+                    <button><img src='/assets/lolbanner.png'></button>
+                <% end %>
+            </div>
+
+            <div class="w3-display-right team-section">
+                <%= link_to create_team_path do %>
+                    <button><img src='/assets/valbanner.png'></button>
+                <% end %>
+            </div>
+ </div>
+       
+ 
+    </div>
+</body>
+
+<!--
+ <div class="container-1" style="height:300px;">
+
+            CREA TEAM
             <div class="w3-display-left team-section">
                 <%= link_to create_team_path do %>
                     <button id="team-btn" class="btn btn-primary">Crea il tuo team!</button>
                 <% end %>
             </div>
 
-            <!-- BACHECA ANNUNCI -->
+          BACHECA ANNUNCI 
             <div class="w3-display-right board-section">
                 Bacheca annunci
             </div>    
@@ -27,6 +53,4 @@
                 Notizie su Luca
             </div>
         </div>
-    </div>
-</body>
-
+-->
