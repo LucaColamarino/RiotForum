@@ -1,24 +1,56 @@
-<div class="container">
-    <header class="header">
+<header class="header">
 
-      <!-- |RiotForum x x x x| -->
-      <div class="header-left">
-        <span class="sito">RiotLuca</span>
-      </div>
-      <!-- | x x x x Profilo| -->
-      <div class="header-right">
-        <div class="dropdown">
-          <button class="btn btn-warning dropdown-toggle profilo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Luca
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/profile">Profilo</a>
-            <a class="dropdown-item" href="/settings">Impostazioni</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Logout</a>
-          </div>
-        </div>
-      </div>
+  <!-- |RiotForum x x x x| -->
+  <div class="header-left ">
 
-    </header>
-</div>
+    <span id="logo" class="sito" style="cursor: pointer">RiotLuca</span>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var redirectSpan = document.getElementById('logo').addEventListener('click', function() {
+        // Redirect to home page
+        window.location.href = '/home?game=<%= @game %>';
+      });
+  });
+</script>
+
+    <!-------------------------------------------------->
+    <% unless request.fullpath == '/' %>
+
+      <% if @game=="LOL" 
+          @lol_state = "";
+          @valo_state = "unchosen";
+        elsif @game=="VALO"
+          @lol_state = "unchosen";
+          @valo_state = "";
+        end; %>
+
+      <div>
+        <%= link_to home_path(game: "LOL") do%>
+          <button id="LOL-home" class="mini-choice-button <%= @lol_state %>" ></button>
+        <% end %>
+        <%= link_to home_path(game: "VALO") do%>
+          <button id="VALO-home" class="mini-choice-button <%= @valo_state %>"></button>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+
+  <!-- | x x x x Profilo| -->
+  
+  <div class=" header-right">
+    <div class="dropdown">
+      <button class="btn btn-warning dropdown-toggle profilo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Luca
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/profile">Profilo</a>
+        <a class="dropdown-item" href="/settings">Impostazioni</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+
+</header>

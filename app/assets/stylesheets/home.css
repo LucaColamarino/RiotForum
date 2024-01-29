@@ -1,9 +1,133 @@
+/*
+.main-container { 
+  background-image: url('/assets/Sfondolol.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color: rgba(69, 49, 160, 0.5); 
 
+  border: 5px dotted black;
+  min-height: 100%;
+} 
+*/
+
+.parent {
+
+  background-image: url('/assets/Sfondolol.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color: rgba(69, 49, 160, 0.5); 
+
+  border: 5px dotted black;
+  min-height: 100%;
+
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 80px;
+}
+
+/* -------------SEZIONE TEAM----------- */
+.team-section {
+  grid-area:1/1/4/4; 
+  margin-left:20px;
+  margin-top:20px;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.team-section > * {
+  margin: 10px;
+}
+
+
+/* styling search bar */
+.search input[type=text] {
+  width: 250px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding-left: 15px;
+}
+
+.search {
+  float: right;
+  margin: 7px;
+}
+
+#team-btn {
+  margin-top: 20px;
+  border-radius: 2em;
+  font-weight: bold;
+}
+
+/* -------------BACHECA ANNUNCI----------- */
+
+.board-section {
+  grid-area:1/4/4/7; 
+  margin-right:40px;
+  margin-top:20px;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 4px groove currentColor;
+}
+
+.annuncio-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.annuncio {
+  width: 100%; /* Each annuncio takes up the full width */
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px; /* Add some space between annuncios */
+
+  display: flexbox;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.annuncio img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.annuncio:hover {
+  border: 2px solid white;
+}
+
+/* -------------SEZIONE NEWS---------- */
+.news-section {
+  grid-area:4/2/7/6;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 4px groove currentColor;
+}
+
+/*
 .main-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 
 .container-1 {
   display: flex;
@@ -26,28 +150,4 @@
   align-items: center;
 
  }
-
-.team-section {
-  border: 3px solid black;
-}
-
-.board-section {
-  border: 3px solid black;
-}
-
-.news-section {
-  border: 3px solid black;
-}
-
-#team-btn {
-  background-color: royalblue;
-  color: white;
-}
-body { 
-  background-image: url('/assets/Sfondolol.png'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-color: rgba(69, 49, 160, 0.2); 
-  background-blend-mode: lighten;
-
-} 
+*/
