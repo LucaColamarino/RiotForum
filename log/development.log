@@ -3940,3 +3940,1629 @@ ActionController::RoutingError (No route matches [GET] "/2.jpg"):
   
 ActionController::RoutingError (No route matches [GET] "/1.jpg"):
   
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:46 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:46 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:47 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:48 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:48 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 12:06:49 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 12:06:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:11:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 55.4ms | Allocations: 23965)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 796)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 93.1ms | Allocations: 42329)
+Completed 200 OK in 126ms (Views: 103.6ms | ActiveRecord: 0.0ms | Allocations: 47319)
+
+
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:12:09 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1653)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3278)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3618)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:12:10 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:12:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:12:11 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:12:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:12:11 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 953)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2584)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2861)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:12:11 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:12:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:12:12 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:12:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:12:46 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1201)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 648)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 17875)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 18806)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:14:04 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1201)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 646)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 17885)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 18816)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:14:22 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1201)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 629)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 17861)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 18792)
+
+
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:14:33 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1598)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 222)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3211)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:14:33 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:14:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:14:35 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:14:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:15:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 577)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 4078)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 209)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5523)
+Completed 200 OK in 60ms (Views: 26.1ms | ActiveRecord: 2.3ms | Allocations: 20689)
+
+
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:15:11 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 939)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2550)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2828)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:15:11 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:15:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:15:12 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:15:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:15:37 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.4ms | Allocations: 904)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2435)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2699)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:16:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1652)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3049)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3678)
+
+
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:16:27 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 942)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2571)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 2846)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:16:28 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:16:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:16:30 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:16:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:16:51 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 953)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2566)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2842)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:16:52 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:16:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/board?game=LOL" for ::1 at 2024-01-30 13:17:08 +0100
+Processing by PagesController#board as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/board.html.erb within layouts/application
+  Rendered pages/board.html.erb within layouts/application (Duration: 0.6ms | Allocations: 226)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 228)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2082)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2409)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:17:08 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:17:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:18:04 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1452)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 731)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 18193)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 19134)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:05 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:18:22 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1445)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 731)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 18189)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 19130)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:24 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/create_team" for ::1 at 2024-01-30 13:18:48 +0100
+Processing by PagesController#create_team as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/create_team.html.erb within layouts/application
+  Rendered pages/create_team.html.erb within layouts/application (Duration: 0.6ms | Allocations: 145)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2010)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2337)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:48 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:52 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:52 +0100
+Started GET "/create_team" for ::1 at 2024-01-30 13:18:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Processing by PagesController#create_team as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering pages/create_team.html.erb within layouts/application
+  Rendered pages/create_team.html.erb within layouts/application (Duration: 0.1ms | Allocations: 35)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 13094)
+Completed 200 OK in 26ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 43640)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:55 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/board?game=LOL" for ::1 at 2024-01-30 13:18:57 +0100
+Processing by PagesController#board as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/board.html.erb within layouts/application
+  Rendered pages/board.html.erb within layouts/application (Duration: 0.6ms | Allocations: 222)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2081)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 2407)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:18:57 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:18:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:19:00 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1122)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2629)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2955)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:01 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:19:13 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 887)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2527)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2803)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:13 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:14 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:19:17 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 887)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2512)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2788)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:17 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:18 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:19:19 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2528)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2804)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:19 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:22 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:19:22 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2509)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2785)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:22 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:23 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:19:23 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2540)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2816)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:23 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:25 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:19:26 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2521)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:26 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:26 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:19:27 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2501)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2777)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:27 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:28 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:19:28 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2509)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2785)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:19:28 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:19:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:20:44 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:20:44 +0100
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:20:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 6919)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 830)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 69735)
+Completed 200 OK in 154ms (Views: 148.0ms | ActiveRecord: 0.0ms | Allocations: 103522)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:20:57 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:20:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:20:58 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:20:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:20:59 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 887)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2515)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2791)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:21:00 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:21:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:21:27 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:21:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:23:08 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1201)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 632)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 17900)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 18831)
+
+
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:23:14 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1355)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 221)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2976)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3311)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:23:14 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:23:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:23:22 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:23:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:24:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2645)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 209)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4090)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 2.0ms | Allocations: 9611)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-30 13:24:39 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 216ms (ActiveRecord: 0.1ms | Allocations: 6917)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:24:39 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.6ms | Allocations: 898)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:8
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 804)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3157)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 3463)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-30 13:25:07 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 90ms (ActiveRecord: 0.1ms | Allocations: 9344)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:25:07 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.7ms | Allocations: 903)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2422)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2691)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:25:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1645)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3030)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:35:36 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 876)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2513)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2788)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:35:36 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:35:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:36:08 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:36:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:36:43 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1439)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 735)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 18181)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 19124)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:36:45 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:36:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:36:47 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2504)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2780)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:36:47 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:36:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:36:48 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:36:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:37:37 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:37:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:37:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2646)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 209)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4091)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 8828)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-30 13:37:44 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 197ms (ActiveRecord: 1.9ms | Allocations: 3188)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:37:45 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1119)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:8
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 774)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3342)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3708)
+
+
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:37:49 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 876)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:8
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3096)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3371)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:37:49 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:37:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:38:34 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1439)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 7.0ms | Allocations: 5851)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 23315)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 2.2ms | Allocations: 24256)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:38:36 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:38:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:38:41 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1121)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3277)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 3603)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:38:41 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:38:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:38:42 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 939)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 869)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3478)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3811)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:38:42 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:38:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:39:31 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 890)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 174.8ms | Allocations: 8499)
+Completed 200 OK in 177ms (Views: 175.2ms | ActiveRecord: 0.1ms | Allocations: 8773)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:39:32 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:39:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:39:44 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 885)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5631)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.1ms | Allocations: 5905)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:39:44 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:39:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:40:12 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 886)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 5632)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.1ms | Allocations: 5906)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:40:13 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:40:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:40:51 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2458)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 824)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 7140)
+Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.1ms | Allocations: 7414)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:40:51 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:40:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/Sfondolol.png"):
+  
+Started GET "/" for ::1 at 2024-01-30 13:40:54 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.4ms | Allocations: 903)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3046)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 3312)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:40:54 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:40:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:40:55 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 886)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3126)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 3402)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:40:55 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:40:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:11 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:41:12 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 889)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 821)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3139)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 3415)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:12 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:13 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:41:13 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 889)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 820)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3138)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 3414)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:13 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2024-01-30 13:41:19 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 2102)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:41:19 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.5ms | Allocations: 906)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2484)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2790)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:41:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 556)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2621)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 209)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4056)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 5194)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-01-30 13:41:23 +0100
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"colamarino01@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 193ms (ActiveRecord: 0.1ms | Allocations: 2671)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:41:23 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.5ms | Allocations: 890)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:29
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 717)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3003)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 3272)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-01-30 13:41:25 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 5ms (ActiveRecord: 0.1ms | Allocations: 1695)
+
+
+Started GET "/" for ::1 at 2024-01-30 13:41:25 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.6ms | Allocations: 890)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2399)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:41:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1638)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3025)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3649)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:41:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1638)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3025)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3658)
+
+
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:41:46 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 876)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2489)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2764)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:46 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:41:47 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2520)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2796)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:47 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:41:48 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2513)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2789)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:48 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:49 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:49 +0100
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:41:49 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.7ms | Allocations: 8527)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 18229)
+Completed 200 OK in 48ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 72192)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:50 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:50 +0100
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:41:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.0ms | Allocations: 7401)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 15196)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 19974)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:50 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:41:51 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:41:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-30 13:41:52 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1651)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3047)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3672)
+
+
+Started GET "/users/1.jpg" for ::1 at 2024-01-30 13:41:52 +0100
+Started GET "/users/2.jpg" for ::1 at 2024-01-30 13:41:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/1.jpg"):
+  
+Started GET "/users/sign_up" for ::1 at 2024-01-30 13:41:53 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1590)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3221)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4135)
+
+
+Started GET "/users/password/new" for ::1 at 2024-01-30 13:41:57 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 873)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 190)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2489)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3380)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:42:06 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:42:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:42:47 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:42:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:42:57 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2519)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2795)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:42:57 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:42:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:02 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:43:02 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2535)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2811)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:03 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:04 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home?game=LOL" for ::1 at 2024-01-30 13:43:04 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"LOL"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 219)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2525)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2801)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:04 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:05 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home?game=VALO" for ::1 at 2024-01-30 13:43:05 +0100
+Processing by PagesController#home as HTML
+  Parameters: {"game"=>"VALO"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 889)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2517)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2793)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:05 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for ::1 at 2024-01-30 13:43:06 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-30 13:43:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
