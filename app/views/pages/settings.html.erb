@@ -1,2 +1,52 @@
-impostazioni per Luca
-<h1><%= link_to 'back', root_path %></h1>
+<head>
+    <style>
+        .container-settings {
+            height: 100vh;
+
+            display: flex;
+        }
+        
+        .sidebar-settings {
+            margin-top: 60px;
+            width: 30%;
+
+             word-spacing: 10px;
+        }
+
+        .sidebar-settings span {
+            font-weight: bold;
+            color: #1f1f14;
+        }
+
+        .content-settings {
+            flex: 1;
+            
+            background-color: aliceblue;
+            border-left: 5px solid gray;
+        }
+
+        .previous {
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-settings">
+
+       <div class="sidebar-settings list-group">
+            <li class="list-group-item active w3-gray w3-border-gray">
+                <%= link_to '<', :back, class: 'btn btn-dark' %>
+                <span>IMPOSTAZIONI</span>
+            </li>
+            <button type="button" class="list-group-item list-group-item-action">Account</button>
+            <button type="button" class="list-group-item list-group-item-action">Segnala un problema</button>
+            <button type="button" class="list-group-item list-group-item-action">Preferenze</button>
+            <button type="button" class="list-group-item list-group-item-action w3-red">Disconnettiti</button>
+        </div>
+
+        <div class="content-settings">
+            asfsa
+        </div>
+    </div>
+</body>

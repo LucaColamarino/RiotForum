@@ -6,6 +6,24 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+         
+    <div class="parent">
+
+
+
+        <!-- CREA TEAM, CERCA GIOCATORI -->
+        <div class="team-section">
+
+            <img src="/assets/miniatura-<%= @game %>.png" width="45%" height="60%">
+
+            
+            <div class="search">
+                <form action="#">
+                    <input type="text" placeholder="Cerca Giocatori" name="search">
+                    
+                </form>
+=======
 
 
 
@@ -40,17 +58,86 @@
                 <%= link_to create_team_path do %>
                     <button id="team-btn" class="btn btn-primary">Crea il tuo team!</button>
                 <% end %>
+>>>>>>> 59817eccb985728f6489cd62254de3c4805170c5
             </div>
+            
 
+<<<<<<< HEAD
+            <%= link_to create_team_path do %>
+                <%if(@game=="LOL"); @team_btn_color = "btn-primary" end%>
+                <%if(@game=="VALO"); @team_btn_color = "btn-danger" end%>
+                <button id="team-btn" class="btn <%= @team_btn_color %>">Crea il tuo team!</button>
+            <% end %>
+=======
           BACHECA ANNUNCI 
             <div class="w3-display-right board-section">
                 Bacheca annunci
             </div>    
+>>>>>>> 59817eccb985728f6489cd62254de3c4805170c5
         </div>
 
-        <div class="container-2">
-            <div class="news-section">
-                Notizie su Luca
+        <!-- BACHECA ANNUNCI -->
+        <div class="board-section" style="background-color:<%= @color %>">
+            <%= if(@game=='LOL'); "ANNUNCI LOL" end%>
+            <%= if(@game=='VALO'); "ANNUNCI VALO" end%>
+
+            
+            <div class="annuncio-container">
+                <div class="annuncio">
+                    <h3>Utente 1</h3>
+                    <img src="1.jpg" alt="Ruoli 1">
+                </div>
+                <div class="annuncio">
+                    <h3>Utente 2</h3>
+                    <img src="2.jpg" alt="Ruoli 2">
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+            
+            <%= link_to board_path(game: "LOL") do %>
+                <%if(@game=="LOL"); @board_btn_color = "btn-dark" end%>
+                <%if(@game=="VALO"); @board_btn_color = "btn-light" end%>
+                <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
+
+        </div> 
+
+        <!-- SEZIONE NOTIZIE -->    
+        <div class="news-section center-block" style="background-color:<%= @color %>">
+
+            <h1> ----- NEWS ----- </h1>
+
+            <div class="news-container">
+                <div class="news">
+                    <h3>Utente 1</h3>
+                    <img src="1.jpg" alt="Ruoli 1">
+                    <a href="">View Details</a>
+                </div>
+                <div class="news">
+                    <h3>Utente 2</h3>
+                    <img src="2.jpg" alt="Ruoli 2">
+                    <a href="">View Details</a>
+                </div>
+                    <!-- Add more products as needed -->
+                
+                <%# 
+                    <div class="thread-container">
+                        <% threads.each do |thread| %/>
+                        <div class="thread">
+                            <a href="<%= thread[:url] %/>"><%= thread[:title] %/></a>
+                        </div>
+                        <% end %/>
+                    </div>
+                %>
             </div>
         </div>
+<<<<<<< HEAD
+
+
+
+    </div>
+    
+</body>
+=======
 -->
+>>>>>>> 59817eccb985728f6489cd62254de3c4805170c5

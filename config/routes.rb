@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#home'
+  root 'pages#scelta'
+  get 'home', to: 'pages#home'
   get 'profile', to: 'pages#profile'
   get 'board', to: 'pages#board'
   get 'create_team', to: 'pages#create_team'
