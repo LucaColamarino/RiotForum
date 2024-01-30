@@ -1,9 +1,13 @@
 class PagesController < ApplicationController
+<<<<<<< HEAD
   
   @game = "LOL"; #per ora lo lascio come default, ma non va bene
 
   def scelta
   end
+=======
+
+>>>>>>> 59817eccb985728f6489cd62254de3c4805170c5
 
   def home
    @game = params[:game];

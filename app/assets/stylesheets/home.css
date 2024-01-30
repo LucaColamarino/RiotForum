@@ -150,4 +150,32 @@
   align-items: center;
 
  }
+<<<<<<< HEAD
 */
+=======
+
+.team-section {
+  border: 3px solid black;
+}
+
+.board-section {
+  border: 3px solid black;
+}
+
+.news-section {
+  border: 3px solid black;
+}
+
+#team-btn {
+  background-color: royalblue;
+  color: white;
+}
+body { 
+  background-image: url('/assets/Immagine1.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-color: rgb(255, 255, 255,0.5); 
+  background-blend-mode: lighten;
+
+} 
+>>>>>>> 59817eccb985728f6489cd62254de3c4805170c5
