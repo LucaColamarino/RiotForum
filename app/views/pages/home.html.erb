@@ -6,8 +6,9 @@
 </head>
 
 <body>
-         
-    <div class="parent">
+     <% if(@game=="LOL"); @parentclass="LOL-home" end %>
+     <% if(@game=="VALO"); @parentclass="VALO-home" end %>
+    <div class="parent", id=<%=@parentclass%>>
 
 
 
