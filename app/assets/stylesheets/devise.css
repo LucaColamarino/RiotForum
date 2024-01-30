@@ -1,0 +1,30 @@
+.wrapper {
+
+    background-image: url('/assets/Immagine1.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: rgba(196, 23, 23, 0.2); 
+  
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: bisque;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
