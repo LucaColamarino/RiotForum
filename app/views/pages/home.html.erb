@@ -50,12 +50,18 @@
                 </div>
                 <!-- Add more products as needed -->
             </div>
-            
-            <%= link_to board_path(game: "LOL") do %>
-                <%if(@game=="LOL"); @board_btn_color = "btn-dark" end%>
-                <%if(@game=="VALO"); @board_btn_color = "btn-light" end%>
-                <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <%if(@game == 'LOL') %>
+            <%= link_to board_path(game: 'LOL') do %>
+               <%@board_btn_color = "btn-dark" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
             <% end %>
+           <%elsif(@game == 'VALO') %>
+            <%= link_to board_path(game: 'VALO') do %>
+               <%@board_btn_color = "btn-light" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
+           <% end %>
+
 
         </div> 
 
@@ -76,6 +82,18 @@
                     <a href="">View Details</a>
                 </div>
                     <!-- Add more products as needed -->
+                    <!-- Aggiunto collegamento alla pagina news con parametro -->
+                    <%if(@game == 'LOL') %>
+                     <%= link_to news_path(game: 'LOL') do %>
+                        <% @board_btn_color = "btn-dark" %>
+                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                     <% end %>
+                    <%elsif(@game == 'VALO') %>
+                     <%= link_to news_path(game: 'VALO') do %>
+                        <%@board_btn_color = "btn-light" %>
+                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                     <% end %>
+                    <% end %>
                 
                 <%# 
                     <div class="thread-container">

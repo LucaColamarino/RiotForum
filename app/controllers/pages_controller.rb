@@ -13,12 +13,17 @@ class PagesController < ApplicationController
   end
 
   def board
+    @game = params[:game];
   end
 
   def create_team
   end
 
   def settings
+  end
+  
+  def news
+    @game = params[:game];
   end
 
 end
