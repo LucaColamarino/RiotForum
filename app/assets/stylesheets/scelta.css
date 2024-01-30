@@ -51,13 +51,13 @@
 }
 
 #LOL-btn {
-    background-image: url('/assets/lol-image.jpeg'); 
+    background-image: url('/assets/LOL-image.jpeg'); 
     background-size: cover; 
     background-repeat: no-repeat; 
 }
 
 #VALO-btn {
-    background-image: url('/assets/valo-image.jpg');
+    background-image: url('/assets/VALO-image.jpg');
     background-size: cover; 
     background-repeat: no-repeat;  
 }
