@@ -6,8 +6,8 @@
 </head>
 
 <body>
-     <% if(@game=="LOL"); @parentclass="LOL-home" end %>
-     <% if(@game=="VALO"); @parentclass="VALO-home" end %>
+     <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
+     <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
     <div class="parent", id=<%=@parentclass%>>
 
 

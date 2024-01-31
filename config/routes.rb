@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#scelta'
   get 'home', to: 'pages#home'
+  post '/set_session/:value', to: 'sessions#set_session', as: 'set_session'
   get 'profile', to: 'pages#profile'
   get 'board', to: 'pages#board'
   get 'create_team', to: 'pages#create_team'

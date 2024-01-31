@@ -6,14 +6,13 @@
     <div class="wrapper">
         <div class="flex-container">
             <div class="column">
-                <%= link_to home_path(game: "LOL") do %>
-                    <button id="LOL-btn" class="choice-button"></button>
-                <% end %>
+                
+                <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-btn", class: "choice-button" %>
+
             </div>
             <div class="column">
-                <%= link_to home_path(game: "VALO") do %>
-                    <button id="VALO-btn" class="choice-button"></button>
-                <% end %>
+
+                <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-btn", class: "choice-button" %>
             </div>
         </div>
     </div>
