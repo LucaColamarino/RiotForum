@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum role: [:user,:moderator]
+
+  attr_accessor :riot_user, :riot_tag, :username
 end

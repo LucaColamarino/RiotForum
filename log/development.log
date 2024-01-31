@@ -6352,3 +6352,158 @@ Started GET "/1.jpg" for 127.0.0.1 at 2024-01-30 21:02:50 +0100
   
 ActionController::RoutingError (No route matches [GET] "/1.jpg"):
   
+Started GET "/" for ::1 at 2024-01-31 13:56:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 343.8ms | Allocations: 41606)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 705)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 370.1ms | Allocations: 58399)
+Completed 200 OK in 407ms (Views: 381.7ms | ActiveRecord: 0.0ms | Allocations: 63389)
+
+
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 13:56:45 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms | Allocations: 1697)
+
+
+Started GET "/home" for ::1 at 2024-01-31 13:56:45 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1832)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3557)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4118)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 13:56:45 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 13:56:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-31 13:56:47 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1226)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2676)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2946)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 13:56:48 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 13:56:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 13:56:48 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 363)
+
+
+Started GET "/home" for ::1 at 2024-01-31 13:56:48 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 960)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 2654)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 3117)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 13:56:48 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 13:56:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-31 13:56:52 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1251)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2701)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2967)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 13:56:52 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 13:56:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/" for ::1 at 2024-01-31 18:59:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 66.5ms | Allocations: 25952)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 705)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 94.3ms | Allocations: 42823)
+Completed 200 OK in 127ms (Views: 104.9ms | ActiveRecord: 0.0ms | Allocations: 47813)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 18:59:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 580)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.5ms | Allocations: 4242)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 5955)
+Completed 200 OK in 67ms (Views: 31.3ms | ActiveRecord: 2.5ms | Allocations: 21150)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 18:59:47 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 83)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2406)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4058)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4973)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for ::1 at 2024-01-31 19:12:58 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 511)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2981)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 781)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 19715)
+Completed 200 OK in 52ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 24615)
+
+
