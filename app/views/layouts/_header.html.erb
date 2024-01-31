@@ -15,10 +15,10 @@
 
       <div>
 
-        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button @lol_state" %>
+        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
   </div>
- <div>
-        <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button @valo-state" %>
+ 
+        <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
  
 
       </div>
