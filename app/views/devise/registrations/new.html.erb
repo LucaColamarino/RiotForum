@@ -41,12 +41,14 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  
 
   <div class="actions">
     <%= f.submit "Registrati" %>
   </div>
+  
 <% end %>
-
+<%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
 <%= render "devise/shared/links" %>
 </div>
 </div>

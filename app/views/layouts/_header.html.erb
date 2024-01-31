@@ -8,14 +8,14 @@
       <% if @game=="LOL" 
           @lol_state = "";
           @valo_state = "unchosen";
-        elsif @game=="VALO"
+        else 
           @lol_state = "unchosen";
           @valo_state = "";
         end; %>
 
       <div>
 
-        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
+        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button "+@lol_state %>
   </div>
  
         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>

@@ -7479,3 +7479,2645 @@ Started GET "/2.jpg" for ::1 at 2024-01-31 19:24:54 +0100
   
 ActionController::RoutingError (No route matches [GET] "/2.jpg"):
   
+Started GET "/home" for ::1 at 2024-01-31 19:25:49 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 950)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2635)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3124)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:25:49 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:25:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:26:00 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 430)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:01 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2683)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3199)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:01 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:26:01 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:02 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 951)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2640)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3131)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:02 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:26:03 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 376)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:03 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 953)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2643)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3122)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:03 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:26:04 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:04 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2643)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3119)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:04 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:26:04 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:04 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 956)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2646)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3119)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:04 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:26:05 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:05 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2643)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3143)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:05 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:26:05 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:06 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 956)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2646)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3113)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:06 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:26:06 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:26:06 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2643)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3131)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:26:06 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:26:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for ::1 at 2024-01-31 19:26:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1846)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 815)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 18621)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.0ms | Allocations: 19763)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:27:00 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:27:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:27:01 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 445)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:27:01 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2683)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3217)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:27:01 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:27:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:27:01 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:27:01 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 951)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2640)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3119)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:27:02 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:27:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:27:37 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:27:37 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 953)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2643)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3128)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:27:37 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:27:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for ::1 at 2024-01-31 19:28:03 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1845)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 819)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 18626)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 19777)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:28:05 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:28:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:28:06 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 466)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:28:06 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 952)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2682)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3195)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:28:06 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:28:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:28:07 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 382)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:28:07 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 953)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2644)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3114)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:28:07 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:28:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for ::1 at 2024-01-31 19:28:34 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1845)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 1644)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 19287)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 20428)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    18:         <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
+    19:   </div>
+    20:  
+    21:         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo-state %>
+    22:  
+    23: 
+    24:       </div>
+  
+app/views/layouts/_header.html.erb:21:in `+'
+app/views/layouts/_header.html.erb:21
+app/views/layouts/application.html.erb:27
+Started GET "/home" for ::1 at 2024-01-31 19:28:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1840)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 817)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 18512)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 19671)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:28:59 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:28:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:29:00 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 460)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:29:01 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 947)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 357)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2670)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3218)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:29:01 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:29:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:29:02 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:29:02 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 948)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 357)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2632)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3122)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:29:02 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:29:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 19:29:02 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:29:02 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 948)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2631)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3136)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:29:02 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:29:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 19:29:04 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/home" for ::1 at 2024-01-31 19:29:04 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 948)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 357)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2632)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3104)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 19:29:04 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 19:29:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOmniauthToUsers (20240131222055)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240131222055') RETURNING "version"[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-01-31 23:25:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 324.6ms | Allocations: 36933)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 705)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 355.2ms | Allocations: 53760)
+Completed 200 OK in 392ms (Views: 367.0ms | ActiveRecord: 0.0ms | Allocations: 58750)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:25:40 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4398)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 1532)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 7208)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.9ms | Allocations: 25942)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    15: 
+    16:       <div>
+    17: 
+    18:         <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
+    19:   </div>
+    20:  
+    21:         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
+  
+app/views/layouts/_header.html.erb:18:in `+'
+app/views/layouts/_header.html.erb:18
+app/views/layouts/application.html.erb:27
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:25:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1790)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4233)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4826)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    15: 
+    16:       <div>
+    17: 
+    18:         <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
+    19:   </div>
+    20:  
+    21:         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
+  
+app/views/layouts/_header.html.erb:18:in `+'
+app/views/layouts/_header.html.erb:18
+app/views/layouts/application.html.erb:27
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 23:26:20 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 519)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:26:20 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1813)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 360)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3539)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4100)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:26:20 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:26:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:26:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1789)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 1189)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4231)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4828)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    15: 
+    16:       <div>
+    17: 
+    18:         <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button " +@lol_state %>
+    19:   </div>
+    20:  
+    21:         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
+  
+app/views/layouts/_header.html.erb:18:in `+'
+app/views/layouts/_header.html.erb:18
+app/views/layouts/application.html.erb:27
+Started GET "/home" for ::1 at 2024-01-31 23:26:58 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1843)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 816)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 18609)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 19727)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:27:00 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:27:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:27:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 715)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2793)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 1133)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5203)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.9ms | Allocations: 11331)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    15: 
+    16:       <div>
+    17: 
+    18:         <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button "+@lol_state %>
+    19:   </div>
+    20:  
+    21:         <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
+  
+app/views/layouts/_header.html.erb:18:in `+'
+app/views/layouts/_header.html.erb:18
+app/views/layouts/application.html.erb:27
+Started GET "/" for ::1 at 2024-01-31 23:27:45 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1495)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 562)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 17992)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 18922)
+
+
+Started GET "/" for ::1 at 2024-01-31 23:27:47 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1205)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2640)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2900)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:27:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 715)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2792)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4485)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 2.0ms | Allocations: 10632)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:27:51 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3626)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5281)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 6424)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:27:52 +0100
+  
+NameError (uninitialized constant Users):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+devise (4.9.3) lib/devise/omniauth.rb:18:in `block in <main>'
+omniauth (2.1.2) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:28:52 +0100
+  
+Zeitwerk::NameError (wrong constant name OmniauthCallbacksController.rb inferred by Module from file
+
+  C:/Users/colam/Documents/GitHub/RiotForum/app/controllers/omniauth_callbacks_controller.rb.rb
+
+Possible ways to address this:
+
+  * Tell Zeitwerk to ignore this particular file.
+  * Tell Zeitwerk to ignore one of its parent directories.
+  * Rename the file to comply with the naming conventions.
+  * Modify the inflector to handle this case.
+):
+  
+zeitwerk (2.6.12) lib/zeitwerk/loader/helpers.rb:171:in `rescue in cname_for'
+zeitwerk (2.6.12) lib/zeitwerk/loader/helpers.rb:166:in `cname_for'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:414:in `block in define_autoloads_for_dir'
+zeitwerk (2.6.12) lib/zeitwerk/loader/helpers.rb:40:in `block in ls'
+zeitwerk (2.6.12) lib/zeitwerk/loader/helpers.rb:25:in `each'
+zeitwerk (2.6.12) lib/zeitwerk/loader/helpers.rb:25:in `ls'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:411:in `define_autoloads_for_dir'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:124:in `block (2 levels) in setup'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:123:in `each'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:123:in `block in setup'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:120:in `synchronize'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:120:in `setup'
+zeitwerk (2.6.12) lib/zeitwerk/loader.rb:230:in `reload'
+activesupport (7.1.3) lib/active_support/dependencies.rb:79:in `block in clear'
+activesupport (7.1.3) lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+activesupport (7.1.3) lib/active_support/dependencies/interlock.rb:17:in `unloading'
+activesupport (7.1.3) lib/active_support/dependencies.rb:32:in `unload_interlock'
+activesupport (7.1.3) lib/active_support/dependencies.rb:77:in `clear'
+railties (7.1.3) lib/rails/application/finisher.rb:188:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+railties (7.1.3) lib/rails/application/finisher.rb:217:in `block (3 levels) in <module:Finisher>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:110:in `run_callbacks'
+activesupport (7.1.3) lib/active_support/reloader.rb:128:in `class_unload!'
+railties (7.1.3) lib/rails/application/finisher.rb:216:in `block (2 levels) in <module:Finisher>'
+activesupport (7.1.3) lib/active_support/callbacks.rb:448:in `instance_exec'
+activesupport (7.1.3) lib/active_support/callbacks.rb:448:in `block in make_lambda'
+activesupport (7.1.3) lib/active_support/callbacks.rb:202:in `block (2 levels) in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:707:in `block (2 levels) in default_terminator'
+activesupport (7.1.3) lib/active_support/callbacks.rb:706:in `catch'
+activesupport (7.1.3) lib/active_support/callbacks.rb:706:in `block in default_terminator'
+activesupport (7.1.3) lib/active_support/callbacks.rb:203:in `block in halting'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `block in invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `each'
+activesupport (7.1.3) lib/active_support/callbacks.rb:598:in `invoke_before'
+activesupport (7.1.3) lib/active_support/callbacks.rb:109:in `run_callbacks'
+activesupport (7.1.3) lib/active_support/execution_wrapper.rb:129:in `run'
+activesupport (7.1.3) lib/active_support/execution_wrapper.rb:125:in `run!'
+activesupport (7.1.3) lib/active_support/reloader.rb:122:in `run!'
+activesupport (7.1.3) lib/active_support/execution_wrapper.rb:78:in `block in run!'
+<internal:kernel>:90:in `tap'
+activesupport (7.1.3) lib/active_support/execution_wrapper.rb:75:in `run!'
+activesupport (7.1.3) lib/active_support/reloader.rb:64:in `run!'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:28:54 +0100
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/" for ::1 at 2024-01-31 23:29:00 +0100
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/" for ::1 at 2024-01-31 23:30:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 64.1ms | Allocations: 25943)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 92.2ms | Allocations: 42816)
+Completed 200 OK in 124ms (Views: 102.5ms | ActiveRecord: 0.0ms | Allocations: 47805)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:30:55 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4419)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 6128)
+Completed 200 OK in 68ms (Views: 27.8ms | ActiveRecord: 2.0ms | Allocations: 23713)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:30:58 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3631)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5281)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 6423)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:31:00 +0100
+  
+NameError (uninitialized constant Users::OmniauthCallbacksController):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+devise (4.9.3) lib/devise/omniauth.rb:18:in `block in <main>'
+omniauth (2.1.2) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:37:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 63.7ms | Allocations: 25940)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 90.4ms | Allocations: 42812)
+Completed 200 OK in 122ms (Views: 100.5ms | ActiveRecord: 0.0ms | Allocations: 47793)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:37:55 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6130)
+Completed 200 OK in 74ms (Views: 27.4ms | ActiveRecord: 1.9ms | Allocations: 23725)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:37:56 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3631)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5280)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 6438)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:37:57 +0100
+  
+NameError (uninitialized constant Users::OmniauthCallbacksController):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+devise (4.9.3) lib/devise/omniauth.rb:18:in `block in <main>'
+omniauth (2.1.2) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:38:54 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1235)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2686)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2952)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:38:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1790)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3437)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4048)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:01 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2420)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4067)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4685)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:04 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4663)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:06 +0100
+  
+NameError (uninitialized constant Users::OmniauthCallbacksController):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+devise (4.9.3) lib/devise/omniauth.rb:18:in `block in <main>'
+omniauth (2.1.2) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1797)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3463)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4062)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1787)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3435)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4053)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:10 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2420)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4067)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4681)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:11 +0100
+  
+NameError (uninitialized constant Users::OmniauthCallbacksController):
+  
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+devise (4.9.3) lib/devise/omniauth.rb:18:in `block in <main>'
+omniauth (2.1.2) lib/omniauth/strategy.rb:545:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:13 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2434)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4097)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4725)
+
+
+Started GET "/" for ::1 at 2024-01-31 23:39:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 64.0ms | Allocations: 26065)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 90.3ms | Allocations: 42937)
+Completed 200 OK in 122ms (Views: 100.3ms | ActiveRecord: 0.0ms | Allocations: 47918)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 6130)
+Completed 200 OK in 76ms (Views: 28.1ms | ActiveRecord: 2.0ms | Allocations: 23740)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:38 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3631)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5280)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 6441)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:41 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 632)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:41 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1784)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3431)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4090)
+
+
+Started GET "/users/password/new" for ::1 at 2024-01-31 23:39:43 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 265)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1020)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2897)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3821)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:47 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4731)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:48 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:48 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3430)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4092)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:39:49 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4052)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4707)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:49 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3430)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4083)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:56 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3449)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4102)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:58 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1787)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3452)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4088)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:39:59 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:39:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1786)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3433)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4086)
+
+
+Started GET "/users/password/new" for ::1 at 2024-01-31 23:40:00 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 258)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 749)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2620)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3207)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:40:01 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2420)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4067)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4735)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:40:02 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:40:02 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1784)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3431)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4090)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:40:04 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4698)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:40:05 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:40:05 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3430)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4065)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:40:05 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4710)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:40:48 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:40:49 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3430)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4107)
+
+
+Started GET "/users/password/new" for ::1 at 2024-01-31 23:41:07 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 258)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 749)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2639)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3229)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:41:08 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2422)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4087)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4755)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:41:09 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:41:09 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1786)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3433)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4128)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:41:10 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4704)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:41:11 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:41:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1784)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3431)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4084)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:41:13 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:41:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3430)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4077)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:41:14 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4052)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4698)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:41:15 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:41:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3430)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4041)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:43:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 783)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 71.1ms | Allocations: 27642)
+  Rendered layouts/_header.html.erb (Duration: 7.6ms | Allocations: 849)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 107.0ms | Allocations: 44611)
+Completed 200 OK in 188ms (Views: 134.9ms | ActiveRecord: 1.9ms | Allocations: 67902)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:43:41 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:45:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 64.4ms | Allocations: 25867)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 91.3ms | Allocations: 42741)
+Completed 200 OK in 124ms (Views: 101.5ms | ActiveRecord: 0.0ms | Allocations: 47722)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:45:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 6130)
+Completed 200 OK in 79ms (Views: 28.5ms | ActiveRecord: 2.0ms | Allocations: 23808)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:45:50 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:46:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 64.3ms | Allocations: 25915)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 91.0ms | Allocations: 42787)
+Completed 200 OK in 122ms (Views: 101.1ms | ActiveRecord: 0.0ms | Allocations: 47768)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:46:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 6130)
+Completed 200 OK in 77ms (Views: 28.7ms | ActiveRecord: 2.2ms | Allocations: 23751)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:46:40 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3631)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5281)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 6478)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:46:41 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:48:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 63.6ms | Allocations: 25954)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 90.4ms | Allocations: 42826)
+Completed 200 OK in 121ms (Views: 100.4ms | ActiveRecord: 0.0ms | Allocations: 47807)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:48:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6130)
+Completed 200 OK in 79ms (Views: 29.6ms | ActiveRecord: 2.1ms | Allocations: 23769)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:48:16 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3631)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5280)
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 6453)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:48:18 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:49:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 63.7ms | Allocations: 26013)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 700)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 90.1ms | Allocations: 42885)
+Completed 200 OK in 121ms (Views: 99.8ms | ActiveRecord: 0.0ms | Allocations: 47866)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:49:05 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4421)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6130)
+Completed 200 OK in 74ms (Views: 27.4ms | ActiveRecord: 2.0ms | Allocations: 23775)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:49:06 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:49:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1798)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3461)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4134)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:49:17 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:49:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 783)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 71.1ms | Allocations: 27667)
+  Rendered layouts/_header.html.erb (Duration: 7.6ms | Allocations: 849)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 44636)
+Completed 200 OK in 186ms (Views: 131.9ms | ActiveRecord: 2.0ms | Allocations: 67911)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:49:28 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-01-31 23:49:50 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1582)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3074)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 3802)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:49:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1794)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3441)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4107)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:49:53 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3627)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5276)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 6451)
+
+
+Started POST "/users" for ::1 at 2024-01-31 23:49:54 +0100
+Processing by RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"riot_user"=>"", "riot_tag"=>"", "username"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrati"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 829)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 4126)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5773)
+Completed 422 Unprocessable Entity in 21ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8520)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:49:59 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2024-01-31 23:50:23 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2434)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4097)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4765)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:50:25 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+omniauth (2.1.2) lib/omniauth/builder.rb:44:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:50:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1797)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3460)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4110)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:50:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3430)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4080)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:50:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 783)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.4ms | Allocations: 27544)
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | Allocations: 849)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 102.8ms | Allocations: 44513)
+Completed 200 OK in 186ms (Views: 131.3ms | ActiveRecord: 2.0ms | Allocations: 67801)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:50:40 +0100
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+omniauth (2.1.2) lib/omniauth/strategy.rb:163:in `log'
+omniauth (2.1.2) lib/omniauth/strategy.rb:540:in `fail!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:199:in `rescue in call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:191:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'

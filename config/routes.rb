@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
   root 'pages#scelta'
   get 'home', to: 'pages#home'
   post '/set_session/:value', to: 'sessions#set_session', as: 'set_session'
