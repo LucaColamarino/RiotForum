@@ -10121,3 +10121,864 @@ puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
 puma (6.4.2) lib/puma/server.rb:464:in `process_client'
 puma (6.4.2) lib/puma/server.rb:245:in `block in run'
 puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:51:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 783)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 70.0ms | Allocations: 27693)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 851)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 103.2ms | Allocations: 44716)
+Completed 200 OK in 186ms (Views: 131.5ms | ActiveRecord: 1.9ms | Allocations: 68013)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:51:20 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 639)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:51:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1788)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3443)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4110)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:51:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3430)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4103)
+
+
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 23:51:25 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 490)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:25 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1897)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 379)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3681)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 4641)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:25 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 23:51:27 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:27 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 957)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2653)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3153)
+
+
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:27 +0100
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 23:51:28 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 441)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:28 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 954)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2650)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3166)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:28 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 23:51:29 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 396)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:29 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 955)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2651)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3185)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:29 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started POST "/set_session/VALO" for ::1 at 2024-01-31 23:51:30 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"VALO"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:30 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 957)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2653)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3160)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:30 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started POST "/set_session/LOL" for ::1 at 2024-01-31 23:51:30 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 414)
+
+
+Started GET "/home" for ::1 at 2024-01-31 23:51:30 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 955)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2651)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3149)
+
+
+Started GET "/1.jpg" for ::1 at 2024-01-31 23:51:31 +0100
+Started GET "/2.jpg" for ::1 at 2024-01-31 23:51:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:51:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1801)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3464)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 4110)
+
+
+Started GET "/users/1.jpg" for ::1 at 2024-01-31 23:51:31 +0100
+Started GET "/users/2.jpg" for ::1 at 2024-01-31 23:51:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:52:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 783)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 68.9ms | Allocations: 27681)
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | Allocations: 849)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 101.7ms | Allocations: 44650)
+Completed 200 OK in 183ms (Views: 128.7ms | ActiveRecord: 1.9ms | Allocations: 67893)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-01-31 23:52:31 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 639)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-01-31 23:52:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1788)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3443)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4107)
+
+
+Started GET "/" for ::1 at 2024-02-01 16:00:58 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 81.8ms | Allocations: 24824)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 684)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 41699)
+Completed 200 OK in 151ms (Views: 124.8ms | ActiveRecord: 0.0ms | Allocations: 46680)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:00 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 749)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.1ms | Allocations: 4413)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 354)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 6112)
+Completed 200 OK in 86ms (Views: 32.6ms | ActiveRecord: 1.9ms | Allocations: 24863)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:01:02 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 637)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:02 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1784)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3434)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4108)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:01:04 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 224)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3626)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5279)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 6449)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:01:06 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:06 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3452)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4132)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:01:07 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2415)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4082)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4754)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:01:08 +0100
+Processing by Users::OmniauthCallbacksController#failure as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1786)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3436)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4079)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:01:09 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4691)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3433)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4072)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:01:12 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4700)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:01:12 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:13 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3433)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4091)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:01:13 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4706)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:01:14 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:01:14 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3433)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4070)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:02:26 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4697)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:02:28 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:02:28 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1784)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3453)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4108)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:02:29 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2424)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4090)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4729)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:02:30 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:02:30 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3433)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4112)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:02:31 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 4691)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:02:32 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:02:32 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3433)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 4103)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:02:33 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 216)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2405)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4055)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4706)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:02:33 +0100
+Processing by Users::OmniauthCallbacksController#failure as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:02:33 +0100
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3433)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4100)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:08:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:08:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 761)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 74.0ms | Allocations: 27486)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 840)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 44496)
+Completed 200 OK in 189ms (Views: 139.5ms | ActiveRecord: 2.0ms | Allocations: 66437)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:08:49 +0100
+Started GET "/users/auth/google_oauth2/callback?state=836a083cf87c037ed8afa54fa40c3f80df9f474a15d6e9e7&code=4%2F0AfJohXl7CwfNesqIyaI5Z_g-Z_xsmUVxnUl3_h8ZcBOkM_litV_ECZSRdu5WyuYQkh4hBw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=2&hd=studenti.uniroma1.it&prompt=consent" for ::1 at 2024-02-01 16:09:02 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"836a083cf87c037ed8afa54fa40c3f80df9f474a15d6e9e7", "code"=>"4/0AfJohXl7CwfNesqIyaI5Z_g-Z_xsmUVxnUl3_h8ZcBOkM_litV_ECZSRdu5WyuYQkh4hBw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"2", "hd"=>"studenti.uniroma1.it", "prompt"=>"consent"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "109229095134933114897"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "colamarino.1944447@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "role", "provider", "uid") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "colamarino.1944447@studenti.uniroma1.it"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-02-01 15:09:03.550318"], ["updated_at", "2024-02-01 15:09:03.550318"], ["role", nil], ["provider", "google_oauth2"], ["uid", "109229095134933114897"]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 5.8ms | Allocations: 16773)
+
+
+Started GET "/" for ::1 at 2024-02-01 16:09:03 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1560)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:30
+  Rendered layouts/_header.html.erb (Duration: 15.3ms | Allocations: 871)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 3786)
+Completed 200 OK in 32ms (Views: 26.8ms | ActiveRecord: 2.2ms | Allocations: 4508)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2024-02-01 16:09:06 +0100
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 9ms (ActiveRecord: 0.1ms | Allocations: 2361)
+
+
+Started GET "/" for ::1 at 2024-02-01 16:09:07 +0100
+Processing by PagesController#scelta as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1241)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2725)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3028)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:09:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1794)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3444)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4046)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:11:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1783)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3433)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4054)
+
+
+Started GET "/users/sign_up" for ::1 at 2024-02-01 16:11:27 +0100
+Processing by RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 228)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3613)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 333)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5266)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 6428)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:12:39 +0100
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:12:42 +0100
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:12:43 +0100
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:12:44 +0100
+Started GET "/users/auth/google_oauth2/callback?state=5445a459b9dba390fe34b234422cd0fe3886a715e3b122a8&code=4%2F0AfJohXkTg9BD8wmAane0eeELY5PFUdpGF5Y0VHrPtQoAVlw3FvmtWenmzMjEwCeogL_3Ww&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=consent" for ::1 at 2024-02-01 16:13:20 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"5445a459b9dba390fe34b234422cd0fe3886a715e3b122a8", "code"=>"4/0AfJohXkTg9BD8wmAane0eeELY5PFUdpGF5Y0VHrPtQoAVlw3FvmtWenmzMjEwCeogL_3Ww", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"consent"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "111625134799659869601"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 188ms (ActiveRecord: 1.1ms | Allocations: 3040)
+
+
+  
+ActionDispatch::Cookies::CookieOverflow (_forum_session cookie overflowed with size 5652 bytes):
+  
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:597:in `check_for_overflow!'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:679:in `commit'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:515:in `[]='
+actionpack (7.1.3) lib/action_dispatch/middleware/session/cookie_store.rb:116:in `set_cookie'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:409:in `commit_session'
+actionpack (7.1.3) lib/action_dispatch/middleware/session/abstract_store.rb:72:in `commit_session'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for ::1 at 2024-02-01 16:13:26 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1291)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2742)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3003)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-02-01 16:13:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 261)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1790)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 331)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3440)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4113)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2024-02-01 16:13:29 +0100
+Started GET "/users/auth/google_oauth2/callback?state=4491dc5c5a9e4724f9cf3df8457e2e9c3ac2ba9567fc3dd2&code=4%2F0AfJohXk_suolt9hfnZUfPaxkfsKfrxYjZH2uI7B_H-TFnWu6rkmz-68aT2IoLmhFKF_Pug&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=consent" for ::1 at 2024-02-01 16:13:31 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"4491dc5c5a9e4724f9cf3df8457e2e9c3ac2ba9567fc3dd2", "code"=>"4/0AfJohXk_suolt9hfnZUfPaxkfsKfrxYjZH2uI7B_H-TFnWu6rkmz-68aT2IoLmhFKF_Pug", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"consent"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "111625134799659869601"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "colamarino01@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 188ms (ActiveRecord: 1.3ms | Allocations: 2967)
+
+
+  
+ActionDispatch::Cookies::CookieOverflow (_forum_session cookie overflowed with size 5652 bytes):
+  
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:597:in `check_for_overflow!'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:679:in `commit'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:515:in `[]='
+actionpack (7.1.3) lib/action_dispatch/middleware/session/cookie_store.rb:116:in `set_cookie'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:409:in `commit_session'
+actionpack (7.1.3) lib/action_dispatch/middleware/session/abstract_store.rb:72:in `commit_session'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/users/auth/google_oauth2/callback?state=4491dc5c5a9e4724f9cf3df8457e2e9c3ac2ba9567fc3dd2&code=4%2F0AfJohXnBiHGMl-iFF9sVpT6G_hVLtW1KbysMwc_0RgyYWaqgwQ84aM0dZbqr5A2cuiV6Xw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=2&hd=studenti.uniroma1.it&prompt=consent" for ::1 at 2024-02-01 16:13:39 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"4491dc5c5a9e4724f9cf3df8457e2e9c3ac2ba9567fc3dd2", "code"=>"4/0AfJohXnBiHGMl-iFF9sVpT6G_hVLtW1KbysMwc_0RgyYWaqgwQ84aM0dZbqr5A2cuiV6Xw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"2", "hd"=>"studenti.uniroma1.it", "prompt"=>"consent"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "109229095134933114897"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 782)
+
+
+Started GET "/" for ::1 at 2024-02-01 16:13:40 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1245)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:30
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 719)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3299)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 3559)
+
+
