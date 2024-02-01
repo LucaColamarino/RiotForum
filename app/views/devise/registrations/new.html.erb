@@ -11,8 +11,22 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :riot_user %>
+    <%= f.text_field :riot_user, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :riot_tag %>
+    <%= f.text_field :riot_tag %>
+  </div>
+    <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -27,12 +41,14 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  
 
   <div class="actions">
     <%= f.submit "Registrati" %>
   </div>
+  
 <% end %>
-
+<%= button_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
 <%= render "devise/shared/links" %>
 </div>
 </div>

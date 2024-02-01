@@ -1,0 +1,7 @@
+<%if(session[:game]=="LOL")%>
+ <p>news di lol</p>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%else %>
+ <p>news di valorant</p>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%end %>

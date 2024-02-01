@@ -5,21 +5,22 @@
         <span class="sito">RiotForum</span>
         <% unless request.fullpath == '/' %>
 
-      <% if @game=="LOL" 
+      <% if session[:game]=="LOL" 
           @lol_state = "";
           @valo_state = "unchosen";
-        elsif @game=="VALO"
+        else 
           @lol_state = "unchosen";
           @valo_state = "";
         end; %>
 
       <div>
-        <%= link_to home_path(game: "LOL") do%>
-          <button id="LOL-home" class="mini-choice-button <%= @lol_state %>" ></button>
-        <% end %>
-        <%= link_to home_path(game: "VALO") do%>
-          <button id="VALO-home" class="mini-choice-button <%= @valo_state %>"></button>
-        <% end %>
+
+        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button "+@lol_state %>
+  </div>
+ 
+        <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
+ 
+
       </div>
     <% end %>
 
@@ -59,7 +60,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     var redirectSpan = document.getElementById('logo').addEventListener('click', function() {
         // Redirect to home page
-        window.location.href = '/home?game=<%= @game %>';
+        window.location.href = '/home';
       });
   });
 </script>

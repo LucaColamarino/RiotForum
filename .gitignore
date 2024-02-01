@@ -1,6 +1,6 @@
-/tmp/*
+tmp/*
 db/*.sqlite3
-/log/*
+log/*
 /.bundle
 .DS_Store
-/storage/*
+storage/*

@@ -1,64 +1,15 @@
+
 <head>
+<%= stylesheet_link_tag "board", "data-turbo-track": "reload" %>
+
     <style>
-
-        .container-bacheca {
-            padding: 0;
-            margin: 0;
-            height:100vh;
-            
-            position: relative;
-            scroll-behavior: smooth;
-        }
-
+        <%if (session[:game]=="LOL") %>
         .sfondo-bacheca {
-            height: 85%;
-            width: 80%;
-            border-radius: 1.5em;
-            
-            position: absolute;
-            top:30%;
-            left:50%;
-            transform: translate(-50%, -30%);
-
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            row-gap: 15px;
-        
-            background-color: royalblue;
+                background-color: #4169e1;
         }
-
-        #titolo-bacheca {
-            width: 90%;
-        }
-
-        #titolo-bacheca > span {
-            font-weight: bold;
-            word-spacing: 10px;
-
-            flex-basis: 20%;
-        }
-
-        #bacheca {
-            border: 2px dotted black;
-
-            flex-basis: 80%;
-            width: 85%;
-
-            margin-bottom: 10px;
-
-            overflow-y: auto;
-            scroll-behavior: smooth;
-        }
-
-        .thread {
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-    }
-
+        <% end %>
     </style>
-</head> 
+</head>
 
 <body>
 
@@ -75,7 +26,7 @@
 
             <div id="bacheca">
                 <!-- annunci -->
-                <% for a in 1..20 do%>
+                <%= for a in 1..20 do%>
                 <div class="thread"> annuncio
                     </div>
                 <%end%>

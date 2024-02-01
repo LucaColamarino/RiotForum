@@ -99,7 +99,12 @@
   #LOL-home {
     background-image: url('/assets/LOL-bg.png');
   }
-
+  #LOL-button {
+    background-image: url('/assets/LOL-image.jpeg');
+  }
+  #VALO-button {
+    background-image: url('/assets/VALO-image.jpg');
+  }
   #VALO-home {
     background-image: url('/assets/VALO-bg.png');
   }

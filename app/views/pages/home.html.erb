@@ -6,8 +6,8 @@
 </head>
 
 <body>
-     <% if(@game=="LOL"); @parentclass="LOL-home" end %>
-     <% if(@game=="VALO"); @parentclass="VALO-home" end %>
+     <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
+     <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
     <div class="parent", id=<%=@parentclass%>>
 
 
@@ -15,7 +15,7 @@
         <!-- CREA TEAM, CERCA GIOCATORI -->
         <div class="team-section">
 
-            <img src="/assets/miniatura-<%= @game %>.png" width="45%" height="60%">
+            <img src="/assets/miniatura-<%= session[:game] %>.png" width="45%" height="60%">
 
             
             <div class="search">
@@ -27,16 +27,16 @@
             
 
             <%= link_to create_team_path do %>
-                <%if(@game=="LOL"); @team_btn_color = "btn-primary" end%>
-                <%if(@game=="VALO"); @team_btn_color = "btn-danger" end%>
+                <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
+                <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
                 <button id="team-btn" class="btn <%= @team_btn_color %>">Crea il tuo team!</button>
             <% end %>
         </div>
 
         <!-- BACHECA ANNUNCI -->
         <div class="board-section" style="background-color:<%= @color %>">
-            <%= if(@game=='LOL'); "ANNUNCI LOL" end%>
-            <%= if(@game=='VALO'); "ANNUNCI VALO" end%>
+            <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
+            <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
 
             
             <div class="annuncio-container">
@@ -50,12 +50,18 @@
                 </div>
                 <!-- Add more products as needed -->
             </div>
-            
-            <%= link_to board_path(game: "LOL") do %>
-                <%if(@game=="LOL"); @board_btn_color = "btn-dark" end%>
-                <%if(@game=="VALO"); @board_btn_color = "btn-light" end%>
-                <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <%if(session[:game] == 'LOL') %>
+            <%= link_to board_path do %>
+               <%@board_btn_color = "btn-dark" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
             <% end %>
+           <%elsif(session[:game] == 'VALO') %>
+            <%= link_to board_path do %>
+               <%@board_btn_color = "btn-light" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
+           <% end %>
+
 
         </div> 
 
@@ -76,6 +82,18 @@
                     <a href="">View Details</a>
                 </div>
                     <!-- Add more products as needed -->
+                    <!-- Aggiunto collegamento alla pagina news con parametro -->
+                    <%if(session[:game] == 'LOL') %>
+                     <%= link_to news_path do %>
+                        <% @board_btn_color = "btn-dark" %>
+                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                     <% end %>
+                    <%elsif(session[:game] == 'VALO') %>
+                     <%= link_to news_path do %>
+                        <%@board_btn_color = "btn-light" %>
+                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                     <% end %>
+                    <% end %>
                 
                 <%# 
                     <div class="thread-container">
