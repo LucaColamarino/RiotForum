@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
     def set_session
-        session[:game] = params[:value];
+        if (params[:value])
+            session[:game] = params[:value];
+        else
+            session[:game] = 'VALO'
+        end
         redirect_to home_path
     end
 end

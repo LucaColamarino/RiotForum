@@ -1,7 +1,7 @@
-<%if(@game=="LOL") %>
+<%if(session[:game]=="LOL")%>
  <p>news di lol</p>
- <h1><%= link_to 'torna indietro', home_path(game:'LOL')%></h1>
-<%elsif(@game=="VALO") %>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%else %>
  <p>news di valorant</p>
- <h1><%= link_to 'torna indietro', home_path(game:'VALO')%></h1>
-<% end %>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%end %>

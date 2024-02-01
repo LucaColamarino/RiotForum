@@ -2,13 +2,13 @@
 <head>
 <%= stylesheet_link_tag "board", "data-turbo-track": "reload" %>
 
- <style>
- <%if (@game=="LOL") %>
- .sfondo-bacheca {
-            background-color: #4169e1;
- }
- <% end %>
- </style>
+    <style>
+        <%if (session[:game]=="LOL") %>
+        .sfondo-bacheca {
+                background-color: #4169e1;
+        }
+        <% end %>
+    </style>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 
             <div id="bacheca">
                 <!-- annunci -->
-                <% for a in 1..20 do%>
+                <%= for a in 1..20 do%>
                 <div class="thread"> annuncio
                     </div>
                 <%end%>
