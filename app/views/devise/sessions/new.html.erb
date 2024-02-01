@@ -1,4 +1,9 @@
- <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+
+
+<div class="d-flex justify-content-center align-items-center vh-100 wrapper">
+  <div class="text-center card">
+    <!-- Contenuto del tuo div al centro -->
+ <%= stylesheet_link_tag "devise", "data-turbo-track": "reload" %>
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -15,7 +20,7 @@
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :Ricordami %>
     </div>
   <% end %>
 
@@ -26,11 +31,5 @@
 
 <%= render "devise/shared/links" %>
 
-
-<div class="container d-flex justify-content-center align-items-center vh-100">
-  <div class="text-center">
-    <!-- Contenuto del tuo div al centro -->
-    <h1>Il mio div al centro</h1>
-    <p>Contenuto del tuo div</p>
   </div>
 </div>

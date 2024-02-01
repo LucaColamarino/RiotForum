@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  root 'pages#scelta'
-
-  get 'home', to: 'pages#home'
-=======
   devise_for :users
-  root 'pages#home'
->>>>>>> 59817eccb985728f6489cd62254de3c4805170c5
+  root 'pages#scelta'
+  get 'home', to: 'pages#home'
   get 'profile', to: 'pages#profile'
   get 'board', to: 'pages#board'
   get 'create_team', to: 'pages#create_team'
