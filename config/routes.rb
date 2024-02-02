@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
+  
   root 'pages#scelta'
+  
   get 'home', to: 'pages#home'
   post '/set_session/:value', to: 'sessions#set_session', as: 'set_session'
+
   get 'profile', to: 'pages#profile'
+  get 'edit_profile', to: 'pages#edit_profile'
   get 'board', to: 'pages#board'
   get 'create_team', to: 'pages#create_team'
+  get 'your_team', to: 'pages#your_team'
   get 'settings', to: 'pages#settings'
   get 'news', to: 'pages#news'
   

@@ -70,3 +70,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+
+#AGGIUNTE
+#Figaro per settare variabili d'ambiente (ENV)
+gem "figaro"
