@@ -1,0 +1,102 @@
+<head>
+    <title> Profilo </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag "search_player", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class='container-searchedProfile'>
+        <div class="player-info">
+
+            <div class="icona">
+                <% #dopo sarà meglio mettere una funzione in riotgames o pagecontroller che restituisce il link %>
+                <% #con versione e id e lo mette in una variabile che sostituirà sto url intero  %>
+                <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@iconID.to_s+'.png', class:'img responsive',alt:'profile_icon' %>
+                <h1><%= params[:summonerName] %></h1>
+                Livello <%= @summoner_level %>
+            </div>
+
+            <div class="stats">
+                
+            </div>
+
+        </div>
+
+        <div class="barra-filtri btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Left</button>
+            <button type="button" class="btn btn-secondary">Middle</button>
+            <button type="button" class="btn btn-secondary">Right</button>
+        </div>
+
+        <div class="match-history">
+        <% for i in 0...@length do%> 
+            <% index = @searchedPlayer[i]%>
+            <% esito = @players[i][index][:win] == true ? "Vittoria" : "Sconfitta" %>
+            <% coloreEsito = esito == "Vittoria"? "rgb(121, 204, 142)" : "rgb(185, 110, 110)"%>
+
+            <div class="match">
+                <div class="matchTag">
+                    <span>
+                        <%= @matchData[i]["info"]["gameMode"] %>
+                        |
+                        quanto tempo fa
+                    </span>
+                </div>
+                <div class="inner">
+
+                    <div class="gameData" style="background-color:<%=coloreEsito%>">
+                        <span>
+                            <%= esito %>
+                        </span>
+                        <div class="divider"></div>
+                        <span>
+                            <%= @durata[i] %>
+                        </span>
+                    </div>
+
+                    <div class="playerData">
+                        <div class="playerIcon">
+
+                            <div class="champProfile">
+                                <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/champion/'+@players[i][index][:champion]+'.png', class:'champImg responsive',alt: @players[i][index][:champion] %>
+                            
+                                <div class="spells">
+                                    
+                                </div>
+                                <div class="runes">
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="inventory">
+                                inventario
+                            </div>
+
+                        </div>
+
+                        <div class="playerKit">
+                            <h3>
+                                <%= @players[i][index][:kills] %>/<%= @players[i][index][:deaths] %>/<%= @players[i][index][:assists] %>
+                            </h3>
+                            <h5>
+                                CS <%= @players[i][index][:cs] %>
+                            </h5>
+                        </div>
+
+                    </div>
+
+                    <div class="teamData">
+                        
+                    </div>
+
+                </div>
+            </div>
+        <%end%>
+        </div>
+    </div>
+
+    
+    
+</body>

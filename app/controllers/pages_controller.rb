@@ -10,41 +10,189 @@ class PagesController < ApplicationController
   def scelta
   end
 
-  def profile
-    if user_signed_in? && !current_user.username.present?
-      redirect_to edit_profile_path
-    end
+  def search_player
+    if params[:summonerName].present?
+      search_summoner_data = self.find_summoner(params[:summonerName])
+
+      if search_summoner_data[:code] == 200
+        @summoner = search_summoner_data[:body]
+
+        @summoner_name = @summoner["name"]
+        @summoner_level = @summoner["summonerLevel"]
+        @iconID = @summoner["profileIconId"]
+        @puuid = @summoner["puuid"]
+
+      end
+      #-------------------------------#
+      summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
+      if summoner_matchlist[:code] == 200
+        @matchlist = summoner_matchlist[:body]
+      else
+        flash[:alert] = 'Error in loading match history'
+      end
+      #-------------------------------#
+      @length = @matchlist.length
       
+      @matchData = Array.new(@length)
+      @durata = Array.new(@length)
+      @gameMode = Array.new(@length)
+      @participants = Array.new(@length)
+      @players = Array.new(@length)
+      @searchedPlayer = Array.new(@length)
+      for i in 0...@length do
+        @matchData[i] = self.getMatch(@matchlist[i])
+        if @matchData[i] != "error"  #cioè matchData=response.body
+          
+          #-----INFO GAME
+
+          @durata[i] = formattedTime(@matchData[i]["info"]["gameDuration"])
+          @gameMode[i] = @matchData[i]["info"]["gameMode"]
+
+          #-----INFO SINGOLI GIOCATORI
+
+          @players[i] = {}
+          
+          @participants[i] = @matchData[i]["info"]["participants"]  #player del singolo game
+          for j in 0...10 do #10 numero players
+            @players[i][j] = {
+              puuid: @participants[i][j]["puuid"],
+              champion: @participants[i][j]["championName"],
+              kills: @participants[i][j]["kills"],
+              deaths: @participants[i][j]["deaths"],
+              assists: @participants[i][j]["assists"],
+              win: @participants[i][j]["win"], #true/false
+              lane: @participants[i][j]["lane"],
+              cs: @participants[i][j]["totalMinionsKilled"] + @participants[i][j]["neutralMinionsKilled"],
+              team: @participants[i][j]["teamId"],
+              summonerName: @participants[i][j]["summonerName"]
+            }
+
+            if @players[i][j][:puuid] == @puuid
+              @searchedPlayer[i] = j
+            end
+
+          end
+
+
+
+        else
+          flash[:alert] = 'Error in loading match history'
+        end
+      end
+
+    else
+      redirect_to home_path
+    end
+  end
+
+  def profile
+    if user_signed_in?
+      if current_user.username.present?
+        
+        your_data = self.find_summoner(current_user.username)
+        if your_data[:code] == 200
+          @your_summoner = your_data[:body]
+
+          @your_summonerName = @your_summoner["name"]
+          @your_summonerLevel = @your_summoner["summonerLevel"]
+          @your_icon= @your_summoner["profileIconId"]
+          @your_puuid = @your_summoner["puuid"]
+        end
+
+      else
+        redirect_to edit_profile_path #aggiorna solo l'username
+      end
+    else
+      redirect_to sign_up_path #?
+    end
+
+=begin
+    if user_signed_in? && current_user.username.present?
+      @username_on = true
+      search_summoner_data = self.find_summoner(current_user.username)
+
+      if search_summoner_data[:code] == 200
+        @your_summoner = search_summoner_data[:body]
+
+        @your_summoner_name = @your_summoner["name"]
+        @your_summoner_level = @your_summoner["summonerLevel"]
+        @iconID = @your_summoner["profileIconId"]
+        @puuid = @your_summoner["puuid"]
+
+      end
+      #-------------------------------#
+      summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
+      if summoner_matchlist[:code] == 200
+        @matchlist = summoner_matchlist[:body]
+      else
+        flash[:alert] = 'Error in loading match history'
+      end
+      #-------------------------------#
+      @length = @matchlist.length
+      
+      @matchData = Array.new(@length)
+      @durata = Array.new(@length)
+      @gameMode = Array.new(@length)
+      @participants = Array.new(@length)
+      @players = Array.new(@length)
+      @you = Array.new(@length)
+      @allies = Array.new(@length)
+      for i in 0...@length do
+        @matchData[i] = self.getMatch(@matchlist[i])
+        if @matchData[i] != "error"  #cioè matchData=response.body
+          
+          #-----INFO GAME
+
+          @durata[i] = formattedTime(@matchData[i]["info"]["gameDuration"])
+          @gameMode[i] = @matchData[i]["info"]["gameMode"]
+
+          #-----INFO SINGOLI GIOCATORI
+
+          @players[i] = {}
+          
+          @participants[i] = @matchData[i]["info"]["participants"]  #player del singolo game
+          for j in 0...10 do #10 numero players
+            @players[i][j] = {
+              puuid: @participants[i][j]["puuid"],
+              champion: @participants[i][j]["championName"],
+              kills: @participants[i][j]["kills"],
+              deaths: @participants[i][j]["deaths"],
+              assists: @participants[i][j]["assists"],
+              win: @participants[i][j]["win"], #true/false
+              lane: @participants[i][j]["lane"],
+              cs: @participants[i][j]["totalMinionsKilled"] + @participants[i][j]["neutralMinionsKilled"],
+              team: @participants[i][j]["teamId"],
+              summonerName: @participants[i][j]["summonerName"]
+            }
+
+            if @players[i][j][:puuid] == @puuid
+              @you[i] = j
+            end
+
+          end
+
+
+
+        else
+          flash[:alert] = 'Error in loading match history'
+        end
+      end
+
+    else
+      @username_on = false
+      redirect_to edit_profile_path
+
+    end
+=end      
   end
 
   def edit_profile 
-
-    #messo qua in edit_profile per prova, poi penso che andrà usato find_summoner(che fa la API call) e questo solo lo invoca
-    if params[:summoner_name].present?
-      search_summoner_data = RiotGamesApi.find_summoner(params[:summoner_name])
-      case search_summoner_data[:code]
-      when 200
-
-        @summoner_data = search_summoner_data[:body]
-
-        @summoner_name = @summoner_data["name"]
-        @summoner_level = @summoner_data["summonerLevel"]
-
-        render 'profile'
-
-      when 404 #questi ancora non funzionano.L'idea è notificare dell'errore e ridargli la stessa pag con la barra di ricerca per contiuare
-        
-        flash[:error] = 'Evocatore non trovato. Please enter another summoner name.'
-        redirect_to edit_profile_path
-
-      else
-        
-        flash.alert = 'Errore. Riprova tra qualche minuto'
-        redirect_to root_path
-
-      end
+    #messo qua in edit_profile per prova, poi penso che andrà usato find_summoner(giù)che fa la API call e questo solo lo invoca
+    
+    if params['summoner_name'].present?
+      params['summoner_name'] = "ayo"
+      render 'profile'
     end
-
   end
 
   def board
@@ -67,7 +215,24 @@ class PagesController < ApplicationController
 
   #----------------- API METHODS ---------------#
 
-  def find_summoner
+  def find_summoner(summoner)
+    return RiotGamesApi.find_summoner(summoner)
+  end
+
+  def getMatch(matchId)
+    match = RiotGamesApi.getMatch(matchId)
+    if match[:code] == 200
+      return match[:body]
+    else
+      return "error"
+    end
+  end
+
+  def formattedTime(all_seconds)
+    hours = all_seconds / 3600
+    minutes = all_seconds / 60
+    seconds = all_seconds - (hours*3600) - (minutes*60)
+    return "#{hours}:#{minutes}:#{seconds}"
   end
 
 end

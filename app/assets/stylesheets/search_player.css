@@ -1,0 +1,221 @@
+.container-searchedProfile {
+    background-image: url('/assets/profile-image.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+
+   
+
+    display:flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    /*
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 30px; 
+    */
+    
+        
+}
+
+.container-searchedProfile > div {
+    border-radius: 1em;
+    width: 80%;
+}
+
+.player-info {
+    /*grid-area: 1 / 1 / 5 / 8; */
+
+    display:flex;
+    flex-direction: row;
+
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    background-color:white;
+    border:5px ridge white;
+    
+}
+
+.icona {
+    /*grid-area: 1 / 1 / 5 / 8; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex:1;
+
+    border-right: 5px groove white;
+
+}
+
+.icona > .img {
+   
+    border: 5px inset goldenrod;
+    border-radius: 2em;
+    margin: 2em;
+    width: 50%;
+    height: 50%;
+}
+
+.stats {
+    
+    flex:2;
+    color: black;
+
+}
+
+.barra-filtri {
+    /*grid-area: 5 / 1 / 6 / 8; */
+
+
+    background-color:cornflowerblue;
+}
+
+.match-history {
+    /*grid-area: 6 / 2 / 9 / 7; */
+
+    min-height: 4em;
+
+    margin-top: 1em;
+    margin-bottom: 4em;
+
+
+    background-color:white;
+    border:5px ridge white;
+}
+
+    .match {
+        height:9em;
+        margin-top: 1em;
+
+        
+
+        display: flex;
+        flex-direction: column;
+    }
+
+        .match > .matchTag {
+            min-width:100%;
+            padding-left: 1em;
+
+            background-color: brown;
+        }
+
+        .match > .inner {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            height: 100%;
+            
+        }
+
+            .inner > div {
+                border: 2px solid black;
+
+            }
+
+            .inner > .gameData {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+                width: 20%;
+            }
+
+                .gameData > .divider {
+                    width: 80%;
+                    border: 2px inset lightslategray;
+                }
+
+
+            .inner > .playerData {
+                flex-grow: 2;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                
+                width: 50%;
+            }   
+                .playerData > * {
+                    height: 100%;
+                }
+
+                .playerData > .playerIcon {
+                    flex-grow: 1;
+
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 2em;
+
+                }
+
+                    .playerIcon > .champProfile {
+                        flex-grow: 2;
+
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        border: 2px solid red;
+                    }
+
+                        .champProfile .champImg {
+                            width:64px;
+                            height:64px;
+                            border:3px groove goldenrod;
+                            width:50%;
+                        }
+
+                        .champProfile > div {
+                            display:flex;
+                            flex-direction:column;
+                            height:100%;
+
+                            border: 3px dashed black;
+                            width:50%;
+                        }
+
+                    .playerIcon > .inventory {
+                        flex-grow: 1;
+                        margin-bottom: 5px;
+
+                        border:3px dashed brown;
+                    }
+
+                .playerData > .playerKit {
+                    flex-grow: 2;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+
+            .inner > .teamData {
+                flex-grow: 3;
+
+                width: 30%;
+
+                display:flex;
+                flex-direction: row;
+            }
+
+                    
+
+

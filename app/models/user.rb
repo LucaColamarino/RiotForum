@@ -6,8 +6,9 @@ class User < ApplicationRecord
 
   enum role: [:user,:moderator]
 
-  attr_accessor :riot_user, :riot_tag, :username
-  
+  #attr_accessor :riot_user, :riot_tag
+  #per ora non servono
+
   #---------------------------#
   before_create :generate_uid
 
