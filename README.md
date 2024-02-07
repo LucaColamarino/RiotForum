@@ -47,3 +47,11 @@ application.yml deve stare in .gitignore
 -------------------------------------
 -------------------------------------
 
+------------------------------------------------
+7-2-2024
+aristotele1 "pagina giocatore lol cercato, bozza profilo, funzione cambio username del profilo" 
+
+- nelle match history mancano le immagini di rune,spell,inventario perchè non so come metterle (c'è un pacchetto, ddragon qualcosa, che puoi scaricare, ma sulla mia vm pesa troppo ig). Manca anche l'overview dei due team a destra.
+
+- sia nel giocatore cercato che profilo mancano rank e stats generali. La api c'è e funziona, è solo che non so come accedere agli elementi di sto Set[LeagueEntryDTO]
+
