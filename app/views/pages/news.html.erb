@@ -1,5 +1,53 @@
 <%if(session[:game]=="LOL")%>
- <p>news di lol</p>
+<head>
+<%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class="container-bacheca-news">
+        <div class="sfondo-bacheca-news">
+
+            <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+                <span>
+                    NOTIZIE
+                    <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                </span>
+            </div>
+
+            <div id="bacheca-news">
+                <%= for a in 1..20 do%>
+                <div class="thread"> Notizia
+                    </div>
+                <%end%>
+            </div>
+
+        </div>
+    </div>
+    <div class='containerRotation'>
+     <div class='sfondoNotizie'>
+       <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+          <span>
+              ROTAZIONE CAMPIONI
+          </span>
+        </div>
+
+        <div class='Campioni'>
+         <%for i in 1..17 do%>
+          <div class="boxCampioneIcona">
+          </div>
+        <%end%>
+
+          
+
+        </div>
+     </div>
+        
+    </div>
+    
+
+</body>
  <h1><%= link_to 'torna indietro', home_path%></h1>
 <%else %>
  <p>news di valorant</p>
