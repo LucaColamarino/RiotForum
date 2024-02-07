@@ -4,7 +4,15 @@ class PagesController < ApplicationController
   def home
     @game = session[:game];
     @color = @game == "LOL"? "#483D8B" : "#dc3545 ";
-    #credo vada usata la sessione per mantenere l'info sul gioco scelto
+    
+    url = URI.parse('https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations');
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = true if url.scheme == 'https'
+
+    request = Net::HTTP::Get.new(url)
+    request['X-Riot-Token'] = ENV['RIOT_API_KEY']
+
+    @rotation_champs = JSON.parse(http.request(request).body)['freeChampionIds']
   end
 
   def scelta

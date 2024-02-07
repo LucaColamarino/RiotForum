@@ -68,6 +68,17 @@
         <div class="news-section center-block" style="background-color:<%= @color %>">
 
             <h1> ----- NEWS ----- </h1>
+            
+            <% if session[:game] == 'LOL' %>
+                <div class="champ-rotation">
+                <p>
+                    <% for champid in @rotation_champs do %>
+
+                            <%= champid.to_s + '.jpg' %>
+                    <% end %>
+                </p>
+                </div>
+            <% end %>
 
             <div class="news-container">
                 <div class="news">
