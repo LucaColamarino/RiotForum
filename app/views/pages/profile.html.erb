@@ -6,14 +6,16 @@
 <body>
     <div class="container-profile">
         <div class="RF-account">
+            <div class="header-RF">
+                Il tuo account
+            </div>
             <div>
-                username 
+                username: <u><%= current_user.username%></u>
                 <%= link_to edit_user_registration_path do %>
-                    <button class="btn btn-dark">Cambia profilo</button>
+                    <button class="btn btn-danger">Cambia profilo</button>
                 <%end%>
             </div>
-            <div> email </div>
-            <div> password </div>
+            <div> email: <%= current_user.email%></div>
         </div>
 
         <div class="LOL-account">
@@ -25,6 +27,17 @@
                 </span>
             </div>
             </div class="info LOL">
+                <%if !@inactive %>
+                    tipo queue: <%=#@queueType%>
+                    rank <%=#@rank%>
+                    tier <%=#@tier%>
+                    wins <%=#@wins%>
+                    losses <%=#@losses%>
+
+
+                <%else%>
+                    L'evocatore non ha una carriera recente in classificata
+                <%end%>                
             </div>
         </div>
 

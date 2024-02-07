@@ -95,8 +95,26 @@ class PagesController < ApplicationController
 
           @your_summonerName = @your_summoner["name"]
           @your_summonerLevel = @your_summoner["summonerLevel"]
+          @your_summonerID = @your_summoner["id"]
           @your_icon= @your_summoner["profileIconId"]
           @your_puuid = @your_summoner["puuid"]
+        end
+
+        @your_stats = self.getPlayerStats(@your_summonerID)
+        if @your_stats != "error"
+          if @your_stats.empty?
+            @inactive = true
+          else
+            @inactive = false
+=begin
+            @queueType = @your_stats["queueType"]
+            @tier = @your_stats["tier"]
+            @rank = @your_stats["rank"]
+            @wins = @your_stats["wins"]
+            @losses = @your_stats["losses"]
+=end
+          end
+          
         end
 
       else
@@ -226,6 +244,11 @@ class PagesController < ApplicationController
     else
       return "error"
     end
+  end
+
+  def getPlayerStats(summonerID)
+    stats = RiotGamesApi.getPlayerStats(summonerID)
+    return stats[:body]
   end
 
   def formattedTime(all_seconds)
