@@ -22,7 +22,7 @@
                     </div>
                 <%end%>
             </div>
-
+ 
         </div>
     </div>
     <div class='containerRotation'>
@@ -34,8 +34,10 @@
         </div>
 
         <div class='Campioni'>
-         <%for i in 1..17 do%>
+         <%for champid in @rotation_champs do %>
           <div class="boxCampioneIcona">
+ 
+          <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
           </div>
         <%end%>
 
