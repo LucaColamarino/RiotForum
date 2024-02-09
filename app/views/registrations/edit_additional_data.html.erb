@@ -1,0 +1,10 @@
+#<%= form_for(current_user, url: registration_path(current_user), method: :put) do |f| %>
+  <div class="field">
+    <%= f.label :additional_data, "Ulteriori dati" %>
+    <%= f.text_field :additional_data %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Salva ulteriori dati" %>
+  </div>
+<% end %>

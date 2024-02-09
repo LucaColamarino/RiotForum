@@ -105,3 +105,14 @@
   #VALO-home {
     background-image: url('/assets/VALO-bg.png');
   }
+.google-button{
+  padding: 10px 00px;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: url('/assets/Google_Icon_trans.png') no-repeat center center;
+  background-size: cover; /* Opzionale: regola la dimensione dell'immagine */
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px; 
+}
