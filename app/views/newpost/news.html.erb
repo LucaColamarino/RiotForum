@@ -17,7 +17,7 @@
             </div>
 
             <div id="bacheca-news">
-                <% Newpost.all.each do |newpost|%>
+                <% @newpost.each do |newpost|%>
                 <div class="thread"> <%= newpost.title%>
                     </div>
                 <%end%>

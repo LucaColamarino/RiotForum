@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   get 'create_team', to: 'pages#create_team'
   get 'your_team', to: 'pages#your_team'
   get 'settings', to: 'pages#settings'
-  get 'news', to: 'pages#news'
-  get 'news/newpost', to: 'newpost#index'
+  get 'news', to: 'newpost#news'
+  get 'news/p', to: 'newpost#postnotizia'
+
+
   
 
 
