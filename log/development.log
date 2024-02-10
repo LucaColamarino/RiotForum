@@ -42494,3 +42494,1880 @@ Processing by NewpostController#postnotizia as HTML
 Completed 200 OK in 541ms (Views: 424.2ms | ActiveRecord: 3.3ms | Allocations: 62718)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-10 14:40:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240210000334_create_newposts.rb
+
+
+):
+  
+activerecord (7.1.3) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2024-02-10 14:40:29 +0100
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNewposts (20240210000334)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "newposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240210000334') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-10 14:40:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 34162.5ms | Allocations: 72830)
+  Rendered layouts/_header.html.erb (Duration: 10.4ms | Allocations: 723)
+  Rendered layouts/_footer.html.erb (Duration: 3.6ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 34310.5ms | Allocations: 89073)
+Completed 200 OK in 34427ms (Views: 34362.0ms | ActiveRecord: 0.0ms | Allocations: 90932)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-02-10 14:43:04 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 167.0ms | Allocations: 2491)
+  Rendered layouts/_header.html.erb (Duration: 9.7ms | Allocations: 601)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 208.9ms | Allocations: 18497)
+Completed 200 OK in 214ms (Views: 212.8ms | ActiveRecord: 0.0ms | Allocations: 19421)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-10 14:44:23 +0100
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 17.9ms | Allocations: 1219)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 116)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 2746)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 2993)
+
+
+Started POST "/set_session/LOL" for 127.0.0.1 at 2024-02-10 14:44:29 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 536)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 14:44:29 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.4ms | Allocations: 2878)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2969)
+Completed 500 Internal Server Error in 540ms (ActiveRecord: 0.0ms | Allocations: 4396)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    72:             <% if session[:game] == 'LOL' %>
+    73:                 <div class="champ-rotation">
+    74:                 <p>
+    75:                     <% for champid in @rotation_champs do %>
+    76: 
+    77:                         <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+    78:                     <% end %>
+  
+app/views/pages/home.html.erb:75
+Started GET "/" for 127.0.0.1 at 2024-02-10 14:48:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#scelta as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/scelta.html.erb within layouts/application
+  Rendered pages/scelta.html.erb within layouts/application (Duration: 155.3ms | Allocations: 29748)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 740)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 221.4ms | Allocations: 46153)
+Completed 200 OK in 248ms (Views: 230.7ms | ActiveRecord: 0.0ms | Allocations: 50480)
+
+
+Started POST "/set_session/LOL" for 127.0.0.1 at 2024-02-10 14:48:31 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 533)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 14:48:31 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 93.3ms | Allocations: 13241)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | Allocations: 15083)
+Completed 200 OK in 392ms (Views: 107.5ms | ActiveRecord: 0.0ms | Allocations: 16750)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 14:48:33 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 14:48:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:48:43 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 109.8ms | Allocations: 13198)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 363)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 123.0ms | Allocations: 15008)
+Completed 200 OK in 511ms (Views: 116.9ms | ActiveRecord: 10.0ms | Allocations: 17609)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 14:48:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 14:48:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:52:01 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 193.4ms | Allocations: 31949)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 266.7ms | Allocations: 53441)
+Completed 200 OK in 574ms (Views: 273.3ms | ActiveRecord: 3.7ms | Allocations: 55435)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:52:05 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 45.2ms | Allocations: 12177)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 13949)
+Completed 200 OK in 275ms (Views: 60.2ms | ActiveRecord: 0.3ms | Allocations: 14882)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:52:22 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.9ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 113.8ms | Allocations: 13425)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 173.6ms | Allocations: 19815)
+Completed 200 OK in 378ms (Views: 177.6ms | ActiveRecord: 0.4ms | Allocations: 20763)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:52:42 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.6ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 130.4ms | Allocations: 13025)
+  Rendered layouts/_header.html.erb (Duration: 5.5ms | Allocations: 857)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 216.5ms | Allocations: 29355)
+Completed 200 OK in 450ms (Views: 207.9ms | ActiveRecord: 19.5ms | Allocations: 31331)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:52:59 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 51.9ms | Allocations: 12065)
+  Rendered layouts/_header.html.erb (Duration: 7.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 13839)
+Completed 200 OK in 264ms (Views: 82.6ms | ActiveRecord: 0.3ms | Allocations: 14767)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:55:32 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 91.9ms | Allocations: 13224)
+  Rendered layouts/_header.html.erb (Duration: 6.5ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 3.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 147.2ms | Allocations: 29551)
+Completed 200 OK in 470ms (Views: 137.5ms | ActiveRecord: 13.2ms | Allocations: 31545)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:56:02 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 87.2ms | Allocations: 13414)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 126.9ms | Allocations: 19984)
+Completed 200 OK in 794ms (Views: 121.9ms | ActiveRecord: 6.6ms | Allocations: 20910)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:57:18 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 85.9ms | Allocations: 13597)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 136.3ms | Allocations: 20181)
+Completed 200 OK in 386ms (Views: 141.3ms | ActiveRecord: 1.8ms | Allocations: 21126)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:57:52 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.5ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 33.6ms | Allocations: 13400)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 19956)
+Completed 200 OK in 832ms (Views: 55.7ms | ActiveRecord: 0.1ms | Allocations: 20915)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 14:58:55 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 35.7ms | Allocations: 14450)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 35587)
+Completed 200 OK in 309ms (Views: 77.9ms | ActiveRecord: 3.1ms | Allocations: 37565)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:00:51 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 441.0ms | Allocations: 14455)
+  Rendered layouts/_header.html.erb (Duration: 15.4ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 1827.2ms | Allocations: 35582)
+Completed 200 OK in 2306ms (Views: 1841.5ms | ActiveRecord: 9.9ms | Allocations: 37575)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:02:08 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 331.5ms | Allocations: 13563)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 525.3ms | Allocations: 20142)
+Completed 200 OK in 793ms (Views: 532.1ms | ActiveRecord: 0.2ms | Allocations: 21084)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:05:55 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 256.7ms | Allocations: 13507)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 308.3ms | Allocations: 20084)
+Completed 200 OK in 599ms (Views: 312.1ms | ActiveRecord: 0.4ms | Allocations: 21031)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:07:46 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 1317.0ms | Allocations: 14405)
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 856)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 2136.4ms | Allocations: 35554)
+Completed 200 OK in 4052ms (Views: 2335.8ms | ActiveRecord: 7.4ms | Allocations: 37555)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:10:00 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  Rendered newpost/news.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1349)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 1449)
+Completed 500 Internal Server Error in 1340ms (ActiveRecord: 0.0ms | Allocations: 3458)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%if(session[:game]=="LOL")%>
+<head>
+<%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class="container-bacheca-news">
+        <div class="sfondo-bacheca-news">
+
+            <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+                <span>
+                    NOTIZIE
+                    <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                </span>
+            </div>
+
+            <div id="bacheca-news">
+                <% @newpost.each do |newpost|%>
+                <div class="thread"> <%= newpost.title%>
+                    </div>
+                <%end%>
+            </div>
+ 
+        </div>
+    
+        <div class='containerRotation'>
+        <div class='sfondoNotizie'>
+            <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+            <span>
+                ROTAZIONE CAMPIONI
+            </span>
+            </div>
+
+            <div class='Campioni'>
+            <%for champid in @rotation_champs do %>
+            <div class="boxCampioneIcona">
+    
+            <%= image_tag "champions/"+champid.to_s+".png", width:'64px',height:'64px',class:'champImg' %>
+            </div>
+            <%end%>
+
+            
+
+            </div>
+        </div>
+            
+        </div>
+   </div>
+
+</body>
+):
+1:    <%if(session[:game]=="LOL")%>
+2:    <head>
+3:    <%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+4:    </head>
+5:    
+6:    <body>
+7:    
+8:        <div class="container-bacheca-news">
+9:            <div class="sfondo-bacheca-news">
+10:    
+11:                <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+12:                    <span>
+13:                        NOTIZIE
+14:                        <i class="fa fa-refresh" style="font-size:24px"></i>
+15:                        <!-- va implementato il refresh che aggiorni la bacheca -->
+16:                    </span>
+17:                </div>
+18:    
+19:                <div id="bacheca-news">
+20:                    <% @newpost.each do |newpost|%>
+21:                    <div class="thread"> <%= newpost.title%>
+22:                        </div>
+23:                    <%end%>
+24:                </div>
+25:     
+26:            </div>
+27:        
+28:            <div class='containerRotation'>
+29:            <div class='sfondoNotizie'>
+30:                <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+31:                <span>
+32:                    ROTAZIONE CAMPIONI
+33:                </span>
+34:                </div>
+35:    
+36:                <div class='Campioni'>
+37:                <%for champid in @rotation_champs do %>
+38:                <div class="boxCampioneIcona">
+39:        
+40:                <%= image_tag "champions/"+champid.to_s+".png", width:'64px',height:'64px',class:'champImg' %>
+41:                </div>
+42:                <%end%>
+43:    
+44:                
+45:    
+46:                </div>
+47:            </div>
+48:                
+49:            </div>
+50:       </div>
+51:    
+52:    </body>
+  
+app/views/newpost/news.html.erb:54: syntax error, unexpected end-of-input
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:10:26 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 396.0ms | Allocations: 14449)
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 518.6ms | Allocations: 35570)
+Completed 200 OK in 750ms (Views: 506.6ms | ActiveRecord: 24.3ms | Allocations: 37556)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:11:08 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 266.0ms | Allocations: 13580)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 417.8ms | Allocations: 20167)
+Completed 200 OK in 892ms (Views: 419.9ms | ActiveRecord: 0.2ms | Allocations: 21128)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:12:02 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 113.8ms | Allocations: 13438)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 289.4ms | Allocations: 20001)
+Completed 200 OK in 480ms (Views: 291.6ms | ActiveRecord: 0.4ms | Allocations: 20956)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:12:39 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 320.9ms | Allocations: 13512)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 698.3ms | Allocations: 20100)
+Completed 200 OK in 1018ms (Views: 698.7ms | ActiveRecord: 1.0ms | Allocations: 21030)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:13:40 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 100.6ms | Allocations: 14398)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 856)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 288.3ms | Allocations: 35599)
+Completed 200 OK in 555ms (Views: 286.5ms | ActiveRecord: 5.5ms | Allocations: 37592)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:14:25 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 230.9ms | Allocations: 13563)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 310.8ms | Allocations: 20140)
+Completed 200 OK in 621ms (Views: 312.2ms | ActiveRecord: 0.2ms | Allocations: 21100)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:14:40 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 120.8ms | Allocations: 13400)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 174.8ms | Allocations: 19956)
+Completed 200 OK in 408ms (Views: 177.0ms | ActiveRecord: 0.2ms | Allocations: 20898)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:15:33 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 115.4ms | Allocations: 14432)
+  Rendered layouts/_header.html.erb (Duration: 10.1ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 173.2ms | Allocations: 35558)
+Completed 200 OK in 482ms (Views: 170.6ms | ActiveRecord: 6.0ms | Allocations: 37549)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:15:50 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 111.8ms | Allocations: 13491)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 150.9ms | Allocations: 20065)
+Completed 200 OK in 365ms (Views: 151.5ms | ActiveRecord: 0.4ms | Allocations: 20998)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:16:52 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 75.6ms | Allocations: 13423)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 171.8ms | Allocations: 19973)
+Completed 200 OK in 503ms (Views: 173.1ms | ActiveRecord: 0.2ms | Allocations: 20923)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:17:02 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 112.8ms | Allocations: 13620)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 142.3ms | Allocations: 20214)
+Completed 200 OK in 360ms (Views: 143.9ms | ActiveRecord: 0.2ms | Allocations: 21175)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:17:18 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 115.3ms | Allocations: 13498)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 169.3ms | Allocations: 20054)
+Completed 200 OK in 349ms (Views: 172.1ms | ActiveRecord: 0.2ms | Allocations: 21015)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:17:31 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 181.3ms | Allocations: 13437)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 227.5ms | Allocations: 20011)
+Completed 200 OK in 413ms (Views: 230.2ms | ActiveRecord: 0.2ms | Allocations: 20939)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:17:42 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 31.0ms | Allocations: 12348)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 14124)
+Completed 200 OK in 723ms (Views: 40.3ms | ActiveRecord: 0.2ms | Allocations: 15086)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:17:58 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 216.2ms | Allocations: 13395)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 285.3ms | Allocations: 19958)
+Completed 200 OK in 577ms (Views: 287.2ms | ActiveRecord: 0.2ms | Allocations: 20888)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:18:30 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 132.2ms | Allocations: 13495)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 197.3ms | Allocations: 20081)
+Completed 200 OK in 941ms (Views: 204.4ms | ActiveRecord: 0.2ms | Allocations: 21008)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:18:53 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 131.5ms | Allocations: 13594)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 209.2ms | Allocations: 20150)
+Completed 200 OK in 909ms (Views: 224.9ms | ActiveRecord: 1.6ms | Allocations: 21116)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:19:25 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 44.4ms | Allocations: 13185)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 29512)
+Completed 200 OK in 370ms (Views: 62.4ms | ActiveRecord: 13.4ms | Allocations: 31509)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:19:51 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 104.2ms | Allocations: 13457)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 164.9ms | Allocations: 20020)
+Completed 200 OK in 536ms (Views: 163.7ms | ActiveRecord: 2.4ms | Allocations: 20969)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:20:17 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 262.8ms | Allocations: 13596)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 348.4ms | Allocations: 20197)
+Completed 200 OK in 559ms (Views: 351.3ms | ActiveRecord: 2.1ms | Allocations: 21139)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:21:06 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 34.5ms | Allocations: 13166)
+  Rendered layouts/_header.html.erb (Duration: 9.0ms | Allocations: 856)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 29552)
+Completed 200 OK in 348ms (Views: 69.0ms | ActiveRecord: 3.3ms | Allocations: 31536)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:21:38 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:21
+  Rendered newpost/news.html.erb within layouts/application (Duration: 65.3ms | Allocations: 13204)
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 101.0ms | Allocations: 29346)
+Completed 200 OK in 300ms (Views: 100.3ms | ActiveRecord: 4.4ms | Allocations: 31324)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:22:01 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 158.2ms | Allocations: 14440)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 856)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 254.9ms | Allocations: 35564)
+Completed 200 OK in 2038ms (Views: 257.3ms | ActiveRecord: 5.0ms | Allocations: 37560)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:22:44 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 114.5ms | Allocations: 13495)
+  Rendered layouts/_header.html.erb (Duration: 7.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 143.2ms | Allocations: 20075)
+Completed 200 OK in 439ms (Views: 144.6ms | ActiveRecord: 0.2ms | Allocations: 21031)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:23:23 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 45.9ms | Allocations: 13093)
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 886)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 29453)
+Completed 200 OK in 302ms (Views: 83.7ms | ActiveRecord: 4.2ms | Allocations: 31447)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:24:04 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 85.3ms | Allocations: 13396)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 137.0ms | Allocations: 19972)
+Completed 200 OK in 534ms (Views: 138.7ms | ActiveRecord: 0.2ms | Allocations: 20924)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:25:12 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 165.7ms | Allocations: 13523)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 215.1ms | Allocations: 20122)
+Completed 200 OK in 495ms (Views: 216.1ms | ActiveRecord: 0.2ms | Allocations: 21064)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:25:22 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 68.6ms | Allocations: 13550)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 20119)
+Completed 200 OK in 784ms (Views: 118.7ms | ActiveRecord: 0.2ms | Allocations: 21066)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:25:48 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 37.8ms | Allocations: 12177)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 13964)
+Completed 200 OK in 699ms (Views: 46.9ms | ActiveRecord: 0.2ms | Allocations: 14917)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:26:10 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 113.1ms | Allocations: 13379)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 163.8ms | Allocations: 19948)
+Completed 200 OK in 368ms (Views: 165.0ms | ActiveRecord: 0.3ms | Allocations: 20892)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:26:19 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 102.0ms | Allocations: 13575)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 130.9ms | Allocations: 20181)
+Completed 200 OK in 561ms (Views: 132.6ms | ActiveRecord: 0.3ms | Allocations: 21124)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:26:36 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 108.3ms | Allocations: 13401)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 200.3ms | Allocations: 19970)
+Completed 200 OK in 404ms (Views: 202.1ms | ActiveRecord: 0.3ms | Allocations: 20911)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:26:44 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 82.2ms | Allocations: 13397)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 119.9ms | Allocations: 19975)
+Completed 200 OK in 329ms (Views: 122.0ms | ActiveRecord: 0.4ms | Allocations: 20905)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:26:54 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 139.7ms | Allocations: 13466)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 3.9ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 220.3ms | Allocations: 20046)
+Completed 200 OK in 423ms (Views: 222.9ms | ActiveRecord: 0.3ms | Allocations: 20991)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:27:06 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.6ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 124.8ms | Allocations: 13410)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 165.3ms | Allocations: 19986)
+Completed 200 OK in 367ms (Views: 165.7ms | ActiveRecord: 0.6ms | Allocations: 20933)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:27:30 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 117.7ms | Allocations: 13458)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 175.4ms | Allocations: 20050)
+Completed 200 OK in 455ms (Views: 176.2ms | ActiveRecord: 0.7ms | Allocations: 20979)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:27:56 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 85.5ms | Allocations: 12705)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 362)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 106.8ms | Allocations: 14497)
+Completed 200 OK in 372ms (Views: 112.1ms | ActiveRecord: 0.0ms | Allocations: 15872)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:27:57 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:27:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:30:02 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 34.6ms | Allocations: 12831)
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 858)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 85.0ms | Allocations: 29163)
+Completed 200 OK in 349ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 30994)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:30:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:30:18 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.6ms | Allocations: 12831)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | Allocations: 29158)
+Completed 200 OK in 255ms (Views: 70.6ms | ActiveRecord: 0.0ms | Allocations: 30965)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:30:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:31:51 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 147.7ms | Allocations: 14241)
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 234.0ms | Allocations: 35356)
+Completed 200 OK in 5479ms (Views: 241.5ms | ActiveRecord: 0.0ms | Allocations: 37184)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:31:57 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:31:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:32:12 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 108.1ms | Allocations: 13225)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 19800)
+Completed 200 OK in 370ms (Views: 159.7ms | ActiveRecord: 0.0ms | Allocations: 20935)
+
+
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:32:12 +0100
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:32:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:32:46 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 42.6ms | Allocations: 12829)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 77.9ms | Allocations: 29157)
+Completed 200 OK in 262ms (Views: 81.5ms | ActiveRecord: 0.0ms | Allocations: 30965)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:32:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:32:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:33:15 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 88.4ms | Allocations: 11880)
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | Allocations: 13668)
+Completed 200 OK in 434ms (Views: 103.0ms | ActiveRecord: 0.0ms | Allocations: 14800)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:33:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:33:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:33:37 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 157.5ms | Allocations: 11956)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 175.9ms | Allocations: 13745)
+Completed 200 OK in 394ms (Views: 178.1ms | ActiveRecord: 0.0ms | Allocations: 14972)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:33:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:33:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:37:14 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 107.5ms | Allocations: 14228)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 153.5ms | Allocations: 35351)
+Completed 200 OK in 1174ms (Views: 157.2ms | ActiveRecord: 0.0ms | Allocations: 37173)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:37:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:37:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:37:40 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 130.6ms | Allocations: 13229)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 189.5ms | Allocations: 19797)
+Completed 200 OK in 386ms (Views: 192.7ms | ActiveRecord: 0.0ms | Allocations: 20942)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:37:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:37:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:38:17 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 80.6ms | Allocations: 13239)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 130.6ms | Allocations: 19807)
+Completed 200 OK in 412ms (Views: 131.7ms | ActiveRecord: 0.0ms | Allocations: 20946)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:38:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:38:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:38:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 101.9ms | Allocations: 13248)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 139.1ms | Allocations: 19823)
+Completed 200 OK in 318ms (Views: 143.4ms | ActiveRecord: 0.0ms | Allocations: 20950)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:38:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:38:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:39:00 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 98.2ms | Allocations: 13255)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 141.5ms | Allocations: 19834)
+Completed 200 OK in 313ms (Views: 142.6ms | ActiveRecord: 0.0ms | Allocations: 20941)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:39:01 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:39:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:39:33 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 117.5ms | Allocations: 13254)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 160.4ms | Allocations: 19832)
+Completed 200 OK in 464ms (Views: 162.2ms | ActiveRecord: 0.0ms | Allocations: 20977)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:39:33 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:39:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:40:15 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 130.7ms | Allocations: 13236)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 175.6ms | Allocations: 19806)
+Completed 200 OK in 385ms (Views: 180.6ms | ActiveRecord: 0.0ms | Allocations: 20933)
+
+
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:40:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:40:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:41:00 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 162.5ms | Allocations: 13226)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 202.5ms | Allocations: 19802)
+Completed 200 OK in 1196ms (Views: 204.2ms | ActiveRecord: 0.0ms | Allocations: 20926)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:41:01 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:41:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:41:23 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 91.6ms | Allocations: 13234)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 160.8ms | Allocations: 19802)
+Completed 200 OK in 363ms (Views: 162.6ms | ActiveRecord: 0.0ms | Allocations: 20921)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:41:23 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:41:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:41:35 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 78.5ms | Allocations: 13242)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 19817)
+Completed 200 OK in 323ms (Views: 112.5ms | ActiveRecord: 0.0ms | Allocations: 20946)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:41:35 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:41:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:41:48 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 80.6ms | Allocations: 13249)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 108.8ms | Allocations: 19829)
+Completed 200 OK in 645ms (Views: 113.9ms | ActiveRecord: 0.0ms | Allocations: 20972)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:41:49 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:41:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:42:14 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 84.4ms | Allocations: 13234)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 128.3ms | Allocations: 19816)
+Completed 200 OK in 425ms (Views: 131.4ms | ActiveRecord: 0.0ms | Allocations: 20957)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:42:15 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:42:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:42:37 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 115.1ms | Allocations: 13242)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 172.8ms | Allocations: 19837)
+Completed 200 OK in 356ms (Views: 174.3ms | ActiveRecord: 0.0ms | Allocations: 20967)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:42:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:42:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:43:53 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1866)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1966)
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 0.0ms | Allocations: 3791)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <head>
+    <title> RiotForum </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+     <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
+     <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
+    <div class="parent", id=<%=@parentclass%>>
+
+
+
+        <!-- CREA TEAM, CERCA GIOCATORI -->
+        <div class="team-section">
+
+            <img src="/assets/miniatura-<%= session[:game] %>.png" width="45%" height="60%">
+
+            
+            <div class="search">
+                <form class="w3-center" action="<%= search_player_path %>" method="get">
+                    <input type="text" placeholder="Cerca Giocatori" name="summonerName">
+                </form>
+            </div>
+            
+
+            <%= link_to create_team_path do %>
+                <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
+                <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
+                <button id="team-btn" class="btn <%= @team_btn_color %>">Crea il tuo team!</button>
+            <% end %>
+        </div>
+
+        <!-- BACHECA ANNUNCI -->
+        <div class="board-section" style="background-color:<%= @color %>">
+            <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
+            <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
+
+            
+            <div class="annuncio-container">
+                <div class="annuncio">
+                    <h3>Utente 1</h3>
+                    <img src="1.jpg" alt="Ruoli 1">
+                </div>
+                <div class="annuncio">
+                    <h3>Utente 2</h3>
+                    <img src="2.jpg" alt="Ruoli 2">
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+            <%if(session[:game] == 'LOL') %>
+            <%= link_to board_path do %>
+               <%@board_btn_color = "btn-dark" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
+           <%elsif(session[:game] == 'VALO') %>
+            <%= link_to board_path do %>
+               <%@board_btn_color = "btn-light" %>
+               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
+           <% end %>
+
+
+        </div> 
+
+        <!-- SEZIONE NOTIZIE -->    
+        <div class="news-section center-block" style="background-color:<%= @color %>">
+
+            <h1> NEWS </h1>
+            
+            <% if session[:game] == 'LOL' %>
+                <div class="champ-rotation">
+                        <% for champid in @rotation_champs do %>
+                            <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80 %>
+                        <% end %>
+                </div>
+            <% end %>
+
+            <div class="news-container">
+                <div class="news">
+
+                    <!-- Aggiunto collegamento alla pagina news con parametro -->
+                    <%if(session[:game] == 'LOL') %>
+                     <%= link_to news_path do %>
+                        <% @board_btn_color = "btn-dark" %>
+                        <button class="btn <%= @board_btn_color style="margin-bottom:1em;"%>"> VEDI NOTIZIE </button>
+                     <% end %>
+                    <%elsif(session[:game] == 'VALO') %>
+                     <%= link_to news_path do %>
+                        <%@board_btn_color = "btn-light" %>
+                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                     <% end %>
+                    <% end %>
+                
+                <%# 
+                    <div class="thread-container">
+                        <% threads.each do |thread| %/>
+                        <div class="thread">
+                            <a href="<%= thread[:url] %/>"><%= thread[:title] %/></a>
+                        </div>
+                        <% end %/>
+                    </div>
+                %>
+            </div>
+        </div>
+
+
+
+    </div>
+    
+</body>
+
+):
+1:    <head>
+2:        <title> RiotForum </title>
+3:        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+4:    
+5:        <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+6:    </head>
+7:    
+8:    <body>
+9:         <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
+10:         <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
+11:        <div class="parent", id=<%=@parentclass%>>
+12:    
+13:    
+14:    
+15:            <!-- CREA TEAM, CERCA GIOCATORI -->
+16:            <div class="team-section">
+17:    
+18:                <img src="/assets/miniatura-<%= session[:game] %>.png" width="45%" height="60%">
+19:    
+20:                
+21:                <div class="search">
+22:                    <form class="w3-center" action="<%= search_player_path %>" method="get">
+23:                        <input type="text" placeholder="Cerca Giocatori" name="summonerName">
+24:                    </form>
+25:                </div>
+26:                
+27:    
+28:                <%= link_to create_team_path do %>
+29:                    <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
+30:                    <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
+31:                    <button id="team-btn" class="btn <%= @team_btn_color %>">Crea il tuo team!</button>
+32:                <% end %>
+33:            </div>
+34:    
+35:            <!-- BACHECA ANNUNCI -->
+36:            <div class="board-section" style="background-color:<%= @color %>">
+37:                <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
+38:                <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
+39:    
+40:                
+41:                <div class="annuncio-container">
+42:                    <div class="annuncio">
+43:                        <h3>Utente 1</h3>
+44:                        <img src="1.jpg" alt="Ruoli 1">
+45:                    </div>
+46:                    <div class="annuncio">
+47:                        <h3>Utente 2</h3>
+48:                        <img src="2.jpg" alt="Ruoli 2">
+49:                    </div>
+50:                    <!-- Add more products as needed -->
+51:                </div>
+52:                <%if(session[:game] == 'LOL') %>
+53:                <%= link_to board_path do %>
+54:                   <%@board_btn_color = "btn-dark" %>
+55:                   <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+56:                <% end %>
+57:               <%elsif(session[:game] == 'VALO') %>
+58:                <%= link_to board_path do %>
+59:                   <%@board_btn_color = "btn-light" %>
+60:                   <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+61:                <% end %>
+62:               <% end %>
+63:    
+64:    
+65:            </div> 
+66:    
+67:            <!-- SEZIONE NOTIZIE -->    
+68:            <div class="news-section center-block" style="background-color:<%= @color %>">
+69:    
+70:                <h1> NEWS </h1>
+71:                
+72:                <% if session[:game] == 'LOL' %>
+73:                    <div class="champ-rotation">
+74:                            <% for champid in @rotation_champs do %>
+75:                                <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80 %>
+76:                            <% end %>
+77:                    </div>
+78:                <% end %>
+79:    
+80:                <div class="news-container">
+81:                    <div class="news">
+82:    
+83:                        <!-- Aggiunto collegamento alla pagina news con parametro -->
+84:                        <%if(session[:game] == 'LOL') %>
+85:                         <%= link_to news_path do %>
+86:                            <% @board_btn_color = "btn-dark" %>
+87:                            <button class="btn <%= @board_btn_color style="margin-bottom:1em;"%>"> VEDI NOTIZIE </button>
+88:                         <% end %>
+89:                        <%elsif(session[:game] == 'VALO') %>
+90:                         <%= link_to news_path do %>
+91:                            <%@board_btn_color = "btn-light" %>
+92:                            <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+93:                         <% end %>
+94:                        <% end %>
+95:                    
+96:                    <%# 
+97:                        <div class="thread-container">
+98:                            <% threads.each do |thread| %/>
+99:                            <div class="thread">
+100:                                <a href="<%= thread[:url] %/>"><%= thread[:title] %/></a>
+101:                            </div>
+102:                            <% end %/>
+103:                        </div>
+104:                    %>
+105:                </div>
+106:            </div>
+107:    
+108:    
+109:    
+110:        </div>
+111:        
+112:    </body>
+  
+app/views/pages/home.html.erb:87: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:44:23 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 50.5ms | Allocations: 12825)
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 90.1ms | Allocations: 29155)
+Completed 200 OK in 288ms (Views: 93.5ms | ActiveRecord: 0.0ms | Allocations: 30969)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:44:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:44:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:44:45 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 66.7ms | Allocations: 13028)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 382)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 14851)
+Completed 200 OK in 327ms (Views: 59.7ms | ActiveRecord: 19.5ms | Allocations: 20034)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:44:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:44:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:45:12 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 56.9ms | Allocations: 13089)
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 886)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 29453)
+Completed 200 OK in 1089ms (Views: 102.9ms | ActiveRecord: 5.1ms | Allocations: 31425)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:45:41 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 33.9ms | Allocations: 12945)
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 886)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 29112)
+Completed 200 OK in 261ms (Views: 61.8ms | ActiveRecord: 4.3ms | Allocations: 31092)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:46:14 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 179.5ms | Allocations: 14354)
+  Rendered layouts/_header.html.erb (Duration: 7.1ms | Allocations: 886)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 266.1ms | Allocations: 35509)
+Completed 200 OK in 551ms (Views: 260.5ms | ActiveRecord: 11.1ms | Allocations: 37487)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:47:20 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (1.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 204.1ms | Allocations: 13405)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 304.2ms | Allocations: 19974)
+Completed 200 OK in 599ms (Views: 309.4ms | ActiveRecord: 1.2ms | Allocations: 20923)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:48:13 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.3ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 197.5ms | Allocations: 13373)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 303.8ms | Allocations: 19958)
+Completed 200 OK in 497ms (Views: 306.5ms | ActiveRecord: 2.1ms | Allocations: 20900)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:48:15 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 91.9ms | Allocations: 12648)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 362)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 14438)
+Completed 200 OK in 311ms (Views: 109.4ms | ActiveRecord: 0.0ms | Allocations: 15797)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:48:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:48:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:50:08 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 118.5ms | Allocations: 14322)
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 202.8ms | Allocations: 35450)
+Completed 200 OK in 506ms (Views: 208.7ms | ActiveRecord: 0.0ms | Allocations: 37242)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:50:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:50:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:50:15 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 33.7ms | Allocations: 13059)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 382)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 14882)
+Completed 200 OK in 396ms (Views: 39.5ms | ActiveRecord: 3.4ms | Allocations: 16401)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:50:16 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:50:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:50:39 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 116.3ms | Allocations: 13336)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 145.4ms | Allocations: 19913)
+Completed 200 OK in 333ms (Views: 146.9ms | ActiveRecord: 0.0ms | Allocations: 21067)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:50:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:50:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:50:57 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 112.7ms | Allocations: 13323)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 154.4ms | Allocations: 19898)
+Completed 200 OK in 631ms (Views: 155.5ms | ActiveRecord: 0.0ms | Allocations: 21022)
+
+
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:50:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:50:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:51:16 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 109.6ms | Allocations: 13324)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 151.3ms | Allocations: 19892)
+Completed 200 OK in 441ms (Views: 155.7ms | ActiveRecord: 0.0ms | Allocations: 21027)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:51:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:51:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:51:35 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 141.6ms | Allocations: 13320)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 210.9ms | Allocations: 19898)
+Completed 200 OK in 455ms (Views: 212.0ms | ActiveRecord: 0.0ms | Allocations: 21050)
+
+
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:51:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:51:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 15:52:05 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 118.2ms | Allocations: 13329)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 170.4ms | Allocations: 19904)
+Completed 200 OK in 342ms (Views: 175.1ms | ActiveRecord: 0.0ms | Allocations: 21044)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:52:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:52:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 15:52:09 +0100
+Processing by NewpostController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/news.html.erb within layouts/application
+  [1m[36mNewpost Load (2.6ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/news.html.erb:20
+  Rendered newpost/news.html.erb within layouts/application (Duration: 114.5ms | Allocations: 12310)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 127.9ms | Allocations: 14111)
+Completed 200 OK in 704ms (Views: 132.9ms | ActiveRecord: 2.5ms | Allocations: 15056)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 15:52:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 15:52:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  

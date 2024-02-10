@@ -67,29 +67,24 @@
         <!-- SEZIONE NOTIZIE -->    
         <div class="news-section center-block" style="background-color:<%= @color %>">
 
-            <h1> ----- NEWS ----- </h1>
+            <h1> NEWS </h1>
             
             <% if session[:game] == 'LOL' %>
                 <div class="champ-rotation">
-                <p>
-                    <% for champid in @rotation_champs do %>
-
-                        <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
-                    <% end %>
-                </p>
+                        <% for champid in @rotation_champs do %>
+                            <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80, class:'champImg' %>
+                        <% end %>
                 </div>
             <% end %>
 
             <div class="news-container">
                 <div class="news">
 
-
-                    <!-- Add more products as needed -->
                     <!-- Aggiunto collegamento alla pagina news con parametro -->
                     <%if(session[:game] == 'LOL') %>
                      <%= link_to news_path do %>
                         <% @board_btn_color = "btn-dark" %>
-                        <button class="btn <%= @board_btn_color %>"> VEDI PATCHES </button>
+                        <button class="btn <%= @board_btn_color %>" style="margin-bottom:1em;"> VEDI NOTIZIE </button>
                      <% end %>
                     <%elsif(session[:game] == 'VALO') %>
                      <%= link_to news_path do %>

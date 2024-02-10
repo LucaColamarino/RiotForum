@@ -1,34 +1,41 @@
 .container-bacheca-news {
     padding: 0;
     margin: 0;
-    height: 60vh;
+    /*height: 100vh;*/
     
     
     position: relative;
     scroll-behavior: smooth;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sfondo-bacheca-news {
     height: 85%;
     width: 80%;
     border-radius: 1.5em;
-    
+    /*
     position: absolute;
     top:30%;
     left:50%;
     transform: translate(-50%, -30%);
-
+    */
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 15px;
+    row-gap: 10px;
 
     background-color: royalblue;
+
+    margin-top: 2em;
 }
 
 #titolo-bacheca-news {
     width: 90%;
+
 }
 
 #titolo-bacheca-news > span {
@@ -50,10 +57,10 @@
     scroll-behavior: smooth;
 }
 
-.thread {
-padding: 10px;
-border-bottom: 1px solid #eee;
-}
+    .thread {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
 
 .containerRotation {
     padding:0;
@@ -61,48 +68,55 @@ border-bottom: 1px solid #eee;
     height:38vh;
     position:relative;
     scroll-behavior: smooth;
+    width: 80%;
+    
+
+    margin-top: 4em;
 }
 
 #titoloRotazione{
     width:90%;
-
-    
-
 }
+
 #titoloRotazione > span{
     font-weight: bold;
-    word-spacing:10px;
     flex-basis:20%;
+}
+
+.sfondoNotizie{
+    min-height: 85%;
+    
+    border-radius: 1.5em;
+   /* 
+    position: absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -30%);
+*/
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px; 
+
+    background-color: royalblue;
 }
 
 .Campioni{
     height:95%;
     width:95%;
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 2em;
 }
 
 .boxCampioneIcona{
-    border:2px solid #333;
-    height:33%;
-    width:7%;
+    /* outline e non border perchè altrimenti appare doppio tra elementi adiacenti*/
+    outline:2px solid goldenrod;
+    
     display:inline-block;
     background-color: white;
-}
-
-.sfondoNotizie{
-    height: 85%;
-    width: 80%;
-    border-radius: 1.5em;
-    
-    position: absolute;
-    top:30%;
-    left:50%;
-    transform: translate(-50%, -30%);
-
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 15px;
-
-    background-color: royalblue;
 }
