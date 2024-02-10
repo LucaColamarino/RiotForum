@@ -24,9 +24,11 @@
                 </a>
                     </div>
                 <%end%>
+                provaprovaporva
             </div>
  
         </div>
+<<<<<<< HEAD
     </div>
     <div class='containerRotation'>
      <div class='sfondoNotizie'>
@@ -50,11 +52,31 @@
      </div>
         
     </div>
+=======
+>>>>>>> refs/remotes/origin/main
     
+        <div class='containerRotation'>
+            <div class='sfondoNotizie'>
+                <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+                    <span>
+                        ROTAZIONE GRATUITA CAMPIONI
+                    </span>
+                </div>
+
+                <div class='Campioni'>
+                    <%for champid in @rotation_champs do %>
+                        <div class="boxCampioneIcona">
+                            <%= image_tag "champions/"+champid.to_s+".png", width:'64px',height:'64px',class:'champImg' %>
+                        </div>
+                    <%end%>
+                </div>
+        </div>
+            
+        </div>
+   </div>
 
 </body>
- <h1><%= link_to 'torna indietro', home_path%></h1>
+
 <%else %>
  <p>news di valorant</p>
- <h1><%= link_to 'torna indietro', home_path%></h1>
 <%end %>

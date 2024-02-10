@@ -24,14 +24,14 @@
   grid-template-columns: repeat(6,1fr);
   grid-template-rows: repeat(6,1fr);
   grid-column-gap: 40px;
-  grid-row-gap: 80px;
+  
 }
 
 /* -------------SEZIONE TEAM----------- */
 .team-section {
   grid-area:1/1/4/4; 
   margin-left:20px;
-  margin-top:20px;
+  margin-top:2em;
   height: 50vh;
 
   display: flex;
@@ -71,7 +71,7 @@
 .board-section {
   grid-area:1/4/4/7; 
   margin-right:40px;
-  margin-top:20px;
+  margin-top:2em;
   height: 50vh;
 
   display: flex;
@@ -79,6 +79,7 @@
   justify-content: center;
   align-items: center;
 
+  border-radius: 1em;
   border: 4px groove currentColor;
 }
 
@@ -112,13 +113,38 @@
 /* -------------SEZIONE NEWS---------- */
 .news-section {
   grid-area:4/2/7/6;
-  height: 100%;
-
+  
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  margin-bottom: 2em;
+  row-gap: 1em;
+  border-radius: 1em;
 
   border: 4px groove currentColor;
+}
+
+.news-section > h1 {
+  margin-top: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius:1.5em;
+  background-color: white;
+}
+
+.champ-rotation {
+
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.champ-rotation > .champImg {
+  outline:2px inset goldenrod;
 }
 
 /*
