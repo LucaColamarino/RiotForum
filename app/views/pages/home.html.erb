@@ -74,7 +74,7 @@
                 <p>
                     <% for champid in @rotation_champs do %>
 
-                            <%= champid.to_s + '.jpg' %>
+                        <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
                     <% end %>
                 </p>
                 </div>
@@ -82,21 +82,14 @@
 
             <div class="news-container">
                 <div class="news">
-                    <h3>Utente 1</h3>
-                    <img src="1.jpg" alt="Ruoli 1">
-                    <a href="">View Details</a>
-                </div>
-                <div class="news">
-                    <h3>Utente 2</h3>
-                    <img src="2.jpg" alt="Ruoli 2">
-                    <a href="">View Details</a>
-                </div>
+
+
                     <!-- Add more products as needed -->
                     <!-- Aggiunto collegamento alla pagina news con parametro -->
                     <%if(session[:game] == 'LOL') %>
                      <%= link_to news_path do %>
                         <% @board_btn_color = "btn-dark" %>
-                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                        <button class="btn <%= @board_btn_color %>"> VEDI PATCHES </button>
                      <% end %>
                     <%elsif(session[:game] == 'VALO') %>
                      <%= link_to news_path do %>

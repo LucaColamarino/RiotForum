@@ -1,0 +1,2 @@
+class Newpost < ApplicationRecord
+end

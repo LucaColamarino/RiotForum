@@ -17,8 +17,8 @@
             </div>
 
             <div id="bacheca-news">
-                <%= for a in 1..20 do%>
-                <div class="thread"> Notizia
+                <% Newpost.all.each do |newpost|%>
+                <div class="thread"> <%= newpost.title%>
                     </div>
                 <%end%>
             </div>

@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   get 'your_team', to: 'pages#your_team'
   get 'settings', to: 'pages#settings'
   get 'news', to: 'pages#news'
+  get 'news/newpost', to: 'newpost#index'
+  
+
+
+  
+
   get 'search_player', to: 'pages#search_player'
   
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

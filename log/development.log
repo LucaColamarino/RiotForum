@@ -40579,3 +40579,1565 @@ Processing by RegistrationsController#new as HTML
 Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4396)
 
 
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:00:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 474.7ms | Allocations: 40884)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 1051)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 526.9ms | Allocations: 57842)
+Completed 200 OK in 934ms (Views: 547.1ms | ActiveRecord: 0.0ms | Allocations: 63316)
+
+
+Started POST "/set_session/LOL" for 127.0.0.1 at 2024-02-10 01:00:49 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 513)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 01:00:49 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2016)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 359)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3852)
+Completed 200 OK in 231ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 5097)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 01:00:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 01:00:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/home" for 127.0.0.1 at 2024-02-10 01:02:33 +0100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 63.6ms | Allocations: 12837)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 108.0ms | Allocations: 29361)
+Completed 200 OK in 414ms (Views: 115.3ms | ActiveRecord: 0.0ms | Allocations: 31157)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 01:02:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 01:02:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:02:39 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 22.3ms | Allocations: 12283)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 14075)
+Completed 200 OK in 237ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 15093)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 01:02:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 01:02:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNewposts (20240210000334)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "newposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240210000334') RETURNING "version"[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNewpost Create (1.0ms)[0m  [1m[32mINSERT INTO "newposts" ("title", "content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Patch 14.3"], ["content", "Nerf darius plz"], ["user_id", 16], ["created_at", "2024-02-10 00:07:44.179105"], ["updated_at", "2024-02-10 00:07:44.179105"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:09:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1901)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2047)
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 0.0ms | Allocations: 7527)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%if(session[:game]=="LOL")%>
+<head>
+<%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class="container-bacheca-news">
+        <div class="sfondo-bacheca-news">
+
+            <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+                <span>
+                    NOTIZIE
+                    <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                </span>
+            </div>
+
+            <div id="bacheca-news">
+                <%= Newpost.each do |newpost|>
+                <div class="thread"> <%= newpost.title%>
+                    </div>
+                <%end%>
+            </div>
+ 
+        </div>
+    </div>
+    <div class='containerRotation'>
+     <div class='sfondoNotizie'>
+       <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+          <span>
+              ROTAZIONE CAMPIONI
+          </span>
+        </div>
+
+        <div class='Campioni'>
+         <%for champid in @rotation_champs do %>
+          <div class="boxCampioneIcona">
+ 
+          <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+          </div>
+        <%end%>
+
+          
+
+        </div>
+     </div>
+        
+    </div>
+    
+
+</body>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%else %>
+ <p>news di valorant</p>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%end %>
+):
+1:    <%if(session[:game]=="LOL")%>
+2:    <head>
+3:    <%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+4:    </head>
+5:    
+6:    <body>
+7:    
+8:        <div class="container-bacheca-news">
+9:            <div class="sfondo-bacheca-news">
+10:    
+11:                <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+12:                    <span>
+13:                        NOTIZIE
+14:                        <i class="fa fa-refresh" style="font-size:24px"></i>
+15:                        <!-- va implementato il refresh che aggiorni la bacheca -->
+16:                    </span>
+17:                </div>
+18:    
+19:                <div id="bacheca-news">
+20:                    <%= Newpost.each do |newpost|>
+21:                    <div class="thread"> <%= newpost.title%>
+22:                        </div>
+23:                    <%end%>
+24:                </div>
+25:     
+26:            </div>
+27:        </div>
+28:        <div class='containerRotation'>
+29:         <div class='sfondoNotizie'>
+30:           <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+31:              <span>
+32:                  ROTAZIONE CAMPIONI
+33:              </span>
+34:            </div>
+35:    
+36:            <div class='Campioni'>
+37:             <%for champid in @rotation_champs do %>
+38:              <div class="boxCampioneIcona">
+39:     
+40:              <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+41:              </div>
+42:            <%end%>
+43:    
+44:              
+45:    
+46:            </div>
+47:         </div>
+48:            
+49:        </div>
+50:        
+51:    
+52:    </body>
+53:     <h1><%= link_to 'torna indietro', home_path%></h1>
+54:    <%else %>
+55:     <p>news di valorant</p>
+56:     <h1><%= link_to 'torna indietro', home_path%></h1>
+57:    <%end %>
+  
+app/views/pages/news.html.erb:20: syntax error, unexpected '>'
+app/views/pages/news.html.erb:23: syntax error, unexpected `end', expecting ')'
+app/views/pages/news.html.erb:54: syntax error, unexpected `else', expecting ')'
+app/views/pages/news.html.erb:57: syntax error, unexpected `end', expecting ')'
+app/views/pages/news.html.erb:59: syntax error, unexpected `end', expecting ')'
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:10:00 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1391)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1503)
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.0ms | Allocations: 3173)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%if(session[:game]=="LOL")%>
+<head>
+<%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class="container-bacheca-news">
+        <div class="sfondo-bacheca-news">
+
+            <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+                <span>
+                    NOTIZIE
+                    <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                </span>
+            </div>
+
+            <div id="bacheca-news">
+                <%= Newpost.all.each do |newpost|>
+                <div class="thread"> <%= newpost.title%>
+                    </div>
+                <%end%>
+            </div>
+ 
+        </div>
+    </div>
+    <div class='containerRotation'>
+     <div class='sfondoNotizie'>
+       <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+          <span>
+              ROTAZIONE CAMPIONI
+          </span>
+        </div>
+
+        <div class='Campioni'>
+         <%for champid in @rotation_champs do %>
+          <div class="boxCampioneIcona">
+ 
+          <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+          </div>
+        <%end%>
+
+          
+
+        </div>
+     </div>
+        
+    </div>
+    
+
+</body>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%else %>
+ <p>news di valorant</p>
+ <h1><%= link_to 'torna indietro', home_path%></h1>
+<%end %>
+):
+1:    <%if(session[:game]=="LOL")%>
+2:    <head>
+3:    <%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
+4:    </head>
+5:    
+6:    <body>
+7:    
+8:        <div class="container-bacheca-news">
+9:            <div class="sfondo-bacheca-news">
+10:    
+11:                <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
+12:                    <span>
+13:                        NOTIZIE
+14:                        <i class="fa fa-refresh" style="font-size:24px"></i>
+15:                        <!-- va implementato il refresh che aggiorni la bacheca -->
+16:                    </span>
+17:                </div>
+18:    
+19:                <div id="bacheca-news">
+20:                    <%= Newpost.all.each do |newpost|>
+21:                    <div class="thread"> <%= newpost.title%>
+22:                        </div>
+23:                    <%end%>
+24:                </div>
+25:     
+26:            </div>
+27:        </div>
+28:        <div class='containerRotation'>
+29:         <div class='sfondoNotizie'>
+30:           <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">
+31:              <span>
+32:                  ROTAZIONE CAMPIONI
+33:              </span>
+34:            </div>
+35:    
+36:            <div class='Campioni'>
+37:             <%for champid in @rotation_champs do %>
+38:              <div class="boxCampioneIcona">
+39:     
+40:              <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+41:              </div>
+42:            <%end%>
+43:    
+44:              
+45:    
+46:            </div>
+47:         </div>
+48:            
+49:        </div>
+50:        
+51:    
+52:    </body>
+53:     <h1><%= link_to 'torna indietro', home_path%></h1>
+54:    <%else %>
+55:     <p>news di valorant</p>
+56:     <h1><%= link_to 'torna indietro', home_path%></h1>
+57:    <%end %>
+  
+app/views/pages/news.html.erb:20: syntax error, unexpected '>'
+app/views/pages/news.html.erb:23: syntax error, unexpected `end', expecting ')'
+app/views/pages/news.html.erb:54: syntax error, unexpected `else', expecting ')'
+app/views/pages/news.html.erb:57: syntax error, unexpected `end', expecting ')'
+app/views/pages/news.html.erb:59: syntax error, unexpected `end', expecting ')'
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:11:10 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.9ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 602.6ms | Allocations: 51448)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 1040)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 657.0ms | Allocations: 68314)
+Completed 200 OK in 927ms (Views: 656.1ms | ActiveRecord: 5.9ms | Allocations: 69997)
+
+
+Started POST "/set_session/LOL" for 127.0.0.1 at 2024-02-10 01:11:15 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 508)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 01:11:15 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 27.7ms | Allocations: 12813)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 359)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 14649)
+Completed 200 OK in 238ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 15903)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 01:11:16 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 01:11:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:11:20 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 32.2ms | Allocations: 12313)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 14105)
+Completed 200 OK in 267ms (Views: 38.8ms | ActiveRecord: 0.2ms | Allocations: 15057)
+
+
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 01:11:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 01:11:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:13:09 +0100
+  
+SyntaxError (/home/andrea/Scrivania/ProgettoRiot/RiotForum/config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  get 'news' to 'news#index'
+             ^~
+):
+  
+config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:13:30 +0100
+  
+SyntaxError (/home/andrea/Scrivania/ProgettoRiot/RiotForum/config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  get 'news' to: 'news#index'
+             ^~
+):
+  
+config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:13:49 +0100
+  
+SyntaxError (/home/andrea/Scrivania/ProgettoRiot/RiotForum/config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  get 'news' to: 'index#news'
+             ^~
+):
+  
+config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:14:02 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (1.8ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 76.9ms | Allocations: 16325)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 118.1ms | Allocations: 32848)
+Completed 200 OK in 406ms (Views: 116.4ms | ActiveRecord: 8.0ms | Allocations: 34466)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:15:10 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 25.9ms | Allocations: 16319)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 32842)
+Completed 200 OK in 305ms (Views: 43.0ms | ActiveRecord: 2.2ms | Allocations: 34461)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:15:30 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2340)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2432)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.0ms | Allocations: 4011)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:15:41 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2428)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms | Allocations: 4025)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:15:52 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2428)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.0ms | Allocations: 4025)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:16:08 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2426)
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.0ms | Allocations: 4038)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:16:19 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2426)
+Completed 500 Internal Server Error in 315ms (ActiveRecord: 0.0ms | Allocations: 4020)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:17:10 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2426)
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 0.0ms | Allocations: 4040)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:18:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/news"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:18:43 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2428)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.0ms | Allocations: 4030)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:22:55 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2426)
+Completed 500 Internal Server Error in 318ms (ActiveRecord: 0.0ms | Allocations: 4021)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:26:18 +0100
+  
+SyntaxError (/home/andrea/Scrivania/ProgettoRiot/RiotForum/config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+  get 'newpost' to: 'newpost#index'
+                ^~
+):
+  
+config/routes.rb:17: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:26:36 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2426)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.0ms | Allocations: 4020)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:27:59 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 18.7ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 2426)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.0ms | Allocations: 4039)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:30:09 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2426)
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 0.0ms | Allocations: 4043)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:37:23 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2428)
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 0.0ms | Allocations: 4028)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:38:08 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2335)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2427)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.0ms | Allocations: 4042)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:40:47 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 32.9ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 2426)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.0ms | Allocations: 4040)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:42:12 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2336)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2428)
+Completed 500 Internal Server Error in 487ms (ActiveRecord: 0.0ms | Allocations: 4028)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:43:43 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2426)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.0ms | Allocations: 4040)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:46:55 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 25.6ms | Allocations: 2334)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 2426)
+Completed 500 Internal Server Error in 400ms (ActiveRecord: 0.0ms | Allocations: 4022)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/newpost" for 127.0.0.1 at 2024-02-10 01:47:01 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  Rendered newpost/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 92)
+  Rendered layouts/_header.html.erb (Duration: 8.9ms | Allocations: 887)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 102.3ms | Allocations: 17046)
+Completed 200 OK in 113ms (Views: 104.1ms | ActiveRecord: 0.0ms | Allocations: 17869)
+
+
+Started GET "/newpost" for 127.0.0.1 at 2024-02-10 01:48:43 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:3
+  Rendered newpost/index.html.erb within layouts/application (Duration: 52.5ms | Allocations: 3726)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 20756)
+Completed 200 OK in 118ms (Views: 70.1ms | ActiveRecord: 43.2ms | Allocations: 22035)
+
+
+Started GET "/newpost" for 127.0.0.1 at 2024-02-10 01:49:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/newpost"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:50:11 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 26.4ms | Allocations: 2358)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 2450)
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 0.0ms | Allocations: 4064)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/newpost" for 127.0.0.1 at 2024-02-10 01:50:42 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:3
+  Rendered newpost/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 3717)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 20750)
+Completed 200 OK in 87ms (Views: 59.4ms | ActiveRecord: 21.7ms | Allocations: 22031)
+
+
+Started GET "/newpost" for 127.0.0.1 at 2024-02-10 01:52:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/newpost"):
+  
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 01:52:48 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:3
+  Rendered newpost/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3715)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 88.8ms | Allocations: 20730)
+Completed 200 OK in 102ms (Views: 75.5ms | ActiveRecord: 17.3ms | Allocations: 21963)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:52:53 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 24.5ms | Allocations: 2340)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 2431)
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 0.0ms | Allocations: 3589)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 01:54:19 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2355)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2447)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.0ms | Allocations: 4061)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:00:23 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2362)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2454)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 0.0ms | Allocations: 4069)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f878db29938>::News):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% News.all.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:00:41 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (1.6ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 122.6ms | Allocations: 16321)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 179.1ms | Allocations: 32845)
+Completed 200 OK in 385ms (Views: 169.0ms | ActiveRecord: 14.6ms | Allocations: 34463)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:00:50 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  Rendered newpost/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 93)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 382)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2309)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 2787)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:02:10 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  Rendered newpost/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+  Rendered layouts/_header.html.erb (Duration: 7.0ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 16947)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.0ms | Allocations: 18222)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:02:25 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  Rendered newpost/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 213)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 17130)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 18408)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:02:33 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.4ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered newpost/index.html.erb within layouts/application (Duration: 42.8ms | Allocations: 6381)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 6473)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 7.9ms | Allocations: 7729)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<ActiveRecord::Relation [#<Newpost id: 1, title: "Patch 14.3", content: "Nerf darius plz", user_id: 16, created_at: "2024-02-10 00:07:44.179105000 +0000", updated_at: "2024-02-10 00:07:44.179105000 +0000">]>):
+    1: <h1>Newpost#index</h1>
+    2: <p>Find me in app/views/newpost/index.html.erb</p>
+    3: <%=@newpost.all.title%>
+  
+app/views/newpost/index.html.erb:3
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:02:44 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" ORDER BY "newposts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/newpost/index.html.erb:3
+  Rendered newpost/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3968)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 21003)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 1.6ms | Allocations: 22279)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:03:02 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:3
+  Rendered newpost/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3795)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 20614)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 1.5ms | Allocations: 21893)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:03:53 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3685)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 20700)
+Completed 200 OK in 49ms (Views: 38.8ms | ActiveRecord: 2.8ms | Allocations: 21979)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:04:25 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3659)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 12.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 20493)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 1.2ms | Allocations: 21769)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:04:49 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered newpost/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 5554)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5646)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.9ms | Allocations: 6906)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<ActiveRecord::Relation [#<Newpost id: 1, title: "Patch 14.3", content: "Nerf darius plz", user_id: 16, created_at: "2024-02-10 00:07:44.179105000 +0000", updated_at: "2024-02-10 00:07:44.179105000 +0000">]>):
+    1: <h1>Newpost#index</h1>
+    2: <%= @newpost.title%>
+  
+app/views/newpost/index.html.erb:2
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:04:59 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.5ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 4747)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4839)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 11.0ms | Allocations: 6099)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Enumerator: [#<Newpost id: 1, title: "Patch 14.3", content: "Nerf darius plz", user_id: 16, created_at: "2024-02-10 00:07:44.179105000 +0000", updated_at: "2024-02-10 00:07:44.179105000 +0000">]:index>):
+    1: <h1>Newpost#index</h1>
+    2: <%= @newpost.index.title%>
+  
+app/views/newpost/index.html.erb:2
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:05:21 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" ORDER BY "newposts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3918)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 62.1ms | Allocations: 20930)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 1.4ms | Allocations: 22209)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:06:23 +0100
+  
+AbstractController::ActionNotFound (The action 'news' could not be found for NewpostController):
+  
+actionpack (7.1.3) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+omniauth (2.1.2) lib/omniauth/strategy.rb:202:in `call!'
+omniauth (2.1.2) lib/omniauth/strategy.rb:169:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.0.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.8) lib/rack/etag.rb:29:in `call'
+rack (3.0.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.8) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:06:29 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 123.1ms | Allocations: 16286)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 134.3ms | Allocations: 32809)
+Completed 200 OK in 438ms (Views: 135.6ms | ActiveRecord: 2.7ms | Allocations: 34384)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:06:51 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2360)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2452)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms | Allocations: 4053)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:08:31 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (2.5ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 93.7ms | Allocations: 16320)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 856)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 160.5ms | Allocations: 32852)
+Completed 200 OK in 451ms (Views: 140.7ms | ActiveRecord: 27.8ms | Allocations: 34489)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:08:38 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" ORDER BY "newposts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 723)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 382)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2980)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 3457)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:10:18 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 32.1ms | Allocations: 12183)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 13966)
+Completed 200 OK in 331ms (Views: 38.3ms | ActiveRecord: 0.2ms | Allocations: 14901)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:12:22 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2341)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2433)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.0ms | Allocations: 4019)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:12:38 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2435)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.0ms | Allocations: 4035)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:12:56 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2435)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.0ms | Allocations: 4029)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:14:30 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2345)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2437)
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 0.0ms | Allocations: 4054)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:15:05 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2435)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms | Allocations: 4031)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:15:16 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2435)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 0.0ms | Allocations: 4035)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:15:30 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2435)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms | Allocations: 4048)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:16:27 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  Rendered pages/news.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2343)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 2435)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms | Allocations: 4031)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:             </div>
+    18: 
+    19:             <div id="bacheca-news">
+    20:                 <% @newpost.each do |newpost|%>
+    21:                 <div class="thread"> <%= newpost.title%>
+    22:                     </div>
+    23:                 <%end%>
+  
+app/views/pages/news.html.erb:20
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:17:01 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 21.7ms | Allocations: 16307)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 854)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 32830)
+Completed 200 OK in 320ms (Views: 37.8ms | ActiveRecord: 2.0ms | Allocations: 34467)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:17:08 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" ORDER BY "newposts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 723)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 382)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2933)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 3411)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:19:58 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts" ORDER BY "newposts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3900)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 20910)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 1.3ms | Allocations: 22191)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:21:32 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (1.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3732)
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 888)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 20792)
+Completed 200 OK in 79ms (Views: 67.6ms | ActiveRecord: 7.5ms | Allocations: 22072)
+
+
+Started POST "/set_session/LOL" for 127.0.0.1 at 2024-02-10 02:22:15 +0100
+Processing by SessionsController#set_session as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "value"=>"LOL"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 431)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-10 02:22:15 +0100
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 100.7ms | Allocations: 12765)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 362)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 105.8ms | Allocations: 14611)
+Completed 200 OK in 367ms (Views: 109.4ms | ActiveRecord: 0.0ms | Allocations: 16005)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 02:22:15 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 02:22:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:22:19 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 17.7ms | Allocations: 12651)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 14443)
+Completed 200 OK in 271ms (Views: 40.4ms | ActiveRecord: 0.1ms | Allocations: 15442)
+
+
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 02:22:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 02:22:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:22:29 +0100
+Processing by PagesController#news as HTML
+Started GET "/1.jpg" for 127.0.0.1 at 2024-02-10 02:22:29 +0100
+Started GET "/2.jpg" for 127.0.0.1 at 2024-02-10 02:22:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/1.jpg"):
+  
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 88.2ms | Allocations: 63020)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 112.4ms | Allocations: 70773)
+Completed 200 OK in 463ms (Views: 115.6ms | ActiveRecord: 0.1ms | Allocations: 155796)
+
+
+Started GET "/news/newpost" for 127.0.0.1 at 2024-02-10 02:24:00 +0100
+Processing by NewpostController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering newpost/index.html.erb within layouts/application
+  [1m[36mNewpost Load (0.2ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/newpost/index.html.erb:2
+  Rendered newpost/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 391)
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 371)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2590)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms | Allocations: 2843)
+
+
+Started GET "/news" for 127.0.0.1 at 2024-02-10 02:24:31 +0100
+Processing by PagesController#news as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/news.html.erb within layouts/application
+  [1m[36mNewpost Load (0.1ms)[0m  [1m[34mSELECT "newposts".* FROM "newposts"[0m
+  ↳ app/views/pages/news.html.erb:20
+  Rendered pages/news.html.erb within layouts/application (Duration: 18.1ms | Allocations: 12118)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 13888)
+Completed 200 OK in 323ms (Views: 23.3ms | ActiveRecord: 0.1ms | Allocations: 14821)
+
+

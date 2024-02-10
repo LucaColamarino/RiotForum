@@ -244,6 +244,8 @@ class PagesController < ApplicationController
     request['X-Riot-Token'] = ENV['RIOT_API_KEY']
 
     @rotation_champs = JSON.parse(http.request(request).body)['freeChampionIds']
+
+    
   end
 
 

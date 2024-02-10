@@ -1,0 +1,2 @@
+module NewpostHelper
+end
