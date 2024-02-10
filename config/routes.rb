@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'news', to: 'newpost#news'
   get 'news/p', to: 'newpost#postnotizia'
 
-
+  resources :ads
   
 
 

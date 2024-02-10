@@ -1,13 +1,14 @@
 class User < ApplicationRecord
+  rolify
+  has_many :ads, dependent: :destroy
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  enum role: [:user,:moderator]
-
-  #attr_accessor :riot_user, :riot_tag
-  #per ora non servono
+  #enum role: %i[user teamOwner teamMember moderator]
+  
 
   #---------------------------#
   before_create :generate_uid

@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+mod = User.create(email: 'mod1@mod.com', password:'password', password_confirmation:'password')
+mod.add_role(:moderator)

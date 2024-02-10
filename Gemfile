@@ -75,3 +75,7 @@ end
 #AGGIUNTE
 #Figaro per settare variabili d'ambiente (ENV)
 gem "figaro"
+#cancancan e permessi
+gem "cancancan"
+#rolify per aggiungere e gestire ruoli
+gem "rolify"

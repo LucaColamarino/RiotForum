@@ -55,3 +55,16 @@ aristotele1 "pagina giocatore lol cercato, bozza profilo, funzione cambio userna
 
 - sia nel giocatore cercato che profilo mancano rank e stats generali. La api c'è e funziona, è solo che non so come accedere agli elementi di sto Set[LeagueEntryDTO]
 
+-------------------------------------------------
+_________________________________________________
+
+
+-------------------------------------------------
+10-2-2024
+aristotele1 "implementati permessi e ruoli"
+
+- 2 gems, cancancan(permessi) e rolify(ruoli)
+- rolify crea la tabella roles, e per aggiungere ruoli basta fare User.add_role(:nomeRuolo)
+- ho messo che ogni tizio che si registra ha automaticamente come ruolo :user, e per il moderatore quindi ne ho seedato manualmente in seeds.rb
+- i permessi stanno in models/ability.rb
+- per ora l'accesso vietato (messo solo a crea il tuo team) redireziona alla homepage e basta; si possono dopo aggiungere avvisi a finestra dell'errore

@@ -5,6 +5,15 @@ class RegistrationsController < Devise::RegistrationsController
         params.require(:user).permit(:email, :password, :password_confirmation, :username) #, :riot_user, :riot_tag
     end
 
+    #override
+    def create
+      super do |resource|
+        if resource.is_a?(User)
+          resource.add_role(:user)
+        end
+      end
+    end
+
     protected
 
     def after_sign_up_path_for(resource)  #resource è l'utente al momento loggato
