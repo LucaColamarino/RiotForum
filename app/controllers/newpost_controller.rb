@@ -15,10 +15,22 @@ class NewpostController < ApplicationController
     
   end
 
-  def postnotizia
-    @newpost=Newpost.first
-  end
+    # GET /newposts
+    def index
+      @newposts = Newpost.all
+    end
+  
+    # GET /newposts/1
+    def show
+      @newpost=Newpost.find(params[:id])
+    end
 
+    def newpost
+      @newpost=Newpost.save
+    end
 
+    def create
+    end
+      
 
 end

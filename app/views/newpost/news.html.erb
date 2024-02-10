@@ -18,7 +18,10 @@
 
             <div id="bacheca-news">
                 <% @newpost.each do |newpost|%>
-                <div class="thread"> <%= newpost.title%>
+                <div class="thread"> 
+                <a href=<%='/news/'+newpost.id.to_s%>>
+                <%= newpost.title%>
+                </a>
                     </div>
                 <%end%>
             </div>
@@ -37,7 +40,7 @@
          <%for champid in @rotation_champs do %>
           <div class="boxCampioneIcona">
  
-          <%= image_tag "champions/"+champid.to_s+".png", width:80,height:95 %>
+          <%= image_tag "champions/"+champid.to_s+".png", width:85,height:95 %>
           </div>
         <%end%>
 
