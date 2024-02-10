@@ -15,10 +15,38 @@ class NewpostController < ApplicationController
     
   end
 
-  def postnotizia
-    @newpost=Newpost.first
-  end
+    def index
+      @newposts = Newpost.all
+    end
+    
+    def postsuccesso
+      
+    end
+  
+    def show
+      @newpost=Newpost.find(params[:id])
+    end
 
+    def newpost
+      @newpost=Newpost.new
+    end
 
+    def create
+      @newpost=Newpost.new(post_params)
+
+      if @newpost.save
+        redirect_to '/news/'+@newpost.id.to_s
+      else
+        render :new, status: :unprocessable_entity
+      end
+    end
+
+    private
+
+    def post_params
+      params.require(:newpost).permit(:title, :content)
+    end
+
+      
 
 end

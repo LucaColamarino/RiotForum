@@ -18,14 +18,15 @@
 
             <div id="bacheca-news">
                 <% @newpost.each do |newpost|%>
-                <div class="thread"> <%= newpost.title%>
+                <div class="thread"> 
+                <a href=<%='/news/'+newpost.id.to_s%>>
+                <%= newpost.title%>
+                </a>
                     </div>
                 <%end%>
-                provaprovaporva
             </div>
- 
-        </div>
-    
+
+        </div>  
         <div class='containerRotation'>
             <div class='sfondoNotizie'>
                 <div id='titoloRotazione' class="w3-panel w3-center w3-white w3-round-medium">

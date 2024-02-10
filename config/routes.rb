@@ -13,7 +13,17 @@ Rails.application.routes.draw do
   get 'your_team', to: 'pages#your_team'
   get 'settings', to: 'pages#settings'
   get 'news', to: 'newpost#news'
-  get 'news/p', to: 'newpost#postnotizia'
+  get 'news/:id', to: 'newpost#show', constraints: {id: /\d+/}
+  get 'news/newpost', to: 'newpost#newpost'
+  post 'news/newpost', to: 'newpost#create'
+
+
+
+
+
+
+
+
 
   resources :ads
   
