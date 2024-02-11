@@ -16,9 +16,11 @@ Rails.application.routes.draw do
   get 'news/:id', to: 'newpost#show', constraints: {id: /\d+/}
   get 'news/newpost', to: 'newpost#newpost'
   post 'news/newpost', to: 'newpost#create'
+  get 'news/:id/edit', to: 'newpost#edit'
+  patch 'news/:id' , to: 'newpost#update'
+  delete 'news/:id', to: 'newpost#destroy'
 
-
-
+  
 
 
 

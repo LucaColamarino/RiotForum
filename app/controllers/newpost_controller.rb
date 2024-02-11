@@ -37,8 +37,29 @@ class NewpostController < ApplicationController
       if @newpost.save
         redirect_to '/news/'+@newpost.id.to_s
       else
-        render :new, status: :unprocessable_entity
+        render :'/news', status: :unprocessable_entity
       end
+    end
+
+    def edit
+        @newpost = Newpost.find(params[:id])
+      end
+    
+    def update
+        @newpost = Newpost.find(params[:id])
+    
+        if @newpost.update(post_params)
+          redirect_to '/news'
+        else
+          render :edit, status: :unprocessable_entity
+        end
+    end
+
+    def destroy
+      @newpost = Newpost.find(params[:id])
+      @newpost.destroy
+  
+      redirect_to '/news', status: :see_other
     end
 
     private
