@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   rolify
+  
   has_many :ads, dependent: :destroy
 
   # Include default devise modules. Others available are:

@@ -2,7 +2,9 @@
 
       <!-- |RiotForum x x x x| -->
       <div class="header-left">
-        <span class="sito">RiotForum</span>
+        <a href="/home" style="text-decoration:none;">
+        <span class="sito">RiotGuild</span>
+        </a>
         <% unless request.fullpath == '/' %>
 
       <% if session[:game]=="LOL" 
@@ -30,26 +32,6 @@
       <% if user_signed_in? %>
         <!-- | x x x x Profilo| -->
       <div class="header-right">
-        <!--
-        <div class="dropdown">
-
-
-
-          <button class="btn  dropdown-toggle profilo" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false", style= "background-color: #fff; width: 130px; height: 100px;">
-            <img src='/assets/profileimg.png'>
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <p><%= current_user.email %></p>
-            <a class="dropdown-item" href="/profile">Profilo</a>
-         <a class="dropdown-item" href="/settings">Impostazioni</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><%= button_to "Logout", destroy_user_session_path, method: :delete, form_class: "d-inline" , class: "btn btn-primary ", style: "background-color: #df7e23;" %></a>
-          </div>
-        </div>
-      </div>
-
-      -->
-
        <div class="w3-dropdown-hover w3-right">
         <a class="w3-button profilo"><p><%= current_user.email %></p></a>
         <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
@@ -66,7 +48,7 @@
   <% else %>
         <!-- |LOGIN| -->
       <div class="header-right">
-        <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-primary ", style: "background-color: #df7e23;" %>
+        <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-primary login" %>
       </div>
 <% end %>
 

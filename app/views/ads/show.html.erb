@@ -4,7 +4,7 @@
 
 <div>
   <%= link_to "Edit this ad", edit_ad_path(@ad) %> |
-  <%= link_to "Back to ads", ads_path %>
-
-  <%= button_to "Destroy this ad", @ad, method: :delete %>
+  <%= link_to "Back to ads", ads_path %> |
+  <%= link_to "Back to home", home_path %>
+  <%= button_to "Delete this ad", @ad, method: :delete %>
 </div>

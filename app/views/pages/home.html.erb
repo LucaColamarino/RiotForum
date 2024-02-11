@@ -39,16 +39,23 @@
 
             
             <div class="annuncio-container">
-                <div class="annuncio">
-                    <h3>Utente 1</h3>
-                    <img src="1.jpg" alt="Ruoli 1">
-                </div>
-                <div class="annuncio">
-                    <h3>Utente 2</h3>
-                    <img src="2.jpg" alt="Ruoli 2">
-                </div>
-                <!-- Add more products as needed -->
+                <% for annuncio in @annunci_home do%>
+                    <% user = User.find_by(id: annuncio.user_id) %>
+                    <div class="annuncio_home">
+                        <div class="owner">
+                            <span><%= user.username %></span>
+                        </div>
+                        <div class="roles">
+                            <% if annuncio.mode == 'Aram'%>
+                                Aram
+                            <%else%>
+                                icone ruoli 
+                            <%end%>
+                        </div>
+                    </div>
+                <%end%>
             </div>
+
             <%if(session[:game] == 'LOL') %>
             <%= link_to board_path do %>
                <%@board_btn_color = "btn-dark" %>

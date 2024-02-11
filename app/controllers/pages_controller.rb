@@ -13,6 +13,8 @@ class PagesController < ApplicationController
     request['X-Riot-Token'] = ENV['RIOT_API_KEY']
 
     @rotation_champs = JSON.parse(http.request(request).body)['freeChampionIds']
+
+    @annunci_home = Ad.order(updated_at: :desc).limit(3)
   end
 
   def scelta
@@ -223,6 +225,9 @@ class PagesController < ApplicationController
 
   def board
     @game = params[:game];
+
+    @annunci = Ad.order(updated_at: :desc).all
+
   end
 
   def create_team

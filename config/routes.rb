@@ -17,19 +17,8 @@ Rails.application.routes.draw do
   get 'news/newpost', to: 'newpost#newpost'
   post 'news/newpost', to: 'newpost#create'
 
-
-
-
-
-
-
-
-
   resources :ads
-  
-
-
-  
+ 
 
   get 'search_player', to: 'pages#search_player'
   

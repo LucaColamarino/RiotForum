@@ -19,16 +19,41 @@
             <div id="titolo-bacheca" class="w3-panel w3-center w3-white w3-round-medium">
                 <span>
                     ANNUNCI
-                    <i class="fa fa-refresh" style="font-size:24px"></i>
-                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                    <!-- funziona, ma non capisco se refreshi solo la bacheca o tutta la pagina perchè è troppo veloce da me -->
+                    <%= link_to board_path, :method => :get do%>
+                        <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <%end%>
                 </span>
             </div>
 
             <div id="bacheca">
                 <!-- annunci -->
-                <%= for a in 1..20 do%>
-                <div class="thread"> annuncio
+                <% for annuncio in @annunci do%>
+                    <% user = User.find_by(id: annuncio.user_id) %>
+                    <div class="annuncio">
+                        <div class="owner">
+                            <span><%= user.username %></span>
+                            <img src="1.jpg" alt="Rank">
+                        </div>
+                        <div class="roles">
+                            <h4>
+                                <%=annuncio.mode%>
+                            </h4>
+                            <% if annuncio.mode != 'Aram'%>
+                                icone ruoli
+                            <%end%>
+                        </div>
+                        <div class="minRank">
+                            <%=annuncio.minRank%>
+                            <img src="1.jpg" alt="minRank">
+                        </div>
+                        <div class="apply_for">
+                            <h6 class="scadenza">scadenza</h6>
+                            <button class="btn btn-dark">Candidati</button>
+                        </div>
                     </div>
+                    <!-- <h3><%= user %></h3> 
+                        <img src="1.jpg" alt="Ruoli 1"> -->
                 <%end%>
             </div>
 

@@ -7,18 +7,9 @@ class Ability
     user ||= User.new #guest 
 
     can :read, Ad
-    cannot :create, Ad
-
+    
     if user.has_role?(:user)
-      can :create, Ad
-
-    elsif user.has_role?(:moderator)
-      can :manage, :all
-    elsif user.has_role?(:teamOwner)
-      can [:update, :destroy], Ad, user: user  #può distruggere i SUOI annunci
-    elsif user.has_role?(:teamMember)
-      #permessi team, può vedere il suo team, etc
-      #non può creare annunci perche sta gia in un team
+      can :manage, Ad, user: user
     end
   end
 end

@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_10_202314) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_11_141928) do
   create_table "ads", force: :cascade do |t|
     t.string "game"
-    t.integer "size"
-    t.integer "teamMember_id"
-    t.integer "teamOwner_id"
+    t.string "mode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["teamMember_id"], name: "index_ads_on_teamMember_id"
-    t.index ["teamOwner_id"], name: "index_ads_on_teamOwner_id"
+    t.string "lanes"
+    t.string "minRank"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_ads_on_user_id"
   end
 
   create_table "newposts", force: :cascade do |t|
@@ -64,4 +64,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_10_202314) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
+  add_foreign_key "ads", "users"
 end

@@ -23,7 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 15px;
 
     background-color: red;
 }
@@ -40,7 +39,8 @@
 }
 
 #bacheca {
-    border: 2px dotted black;
+    border: 4px groove silver;
+    border-radius: 1.5em;
 
     flex-basis: 80%;
     width: 85%;
@@ -49,9 +49,58 @@
 
     overflow-y: auto;
     scroll-behavior: smooth;
+
+    display:flex;
+    flex-direction: column;
 }
 
-.thread {
-padding: 10px;
-border-bottom: 1px solid #eee;
+.annuncio {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+
+    display:flex;
+    flex-direction: row;
 }
+.annuncio:hover {
+  outline: 2px solid white;
+}
+
+.annuncio .owner,.minRank,.apply_for {
+    flex-grow:1
+}
+
+.annuncio > * {
+    outline: 2px dotted black;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.annuncio .owner {
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+}
+.annuncio .roles {
+    flex-direction: column;
+    flex-grow: 2;
+    
+}
+.annuncio .minRank {
+    flex-direction: column;
+    justify-content: space-around;
+}
+.annuncio .apply_for {    
+    flex-direction: column;
+    align-items: center;    
+}   
+    .apply_for .scadenza {
+        margin-bottom: auto;
+    }
+    .apply_for button {
+        width: 90%;
+    }

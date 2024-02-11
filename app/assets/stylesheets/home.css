@@ -88,26 +88,20 @@
   margin: 20px auto;
 }
 
-.annuncio {
-  width: 100%; /* Each annuncio takes up the full width */
+.annuncio_home {
+  width: 100%;
   border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 10px; /* Add some space between annuncios */
-
-  display: flexbox;
-  flex-direction: row;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  
 }
 
-.annuncio img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.annuncio:hover {
-  border: 2px solid white;
+.annuncio_home:hover {
+  outline: 2px solid white;
 }
 
 /* -------------SEZIONE NEWS---------- */

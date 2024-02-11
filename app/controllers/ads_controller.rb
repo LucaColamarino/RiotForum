@@ -1,7 +1,8 @@
 class AdsController < ApplicationController
   before_action :set_ad, only: %i[ show edit update destroy ]
-  
-  load_and_authorize_resource
+  before_action :has_user, :only => [:new, :create]
+
+  #load_and_authorize_resource
 
   # GET /ads or /ads.json
   def index
@@ -24,6 +25,9 @@ class AdsController < ApplicationController
   # POST /ads or /ads.json
   def create
     @ad = Ad.new(ad_params)
+    @ad.lanes = params[:ad][:lanes] || {}
+    #lanes_hash = selected_lanes&.map { |lane| [lane, 1] }
+    
 
     respond_to do |format|
       if @ad.save
@@ -67,6 +71,15 @@ class AdsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ad_params
-      params.require(:ad).permit(:game, :size)
+      params.require(:ad).permit(:game, :mode, :minRank, :user_id, lanes: [])
+    end
+
+  protected 
+    
+    def has_user
+      unless current_user
+        flash[:warning] = 'Devi essere loggato per creare un annuncio'
+        redirect_to root_path
+      end
     end
 end

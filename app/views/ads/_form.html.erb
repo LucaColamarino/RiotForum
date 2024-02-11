@@ -1,27 +1,69 @@
 <%= form_with(model: ad) do |form| %>
-  <% if ad.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(ad.errors.count, "error") %> prohibited this ad from being saved:</h2>
 
-      <ul>
-        <% ad.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <div class="field">
+      <%= form.label :game, 'Gioco' %>
+      <%= form.select :game, options_for_select(['League of Legends', 'Valorant'], 'League of Legends') %>
+      <br>
     </div>
-  <% end %>
 
-  <div>
-    <%= form.label :game, style: "display: block" %>
-    <%= form.text_field :game %>
-  </div>
+    <div class="field">
+      <%= form.label :mode, 'Per quale modalità' %>
+      <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex']) %>
+      <br>
+    </div>
 
-  <div>
-    <%= form.label :size, style: "display: block" %>
-    <%= form.number_field :size %>
+    <div class="field">
+      <%= form.label :lanes, 'Ruoli richiesti' %>
+    <br>
+    <div id="lanes">
+    <% lanes = %w[Top Jungle Mid Adc Support Tutti] %>
+    <% lanes.each do |lane| %>
+        <%= form.check_box :lanes, { multiple: true }, lane, lane=='Tutti'%>
+        <%= form.label lane.downcase, lane %><br>
+    <% end %>
   </div>
+    </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+    <div class="field">
+      <%= form.label :minRank, 'Rank minimo' %>
+      <%= form.select :minRank, options_for_select(['Nessuno', 'Argento', 'Oro', 'Platino', 'Smeraldo', 'Diamante', 'Master', 'Grandmaster', 'Challenger'], 'Nessuno') %>
+  
+    </div>
+
+    <div class="field">
+      <%= form.hidden_field :user_id, value: current_user.id %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+
+
+  
+
 <% end %>
+
+<!--
+<div class="form-group">
+    <%= label_tag :mode, 'Per quale modalità' %>
+    <%= select_tag :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex'])%>
+    <br>
+
+    <%= label_tag :lanes, 'Ruoli richiesti' %>
+    <br>
+    <div id="lanes">
+      <% lanes = ['Top', 'Jungle', 'Mid', 'Adc', 'Support', 'Tutti'] %>
+      <% lanes.each do |lane| %>
+        <%= check_box_tag 'lanes', lane, false, id: "#{lane.downcase}" %>
+        <%= label_tag "#{lane.downcase}", lane %><br>
+      <% end %>
+    </div>
+
+    <%= label_tag :minRank, 'Rank minimo' %>
+    <%= select_tag :minRank, options_for_select(['Nessuno', 'Silver', 'Gold', 'Platino', 'Smeraldo', 'Diamond', 'Master', 'Grandmaster', 'Challenger'], 'Nessuno')%>
+    <br>
+
+    <input type="text" name="user_id" id="user_id">
+  </div>
+  <button type="submit" class="btn btn-primary">Pubblica</button>
+-->

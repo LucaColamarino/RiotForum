@@ -1,4 +1,4 @@
-<h1>New ad</h1>
+<h1>Annuncio</h1>
 
 <%= render "form", ad: @ad %>
 
@@ -7,3 +7,24 @@
 <div>
   <%= link_to "Back", home_path %>
 </div>
+<!--
+<%= label_tag :per_quale_modalità, 'Per quale modalità' %>
+    <%= select_tag :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex']), id: 'per_quale_modalità' %>
+    <br>
+
+    <%= label_tag :lanes, 'Ruoli richiesti' %>
+    <br>
+    <div id="ruoli_richiesti">
+      <% lanes = ['Top', 'Jungle', 'Mid', 'Adc', 'Support', 'Tutti'] %>
+      <% lanes.each do |lane| %>
+        <%= check_box_tag 'lanes[]', lane, false, id: "#{lane.downcase}" %>
+        <%= label_tag "#{lane.downcase}", lane %><br>
+      <% end %>
+    </div>
+
+    <%= label_tag :rank_minimo, 'Rank minimo' %>
+    <%= select_tag :minRank, options_for_select(['Nessuno', 'Silver', 'Gold', 'Platino', 'Smeraldo', 'Diamond', 'Master', 'Grandmaster', 'Challenger'], 'Nessuno'), id: 'rank_minimo' %>
+    <br>
+
+    <input type="text" name="user_id" id="article_title">
+    -->
