@@ -40,10 +40,11 @@
             
             <div class="annuncio-container">
                 <% for annuncio in @annunci_home do%>
-                    <% user = User.find_by(id: annuncio.user_id) %>
+                  <% user = User.find_by(id: annuncio.user_id) %>
+                   <% if user.present?%>
                     <div class="annuncio_home">
                         <div class="owner">
-                            <span><%= user.username %></span>
+                        <span><%= user.username %></span> 
                         </div>
                         <div class="roles">
                             <% if annuncio.mode == 'Aram'%>
@@ -53,6 +54,7 @@
                             <%end%>
                         </div>
                     </div>
+                   <%end%>
                 <%end%>
             </div>
 
