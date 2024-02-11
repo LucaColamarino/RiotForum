@@ -3,3 +3,19 @@
 <br>
 
 <%= @newpost.content %>
+<br>
+<br>
+
+<h1>
+<a href="/news"> TORNA INDIETRO</a>
+</h1>
+
+<a href=<%='/news/'+@newpost.id.to_s+'/edit'%>>
+MODIFICA POST
+</a>
+
+
+<a <%= link_to "Elimina Post", '/news/'+@newpost.id.to_s, data: {
+    turbo_method: :delete,
+    turbo_confirm: "Sicuro?"
+  } %> </a>

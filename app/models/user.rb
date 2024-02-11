@@ -2,6 +2,7 @@ class User < ApplicationRecord
   rolify
   
   has_many :ads, dependent: :destroy
+  has_many :newposts
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
