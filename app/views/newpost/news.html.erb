@@ -22,6 +22,10 @@
                 <a href=<%='/news/'+newpost.id.to_s%>>
                 <%= newpost.title%>
                 </a>
+                <%if current_user && current_user.id == newpost.user_id%>
+                    <p>IL POST È TUO</p>
+                <%end%>
+
                     </div>
                 <%end%>
             </div>

@@ -1,6 +1,7 @@
 class NewpostController < ApplicationController
-
   before_action :authenticate_user!, except: [:show, :news]
+  before_action :check_admin, except: [:show, :news]
+
   
 
   def news
@@ -93,6 +94,12 @@ class NewpostController < ApplicationController
     def post_params
       if user_signed_in?
         params.require(:newpost).permit(:title, :content)
+      end
+    end
+
+    def check_admin
+      if current_user.has_role?(:user)
+        redirect_to '/home'
       end
     end
 
