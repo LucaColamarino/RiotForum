@@ -25,9 +25,15 @@
         </div>
 
         <div class="barra-filtri btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-light">Left</button>
-            <button type="button" class="btn btn-light">Middle</button>
-            <button type="button" class="btn btn-light">Right</button>
+            <%=link_to search_player_path(filter: 'CLASSIC') do%>
+                <button type="button" class="btn btn-light">Normal</button>
+            <%end%>
+            <%=link_to search_player_path do%>
+                <button type="button" class="btn btn-light">Ranked</button>
+            <%end%>
+            <%=link_to search_player_path do%>
+                <button type="button" class="btn btn-light">Tutti</button>
+            <%end%>
         </div>
 
         <div class="match-history">
