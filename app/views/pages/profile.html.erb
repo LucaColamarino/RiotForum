@@ -1,5 +1,5 @@
 <head>
-    <title> Profilo - RiotForum</title>
+    <title> Profilo - RiotGuild</title>
     <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
 </head>
 
@@ -121,31 +121,6 @@
 </body>
 
 <!--
-    <div class="container-profile">
-        <div class="RF-account">
-            <div class="header-RF">
-                Il tuo account
-            </div>
-            <div class="content-RF">
-                <div id="UserInfo">
-                    username: <u><%= current_user.username%></u>
-                    <%= link_to edit_profile_path do %>
-                        <button class="btn btn-danger">Cambia profilo</button>
-                    <%end%>
-                
-                    <div> 
-                        email: <%= current_user.email%>
-                    </div>
-
-                    <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary" %> #momentaneo bottone per mail box
-                </div> 
-                <div id="UserOptions">
-                    
-                </div>
-            </div>
-            <div>
-                
-        </div>
 
         <div class="LOL-account">
             <div class="icon">
