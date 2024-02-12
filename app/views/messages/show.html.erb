@@ -4,6 +4,6 @@
 
 <%= @message.body %>
 
+<br>
 
-
-<a <%= link_to "Elimina", message_path(@message), method: :delete, data: { confirm: "Sei sicuro di voler eliminare questo messaggio?" } %></a>
+<%= button_to 'delete', @message,method: :delete%>
