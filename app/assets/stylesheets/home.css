@@ -83,6 +83,10 @@
   border: 4px groove currentColor;
 }
 
+#titolo-bacheca-home {
+  color: goldenrod;
+}
+
 .annuncio-container {
   width: 80%;
   margin: 20px auto;
@@ -139,6 +143,27 @@
 
 .champ-rotation > .champImg {
   outline:2px inset goldenrod;
+}
+
+#scrivi {
+  background-color: crimson;
+  color: white;
+  
+  border: none;
+  border-radius: 1em;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position:fixed;
+  bottom: 50px;
+  right:50px;
+}
+
+#scrivi:hover {
+  filter: brightness(1.1);
+  outline: 2px groove rgb(134, 11, 36);
+  color: goldenrod;
 }
 
 /*

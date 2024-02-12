@@ -69,12 +69,25 @@
   .header-left {
     display:flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .header-right {
     display:flex;
-    justify-content: flex-end;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+  }
+  
+  #iconaNotifica {
+    outline: 1px solid gray;
+  }
+
+  #iconaNotifica:hover {
+    cursor: pointer;
+    outline: 2px solid black;
   }
   
   .login {

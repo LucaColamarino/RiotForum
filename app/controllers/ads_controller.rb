@@ -2,7 +2,7 @@ class AdsController < ApplicationController
   before_action :set_ad, only: %i[ show edit update destroy ]
   before_action :has_user, :only => [:new, :create]
 
-  #load_and_authorize_resource
+  load_and_authorize_resource
 
   # GET /ads or /ads.json
   def index

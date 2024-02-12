@@ -28,6 +28,11 @@
         height:50%;
     }
 
+        .RF-account .content-RF {
+            display: flex;
+            flex-direction: row;
+        }
+
     .LOL-account {
         display:flex;
         flex-direction: row;
@@ -35,18 +40,12 @@
 
         .LOL-account .icon {
 
-            display:flex;
-            flex-direction:column;
-            margin-left: 2em;
-            margin-top: 1em;
-            margin-bottom: 1em;
-
             border: 3px dotted blue;
         }
         
             .icon > .img {
-                width:50%;
-                height:50%;
+                width:100%;
+                height:100%;
             }
         
         .LOL-account .info {

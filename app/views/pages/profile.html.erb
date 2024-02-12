@@ -9,23 +9,33 @@
             <div class="header-RF">
                 Il tuo account
             </div>
-            <div>
-                username: <u><%= current_user.username%></u>
-                <%= link_to edit_user_registration_path do %>
-                    <button class="btn btn-danger">Cambia profilo</button>
-                <%end%>
+            <div class="content-RF">
+                <div id="UserInfo">
+                    username: <u><%= current_user.username%></u>
+                    <%= link_to edit_user_registration_path do %>
+                        <button class="btn btn-danger">Cambia profilo</button>
+                    <%end%>
+                
+                    <div> 
+                        email: <%= current_user.email%>
+                    </div>
+                </div> 
+                <div id="UserOptions">
+                    
+                </div>
             </div>
-            <div> email: <%= current_user.email%></div>
+            <div>
+                
         </div>
 
         <div class="LOL-account">
             <div class="icon">
                 <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@your_icon.to_s+'.png', class:'img responsive'%>
-                <span>
+            </div>
+            <span>
                     <h1><%= @current_user.username %></h1>
                     Livello <%= @your_summonerLevel %>
                 </span>
-            </div>
             </div class="info LOL">
             <!--
                 <%if !@inactive %>

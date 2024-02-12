@@ -29,28 +29,37 @@
   </div>
       </div>
 
-      <% if user_signed_in? %>
-        <!-- | x x x x Profilo| -->
       <div class="header-right">
-       <div class="w3-dropdown-hover w3-right">
-        <a class="w3-button profilo"><p><%= current_user.email %></p></a>
-        <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
-          <a href="/profile" class="w3-bar-item w3-button">Profilo</a>
-          <a href="/your_team" class="w3-bar-item w3-button">Il tuo team</a>
-          <a href="/settings" class="w3-bar-item w3-button">Impostazioni</a>
-          <hr class="w3-border">
-          <div class="w3-center">
-            <%= button_to "Logout", destroy_user_session_path, method: :delete, form_class: "d-inline" , class: "btn btn-primary ", style: "background-color: #df7e23;" %>
-          </div>
-        </div>
-      </div> 
+        <% if user_signed_in? %>
+          <!-- | x x x x Profilo| -->
 
-  <% else %>
-        <!-- |LOGIN| -->
-      <div class="header-right">
-        <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-primary login" %>
+        <div class="w3-round" id="iconaNotifica">
+          <%= link_to notificas_path do %>
+          <%= image_tag "iconaNotifica-24.png", alt: 'Nots'%>
+          <%end%>
+        </div>
+        
+        <div class="w3-dropdown-hover w3-right">
+          <a class="w3-button profilo"><p><%= current_user.email %></p></a>
+          <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+            <a href="/profile" class="w3-bar-item w3-button">Profilo</a>
+            <a href="/your_team" class="w3-bar-item w3-button">Il tuo team</a>
+            <a href="/settings" class="w3-bar-item w3-button">Impostazioni</a>
+            <hr class="w3-border">
+            <div class="w3-center">
+              <%= button_to "Logout", destroy_user_session_path, method: :delete, form_class: "d-inline" , class: "btn btn-primary ", style: "background-color: #df7e23;" %>
+            </div>
+          </div>
+        </div> <!-- aggiunto solo perchè mancava, ma il dropdown funzionava anche senza-->
+        
+
+        <% else %>
+              <!-- |LOGIN| -->
+            
+              <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-primary login" %>
+            
+        <% end %>
       </div>
-<% end %>
 
 </header>
 

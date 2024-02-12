@@ -25,9 +25,9 @@
         </div>
 
         <div class="barra-filtri btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Left</button>
-            <button type="button" class="btn btn-secondary">Middle</button>
-            <button type="button" class="btn btn-secondary">Right</button>
+            <button type="button" class="btn btn-light">Left</button>
+            <button type="button" class="btn btn-light">Middle</button>
+            <button type="button" class="btn btn-light">Right</button>
         </div>
 
         <div class="match-history">
@@ -60,18 +60,25 @@
                         <div class="playerIcon">
 
                             <div class="champProfile">
-                                <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/champion/'+@players[i][index][:champion]+'.png', class:'champImg responsive',alt: @players[i][index][:champion] %>
-                            
-                                <div class="spells">
-                                    
+                                <div>
+                                    <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/champion/'+@players[i][index][:champion]+'.png', class:'champImg responsive',alt: @players[i][index][:champion] %>
                                 </div>
-                                <div class="runes">
-                                    
+                                <!--
+                                <div class="nomeChamp">
+                                    <%=@players[i][index][:champion]%>
                                 </div>
+                                -->
                             </div>
                             
                             <div class="inventory">
-                                inventario
+                                <%if !@searchedPlayer_data[i].nil?%>
+                                    <%for n_item in 0..6 do%>
+                                    <% item = @searchedPlayer_data[i]["item#{n_item}"] %>
+                                            <%= image_tag "https://ddragon.leagueoflegends.com/cdn/14.3.1/img/item/"+item.to_s+".png", class: "responsive itemImg", alt: "" %>
+                                    <%end%>
+                                <%else%>
+                                    NO INFO 
+                                <%end%>
                             </div>
 
                         </div>
@@ -88,7 +95,8 @@
                     </div>
 
                     <div class="teamData">
-                        
+                        <span>Oro guadagnato</span>
+                        <%=@searchedPlayer_data[i]["gold"]%>
                     </div>
 
                 </div>
