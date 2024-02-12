@@ -1,0 +1,16 @@
+
+
+<h1> MESSAGGI RICEVUTI </h1>
+
+<% @messages.each do |message| %>
+  <% if message.present? %>
+  <a href=<%='/messages/'+message.id.to_s%>>
+    <%= message.subject %>
+  </a>
+    <%= User.find_by(id: message.sender_id).email %>
+   
+  <br>
+  <% end %>
+<%end%>
+
+  <%= button_to "Invia un messaggio", '/messages/new', method: :get, class: "btn btn-primary" %>

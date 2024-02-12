@@ -98,7 +98,7 @@ class NewpostController < ApplicationController
     end
 
     def check_admin
-      if current_user.has_role?(:user)
+      if !(current_user.has_role?(:moderator))
         redirect_to '/home'
       end
     end
