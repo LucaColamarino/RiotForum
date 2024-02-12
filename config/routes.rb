@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   patch 'news/:id' , to: 'newpost#update'
   delete 'news/:id', to: 'newpost#destroy'
 
+  delete 'messages/:id', to: 'messages#destroy'
+
+  resources :messages
+
   resources :ads
  
 

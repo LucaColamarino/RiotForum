@@ -1,0 +1,29 @@
+<%= form_with model: @message do |form| %>
+    <div>
+      <%= form.label :subject %><br>
+      <%= form.text_field :subject %>
+      <% @message.errors.full_messages_for(:subject).each do |message| %>
+        <div><%= @message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %><br>
+      <% @message.errors.full_messages_for(:body).each do |message| %>
+        <div><%= @message %></div>
+      <% end %>
+    </div>
+    <div>
+      <%= form.label :receive_email %><br>
+      <%= form.email_field :receive_email %><br>
+      <% @message.errors.full_messages_for(:receive_email).each do |message| %>
+        <div><%= @message %></div>
+      <% end %>
+    </div>
+
+  
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
