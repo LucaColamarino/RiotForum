@@ -34,9 +34,10 @@
 
         <!-- BACHECA ANNUNCI -->
         <div class="board-section" style="background-color:<%= @color %>">
-            <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
-            <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
-
+            <div id="titolo-bacheca-home">
+                <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
+                <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
+            </div>
             
             <div class="annuncio-container">
                 <% for annuncio in @annunci_home do%>
@@ -59,17 +60,14 @@
             </div>
 
             <%if(session[:game] == 'LOL') %>
-            <%= link_to board_path do %>
                <%@board_btn_color = "btn-dark" %>
-               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <%elsif(session[:game] == 'VALO') %>
+                <%@board_btn_color = "btn-light" %>
             <% end %>
-           <%elsif(session[:game] == 'VALO') %>
-            <%= link_to board_path do %>
-               <%@board_btn_color = "btn-light" %>
-               <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
-            <% end %>
-           <% end %>
 
+            <%= link_to board_path do %>
+                <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+            <% end %>
 
         </div> 
 
@@ -114,6 +112,12 @@
             </div>
         </div>
 
+        <!-- TASTO SCRIVI -->
+        <%= link_to new_notifica_path do %>
+            <button id="scrivi">
+                Scrivi
+            </button>
+        <% end %>
 
 
     </div>

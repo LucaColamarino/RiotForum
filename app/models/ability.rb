@@ -7,9 +7,10 @@ class Ability
     user ||= User.new #guest 
 
     can :read, Ad
+    cannot :create, Ad
     
     if user.has_role?(:user)
-      can :manage, Ad, user: user
+      can :create, Ad
     end
   end
 end

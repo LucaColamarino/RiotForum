@@ -49,6 +49,7 @@ class PagesController < ApplicationController
       @participants = Array.new(@length)
       @players = Array.new(@length)
       @searchedPlayer = Array.new(@length)
+      @searchedPlayer_data = Array.new(@length)
       for i in 0...@length do
         @matchData[i] = self.getMatch(@matchlist[i])
         if @matchData[i] != "error"  #cioè matchData=response.body
@@ -61,7 +62,7 @@ class PagesController < ApplicationController
           #-----INFO SINGOLI GIOCATORI
 
           @players[i] = {}
-          
+          @searchedPlayer_data[i] = {}
           @participants[i] = @matchData[i]["info"]["participants"]  #player del singolo game
           for j in 0...10 do #10 numero players
             @players[i][j] = {
@@ -79,7 +80,14 @@ class PagesController < ApplicationController
 
             if @players[i][j][:puuid] == @puuid
               @searchedPlayer[i] = j
+              @searchedPlayer_data[i] = {}
+              for n_item in 0..6 do
+                @searchedPlayer_data[i]["item#{n_item}"] = @participants[i][j]["item#{n_item}"]
+              end
+              @searchedPlayer_data[i]["gold"] = @participants[i][j]["goldEarned"]
+              
             end
+
 
           end
 
