@@ -31,10 +31,12 @@
                 <% for annuncio in @annunci do%>
                     <% user = User.find_by(id: annuncio.user_id) %>
                     <div class="annuncio">
+                     <%if user.present?%>
                         <div class="owner">
                             <span><%= user.username %></span>
                             <img src="1.jpg" alt="Rank">
                         </div>
+                     <%end%>
                         <div class="roles">
                             <h4>
                                 <%=annuncio.mode%>

@@ -39,8 +39,7 @@ class MessagesController < ActionController::Base
     end
 
     def destroy
-         @message = Message.find(params[:id])
-         @message.destroy
+         @message = Message.find(params[:id]).delete
      
          redirect_to '/messages', status: :see_other
     end
