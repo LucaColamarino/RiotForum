@@ -1,0 +1,16 @@
+<%= form_with model: @message, url: messages_new_admin_message_path do |form| %>
+    <div>
+      <%= form.label :subject %><br>
+      <%= form.text_field :subject %>
+    </div>
+    
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </div>
+    
+    <div>
+      <%= form.submit "Invia a tutti gli utenti " %>
+    </div>
+  <% end %>
+  

@@ -45,6 +45,29 @@ class MessagesController < ActionController::Base
     end
 
 
+    def new_admin_message
+
+        @message = Message.new
+     if !current_user.has_role?(:moderator)
+        redirect_to '/profile/'
+     end      
+
+    end
+    
+    def create_admin_message
+        receivers=User.all
+
+        receivers.each do |receiver|
+            message=Message.new(admin_msg)
+            message.sender_id=current_user.id
+            message.receiver_id = receiver.id
+            message.save
+        end
+     redirect_to '/profile/'
+    end
+
+
+
 
     private
 
@@ -53,15 +76,9 @@ class MessagesController < ActionController::Base
 
     end
 
-
-
-
-
-
-
-
-
-
+    def admin_msg
+        params.require(:message).permit(:subject, :body)
+    end
 
 end
 
