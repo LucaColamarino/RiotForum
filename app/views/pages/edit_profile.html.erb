@@ -1,9 +1,16 @@
 <form class="w3-center" action="<%= edit_profile_path %>" method="get">
   <div class="form-group">
+
+    <% if flash.now[:error] %>
+      <div class="alert alert-danger" role="alert">
+        <%= flash.now[:error] %>
+      </div>
+    <% end %>
+
     <label for="inputUsername">name</label>
     <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Enter username">
-    <small id="name" class="form-text text-muted">Il tuo username deve essere nella forma "nome#tag" (es. abc#1234)</small>
-  
+    <small id="name" class="form-text text-muted">Inserisci un username Evocatore</small>
+
   </div>
   <button type="submit" class="btn btn-primary">Cerca</button>
 </form>

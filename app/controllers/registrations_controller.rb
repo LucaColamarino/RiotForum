@@ -14,6 +14,18 @@ class RegistrationsController < Devise::RegistrationsController
       end
     end
 
+    # def edit
+    #     @user = current_user
+    #     if resource.is_a?(User) && params[:username].present?
+    #       username = RiotGamesApi.find_summoner(params[:username])
+    #       if user[:code] == 200 && user[:body]["name"]==params[:username]
+    #         resource.username = user[:code].to_s
+    #         render 'profile'
+    #       else
+    #         redirect_to root_path
+    #       end
+    #     end
+    # end
     protected
 
     def after_sign_up_path_for(resource)  #resource è l'utente al momento loggato

@@ -141,95 +141,23 @@ class PagesController < ApplicationController
     else
       redirect_to sign_up_path #?
     end
-
-=begin
-    if user_signed_in? && current_user.username.present?
-      @username_on = true
-      search_summoner_data = self.find_summoner(current_user.username)
-
-      if search_summoner_data[:code] == 200
-        @your_summoner = search_summoner_data[:body]
-
-        @your_summoner_name = @your_summoner["name"]
-        @your_summoner_level = @your_summoner["summonerLevel"]
-        @iconID = @your_summoner["profileIconId"]
-        @puuid = @your_summoner["puuid"]
-
-      end
-      #-------------------------------#
-      summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
-      if summoner_matchlist[:code] == 200
-        @matchlist = summoner_matchlist[:body]
-      else
-        flash[:alert] = 'Error in loading match history'
-      end
-      #-------------------------------#
-      @length = @matchlist.length
-      
-      @matchData = Array.new(@length)
-      @durata = Array.new(@length)
-      @gameMode = Array.new(@length)
-      @participants = Array.new(@length)
-      @players = Array.new(@length)
-      @you = Array.new(@length)
-      @allies = Array.new(@length)
-      for i in 0...@length do
-        @matchData[i] = self.getMatch(@matchlist[i])
-        if @matchData[i] != "error"  #cioè matchData=response.body
-          
-          #-----INFO GAME
-
-          @durata[i] = formattedTime(@matchData[i]["info"]["gameDuration"])
-          @gameMode[i] = @matchData[i]["info"]["gameMode"]
-
-          #-----INFO SINGOLI GIOCATORI
-
-          @players[i] = {}
-          
-          @participants[i] = @matchData[i]["info"]["participants"]  #player del singolo game
-          for j in 0...10 do #10 numero players
-            @players[i][j] = {
-              puuid: @participants[i][j]["puuid"],
-              champion: @participants[i][j]["championName"],
-              kills: @participants[i][j]["kills"],
-              deaths: @participants[i][j]["deaths"],
-              assists: @participants[i][j]["assists"],
-              win: @participants[i][j]["win"], #true/false
-              lane: @participants[i][j]["lane"],
-              cs: @participants[i][j]["totalMinionsKilled"] + @participants[i][j]["neutralMinionsKilled"],
-              team: @participants[i][j]["teamId"],
-              summonerName: @participants[i][j]["summonerName"]
-            }
-
-            if @players[i][j][:puuid] == @puuid
-              @you[i] = j
-            end
-
-          end
-
-
-
-        else
-          flash[:alert] = 'Error in loading match history'
-        end
-      end
-
-    else
-      @username_on = false
-      redirect_to edit_profile_path
-
-    end
-=end      
+    
   end
+  
 
   def edit_profile 
-    #messo qua in edit_profile per prova, poi penso che andrà usato find_summoner(giù)che fa la API call e questo solo lo invoca
-    
-    if params['summoner_name'].present?
-      params['summoner_name'] = "ayo"
-      render 'profile'
+    if !params[:username].nil?
+      username = params[:username]
+      if username_valid?(username)
+        current_user.update(username: params[:username])
+        redirect_to profile_path
+      else
+        flash.now[:error] = "Username inesistente. Riprova}"
+        render :edit_profile
+      end
     end
   end
+
 
   def board
     @game = params[:game];
@@ -237,6 +165,7 @@ class PagesController < ApplicationController
     @annunci = Ad.order(updated_at: :desc).all
 
   end
+
 
   def create_team
   end
@@ -249,6 +178,7 @@ class PagesController < ApplicationController
   
 
   #----------------- API METHODS ---------------#
+  private 
 
   def find_summoner(summoner)
     return RiotGamesApi.find_summoner(summoner)
@@ -275,6 +205,15 @@ class PagesController < ApplicationController
     return "#{hours}:#{minutes}:#{seconds}"
   end
 
+  def username_valid?(username)
+    summoner = self.find_summoner(username)
+    if summoner[:code] == 200
+      summoner_name = summoner[:body]["name"]
+      return summoner_name == username
+    else
+      false
+    end
+  end
 
 
 end

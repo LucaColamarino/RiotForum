@@ -16,6 +16,11 @@
     .account-info {
         flex:1;
     }
+    
+	    	.account-info .icon .img {
+		    width: 128px;
+		    height: 128px;
+	    	}
 
         .user-info > * {
             margin-top: 1em;
