@@ -12,7 +12,7 @@ class RiotGamesApi
     #----------- RIOT USER --------------#
    
     def self.find_byRiotId(name, tag)
-        endpoint = "/riot/account/v1/accounts/by-riot-id/#{name}/"
+        endpoint = "/riot/account/v1/accounts/by-riot-id/#{name}/#{tag}"
 
         uri = URI.parse("#{REGION_URL}#{endpoint}")
         http = Net::HTTP.new(uri.host, uri.port)

@@ -1,16 +1,79 @@
 <form class="w3-center" action="<%= edit_profile_path %>" method="get">
-  <div class="form-group">
 
-    <% if flash.now[:error] %>
+  <% if flash.now[:error] %>
       <div class="alert alert-danger" role="alert">
         <%= flash.now[:error] %>
       </div>
     <% end %>
-
-    <label for="inputUsername">name</label>
-    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Enter username">
-    <small id="name" class="form-text text-muted">Inserisci un username Evocatore</small>
+  <!--
+  <div class="form-group" >
+    
+    <label>Scegli cosa usare:</label><br>
+    <input type="radio" id="inputUsernameRadio" name="type" value="username" >
+    <label for="inputUsernameRadio">Nome Evocatore</label>
+    <input type="radio" id="inputRiotIDRadio" name="type" value="riot_id">
+    <label for="inputRiotIDRadio">Riot ID</label>
 
   </div>
+  -->
+  
+  <div id="username-form" class="form-group">
+    <label for="inputUsername">Nome Evocatore</label>
+    <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Inserisci un nome Evocatore" autofocus>
+    
+    <%= hidden_field_tag 'inputType', 'username' %>
+  </div>
+
+  <!--
+  <div id="riot-id-form" class="form-group" style="display: none;">
+    <label for="inputGameName">Game Name</label>
+    <input type="text" name="game_name" class="form-control" id="inputGameName" placeholder="Enter Game Name">
+
+    <label for="inputTagline">Tagline</label>
+    <input type="text" name="tagline" class="form-control" id="inputTagline" placeholder="Enter Tagline">
+    
+    <%= hidden_field_tag 'inputType', 'riot_id' %>
+  </div>
+  -->
   <button type="submit" class="btn btn-primary">Cerca</button>
 </form>
+
+<!--
+<script>
+  const inputUsernameRadio = document.getElementById('inputUsernameRadio');
+  const inputRiotIDRadio = document.getElementById('inputRiotIDRadio');
+  const usernameForm = document.getElementById('username-form');
+  const riotIdForm = document.getElementById('riot-id-form');
+
+  inputUsernameRadio.addEventListener('change', () => {
+    if (inputUsernameRadio.checked) {
+      usernameForm.style.display = 'block';
+      riotIdForm.style.display = 'none';
+    }
+  });
+
+  inputRiotIDRadio.addEventListener('change', () => {
+    if (inputRiotIDRadio.checked) {
+      riotIdForm.style.display = 'block';
+      usernameForm.style.display = 'none';
+    }
+  });
+</script>
+-->
+<style>
+  .form-group input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 10px; 
+  }
+
+
+.form-group label {
+  display: block;
+}
+
+.form-group input[type="text"] {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+</style>

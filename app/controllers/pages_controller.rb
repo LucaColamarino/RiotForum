@@ -20,6 +20,7 @@ class PagesController < ApplicationController
   def scelta
   end
 
+#------------------------------------
   def search_player
     if params[:summonerName].present?
       search_summoner_data = self.find_summoner(params[:summonerName])
@@ -103,8 +104,26 @@ class PagesController < ApplicationController
     end
   end
 
+  def search_user
+    @search_query = params[:search]
+    @found_user = User.find_by(username: @search_query)
+    if @found_user
+      render 'show_user'
+    else
+      flash[:alert] = "Utente '#{@search_query}' non trovato."
+      redirect_to profile_path
+    end
+  end
+#------------------------------------
+
   def profile
     if user_signed_in?
+
+      if flash[:alert]
+        # per triggerare il messaggio d'errore di cerca utente inesistente
+        flash.now[:error] = flash[:error]
+      end
+      
       if current_user.username.present?
         
         your_data = self.find_summoner(current_user.username)
@@ -144,21 +163,57 @@ class PagesController < ApplicationController
     
   end
   
-
+  #--------------------------------
   def edit_profile 
-    if !params[:username].nil?
-      username = params[:username]
-      if username_valid?(username)
-        current_user.update(username: params[:username])
-        redirect_to profile_path
-      else
-        flash.now[:error] = "Username inesistente. Riprova}"
-        render :edit_profile
-      end
+    if request.get? && !params[:inputType].present?
+      # Affinchè non mi dia errore quando apro la pagina per la 1a volta
+      return
+    end
+
+    if !params[:username].nil?     
+       updateBy_username(params[:username]) 
+    end
+
+    # if params[:inputType].present? && !params[:username].nil?
+    #   type = params[:inputType]
+    #   if type == "username"
+    #     updateBy_username(params[:username])
+    #   elsif type == "riot_id"
+    #     updateBy_riotId(params[:game_name],params[:tagline])
+    #   end
+    # else
+    #   flash.now[:error] = "Errore. Riprova"
+    #   render :edit_profile
+    # end
+
+  end
+
+  def updateBy_username(username)
+    if username_valid?(username)
+      current_user.update(username: username)
+      redirect_to profile_path(user: username)
+    else
+      flash.now[:error] = "Username inesistente. Riprova"
+      render :edit_profile
     end
   end
 
-
+  #ancora da implementare
+  def updateBy_riotId(name,tag)
+    if riotID_valid?(name,tag)  #non è stato (ancora) messo come colonna in user
+      data = self.find_byRiotId(name,tag)
+      if data[:code]==200
+        data_puuid = self.find_byPuuid(data[:body][:puuid])
+        if data_puuid[:code] = 200
+          redirect_to profile_path(user: data_puuid[:body]["name"])
+        end
+      end
+    else
+      flash.now[:error] = "RiotID inesistente. Riprova"
+      render :edit_profile
+    end
+  end
+  #--------------------------------
   def board
     @game = params[:game];
 
@@ -182,6 +237,14 @@ class PagesController < ApplicationController
 
   def find_summoner(summoner)
     return RiotGamesApi.find_summoner(summoner)
+  end
+
+  def find_byRiotId(name, tag)
+    return RiotGamesApi.find_byRiotId(name, tag)
+  end
+
+  def find_byPuuid(puuid)
+    return RiotGamesApi.find_byPuuid(puuid)
   end
 
   def getMatch(matchId)
@@ -210,6 +273,17 @@ class PagesController < ApplicationController
     if summoner[:code] == 200
       summoner_name = summoner[:body]["name"]
       return summoner_name == username
+    else
+      false
+    end
+  end
+
+  def riotID_valid?(name,tag)
+    riotUser = self.find_byRiotId(name,tag)
+    if riotUser[:code] == 200
+      gameName = riotUser[:body]["gameName"]
+      tagline = riotUser[:body]["tagLine"]
+      return name == gameName && tag == tagline
     else
       false
     end

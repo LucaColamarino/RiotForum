@@ -3,18 +3,23 @@
     flex-direction: row;
 
     min-height: 100vh;
+    
+    background-image: url('/assets/sfondo-profilo.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
 
-    border: 3px dotted black;
 }
 
-.container-profile > div {
-    border: 5px solid blue;
-    
+.container-profile > div { 
     margin-top: 4em;
+    margin-bottom: 1em;
 }
 
     .account-info {
         flex:1;
+        background-color: white;
+        border: 5px groove goldenrod;
+        margin-left: 5px;
     }
     
 	    	.account-info .icon .img {
@@ -25,6 +30,10 @@
         .user-info > * {
             margin-top: 1em;
         }
+        
+        	.user-info .cerca-utenti {
+        	    margin-top: 4em;
+        	}
 
     
     .candidature-team {
@@ -95,8 +104,8 @@
 
     .container-friendlist {
         flex:1;
-
         background-color: pink;
+        margin-right: 5px;
     }
         .friendlist {
             border: 3px solid black;

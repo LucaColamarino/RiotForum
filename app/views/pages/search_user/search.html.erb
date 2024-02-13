@@ -1,0 +1,9 @@
+<div class="search-results">
+  <% if @found_user %>
+    <%= render @found_user %>
+  <% else %>
+    <div class="alert alert-warning" role="alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+</div>

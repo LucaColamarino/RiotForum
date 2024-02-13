@@ -7,11 +7,11 @@
     
     <div class="container-profile">
         <!-----------------------ACCOUNT--------------------------->
-        <div class="account-info">  
+        <div class="account-info w3-center">  
 
             <div class="summoner-info">
                 <span>
-                    <h1><%= @current_user.username %></h1>Lv <%= @your_summonerLevel %>
+                    <h1><%= current_user.username %></h1>Lv <%= @your_summonerLevel %>
                 </span>
 
                 <div class="icon">
@@ -33,6 +33,18 @@
                 </div>
                 <div style="text-align:center">
                     <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary"%>
+                </div>
+
+                <div class="cerca-utenti w3-center">
+                    <% if flash.now[:alert] %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= flash.now[:alert] %>
+                        </div>
+                    <% end %>
+                    <%= form_tag search_user_path, method: :get do %>
+                        <%= text_field_tag :search, params[:search], placeholder: "Cerca utente del sito", name: "search" %>
+                        <%= submit_tag "Cerca" %>
+                    <% end %>
                 </div>
             </div> 
 
@@ -118,32 +130,22 @@
         </div>
 
     </div>
+    
 
 </body>
 
 <!--
 
-        <div class="LOL-account">
-            <div class="icon">
-                <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@your_icon.to_s+'.png', class:'img responsive'%>
-            </div>
-            <span>
-                    <h1><%= @current_user.username %></h1>
-                    Livello <%= @your_summonerLevel %>
-                </span>
-            </div class="info LOL">
+        
             
-                <%if !@inactive %>
+                if !@inactive 
                     tipo queue: <%=@queueType%>
                     rank <%=@rank%>
                     tier <%=@tier%>
                     wins <%=@wins%>
                     losses <%=@losses%>
 
-
-                <%else%>
-                    L'evocatore non ha una carriera recente in classificata
-                <%end%>   
+  
                          
             </div>
         </div>
