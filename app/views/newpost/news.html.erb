@@ -11,8 +11,9 @@
             <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
                 <span>
                     NOTIZIE
-                    <i class="fa fa-refresh" style="font-size:24px"></i>
-                    <!-- va implementato il refresh che aggiorni la bacheca -->
+                    <%= link_to news_path, :method => :get do%>
+                        <i class="fa fa-refresh" style="font-size:24px"></i>
+                    <%end%>
                 </span>
             </div>
 

@@ -1,0 +1,12 @@
+<%= form_with model: @message, url: messages_new_support_message_path do |form| %>
+
+    
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </div>
+    
+    <div>
+      <%= form.submit "Invia Ticket ai moderatori " %>
+    </div>
+  <% end %>

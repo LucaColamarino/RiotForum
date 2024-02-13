@@ -34,6 +34,9 @@
                 <div style="text-align:center">
                     <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary"%>
                 </div>
+                <div style="text-align:center">
+                <%= button_to "Supporto", '/messages/new_support_message', method: :get, class: "btn btn-primary"%>
+                </div>
 
                 <div class="cerca-utenti w3-center">
                     <% if flash.now[:alert] %>

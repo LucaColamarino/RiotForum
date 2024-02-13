@@ -66,6 +66,25 @@ class MessagesController < ActionController::Base
      redirect_to '/profile/'
     end
 
+    def new_support_message
+        @message = Message.new   
+    end
+
+    def create_support_message
+        users=User.all
+        users.each do |user|
+            if user.has_role?(:moderator)
+              message=Message.new(support_msg)
+              message.sender_id=current_user.id
+              message.receiver_id=user.id
+              message.subject='Ticket Supporto Utente'
+              message.save
+            end
+
+        end
+        redirect_to '/profile/'
+    end
+
 
 
 
@@ -78,6 +97,10 @@ class MessagesController < ActionController::Base
 
     def admin_msg
         params.require(:message).permit(:subject, :body)
+    end
+
+    def support_msg
+        params.require(:message).permit(:body)
     end
 
 end

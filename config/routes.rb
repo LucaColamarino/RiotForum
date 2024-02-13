@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   get 'messages/new_admin_message', to: 'messages#new_admin_message'
   post 'messages/new_admin_message', to: 'messages#create_admin_message'
 
+  get 'messages/new_support_message', to: 'messages#new_support_message'
+  post 'messages/new_support_message', to: 'messages#create_support_message'
+
 
   resources :messages
 
