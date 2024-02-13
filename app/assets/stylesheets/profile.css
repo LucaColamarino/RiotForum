@@ -1,54 +1,123 @@
 .container-profile {
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+
+    min-height: 100vh;
 
     border: 3px dotted black;
 }
 
 .container-profile > div {
-    flex-grow: 1;
+    border: 5px solid blue;
+    
+    margin-top: 4em;
+}
 
-    border: 2px solid black;
-    width: 80%;
-}       
-
-    .RF-account {
-        background-image: url('/assets/riot-profile.jpeg'); 
-        background-size: cover; 
-        background-repeat: no-repeat; 
-
-        color: white;
-        border: 2px dashed black;
-        font-weight: bold;
-
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height:50%;
+    .account-info {
+        flex:1;
     }
 
-        .RF-account .content-RF {
+        .user-info > * {
+            margin-top: 1em;
+        }
+
+    
+    .candidature-team {
+        flex:2;
+    }     
+
+    .candidature-team > div {
+        background-color: burlywood;
+        border: 3px inset gray;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+
+        margin:20px;
+    }
+
+    .candidature-team .w3-panel{
+        background-color:rgb(158, 158, 158);
+        color: white;
+        width: 80%;
+        margin-top: 5px;
+    }
+
+    .container-candidature {
+        
+        flex: 1;
+    }
+
+    .container-richieste {
+        flex: 2;
+    }
+       
+
+        .candidatura, .richiesta {
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
-    .LOL-account {
-        display:flex;
-        flex-direction: row;
-    }
-
-        .LOL-account .icon {
-
-            border: 3px dotted blue;
+        .candidatura,.richiesta {
+            border: none;
+            background-color:rgb(44, 44, 63);
+            color: white;
+            
+            height: 5em;
+            margin-top: 5px;
+            margin-bottom: 3px;
         }
-        
-            .icon > .img {
-                width:100%;
-                height:100%;
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            .richiedente {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
             }
-        
-        .LOL-account .info {
+
+    .container-friendlist {
+        flex:1;
+
+        background-color: pink;
+    }
+        .friendlist {
+            border: 3px solid black;
+
+            height: 100%;
             display:flex;
-            flex-direction:column;
+            flex-direction: column;
+            align-items: center;
+            align-items: center;  
         }
+
+            .friendlist > .w3-panel {
+                margin-top: 0;
+                border-bottom-left-radius: 0.5em;
+                border-bottom-right-radius: 0.5em;
+            }
+
+            .friend {
+                display: flex;
+                align-items: center;
+
+                margin-bottom: 3px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: floralwhite;
+                border: 3px inset floralwhite;
+                border-radius: 0.3em;
+                width: 100%; 
+            }

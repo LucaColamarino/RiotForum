@@ -1,34 +1,126 @@
 <head>
-    <title> Profilo - RiotForum</title>
+    <title> Profilo - RiotGuild</title>
     <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
 </head>
 
 <body>
+    
     <div class="container-profile">
-        <div class="RF-account">
-            <div class="header-RF">
-                Il tuo account
-            </div>
-            <div class="content-RF">
-                <div id="UserInfo">
-                    username: <u><%= current_user.username%></u>
-                    <%= link_to edit_user_registration_path do %>
-                        <button class="btn btn-danger">Cambia profilo</button>
-                    <%end%>
-                
-                    <div> 
-                        email: <%= current_user.email%>
-                    </div>
+        <!-----------------------ACCOUNT--------------------------->
+        <div class="account-info">  
 
-                    <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary" %> #momentaneo bottone per mail box
-                </div> 
-                <div id="UserOptions">
-                    
+            <div class="summoner-info">
+                <span>
+                    <h1><%= @current_user.username %></h1>Lv <%= @your_summonerLevel %>
+                </span>
+
+                <div class="icon">
+                    <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@your_icon.to_s+'.png', class:'img responsive'%>
                 </div>
             </div>
-            <div>
-                
+
+            <hr>
+
+            <div class="user-info">
+                <span>username: <u><%= current_user.username%></u></span>
+                <%= link_to edit_profile_path do %>
+                    <button class="btn btn-danger">Cambia profilo</button>
+                <%end%>
+            
+                <div> 
+                    email: <%= current_user.email%>
+                </div>
+                <div style="text-align:center">
+                    <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary"%>
+                </div>
+            </div> 
+
         </div>
+
+        <!-----------------------CANDIDATURE/TEAM--------------------------->
+
+        <div class="candidature-team">
+
+
+            <div class="container-candidature">
+                <div class="w3-panel w3-round-xlarge w3-center">
+                    LE MIE CANDIDATURE
+                </div>
+
+                <div class="candidatura">
+                    <div class="user owner">
+                        riotId,rank
+                    </div>  
+                    <div class="ruolo">
+                        ruolo,img
+                    </div>
+                    <div class="buttons">
+                        <%= link_to profile_path do %>
+                            <button class="btn btn-light">Annulla</button>
+                        <%end%>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------->
+
+            <div class="container-richieste">
+                <div class="w3-panel w3-round-xlarge w3-center">
+                    RICHIESTE PER IL TEAM
+                    <h6>(0/10)</h6>
+                </div>
+
+                <!-- if !team.full -->
+                <!-- for sulle richieste-->
+                <div class="richiesta">
+
+                    <div class="user richiedente">
+                        <%= link_to 'nome tizio ', profile_path %>
+                    </div>
+                    <div class="buttons">
+                        <%= link_to profile_path, style: 'margin-right:5px;' do %>
+                            <button class="btn btn-success">Accetta</button>
+                        <%end%>
+                        <%= link_to profile_path do %>
+                            <button class="btn btn-danger">Rifiuta</button>
+                        <%end%>
+                    </div>
+                </div>
+                <!--else-->
+                
+            </div>
+
+        </div>
+
+        <!-------------------------LISTA AMICI------------------------->
+
+        <div class="container-friendlist">
+
+            <div class="friendlist">
+                <div class="w3-panel w3-blue w3-xlarge w3-center" style="width:80%;">
+                    LISTA AMICI
+                </div>
+
+            <!--  @friends.each do |friend|  -->
+                <div class="friend">
+                    <div class="friend-avatar">
+                        <!--  image_tag icona-->
+                    </div>
+                    <div class="friend-details">
+                        <h3>username amico</h3>
+                        <p>email amico?</p>
+                    </div>
+                </div>
+                <hr>
+            <!-- end  -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!--
 
         <div class="LOL-account">
             <div class="icon">
@@ -39,7 +131,7 @@
                     Livello <%= @your_summonerLevel %>
                 </span>
             </div class="info LOL">
-            <!--
+            
                 <%if !@inactive %>
                     tipo queue: <%=@queueType%>
                     rank <%=@rank%>
@@ -51,13 +143,9 @@
                 <%else%>
                     L'evocatore non ha una carriera recente in classificata
                 <%end%>   
-            -->             
+                         
             </div>
         </div>
 
-        <div class="VALO-account">
-            
-
-        </div>
     </div>
-</body>
+-->

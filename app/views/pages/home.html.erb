@@ -20,7 +20,7 @@
             
             <div class="search">
                 <form class="w3-center" action="<%= search_player_path %>" method="get">
-                    <input type="text" placeholder="Cerca Giocatori" name="summonerName">
+                    <input type="text" placeholder="Cerca Giocatore..." name="summonerName">
                 </form>
             </div>
             
@@ -113,7 +113,7 @@
         </div>
 
         <!-- TASTO SCRIVI -->
-        <%= link_to new_notifica_path do %>
+        <%= link_to home_path do %>
             <button id="scrivi">
                 Scrivi
             </button>
