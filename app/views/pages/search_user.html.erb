@@ -1,0 +1,63 @@
+<head>
+    <title> Cerca Utente - RiotGuild</title>
+    <%= stylesheet_link_tag "search_user", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+
+    <div class="container-user">
+        <%=link_to profile_path do%>
+            <button class="btn btn-danger">
+                Torna al profilo
+            </button>
+        <%end%>
+
+        <!-----------------------ACCOUNT--------------------------->
+        <div class="account">  
+
+            <div class="summoner-info w3-center">
+                <span>
+                    <h1><%= @found_user.username %></h1>
+                    Lv <%= @user_lvl %>
+                </span>
+
+                <div class="icon">
+                    <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@user_icon.to_s+'.png', class:'img responsive'%>
+                </div>
+            </div>
+
+            <hr style="border:2px solid goldenrod;border-radius: 1em;">
+
+            <div class="user-info">
+
+                <div>
+                    <p><strong>Email:</strong> <%= @found_user.email %></p>
+                    <p><strong>Username:</strong> <%= @found_user.username %></p>
+                    <p><strong>Account creato il:</strong> <%= @found_user.created_at.strftime("%d/%m/%Y") %></p>
+                </div>
+
+                <div>
+                    <%= form_with(url: send_friend_request_path(friend_id: @found_user.id), method: "post") do |form| %>
+                        <%= form.submit "Aggiungi amico" %>
+                    <% end %>
+                </div>
+
+            </div> 
+
+            <div class="cerca-utenti w3-center">
+                <% if flash.now[:alert] %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= flash.now[:alert] %>
+                    </div>
+                <% end %>
+                <form action="<%= search_user_path %>" method="get" class="form-inline w3-center">
+                    <%= text_field_tag :search, params[:search], placeholder: "Cerca un altro utente", name: "search" %>
+                    <%= submit_tag "Cerca" %>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+
+</body>

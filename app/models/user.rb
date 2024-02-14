@@ -3,14 +3,14 @@ class User < ApplicationRecord
   
   has_many :ads, dependent: :destroy
   has_many :newposts
+  #amicizie
+  has_many :invitations
+  has_many :pending_invitations, -> {where confirmed: false}, class_name: "Invitation", foreign_key: "friend_id"
 
-  # Include default devise modules. Others available are:
+  
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
-
-  #enum role: %i[user teamOwner teamMember moderator]
-  
 
   #---------------------------#
   before_create :generate_uid
@@ -21,6 +21,21 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
       # Altri campi se necessario
     end
+  end
+
+  def friends
+    friendship_sent = Invitation.where(user_id: id, confirmed: true).pluck(:friend_id)
+    friendship_received = Invitation.where(friend_id: id, confirmed: true).pluck(:user_id)
+    ids = friendship_sent + friendship_received
+    User.where(id: ids)
+  end
+
+  def friend_with?(user)
+    Invitation.confirmed?(id, user.id)
+  end
+
+  def send_invitation(user)
+    Invitation.create(friend_id: user.id)
   end
 
   private 

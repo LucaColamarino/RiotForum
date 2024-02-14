@@ -23,48 +23,11 @@ Things you may want to cover:
 
 * ...
 
--------------------------------------
-aristotele1 "prima api call in edit_profile + piccoli fix"3-2-24
--------------------------------------
-- aggiunte gem figaro (per env variables dove mettere l'api key), json
- -> Se usate figaro come in sto tutorial consigliato dai prof https://blog.devgenius.io/what-are-environment-variables-in-rails-6f7e97a0b164
-vanno scritte in config/application.yml e diventano da sole env variables.
-application.yml deve stare in .gitignore
+SUDDIVISIONE LAVORO TRA I MEMBRI DEL GRUPPO
+Andrea Pannunzio 1747865 : Sezione news, funzioni dei moderatori(crea news, banna utenti, ricevi segnalazioni di utenti, manda messaggi broadcast,etc)
 
-- icona del profilo loggato sostituita dall'email, dropdown cambiato perchè si apriva oltre la finestra
+Luca Colamarino 1944447 : configurazione devise, login, registrazione, Oauth Google, funzione cerca giocatore di LoL
 
-- aggiunta colonna username a User (riot name e riot tag non servono per ora ma stanno ancora come attributi)
+Stefano Moisuc 1948863 : profilo, cambia profilo, creazione annunci, cerca utenti del sito RiotGuild, aggiungi amico, chatta con amico
 
-- i metodi delle api stanno tutti in RiotGamesApi in app/services (non era obbligatorio, solo per modularità ig, ma si potrebbe anche cambiare)
-
-- inserita api call per trovare summoner_name(di lol) in edit_profile
-
-- dalla registrazione
--> se NON si scrive l'username si viene reindirizzati a edit_profile (il profilo 
- non è ancora salvato/fissato tho)
--> se si scrive l'username si viene reindirizzati alla home, MA username non è stato salvato nel database di quell'oggeto, idk come farlo
-
--------------------------------------
--------------------------------------
-
-------------------------------------------------
-7-2-2024
-aristotele1 "pagina giocatore lol cercato, bozza profilo, funzione cambio username del profilo" 
-
-- nelle match history mancano le immagini di rune,spell,inventario perchè non so come metterle (c'è un pacchetto, ddragon qualcosa, che puoi scaricare, ma sulla mia vm pesa troppo ig). Manca anche l'overview dei due team a destra.
-
-- sia nel giocatore cercato che profilo mancano rank e stats generali. La api c'è e funziona, è solo che non so come accedere agli elementi di sto Set[LeagueEntryDTO]
-
--------------------------------------------------
-_________________________________________________
-
-
--------------------------------------------------
-10-2-2024
-aristotele1 "implementati permessi e ruoli"
-
-- 2 gems, cancancan(permessi) e rolify(ruoli)
-- rolify crea la tabella roles, e per aggiungere ruoli basta fare User.add_role(:nomeRuolo)
-- ho messo che ogni tizio che si registra ha automaticamente come ruolo :user, e per il moderatore quindi ne ho seedato manualmente in seeds.rb
-- i permessi stanno in models/ability.rb
-- per ora l'accesso vietato (messo solo a crea il tuo team) redireziona alla homepage e basta; si possono dopo aggiungere avvisi a finestra dell'errore
+Valerio Paciotti 1931852 : creazione team, collegamento tra creazione team ed annuncio relativo, chat di team, funzioni da leader team(espellere, smantellare team),funzioni da membro del team(abbandona, onora alleato)

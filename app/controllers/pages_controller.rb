@@ -88,12 +88,7 @@ class PagesController < ApplicationController
               @searchedPlayer_data[i]["gold"] = @participants[i][j]["goldEarned"]
               
             end
-
-
           end
-
-
-
         else
           flash[:alert] = 'Error in loading match history'
         end
@@ -103,18 +98,24 @@ class PagesController < ApplicationController
       redirect_to home_path
     end
   end
-
+#---------------------------------------------------
   def search_user
     @search_query = params[:search]
     @found_user = User.find_by(username: @search_query)
     if @found_user
-      render 'show_user'
+      user_info_data = self.find_summoner(@search_query)
+      if user_info_data[:code] == 200
+        @user_data = user_info_data[:body]
+        @user_icon = @user_data["profileIconId"]
+        @user_lvl = @user_data["summonerLevel"]
+      end
+      
     else
       flash[:alert] = "Utente '#{@search_query}' non trovato."
       redirect_to profile_path
     end
   end
-#------------------------------------
+#---------------------------------------------------
 
   def profile
     if user_signed_in?
@@ -231,6 +232,10 @@ class PagesController < ApplicationController
   def settings
   end
   
+  def send_friend_request
+    friend = User.find(params[:friend_id])
+    current_user.send_invitation(friend)
+  end
 
   #----------------- API METHODS ---------------#
   private 

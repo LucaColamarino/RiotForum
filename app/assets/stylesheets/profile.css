@@ -21,17 +21,19 @@
         border: 5px groove goldenrod;
         margin-left: 5px;
     }
-    
+    	.account .icon {
+    	   border-color: silver;
+    	}
 	    	.account-info .icon .img {
 		    width: 128px;
 		    height: 128px;
 	    	}
 
-        .user-info > * {
+        .profile-info > * {
             margin-top: 1em;
         }
         
-        	.user-info .cerca-utenti {
+        	.profile-info .cerca-utenti {
         	    margin-top: 4em;
         	}
 

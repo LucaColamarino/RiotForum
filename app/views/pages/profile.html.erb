@@ -21,7 +21,7 @@
 
             <hr>
 
-            <div class="user-info">
+            <div class="profile-info">
                 
                 <span>username: <u><%= current_user.username%></u></span>
                 <%= link_to edit_profile_path do %>
@@ -35,7 +35,7 @@
                     <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary"%>
                 </div>
                 <div style="text-align:center">
-                <%= button_to "Supporto", '/messages/new_support_message', method: :get, class: "btn btn-primary"%>
+                <%= button_to "Supporto", '/messages/new_support_message', method: :get, class: "btn btn-warning"%>
                 </div>
 
                 <div class="cerca-utenti w3-center">
@@ -44,10 +44,10 @@
                             <%= flash.now[:alert] %>
                         </div>
                     <% end %>
-                    <%= form_tag search_user_path, method: :get do %>
+                    <form action="<%= search_user_path %>" method="get" class="form-inline w3-center">
                         <%= text_field_tag :search, params[:search], placeholder: "Cerca utente del sito", name: "search" %>
                         <%= submit_tag "Cerca" %>
-                    <% end %>
+                    </form>
                 </div>
             </div> 
 
@@ -136,22 +136,3 @@
     
 
 </body>
-
-<!--
-
-        
-            
-                if !@inactive 
-                    tipo queue: <%=@queueType%>
-                    rank <%=@rank%>
-                    tier <%=@tier%>
-                    wins <%=@wins%>
-                    losses <%=@losses%>
-
-  
-                         
-            </div>
-        </div>
-
-    </div>
--->

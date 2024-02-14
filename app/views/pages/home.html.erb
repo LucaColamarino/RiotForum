@@ -17,10 +17,18 @@
 
             <img src="/assets/miniatura-<%= session[:game] %>.png" width="45%" height="60%">
 
-            
+  <!--          
             <div class="search">
                 <form class="w3-center" action="<%= search_player_path %>" method="get">
-                    <input type="text" placeholder="Cerca Giocatore..." name="summonerName">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Cerca Giocatore..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
+                </form>
+            </div>
+-->
+            <div class="search">
+                <form action="<%= search_player_path %>" method="get" class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Cerca Giocatore..." name="summonerName">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Cerca</button>
                 </form>
             </div>
             
@@ -28,7 +36,7 @@
             <%= link_to new_ad_path do %>
                 <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
                 <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
-                <button id="team-btn" class="btn <%= @team_btn_color %>">Crea il tuo team!</button>
+                <button id="team-btn" class="btn <%= @team_btn_color %> btn-lg">Crea il tuo team!</button>
             <% end %>
         </div>
 
