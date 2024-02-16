@@ -241,7 +241,7 @@ class PagesController < ApplicationController
     username = params[:username]
     user_to_ban = User.find_by(username: username)
 
-        if user_to_ban
+        if !(user_to_ban.has_role?(:moderator))
           if user_to_ban.banned
             user_to_ban.update(banned: false)
             flash[:success] = "Utente bannato con successo."
