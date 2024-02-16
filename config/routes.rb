@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get 'profile/page_to_ban', to: 'pages#page_to_ban'
   post 'profile/page_to_ban', to: 'pages#ban_user'
 
+  get 'search_user/new_segnala_utente/:username', to: 'messages#new_segnala_utente'
+  post 'search_user/new_segnala_utente', to: 'messages#create_segnala_utente'
+
 
   resources :messages
 

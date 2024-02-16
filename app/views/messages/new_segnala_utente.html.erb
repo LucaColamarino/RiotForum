@@ -1,0 +1,15 @@
+<%= form_with model: @message, url: search_user_new_segnala_utente_path(username: params[:username]) do |form| %>
+    <div>
+    <%= form.label :subject %><br>
+    <%= form.text_field :subject, value: params[:username],readonly: true %>
+    </div>
+    
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </div>
+    
+    <div>
+      <%= form.submit "Invia segnalazione agli admin " %>
+    </div>
+  <% end %>
