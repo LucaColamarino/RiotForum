@@ -27,6 +27,9 @@ Rails.application.routes.draw do
   get 'messages/new_support_message', to: 'messages#new_support_message'
   post 'messages/new_support_message', to: 'messages#create_support_message'
 
+  get 'profile/page_to_ban', to: 'pages#page_to_ban'
+  post 'profile/page_to_ban', to: 'pages#ban_user'
+
 
   resources :messages
 

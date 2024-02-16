@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_15_224505) do
   create_table "ads", force: :cascade do |t|
     t.string "game"
     t.string "mode"
@@ -20,6 +20,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
     t.string "minRank"
     t.integer "user_id"
     t.index ["user_id"], name: "index_ads_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "friend_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_friendships_on_friend_id"
+    t.index ["user_id"], name: "index_friendships_on_user_id"
   end
 
   create_table "invitations", force: :cascade do |t|
@@ -70,6 +79,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
     t.string "provider"
     t.string "uid"
     t.string "username"
+    t.boolean "banned", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -83,5 +93,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
   end
 
   add_foreign_key "ads", "users"
+  add_foreign_key "friendships", "friends"
+  add_foreign_key "friendships", "users"
   add_foreign_key "invitations", "users"
 end
