@@ -41,6 +41,10 @@ class User < ApplicationRecord
     Invitation.new(user_id: current_user.id, friend_id: user.id)
   end
 
+  def banned?
+    banned
+  end
+
   private 
   #tutti i metodi definiti sotto saranno privati
 

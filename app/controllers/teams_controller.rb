@@ -44,7 +44,7 @@ class TeamsController < ApplicationController
       current_user.save
       @team.delete
 
-      redirect_to home_path, status: :see_other
+      redirect_to root_path, status: :see_other
     end
 
     private

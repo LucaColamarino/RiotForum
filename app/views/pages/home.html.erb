@@ -10,6 +10,14 @@
      <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
     <div class="parent", id="LOL-home">
 
+        
+        <% if params[:banned] %>
+               <script>
+                    $(document).ready(function() {
+                        alert("Sei stato bannato da questo sito");
+                    });
+                </script>        
+        <% end %>
 
 
         <!-- CREA TEAM, CERCA GIOCATORI -->
