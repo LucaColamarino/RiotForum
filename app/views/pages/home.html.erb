@@ -32,12 +32,17 @@
                 </form>
             </div>
             
+            <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
+            <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
 
-            <%= link_to new_ad_path do %>
-                <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
-                <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
-                <button id="team-btn" class="btn <%= @team_btn_color %> btn-lg">Crea il tuo team!</button>
+            <% if not user_signed_in? %>
+                <%= button_to "Create Team", new_user_session_path, method: :get, class: "btn btn-lg " + @team_btn_color%>
+            <% elsif has_team(current_user)%>
+                <%= button_to "Show Team", teams_path, method: :get, class: "btn btn-lg " + @team_btn_color%>
+            <% else %>
+            <%= button_to "Create Team", teams_new_path, method: :get, class: "btn btn-lg " + @team_btn_color%>
             <% end %>
+
         </div>
 
         <!-- BACHECA ANNUNCI -->

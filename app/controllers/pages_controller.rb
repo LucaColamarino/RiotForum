@@ -144,13 +144,7 @@ class PagesController < ApplicationController
             @inactive = true
           else
             @inactive = false
-=begin
-            @queueType = @your_stats["queueType"]
-            @tier = @your_stats["tier"]
-            @rank = @your_stats["rank"]
-            @wins = @your_stats["wins"]
-            @losses = @your_stats["losses"]
-=end
+
           end
           
         end
@@ -216,7 +210,7 @@ class PagesController < ApplicationController
   end
   #--------------------------------
   def board
-    @game = params[:game];
+    @game = session[:game];
 
     @annunci = Ad.order(updated_at: :desc).all
 

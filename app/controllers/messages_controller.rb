@@ -2,8 +2,6 @@ class MessagesController < ActionController::Base
 
     before_action :authenticate_user!
 
-
-
     def index
         @messages=Message.where(receiver_id: current_user.id)
     end
