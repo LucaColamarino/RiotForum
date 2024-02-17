@@ -14,8 +14,7 @@
 
   background-image: url('/assets/Sfondolol.png'); 
   background-size: cover; 
-  background-repeat: no-repeat; 
-  background-color: rgba(69, 49, 160, 0.5); 
+  background-repeat: no-repeat;  
 
   border: 5px dotted black;
   min-height: 100%;
@@ -72,24 +71,39 @@
   grid-area:1/4/4/7; 
   margin-right:40px;
   margin-top:2em;
-  height: 50vh;
+  height: 60vh;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
 
   border-radius: 1em;
-  border: 4px groove currentColor;
+  background-color:rgba(100, 148, 237, 0.685);
 }
 
 #titolo-bacheca-home {
-  color: goldenrod;
+  background-color:rgba(25, 25, 112, 0.465);
+  width: 60%;
+  height: 2em;
+  
+  border-radius: 1em;
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+
+  margin-top:1em;
 }
 
 .annuncio-container {
+  flex: 1;
   width: 80%;
   margin: 20px auto;
+
+  border: 2px dotted black;
+  
+  display: flex;
+  flex-direction: column;
 }
 
 .annuncio_home {
@@ -101,7 +115,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  
+  flex:1;
 }
 
 .annuncio_home:hover {
@@ -120,7 +134,7 @@
   row-gap: 1em;
   border-radius: 1em;
 
-  border: 4px groove currentColor;
+  background-color:rgba(100, 148, 237, 0.685);
 }
 
 .news-section > h1 {

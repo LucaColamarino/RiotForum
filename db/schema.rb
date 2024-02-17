@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_17_151215) do
   create_table "ads", force: :cascade do |t|
     t.string "game"
     t.string "mode"
@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
     t.boolean "confirmed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "friend_id"], name: "index_invitations_on_user_id_and_friend_id", unique: true
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end
 
@@ -84,4 +85,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_151855) do
 
   add_foreign_key "ads", "users"
   add_foreign_key "invitations", "users"
+  add_foreign_key "invitations", "users"
+  add_foreign_key "invitations", "users", column: "friend_id"
 end

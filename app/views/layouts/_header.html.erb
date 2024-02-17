@@ -2,25 +2,14 @@
 
       <!-- |RiotForum x x x x| -->
       <div class="header-left">
-        <a href="/home" style="text-decoration:none;">
+        <a href="/" style="text-decoration:none;">
         <span class="sito">RiotGuild</span>
         </a>
         <% unless request.fullpath == '/' %>
 
-      <% if session[:game]=="LOL" 
-          @lol_state = "";
-          @valo_state = "unchosen";
-        else 
-          @lol_state = "unchosen";
-          @valo_state = "";
-        end; %>
-
       <div>
 
-        <%= button_to "", set_session_path(value: "LOL"), method: :post, id: "LOL-button", class: "mini-choice-button "+@lol_state %>
   </div>
- 
-        <%= button_to "", set_session_path(value: "VALO"), method: :post, id: "VALO-button", class: "mini-choice-button "+@valo_state %>
  
 
       </div>
@@ -34,7 +23,7 @@
           <!-- | x x x x Profilo| -->
 
         <div class="w3-round" id="iconaNotifica">
-          <%= link_to home_path do %>
+          <%= link_to posta_path do %>
           <%= image_tag "iconaNotifica-24.png", alt: 'Nots'%>
           <%end%>
         </div>

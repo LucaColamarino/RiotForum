@@ -1,0 +1,61 @@
+<%if @friend_requests.empty?%>
+    <div class="w3-center" style="border:none">Non hai richieste d'amicizia :)</div>
+<%else%>
+    <%for request in @friend_requests do%>
+        <div class="friend-request">
+            <div>
+                <%requester = User.where(id: request.user_id).first%>
+                <span style="color: goldenrod;"><%= requester.username %></span> vuole esserti amico
+            </div>
+            <div class="d-flex flex-row">
+                <div class="d-flex flex-row amicizia-buttons" style="margin-right: 20px;">
+                    <%= button_to "Accetta", invitation_path(id:request), method: :patch, class:"accetta-amicizia" %>
+                    <%= button_to "Rifiuta", invitation_path(id:request), method: :delete, class:"rifiuta-amicizia" %>
+                </div>
+                
+                <div class="giorno-invio">
+                    inviata il <%=request.created_at.strftime("%d/%m/%Y, %H:%M")%>
+                </div>
+            </div>
+        </div>
+    <%end%>
+<%end%>
+
+
+
+<style>
+    .friend-request {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        border: 2px solid black;
+        padding: 20px;
+
+    }
+
+    .giorno-invio {
+        color: gray;
+        margin-right: 10px;
+    }
+
+    .accetta-amicizia {
+        border: 2px solid green;
+        background-color: white;
+        margin-right: 5px;
+    }
+    .rifiuta-amicizia {
+        border: 2px solid red;
+        background-color: white;
+    }
+
+    .accetta-amicizia:hover {
+        color: white;
+        background-color: green;
+    }
+    .rifiuta-amicizia:hover {
+        color: white;
+        background-color: red;
+    }
+</style>

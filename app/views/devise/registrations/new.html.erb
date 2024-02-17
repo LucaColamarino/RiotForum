@@ -35,10 +35,11 @@
   
 
   <div class="actions">
-    <%= f.submit "Registrati" %>
+    <%= f.submit "Registrati", class: "btn btn-light btn-sm" %>
   </div>
-  <>
 <% end %>
+
+  <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-light btn-sm login", style: "margin:1em;" %>
 
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>

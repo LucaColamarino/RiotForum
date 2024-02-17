@@ -8,14 +8,14 @@
 <body>
      <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
      <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
-    <div class="parent", id=<%=@parentclass%>>
+    <div class="parent", id="LOL-home">
 
 
 
         <!-- CREA TEAM, CERCA GIOCATORI -->
         <div class="team-section">
 
-            <img src="/assets/miniatura-<%= session[:game] %>.png" width="45%" height="60%">
+            <img src="/assets/miniatura-LOL.png" width="45%" height="60%">
 
   <!--          
             <div class="search">
@@ -36,15 +36,14 @@
             <%= link_to new_ad_path do %>
                 <%if(session[:game]=="LOL"); @team_btn_color = "btn-primary" end%>
                 <%if(session[:game]=="VALO"); @team_btn_color = "btn-danger" end%>
-                <button id="team-btn" class="btn <%= @team_btn_color %> btn-lg">Crea il tuo team!</button>
+                <button id="team-btn" class="btn btn-primary btn-lg">Crea il tuo team!</button>
             <% end %>
         </div>
 
         <!-- BACHECA ANNUNCI -->
-        <div class="board-section" style="background-color:<%= @color %>">
-            <div id="titolo-bacheca-home">
-                <%= if(session[:game]=='LOL'); "ANNUNCI LOL" end%>
-                <%= if(session[:game]=='VALO'); "ANNUNCI VALO" end%>
+        <div class="board-section">
+            <div id="titolo-bacheca-home" class="d-flex justify-content-center align-items-center">
+                ANNUNCI
             </div>
             
             <div class="annuncio-container">
@@ -74,39 +73,34 @@
             <% end %>
 
             <%= link_to board_path do %>
-                <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
+                <button class="btn btn-dark" style="margin-bottom:1em;"> VEDI TUTTI </button>
             <% end %>
 
         </div> 
 
         <!-- SEZIONE NOTIZIE -->    
-        <div class="news-section center-block" style="background-color:<%= @color %>">
+        <div class="news-section center-block">
 
             <h1> NEWS </h1>
             
-            <% if session[:game] == 'LOL' %>
-                <div class="champ-rotation">
-                        <% for champid in @rotation_champs do %>
-                            <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80, class:'champImg' %>
-                        <% end %>
-                </div>
-            <% end %>
+           
+            <div class="champ-rotation">
+                    <% for champid in @rotation_champs do %>
+                        <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80, class:'champImg' %>
+                    <% end %>
+            </div>
+            
 
             <div class="news-container">
                 <div class="news">
 
                     <!-- Aggiunto collegamento alla pagina news con parametro -->
-                    <%if(session[:game] == 'LOL') %>
+                   
                      <%= link_to news_path do %>
                         <% @board_btn_color = "btn-dark" %>
                         <button class="btn <%= @board_btn_color %>" style="margin-bottom:1em;"> VEDI NOTIZIE </button>
                      <% end %>
-                    <%elsif(session[:game] == 'VALO') %>
-                     <%= link_to news_path do %>
-                        <%@board_btn_color = "btn-light" %>
-                        <button class="btn <%= @board_btn_color %>"> VEDI TUTTI </button>
-                     <% end %>
-                    <% end %>
+                    
                 
                 <%# 
                     <div class="thread-container">
@@ -121,7 +115,7 @@
         </div>
 
         <!-- TASTO SCRIVI -->
-        <%= link_to home_path do %>
+        <%= link_to root_path do %>
             <button id="scrivi">
                 Scrivi
             </button>

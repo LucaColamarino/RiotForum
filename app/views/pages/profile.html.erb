@@ -11,7 +11,8 @@
 
             <div class="summoner-info">
                 <span>
-                    <h1><%= current_user.username %></h1>Lv <%= @your_summonerLevel %>
+                    <h2><%= current_user.username %></h2> 
+                    </h1>Lv <%= @your_summonerLevel %>
                 </span>
 
                 <div class="icon">
@@ -113,21 +114,42 @@
         <div class="container-friendlist">
 
             <div class="friendlist">
-                <div class="w3-panel w3-blue w3-xlarge w3-center" style="width:80%;">
+                <div class="w3-panel w3-xlarge w3-center friend-label" style="width:80%;">
                     LISTA AMICI
                 </div>
+            
 
-            <!--  @friends.each do |friend|  -->
+                <%for friend in @friendships_sent do%>
                 <div class="friend">
-                    <div class="friend-avatar">
-                        <!--  image_tag icona-->
-                    </div>
-                    <div class="friend-details">
-                        <h3>username amico</h3>
-                        <p>email amico?</p>
-                    </div>
+                        <div> 
+                            <%friend_name = User.where(id: friend.friend_id).select("email","username").first%>
+                            <%=link_to search_user_path(search: friend_name.username), class: "friend-name" do%>
+                                <h4><%=friend_name.username%></h4>
+                            <%end%>
+                            <h6><%=friend_name.email%></h6>
+                        </div>
+                        <div>
+                            <%= button_to "X", invitation_path(id:friend), method: :delete, class:"delete-friend-btn w3-round", data: { confirm: "Are you sure you want to delete this invitation?" } %>
+
+                        </div>
                 </div>
-                <hr>
+                <%end%>
+                <%for friend in @friendships_received do%>
+                <div class="friend">
+                        <div> 
+                            <%friend_name = User.where(id: friend.user_id).select("email","username").first%>
+                            <%=link_to search_user_path(search: friend_name.username), class: "friend-name" do%>
+                                <h4><%=friend_name.username%></h4>
+                            <%end%>
+                            <h6><%=friend_name.email%></h6>
+                        </div>
+                        <div>
+                            <%= button_to "X", invitation_path(id:friend), method: :delete, class:"delete-friend-btn w3-round", data: { confirm: "Are you sure you want to delete this invitation?" } %>
+
+                        </div>
+                </div>
+                <%end%>
+                
             <!-- end  -->
             </div>
         </div>

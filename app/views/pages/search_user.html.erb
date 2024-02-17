@@ -6,23 +6,45 @@
 <body>
 
     <div class="container-user">
-        <%=link_to profile_path do%>
-            <button class="btn btn-danger">
-                Torna al profilo
-            </button>
-        <%end%>
 
         <!-----------------------ACCOUNT--------------------------->
         <div class="account">  
+            <%=link_to profile_path do%>
+                <button class="btn btn-danger">
+                    Torna al profilo
+                </button>
+            <%end%>
 
-            <div class="summoner-info w3-center">
-                <span>
-                    <h1><%= @found_user.username %></h1>
-                    Lv <%= @user_lvl %>
-                </span>
+            <div class="summoner-user-info w3-center">
+                <div>
+                    <span>
+                        <h1><%= @found_user.username %></h1>
+                        Lv <%= @user_lvl %>
+                    </span>
 
-                <div class="icon">
-                    <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@user_icon.to_s+'.png', class:'img responsive'%>
+                    <div class="icon">
+                        <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@user_icon.to_s+'.png', class:'img responsive'%>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center" style="margin-right: 10px;">
+                    <%if @stats_data.nil? %>
+                        Non ancora classificato
+                    <%else%>
+                        <% for data in @stats_data do %>
+                            <div class="w-100" style="outline: 2px solid gray">
+                                <div style="font-weight: bold; outline: 2px solid gray; width: 100%">
+                                    <%= data["queueType"]%>
+                                </div>
+                                <div class="d-flex flex-row justify-content-sm-around align-items-center">
+                                    <%= data["tier"].capitalize %>
+                                    <%= data["rank"] %>
+                                    <%= image_tag "/assets/ranks/Rank=#{data["tier"].capitalize}.png", class: "small-icon" %>
+                                </div>
+                            </div>
+                        <% end%>
+                    <%end%>
+                    
                 </div>
             </div>
 
@@ -35,15 +57,34 @@
                     <p><strong>Username:</strong> <%= @found_user.username %></p>
                     <p><strong>Account creato il:</strong> <%= @found_user.created_at.strftime("%d/%m/%Y") %></p>
                 </div>
-
+                <!--AMICIZIA-->
                 <div>
-                    <%= form_with(url: send_friend_request_path(friend_id: @found_user.id), method: "post") do |form| %>
-                        <%= form.submit "Aggiungi amico" %>
+                    <!--RIMUOVI AMICO-->
+                    <%if current_user.friend_with?(@found_user)%>
+                        <%invitation = Invitation.find_invitation(current_user.id,@found_user.id)%>
+                        <%= button_to "Rimuovi amico", invitation_path(id:invitation), method: :delete, class:"btn btn-danger" %>
+                    <%else%>
+                     <!--AGGIUNGI AMICO-->
+                        <%= form_with(url: send_friend_request_path, method: "post") do |form| %>
+                            <%= form.hidden_field :friend_id, value: @found_user.id %>
+                            <%= form.submit "Aggiungi amico", class: "btn btn-primary" %>
+                        <% end %>
+                    <%end%>
+                    <% if flash.now[:notice] %>
+                        <div class="alert alert-success" role="alert">
+                            <%= flash.now[:notice] %>
+                        </div>
+                    <% end %>
+                    <% if flash.now[:alert] %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= flash.now[:alert] %>
+                        </div>
                     <% end %>
                 </div>
 
             </div> 
 
+            <!--CERCA ALTRI UTENTI-->
             <div class="cerca-utenti w3-center">
                 <% if flash.now[:alert] %>
                     <div class="alert alert-danger" role="alert">
@@ -57,7 +98,14 @@
             </div>
         </div>
 
-        
+        <div class="interactions-user">
+            <%= link_to search_player_path(summonerName: @found_user.username) do%>
+                <button class="btn btn-danger stats-btn">Vedi stats</button>
+            <%end%>
+            <div class="user-team-info">
+                Non è in nessun team
+            </div>
+        </div>
     </div>
 
 </body>

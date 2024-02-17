@@ -41,8 +41,8 @@ class RiotGamesApi
 
     def self.find_summoner(summoner_name)
         
-        
-        endpoint = "/lol/summoner/v4/summoners/by-name/#{summoner_name}"
+        encoded_summoner_name = URI.encode_www_form_component(summoner_name)
+        endpoint = "/lol/summoner/v4/summoners/by-name/#{encoded_summoner_name}"
 
         uri = URI.parse("#{PLATFORM_URL}#{endpoint}")
         http = Net::HTTP.new(uri.host, uri.port)

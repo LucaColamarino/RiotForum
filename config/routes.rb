@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'registrations' }
   
-  root 'pages#scelta'
+  root 'pages#home' 
+
   
-  get 'home', to: 'pages#home'
   post '/set_session/:value', to: 'sessions#set_session', as: 'set_session'
 
   get 'profile', to: 'pages#profile'
@@ -33,12 +33,20 @@ Rails.application.routes.draw do
   resources :notificas
 
   resources :ads
+
+  resources :invitations
  
   get 'search_player', to: 'pages#search_player'
   get 'search_user', to: 'pages#search_user'
 
-  get 'send_friend_request', to: 'pages#send_friend_request'
-  
+  post 'send_friend_request', to: 'pages#send_friend_request'
+  delete 'destroy_friendship', to: 'pages#destroy_friendship'
+
+
+  get 'posta', to: 'pages#posta'
+  get '/your_messages', to: 'pages#your_messages'
+  get '/your_notifications', to: 'pages#your_notifications'
+
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check

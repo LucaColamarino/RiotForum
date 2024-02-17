@@ -28,6 +28,10 @@
 		    width: 128px;
 		    height: 128px;
 	    	}
+	    	.account-info .rank-icon {
+	            width: 64px;
+	            height: 64px;
+	    	}
 
         .profile-info > * {
             margin-top: 1em;
@@ -84,9 +88,8 @@
 
         .candidatura,.richiesta {
             border: none;
-            background-color:rgb(44, 44, 63);
+            background-color:rgba(44, 44, 63, 0.956);
             color: white;
-            
             height: 5em;
             margin-top: 5px;
             margin-bottom: 3px;
@@ -106,12 +109,17 @@
 
     .container-friendlist {
         flex:1;
-        background-color: pink;
-        margin-right: 5px;
+        background-color: rgba(0, 191, 255, 0.779);
+        border-radius: 0.5em;
+        margin-right: 15px;
     }
-        .friendlist {
-            border: 3px solid black;
 
+        .friend-label {
+            background-color: white;
+            color: black;
+        }
+
+        .friendlist {
             height: 100%;
             display:flex;
             flex-direction: column;
@@ -127,13 +135,30 @@
 
             .friend {
                 display: flex;
+                flex-direction: row;
                 align-items: center;
+                justify-content: space-around;
 
                 margin-bottom: 3px;
+
                 padding-left: 10px;
                 padding-right: 10px;
                 background-color: floralwhite;
-                border: 3px inset floralwhite;
+                border: 3px ridge floralwhite;
                 border-radius: 0.3em;
-                width: 100%; 
+                width: 95%; 
             }
+            	
+            	.friend-name:hover {
+            		color: goldenrod;
+            	}
+
+                    .delete-friend-btn {
+                        background-color: crimson; 
+                        color: white; 
+                        border: none; 
+
+                    }
+                    .delete-friend-btn:hover {
+                        filter: brightness(1.1)
+                    }

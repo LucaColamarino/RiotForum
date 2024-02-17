@@ -7,7 +7,6 @@
     <% end %>
   <!--
   <div class="form-group" >
-    
     <label>Scegli cosa usare:</label><br>
     <input type="radio" id="inputUsernameRadio" name="type" value="username" >
     <label for="inputUsernameRadio">Nome Evocatore</label>
@@ -18,6 +17,7 @@
   -->
   
   <div id="username-form" class="form-group">
+  <%= debug current_user.username%>
     <label for="inputUsername">Nome Evocatore</label>
     <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Inserisci un nome Evocatore" autofocus>
     

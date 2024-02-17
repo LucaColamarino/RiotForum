@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   @game = 'LOL';   #di default
+  
   def home
     @game = session[:game];
     @color = @game == "LOL"? "#483D8B" : "#dc3545 ";
@@ -14,7 +15,7 @@ class PagesController < ApplicationController
 
     @rotation_champs = JSON.parse(http.request(request).body)['freeChampionIds']
 
-    @annunci_home = Ad.order(updated_at: :desc).limit(3)
+    @annunci_home = Ad.order(updated_at: :desc).limit(4)
   end
 
   def scelta
@@ -30,9 +31,23 @@ class PagesController < ApplicationController
 
         @summoner_name = @summoner["name"]
         @summoner_level = @summoner["summonerLevel"]
+        @summonerID = @summoner["id"]
         @iconID = @summoner["profileIconId"]
         @puuid = @summoner["puuid"]
 
+        @stats = self.getPlayerStats(@summonerID)
+          if @stats[:code] == 200
+              for queue in @stats[:body] do
+                @stats_data = @stats[:body][queue]
+                if !@stats_data.nil?
+                  @queueType = @stats_data["queueType"]
+                  @tier = @stats_data["tier"]
+                  @rank = @stats_data["rank"]
+                  @wins = @stats_data["wins"]
+                  @losses = @stats_data["losses"]
+                end
+              end
+          end
       end
       #-------------------------------#
       summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
@@ -108,8 +123,19 @@ class PagesController < ApplicationController
         @user_data = user_info_data[:body]
         @user_icon = @user_data["profileIconId"]
         @user_lvl = @user_data["summonerLevel"]
+        @user_id = @user_data["id"]
       end
       
+      @stats = self.getPlayerStats(@user_id)
+      if @stats[:code] == 200
+        @stats_data = @stats[:body]
+        #queueType
+        #tier
+        #rank
+        #wins
+        #losses
+      end
+
     else
       flash[:alert] = "Utente '#{@search_query}' non trovato."
       redirect_to profile_path
@@ -121,39 +147,27 @@ class PagesController < ApplicationController
     if user_signed_in?
 
       if flash[:alert]
-        # per triggerare il messaggio d'errore di cerca utente inesistente
+        # per triggerare il messaggio d'errore di cerca utente sito inesistente
         flash.now[:error] = flash[:error]
       end
       
       if current_user.username.present?
         
-        your_data = self.find_summoner(current_user.username)
-        if your_data[:code] == 200
-          @your_summoner = your_data[:body]
+        data = self.find_summoner(current_user.username)
+        if data[:code] == 200
+          @summoner = data[:body]
 
-          @your_summonerName = @your_summoner["name"]
-          @your_summonerLevel = @your_summoner["summonerLevel"]
-          @your_summonerID = @your_summoner["id"]
-          @your_icon= @your_summoner["profileIconId"]
-          @your_puuid = @your_summoner["puuid"]
+          @your_summonerName = @summoner["name"]
+          @your_summonerLevel = @summoner["summonerLevel"]
+          @your_summonerID = @summoner["id"]
+          @your_icon= @summoner["profileIconId"]
+          @puuid = @summoner["puuid"]
+
         end
 
-        @your_stats = self.getPlayerStats(@your_summonerID)
-        if @your_stats != "error"
-          if @your_stats.empty?
-            @inactive = true
-          else
-            @inactive = false
-=begin
-            @queueType = @your_stats["queueType"]
-            @tier = @your_stats["tier"]
-            @rank = @your_stats["rank"]
-            @wins = @your_stats["wins"]
-            @losses = @your_stats["losses"]
-=end
-          end
-          
-        end
+        #configura lista amici
+        @friendships_sent = Invitation.where(confirmed: true).where(user_id: current_user.id)
+        @friendships_received = Invitation.where(confirmed: true).where(friend_id: current_user.id)
 
       else
         redirect_to edit_profile_path #aggiorna solo l'username
@@ -167,25 +181,13 @@ class PagesController < ApplicationController
   #--------------------------------
   def edit_profile 
     if request.get? && !params[:inputType].present?
-      # Affinchè non mi dia errore quando apro la pagina per la 1a volta
+      # Affinchè non mi dia errore quando apro la pagina per la prima volta
       return
     end
 
     if !params[:username].nil?     
        updateBy_username(params[:username]) 
     end
-
-    # if params[:inputType].present? && !params[:username].nil?
-    #   type = params[:inputType]
-    #   if type == "username"
-    #     updateBy_username(params[:username])
-    #   elsif type == "riot_id"
-    #     updateBy_riotId(params[:game_name],params[:tagline])
-    #   end
-    # else
-    #   flash.now[:error] = "Errore. Riprova"
-    #   render :edit_profile
-    # end
 
   end
 
@@ -214,6 +216,19 @@ class PagesController < ApplicationController
       render :edit_profile
     end
   end
+
+  def posta
+  end
+
+  def your_notifications
+    @friend_requests = Invitation.where(friend_id: current_user.id, confirmed: false)
+    render partial: 'your_notifications'
+  end
+
+  def your_messages
+    render partial: 'your_messages'
+  end
+  
   #--------------------------------
   def board
     @game = params[:game];
@@ -226,18 +241,46 @@ class PagesController < ApplicationController
   def create_team
   end
 
-  def your_team
+  def team
   end
 
   def settings
   end
   
   def send_friend_request
-    friend = User.find(params[:friend_id])
-    current_user.send_invitation(friend)
+    friend = User.find_by(id: params[:friend_id])
+    if friend
+      @invitation = Invitation.create(user_id: current_user.id, friend_id: friend.id)
+      if @invitation.save
+        flash[:notice] = "Inviata richiesta a #{friend.username}"
+        redirect_to search_user_path
+      else
+        if @invitation.errors[:user_id].include?("has already been taken")
+          # Handle duplicate invitation error
+          flash[:alert] = "You already sent an invitation to this friend."
+          redirect_to search_user_path
+        else
+          flash[:alert] = "Failed to send invitation."
+          redirect_to search_user_path
+        end
+        # Redirect or render appropriate response
+      end
+    end
   end
 
-  #----------------- API METHODS ---------------#
+  def destroy_friendship
+    invitation = Invitation.find_by(friend_id: params[:friend_id])
+
+    if invitation
+      invitation.destroy
+      flash[:notice] = "Invitation successfully removed"
+      redirect_to profile_path
+    else
+      redirect_to home_path
+    end
+  end
+
+  #----------------- API & PRIVATE METHODS ---------------#
   private 
 
   def find_summoner(summoner)
@@ -262,8 +305,7 @@ class PagesController < ApplicationController
   end
 
   def getPlayerStats(summonerID)
-    stats = RiotGamesApi.getPlayerStats(summonerID)
-    return stats[:body]
+    return RiotGamesApi.getPlayerStats(summonerID)
   end
 
   def formattedTime(all_seconds)
@@ -278,8 +320,6 @@ class PagesController < ApplicationController
     if summoner[:code] == 200
       summoner_name = summoner[:body]["name"]
       return summoner_name == username
-    else
-      false
     end
   end
 
@@ -289,8 +329,6 @@ class PagesController < ApplicationController
       gameName = riotUser[:body]["gameName"]
       tagline = riotUser[:body]["tagLine"]
       return name == gameName && tag == tagline
-    else
-      false
     end
   end
 

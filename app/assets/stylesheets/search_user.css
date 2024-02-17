@@ -1,6 +1,6 @@
 .container-user {
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
 
     min-height: 100vh;
     
@@ -10,19 +10,29 @@
 }
     
     .account {
-        
+        flex:2;
         background-color: white;
         border: 5px groove goldenrod;
         border-radius: 1em;
         width: 60%;
-        margin-left: 20px;
+        margin: 20px;
     }
 	    	.account .icon .img {
     		    border: 5px ridge silver;
     		    border-radius: 1em;
-		    width: 256px;
-		    height: 256px;
+                width: 216px;
+                height: 216px;
 	    	}
+
+        .summoner-user-info {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .summoner-user-info > div {
+                flex: 1;
+            }
+
     .user-info {
 	    display:flex;
 	    flex-direction: row;
@@ -35,3 +45,30 @@
         	.user-info .cerca-utenti {
         	    margin-top: 4em;
         	}
+
+    .interactions-user {
+        flex:1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+        .interactions-user .stats-btn {
+            margin-bottom: 100px;
+            padding: 40px;
+            font-weight: bold;
+        }
+
+        .interactions-user .user-team-info {
+            padding: 50px;
+
+            background-color:rgba(28, 28, 121, 0.845);
+            border: 5px groove goldenrod;
+            border-radius: 1em;
+
+            color: white;
+            font-weight: 900;
+        }
