@@ -79,3 +79,5 @@ gem "figaro"
 gem "cancancan"
 #rolify per aggiungere e gestire ruoli
 gem "rolify"
+#test
+gem 'rspec-rails'
