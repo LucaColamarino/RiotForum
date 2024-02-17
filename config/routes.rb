@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get 'profile', to: 'pages#profile'
   get 'edit_profile', to: 'pages#edit_profile'
   get 'board', to: 'pages#board'
-  get 'create_team', to: 'pages#create_team'
-  get 'your_team', to: 'pages#your_team'
+  #get 'create_team', to: 'pages#create_team'
+  #get 'your_team', to: 'pages#your_team'
   get 'settings', to: 'pages#settings'
   get 'news', to: 'newpost#news'
   get 'news/:id', to: 'newpost#show', constraints: {id: /\d+/}
@@ -26,6 +26,16 @@ Rails.application.routes.draw do
 
   get 'messages/new_support_message', to: 'messages#new_support_message'
   post 'messages/new_support_message', to: 'messages#create_support_message'
+
+  get 'profile/page_to_ban', to: 'pages#page_to_ban'
+  post 'profile/page_to_ban', to: 'pages#ban_user'
+
+  get 'search_user/new_segnala_utente/:username', to: 'messages#new_segnala_utente'
+  post 'search_user/new_segnala_utente', to: 'messages#create_segnala_utente'
+  get 'teams/', to: 'teams#show'
+  get 'teams/new', to: 'teams#new'
+  post 'teams/new', to: 'teams#create'
+  delete 'teams/', to: 'teams#destroy'
 
 
   resources :messages

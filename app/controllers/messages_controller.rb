@@ -2,8 +2,6 @@ class MessagesController < ActionController::Base
 
     before_action :authenticate_user!
 
-
-
     def index
         @messages=Message.where(receiver_id: current_user.id)
     end
@@ -85,6 +83,26 @@ class MessagesController < ActionController::Base
         redirect_to '/profile/'
     end
 
+    def new_segnala_utente
+        params[:username] = params[:username]
+        @message=Message.new
+    end
+
+    def create_segnala_utente
+        user=current_user.id
+        admins=User.all
+        admins.each do |admin|
+            if admin.has_role?(:moderator)
+                message=Message.new(segnala_msg)
+                message.sender_id=user
+                message.receiver_id=admin.id
+                #message.subject= non so cosa mettere
+                message.save
+            end
+        end
+        redirect_to '/profile'
+    end
+
 
 
 
@@ -102,6 +120,8 @@ class MessagesController < ActionController::Base
     def support_msg
         params.require(:message).permit(:body)
     end
-
+    def segnala_msg
+        params.require(:message).permit(:subject,:body)
+    end
 end
 

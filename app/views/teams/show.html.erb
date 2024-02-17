@@ -1,0 +1,13 @@
+<h1>Team</h1>
+
+<%= @team.mode %>
+<br>
+<%= @team.leader_id %>
+<br>
+<%= @team.lanes %>
+<br>
+<%= @team.comp %>
+<br>
+
+<%= button_to "Torna Indietro", home_path, method: :get, class: "btn" %>
+<%= button_to "Smantella Team", teams_path, method: :delete %>

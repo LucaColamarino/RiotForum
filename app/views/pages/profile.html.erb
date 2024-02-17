@@ -35,10 +35,16 @@
                 <div style="text-align:center">
                     <%= button_to "Messaggi", '/messages', method: :get, class: "btn btn-primary"%>
                 </div>
+                <% if !current_user.has_role?(:moderator)%>
+                 <div style="text-align:center">
+                 <%= button_to "Supporto", '/messages/new_support_message', method: :get, class: "btn btn-warning"%>
+                 </div>
+                <%end%>
+                <% if current_user.has_role?(:moderator)%>
                 <div style="text-align:center">
-                <%= button_to "Supporto", '/messages/new_support_message', method: :get, class: "btn btn-warning"%>
-                </div>
-
+                <%= button_to "Ban Utente", 'profile/page_to_ban', method: :get, class: "btn btn-primary"%>
+                </div>  
+                <%end%>  
                 <div class="cerca-utenti w3-center">
                     <% if flash.now[:alert] %>
                         <div class="alert alert-danger" role="alert">

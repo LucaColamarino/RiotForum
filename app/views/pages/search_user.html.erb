@@ -57,6 +57,9 @@
                     <p><strong>Username:</strong> <%= @found_user.username %></p>
                     <p><strong>Account creato il:</strong> <%= @found_user.created_at.strftime("%d/%m/%Y") %></p>
                 </div>
+                
+                <%= link_to "Segnala Utente", "search_user/new_segnala_utente/"+@found_user.username, style:"color:red"%>
+                
                 <!--AMICIZIA-->
                 <div>
                     <!--RIMUOVI AMICO-->

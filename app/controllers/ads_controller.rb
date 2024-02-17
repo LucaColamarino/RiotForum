@@ -28,11 +28,11 @@ class AdsController < ApplicationController
     @ad.lanes = params[:ad][:lanes] || {}
     #lanes_hash = selected_lanes&.map { |lane| [lane, 1] }
     
-
     respond_to do |format|
       if @ad.save
         format.html { redirect_to ad_url(@ad), notice: "Ad was successfully created." }
         format.json { render :show, status: :created, location: @ad }
+
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @ad.errors, status: :unprocessable_entity }

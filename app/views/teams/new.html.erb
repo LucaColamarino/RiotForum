@@ -1,0 +1,36 @@
+<%= form_with(model: @team, url: teams_new_path) do |form| %>
+
+    <div class="field">
+      <%= form.label :mode, 'Per quale modalità' %>
+      <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex']) %>
+      <br>
+    </div>
+
+    <div class="field">
+      <%= form.label :leader_lane, 'Ruoli richiesti' %>
+      <br>
+      <div id="leader_lane">
+        <% lanes = %w[Top Jungle Mid Adc Support] %>
+        <% lanes.each do |lane| %>
+            <%= form.radio_button :leader_lane, lane%>
+            <%= form.label lane.downcase, lane %><br>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :lanes, 'Ruoli richiesti' %>
+      <br>
+      <div id="lanes">
+        <% lanes = %w[Top Jungle Mid Adc Support] %>
+        <% lanes.each do |lane| %>
+            <%= form.check_box :lanes, { multiple: true }, lane, lane=='Tutti'%>
+            <%= form.label lane.downcase, lane %><br>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+<% end %>

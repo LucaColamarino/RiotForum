@@ -1,21 +1,21 @@
 class Team < ApplicationRecord
-    has_one :leader, class_name: "User"
-    has_many :users, dependent: :destroy
+    belongs_to :leader, class_name: "User"
+    #has_many :members, class_name: "User"
+
+    serialize :lanes, type: Array, coder: JSON
+    serialize :comp, type: Hash, coder: JSON
     
     validates :leader, presence: true
-    validate :validate_player_count
 
-    #il primo membro del team (inserito durante la creazione) è considerato il leader
-    after_create :set_leader
+    def initialize(attributes = nil)
 
-    private
-
-    def set_leader
-
-        @leader ||= users.first
+        super
+        @comp = Hash.new
+        @comp["Top"] = nil
+        @comp["Jungle"] = nil
+        @comp["Mid"] = nil
+        @comp["Adc"] = nil
+        @comp["Support"] = nil
     end
 
-    def validate_player_count
-        errors.add(:players, "Can't exceed 4") if players.size > 4
-    end
 end

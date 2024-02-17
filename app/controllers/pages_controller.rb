@@ -231,7 +231,7 @@ class PagesController < ApplicationController
   
   #--------------------------------
   def board
-    @game = params[:game];
+    @game = session[:game];
 
     @annunci = Ad.order(updated_at: :desc).all
 
@@ -246,7 +246,37 @@ class PagesController < ApplicationController
 
   def settings
   end
-  
+  def page_to_ban
+    if !(current_user.has_role?(:moderator))
+      redirect_to '/profile'
+    end
+  end
+  def ban_user
+   if current_user.has_role?(:moderator)
+    username = params[:username]
+    user_to_ban = User.find_by(username: username)
+
+        if !(user_to_ban.has_role?(:moderator))
+          if user_to_ban.banned
+            user_to_ban.update(banned: false)
+            flash[:success] = "Utente bannato con successo."
+            redirect_to '/profile' 
+          else
+            user_to_ban.update(banned: true)
+            flash[:success] = "Utente bannato con successo."
+            redirect_to '/profile' 
+          end
+
+        else
+          flash[:error] = "Impossibile trovare l'utente."
+          redirect_back(fallback_location: '/profile')
+        end
+   else
+    redirect_to '/profile'
+   end
+
+  end
+
   def send_friend_request
     friend = User.find_by(id: params[:friend_id])
     if friend
@@ -282,7 +312,9 @@ class PagesController < ApplicationController
 
   #----------------- API & PRIVATE METHODS ---------------#
   private 
-
+  def user_ban
+    params.require(:user).permit(:username)
+  end
   def find_summoner(summoner)
     return RiotGamesApi.find_summoner(summoner)
   end

@@ -1,0 +1,4 @@
+<%= form_with(url: profile_page_to_ban_path, method: "post") do |form| %>
+    <%= form.text_field :username, placeholder: "Username da bannare" %>
+    <%= form.submit "Banna utente" %>
+  <% end %>
