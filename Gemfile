@@ -81,3 +81,6 @@ gem "cancancan"
 gem "rolify"
 #test
 gem 'rspec-rails'
+# creazioni users per i test
+gem 'factory_bot', '~> 6.4.6'
+gem 'factory_bot_rails'

@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post 'news/newpost', to: 'newpost#create'
   get 'news/:id/edit', to: 'newpost#edit'
   patch 'news/:id' , to: 'newpost#update'
-  delete 'news/:id', to: 'newpost#destroy'
+  delete 'news/:id', to: 'newpost#destroy', as:'delete_newpost'
 
   get 'messages/new_admin_message', to: 'messages#new_admin_message'
   post 'messages/new_admin_message', to: 'messages#create_admin_message'
