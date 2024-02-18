@@ -2,6 +2,13 @@
 
 <h1> MESSAGGI RICEVUTI </h1>
 
+
+<% flash.each do |key, value| %>
+  <div class="alert <%= key %>">
+<%= value %>
+  </div>
+<% end %>  
+
 <% @messages.each do |message| %>
   <% if message.present? %>
   <a href=<%='/messages/'+message.id.to_s%>>
