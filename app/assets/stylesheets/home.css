@@ -1,22 +1,10 @@
-/*
-.main-container { 
-  background-image: url('/assets/Sfondolol.png'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-color: rgba(69, 49, 160, 0.5); 
-
-  border: 5px dotted black;
-  min-height: 100%;
-} 
-*/
-
 .parent {
 
-  background-image: url('/assets/Sfondolol.png'); 
+  background-image: url('/assets/LOL-bg.png'); 
   background-size: cover; 
   background-repeat: no-repeat;  
 
-  border: 5px dotted black;
+
   min-height: 100%;
 
   display:grid;
@@ -179,60 +167,3 @@
   outline: 2px groove rgb(134, 11, 36);
   color: goldenrod;
 }
-
-/*
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-
-.container-1 {
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.container-1 > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 47%;
-  box-sizing: border-box;
-}
-
-.container-2 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
- }
-
-
-.team-section {
-  border: 3px solid black;
-}
-
-.board-section {
-  border: 3px solid black;
-}
-
-.news-section {
-  border: 3px solid black;
-}
-
-#team-btn {
-  background-color: royalblue;
-  color: white;
-}
-body { 
-  background-image: url('/assets/Immagine1.png'); 
-  background-size: cover; 
-  background-repeat: no-repeat; 
-  background-color: rgb(255, 255, 255,0.5); 
-  background-blend-mode: lighten;
-
-} 
-*/

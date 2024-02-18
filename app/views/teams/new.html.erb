@@ -1,36 +1,138 @@
-<%= form_with(model: @team, url: teams_new_path) do |form| %>
+<div class="team-creation-container">
 
-    <div class="field">
-      <%= form.label :mode, 'Per quale modalità' %>
-      <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex']) %>
-      <br>
-    </div>
+  <h1 class="mb-3" style="color:white">CREAZIONE TEAM</h1>
 
-    <div class="field">
-      <%= form.label :leader_lane, 'Ruoli richiesti' %>
-      <br>
-      <div id="leader_lane">
-        <% lanes = %w[Top Jungle Mid Adc Support] %>
-        <% lanes.each do |lane| %>
-            <%= form.radio_button :leader_lane, lane%>
-            <%= form.label lane.downcase, lane %><br>
-        <% end %>
-      </div>
-    </div>
+    <%= form_with(model: @team, url: teams_new_path, class:"team-creation-form") do |form| %>
 
-    <div class="field">
-      <%= form.label :lanes, 'Ruoli richiesti' %>
-      <br>
-      <div id="lanes">
-        <% lanes = %w[Top Jungle Mid Adc Support] %>
-        <% lanes.each do |lane| %>
-            <%= form.check_box :lanes, { multiple: true }, lane, lane=='Tutti'%>
-            <%= form.label lane.downcase, lane %><br>
-        <% end %>
-      </div>
-    </div>
+        <div class="field d-flex flex-column">
+          <%= form.label :mode, 'Per quale modalità' %>
+          <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Flex']) %>
+          <br>
+        </div>
 
-    <div class="actions">
-      <%= form.submit %>
-    </div>
-<% end %>
+        <div class="field mt-3">
+          <%= form.label :leader_lane, 'Il tuo ruolo' %>
+          <br>
+          <div id="leader_lane">
+            <% lanes = %w[Top Jungle Mid Adc Support] %>
+            <% lanes.each do |lane| %>
+              <%= image_tag "/assets/positions/"+lane.capitalize+".png", class: 'leader-lane', data: { lane: lane } %>
+            <% end %>
+            <%= form.hidden_field :leader_lane %>
+          </div>
+        </div>
+
+        <div class="field mt-3">
+          <%= form.label :lanes, 'Ruoli richiesti' %>
+          <br>
+          <div id="lanes">
+            <% lanes = %w[Top Jungle Mid Adc Support] %>
+            <% lanes.each do |lane| %>
+              <label>
+                <%= form.check_box :lanes, { multiple: true, class: 'lane-checkbox' }, lane, { id: "lane_#{lane.downcase}", value: lane } %>
+                <%= image_tag "/assets/positions/#{lane.capitalize}.png", class: 'lanes-checkbox', data: { lane: lane } %>
+              </label>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button type="submit" class="btn btn-dark"> Pubblica </button>
+        </div>
+    <% end %>
+
+</div>
+
+
+<script>
+  $(document).ready(function() {
+      $('.leader-lane').on('click', function() {
+        $('.leader-lane').removeClass('leader-selected-lane');
+        
+        $(this).addClass('leader-selected-lane');
+
+        var lane = $(this).data('lane');
+        $('input[name="team[leader_lane]"]').val(lane);
+      });
+      //----------------------------------------
+      $('.lanes-checkbox').on('click', function() {
+        $(this).toggleClass('selected-lane');
+
+        var checkboxId = $(this).prev('.lane-checkbox').attr('id');
+        
+        $('#' + checkboxId).prop('checked', function(_, checked) {
+          return !checked;
+        });
+      });
+
+
+      
+  });
+
+
+</script>
+
+<style>
+
+  .team-creation-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url('/assets/LOL-bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+  }
+  
+
+  .team-creation-form {
+    display:flex;
+    flex-direction:column;
+    color:white;
+    font-weight: 700;
+
+    background-color: rgba(0, 191, 255, 0.5);
+    border-radius: 0.5em;
+
+    padding: 50px;
+    height: 60%;
+  }
+  .team-creation-form > * {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  .lane-checkbox {
+    display: none;
+  }
+
+  .leader-lane, .lanes-checkbox {
+    filter:brightness(0.3);
+  }
+
+  .leader-lane:hover, .lanes-checkbox:hover {
+    filter:none;
+  }
+
+  .selected-lane {
+    filter:brightness(1.2);
+    outline: 5px solid goldenrod;
+  }
+  .leader-selected-lane {
+    filter:brightness(1.2);
+    outline: 5px solid crimson;
+  }
+
+  .leader-lane, .lanes-checkbox {
+    width: 50px; 
+    height: 50px; 
+  }
+
+</style>

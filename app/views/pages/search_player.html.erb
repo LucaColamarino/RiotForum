@@ -9,39 +9,36 @@
 
     <div class='container-searchedProfile'>
         <div class="player-info">
-
+            <% summoner = params[:summonerName]%>
             <div class="icona">
                 <% #dopo sarà meglio mettere una funzione in riotgames o pagecontroller che restituisce il link %>
                 <% #con versione e id e lo mette in una variabile che sostituirà sto url intero  %>
                 <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/profileicon/'+@iconID.to_s+'.png', class:'img responsive',alt:'profile_icon' %>
-                <h1><%= params[:summonerName] %></h1>
+                <h1><%= summoner %></h1>
                 Livello <%= @summoner_level %>
             </div>
 
             <div class="stats">
-                <!-- <div class="d-flex flex-row align-items-center justify-content-center" style="color:goldenrod;">
-                        <h4><%=@tier%> <%=@rank%></h4>
-                        <%=image_tag "/assets/ranks/Rank=#{@tier.capitalize}.png", class: 'rank-icon'%>
-                    </div>
-                    -->
+                
             </div>
 
         </div>
 
         <div class="barra-filtri btn-group" role="group" aria-label="Basic example">
-            <%=link_to search_player_path(filter: 'CLASSIC') do%>
+            <%=link_to search_player_path(summonerName:summoner, filter: 'CLASSIC') do%>
                 <button type="button" class="btn btn-light">Normal</button>
             <%end%>
-            <%=link_to search_player_path do%>
+            <%=link_to search_player_path(summonerName:summoner, filter: 'RANKED') do%>
                 <button type="button" class="btn btn-light">Ranked</button>
             <%end%>
-            <%=link_to search_player_path do%>
+            <%=link_to search_player_path(summonerName:summoner) do%>
                 <button type="button" class="btn btn-light">Tutti</button>
             <%end%>
         </div>
 
         <div class="match-history">
         <% for i in 0...@length do%> 
+            <%if params[:filter] && params[:filter]==@gameMode[i] || params[:filter].nil?%>
             <% index = @searchedPlayer[i]%>
             <% esito = @players[i][index][:win] == true ? "Vittoria" : "Sconfitta" %>
             <% coloreEsito = esito == "Vittoria"? "rgb(121, 204, 142)" : "rgb(185, 110, 110)"%>
@@ -49,9 +46,9 @@
             <div class="match">
                 <div class="matchTag">
                     <span>
-                        <%= @matchData[i]["info"]["gameMode"] %>
+                        <%= @gameMode[i] %>
                         |
-                        quanto tempo fa
+                        <%= @gameEndTimestamp[i] %>
                     </span>
                 </div>
                 <div class="inner">
@@ -111,6 +108,7 @@
 
                 </div>
             </div>
+            <%end%>
         <%end%>
         </div>
     </div>

@@ -73,10 +73,14 @@
 }
 
 .barra-filtri {
-    /*grid-area: 5 / 1 / 6 / 8; */
-
-
-    background-color:cornflowerblue;
+    
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+.barra-filtri > button {
+    flex:1;
 }
 
 .match-history {
@@ -107,6 +111,7 @@
             padding-left: 1em;
 
             background-color: brown;
+            color: white;
         }
 
         .match > .inner {

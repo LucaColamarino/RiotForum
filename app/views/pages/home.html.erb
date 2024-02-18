@@ -25,14 +25,7 @@
 
             <img src="/assets/miniatura-LOL.png" width="45%" height="60%">
 
-  <!--          
-            <div class="search">
-                <form class="w3-center" action="<%= search_player_path %>" method="get">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Cerca Giocatore..." aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerca</button>
-                </form>
-            </div>
--->
+
             <div class="search">
                 <form action="<%= search_player_path %>" method="get" class="form-inline">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca Giocatore..." name="summonerName">
@@ -43,11 +36,11 @@
            
 
             <% if not user_signed_in? %>
-                <%= button_to "Create Team", new_user_session_path, method: :get, class: "btn btn-lg btn-primary"%>
+                <%= button_to "Crea Team", new_user_session_path, method: :get, class: "btn btn-lg btn-primary"%>
             <% elsif has_team(current_user)%>
-                <%= button_to "Show Team", teams_path, method: :get, class: "btn btn-lg btn-primary"%>
+                <%= button_to "Il tuo Team", teams_path, method: :get, class: "btn btn-lg btn-primary"%>
             <% else %>
-            <%= button_to "Create Team", teams_new_path, method: :get, class: "btn btn-lg btn-primary"%>
+            <%= button_to "Crea Team", teams_new_path, method: :get, class: "btn btn-lg btn-primary"%>
             <% end %>
 
         </div>
@@ -127,7 +120,7 @@
         </div>
 
         <!-- TASTO SCRIVI -->
-        <%= link_to root_path do %>
+        <%= link_to new_message_path do %>
             <button id="scrivi">
                 Scrivi
             </button>

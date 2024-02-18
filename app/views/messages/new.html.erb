@@ -1,6 +1,19 @@
-<%= form_with model: @message do |form| %>
+<%= link_to root_path do %>
+    <button class="btn btn-primary">Torna indietro</button>
+<%end%>
+
+<%= form_with model: @message, class: "send-msg-container" do |form| %>
+
     <div>
-      <%= form.label :subject %><br>
+      <%= form.label :receive_email, 'A' %><br>
+      <%= form.email_field :receive_email %><br>
+      <% @message.errors.full_messages_for(:receive_email).each do |message| %>
+        <div><%= @message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :subject, 'Soggetto' %><br>
       <%= form.text_field :subject %>
       <% @message.errors.full_messages_for(:subject).each do |message| %>
         <div><%= @message %></div>
@@ -8,22 +21,51 @@
     </div>
   
     <div>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %><br>
+      <%= form.label :body, "Messaggio" %><br>
+      <%= form.text_area :body, maxlength: 600, rows: 10, cols:70 %><br>
       <% @message.errors.full_messages_for(:body).each do |message| %>
-        <div><%= @message %></div>
-      <% end %>
-    </div>
-    <div>
-      <%= form.label :receive_email %><br>
-      <%= form.email_field :receive_email %><br>
-      <% @message.errors.full_messages_for(:receive_email).each do |message| %>
         <div><%= @message %></div>
       <% end %>
     </div>
 
   
     <div>
-      <%= form.submit %>
+      <%= form.submit "Invia", class: "invia-msg" %>
     </div>
   <% end %>
+
+ 
+
+<style>
+  textarea {
+    resize: none;
+    overflow-y: auto; /* Add vertical scrollbar when content exceeds the height */
+  }
+
+  .invia-msg {
+    margin-top:10px;
+    padding: 10px;
+    border:none;
+    background-color: crimson;
+    color: white;
+  }
+
+  .invia-msg:hover {
+    cursor: pointer;
+    filter: brightness(1.1)
+  }
+
+  .send-msg-container {
+    margin-top: 50px;
+    border: 2px solid gray;
+    background-color: white;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .send-msg-container > * {
+    margin-left: 20px;
+  }
+</style>

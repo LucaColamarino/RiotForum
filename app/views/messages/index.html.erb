@@ -16,6 +16,6 @@
   <%= button_to "Invia un messaggio", '/messages/new', method: :get, class: "btn btn-primary" %>
 
   <% if current_user.has_role?(:moderator)%>
-     <%= button_to "Invia un messaggio a tutti", '/messages/new_admin_message', method: :get, class: "btn btn-primary" %>
+     <%= button_to "Scrivi un messaggio a tutti", '/messages/new_admin_message', method: :get, class: "btn btn-primary" %>
 
   <%end%>

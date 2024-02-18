@@ -62,6 +62,7 @@ class PagesController < ApplicationController
       @matchData = Array.new(@length)
       @durata = Array.new(@length)
       @gameMode = Array.new(@length)
+      @gameEndTimestamp = Array.new(@length)
       @participants = Array.new(@length)
       @players = Array.new(@length)
       @searchedPlayer = Array.new(@length)
@@ -74,6 +75,7 @@ class PagesController < ApplicationController
 
           @durata[i] = formattedTime(@matchData[i]["info"]["gameDuration"])
           @gameMode[i] = @matchData[i]["info"]["gameMode"]
+          @gameEndTimestamp[i] = formatMillis(@matchData[i]["info"]["gameEndTimestamp"])
 
           #-----INFO SINGOLI GIOCATORI
 
@@ -110,7 +112,7 @@ class PagesController < ApplicationController
       end
 
     else
-      redirect_to home_path
+      redirect_to root_path
     end
   end
 #---------------------------------------------------
@@ -306,7 +308,7 @@ class PagesController < ApplicationController
       flash[:notice] = "Invitation successfully removed"
       redirect_to profile_path
     else
-      redirect_to home_path
+      redirect_to root_path
     end
   end
 
@@ -345,6 +347,11 @@ class PagesController < ApplicationController
     minutes = all_seconds / 60
     seconds = all_seconds - (hours*3600) - (minutes*60)
     return "#{hours}:#{minutes}:#{seconds}"
+  end
+
+  def formatMillis(timestamp)
+    time = Time.at(timestamp / 1000)
+    formatted_time = time.strftime("%d/%m/%Y %H:%M")
   end
 
   def username_valid?(username)

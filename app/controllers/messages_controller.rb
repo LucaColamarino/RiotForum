@@ -19,12 +19,13 @@ class MessagesController < ActionController::Base
     end
 #receive email sarà da cambiare con username forse RICORDA
     def create
-        receiver= User.find_by(email: params_msg[:receive_email])
+        receiver = User.find_by(email: params_msg[:receive_email])
         if receiver.nil?
             redirect_to profile_path
+            return
         end
 
-        @message=Message.new(params_msg)
+        @message= Message.new(params_msg)
         @message.sender_id = current_user.id
         @message.receiver_id = receiver.id
 
