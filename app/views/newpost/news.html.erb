@@ -1,10 +1,14 @@
-<%if(session[:game]=="LOL")%>
+
 <head>
 <%= stylesheet_link_tag "news", "data-turbo-track": "reload" %>
 </head>
 
 <body>
-
+  <% flash.each do |key, value| %>
+    <div class="alert <%= key %>">
+      <%= value %>
+    </div>
+  <% end %>  
     <div class="container-bacheca-news">
         <div class="sfondo-bacheca-news">
 
@@ -16,7 +20,7 @@
                     <%end%>
                 </span>
             </div>
-
+          
             <div id="bacheca-news">
                 <% @newpost.each do |newpost|%>
                 <div class="thread"> 
@@ -31,6 +35,7 @@
                 <%end%>
             </div>
             <%= button_to "Vai alla pagina di creazione di un nuovo post", '/news/newpost', method: :get, class: "btn btn-primary" %>
+
 
 
         </div>  
@@ -55,7 +60,3 @@
    </div>
 
 </body>
-
-<%else %>
- <p>news di valorant</p>
-<%end %>

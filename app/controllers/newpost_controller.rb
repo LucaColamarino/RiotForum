@@ -49,7 +49,8 @@ class NewpostController < ApplicationController
           redirect_to '/news/'+@newpost.id.to_s
         else
         
-        render :'/news', status: :unprocessable_entity
+        redirect_to '/news'
+        flash[:alert]='Parametri vuoti non sono accettati'
         end
       else
         flash[:alert] = 'You must be logged in to create a post.'
@@ -99,7 +100,9 @@ class NewpostController < ApplicationController
 
     def check_admin
       if !(current_user.has_role?(:moderator))
-        redirect_to '/home'
+        flash[:alert] = 'You must be admin to create a post'
+
+        redirect_to '/news'
       end
     end
 
