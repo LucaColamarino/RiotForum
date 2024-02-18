@@ -4,11 +4,14 @@
 </head>
 
 <body>
-  <% flash.each do |key, value| %>
-    <div class="alert <%= key %>">
-      <%= value %>
-    </div>
-  <% end %>  
+    <!--
+        <% flash.each do |key, value| %>
+            <div class="alert <%= key %>">
+        <%= value %>
+            </div>
+        <% end %>  
+    -->
+
     <div class="container-bacheca-news">
         <div class="sfondo-bacheca-news">
 
@@ -34,8 +37,9 @@
                     </div>
                 <%end%>
             </div>
+            <%if user_signed_in? && current_user.has_role?(:moderator) %> 
             <%= button_to "Vai alla pagina di creazione di un nuovo post", '/news/newpost', method: :get, class: "btn btn-primary" %>
-
+            <%end%>
 
 
         </div>  

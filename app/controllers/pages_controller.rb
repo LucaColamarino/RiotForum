@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  #redireziona da solo alla pagina login se l'user non è loggato
+  before_action :authenticate_user!, except: [:home, :search_player, :board]  
+  
 
   @game = 'LOL';   #di default
   
@@ -36,18 +39,28 @@ class PagesController < ApplicationController
         @puuid = @summoner["puuid"]
 
         @stats = self.getPlayerStats(@summonerID)
-          if @stats[:code] == 200
-              for queue in @stats[:body] do
-                @stats_data = @stats[:body][queue]
-                if !@stats_data.nil?
-                  @queueType = @stats_data["queueType"]
-                  @tier = @stats_data["tier"]
-                  @rank = @stats_data["rank"]
-                  @wins = @stats_data["wins"]
-                  @losses = @stats_data["losses"]
-                end
-              end
-          end
+
+        if @stats[:code] == 200 && @stats[:body].is_a?(Array)
+          stats_data = @stats[:body]
+          @queueLength = stats_data.length
+          @stats_queue = Array.new(stats_data.length)
+          i=0
+
+          stats_data.each { |data|
+            @stats_queue[i] = {}
+            @stats_queue[i] = {
+              queueType: data["queueType"].gsub('_', ' '),
+              tier: data["tier"].capitalize,
+              rank: data["rank"],
+              wins: data["wins"],
+              losses: data["losses"]
+            }
+
+            i+=1
+          }
+        end
+
+        
       end
       #-------------------------------#
       summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
@@ -146,7 +159,7 @@ class PagesController < ApplicationController
 #---------------------------------------------------
 
   def profile
-    if user_signed_in?
+    #if user_signed_in?
 
       if flash[:alert]
         # per triggerare il messaggio d'errore di cerca utente sito inesistente
@@ -174,9 +187,9 @@ class PagesController < ApplicationController
       else
         redirect_to edit_profile_path #aggiorna solo l'username
       end
-    else
-      redirect_to sign_up_path #?
-    end
+    #else
+      #redirect_to new_user_session_path
+    #end
     
   end
   
@@ -248,11 +261,13 @@ class PagesController < ApplicationController
 
   def settings
   end
+
   def page_to_ban
     if !(current_user.has_role?(:moderator))
       redirect_to '/profile'
     end
   end
+
   def ban_user
    if current_user.has_role?(:moderator)
     username = params[:username]
@@ -314,9 +329,11 @@ class PagesController < ApplicationController
 
   #----------------- API & PRIVATE METHODS ---------------#
   private 
+
   def user_ban
     params.require(:user).permit(:username)
   end
+
   def find_summoner(summoner)
     return RiotGamesApi.find_summoner(summoner)
   end

@@ -120,10 +120,12 @@
         </div>
 
         <!-- TASTO SCRIVI -->
-        <%= link_to new_message_path do %>
-            <button id="scrivi">
-                Scrivi
-            </button>
+        <%if user_signed_in? %>_
+            <%= link_to new_message_path do %>
+                <button id="scrivi">
+                    Scrivi
+                </button>
+            <% end %>
         <% end %>
 
 
