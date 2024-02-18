@@ -11,10 +11,15 @@
         </div>
 
         <div class="field mt-3">
+          <%= form.label :minRank, 'Rank minimo' %>
+          <%= form.select :minRank, options_for_select(['Nessuno', 'Silver', 'Gold', 'Platino', 'Smeraldo', 'Diamond', 'Master', 'Grandmaster', 'Challenger']) %>
+        </div>
+
+        <div class="field mt-3">
           <%= form.label :leader_lane, 'Il tuo ruolo' %>
           <br>
           <div id="leader_lane">
-            <% lanes = %w[Top Jungle Mid Adc Support] %>
+            <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <%= image_tag "/assets/positions/"+lane.capitalize+".png", class: 'leader-lane', data: { lane: lane } %>
             <% end %>
@@ -26,10 +31,10 @@
           <%= form.label :lanes, 'Ruoli richiesti' %>
           <br>
           <div id="lanes">
-            <% lanes = %w[Top Jungle Mid Adc Support] %>
+          <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <label>
-                <%= form.check_box :lanes, { multiple: true, class: 'lane-checkbox' }, lane, { id: "lane_#{lane.downcase}", value: lane } %>
+                <%= form.check_box :lanes, { multiple: true, class: 'lane-checkbox' }, lane, lane %>
                 <%= image_tag "/assets/positions/#{lane.capitalize}.png", class: 'lanes-checkbox', data: { lane: lane } %>
               </label>
             <% end %>

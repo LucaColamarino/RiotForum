@@ -144,3 +144,16 @@
   height: 60px;
   text-indent: -9999px; 
 }
+
+.lane_disponibile{
+	
+	image-size
+}
+.lane_occupata{
+	filter: blur(15px);
+}
+
+.lane_non_disponibile{
+
+	opacity: 30%;
+}

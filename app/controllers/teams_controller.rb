@@ -22,7 +22,18 @@ class TeamsController < ApplicationController
         current_user.team_id = @team.id
         current_user.save
 
-        redirect_to teams_path
+        @ad = Ad.new
+        @ad.team_id = @team.id
+        @ad.minRank = params[:team][:minRank]
+
+        if@ad.save
+
+          redirect_to teams_path
+        else
+
+          redirect_to teams_new_path
+          @team.destroy
+        end
 
       else
         redirect_to teams_new_path
@@ -39,9 +50,11 @@ class TeamsController < ApplicationController
     def destroy
 
       @team = Team.find(current_user.team_id)
+      @ad = Ad.find_by(team_id: @team.id)
       current_user.team_id = nil
 
       current_user.save
+      @ad.delete
       @team.delete
 
       redirect_to root_path, status: :see_other

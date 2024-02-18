@@ -29,7 +29,8 @@
             <div id="bacheca">
                 <!-- annunci -->
                 <% for annuncio in @annunci do%>
-                    <% user = User.find_by(id: annuncio.user_id) %>
+                    <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
+                    <% mode = Team.find( annuncio.team_id ).mode%>
                     <div class="annuncio">
                      <%if user.present?%>
                         <div class="owner">
@@ -39,11 +40,8 @@
                      <%end%>
                         <div class="roles">
                             <h4>
-                                <%=annuncio.mode%>
+                                <%= mode %>
                             </h4>
-                            <% if annuncio.mode != 'Aram'%>
-                                icone ruoli
-                            <%end%>
                         </div>
                         <div class="minRank">
                             <%=annuncio.minRank%>

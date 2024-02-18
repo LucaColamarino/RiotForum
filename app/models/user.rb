@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   rolify
   
-  has_many :ads, dependent: :destroy
   has_many :newposts
   #amicizie
   has_many :invitations
@@ -12,7 +11,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_one :team, foreign_key: 'leader_id'
+  has_one :team, foreign_key: 'leader_id', dependent: :destroy
   belongs_to :team, optional: true
 
   #---------------------------#
