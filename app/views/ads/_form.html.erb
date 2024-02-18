@@ -8,7 +8,7 @@
 
     <div class="field">
       <%= form.label :mode, 'Per quale modalità' %>
-      <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Aram', 'Flex']) %>
+      <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Flex']) %>
       <br>
     </div>
 
@@ -16,8 +16,7 @@
       <%= form.label :lanes, 'Ruoli richiesti' %>
       <br>
       <div id="lanes">
-        <% lanes = %w[Top Jungle Mid Adc Support] %>
-        <% lanes.each do |lane| %>
+        <% Forum::LANES.each do |lane| %>
             <%= form.check_box :lanes, { multiple: true }, lane, lane=='Tutti'%>
             <%= form.label lane.downcase, lane %><br>
         <% end %>

@@ -1,13 +1,29 @@
-<h1>Team</h1>
-
 <%= @team.mode %>
+
 <br>
-<%= @team.leader_id %>
-<br>
-<%= @team.lanes %>
-<br>
-<%= @team.comp %>
-<br>
+
+<% Forum::LANES.each do |lane| %>
+    
+    <% if not @team.lanes.include?(lane) %>
+
+        <% player = nil %>
+        <% @lane_class = "lane_non_disponibile" %>
+    <% elsif @team.comp[lane].nil? %>
+
+        <% player = nil %>
+        <% @lane_class = "lane_disponibile" %>
+    <% else %>
+
+        <% player = User.find(@team.comp[lane]).username %>
+        <% @lane_class = "lane_occupata" %>
+    <% end %>
+
+    <%= image_tag("positions/" + lane + ".png", class: @lane_class) %>
+    <%= player %>
+
+    <br>
+<% end %>
 
 <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light" %>
+<br>
 <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>

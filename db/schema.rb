@@ -10,16 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_17_151215) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_18_010600) do
   create_table "ads", force: :cascade do |t|
-    t.string "game"
-    t.string "mode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "lanes"
     t.string "minRank"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_ads_on_user_id"
+    t.integer "team_id", null: false
+    t.index ["team_id"], name: "index_ads_on_team_id"
   end
 
   create_table "invitations", force: :cascade do |t|
@@ -64,7 +61,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_151215) do
     t.integer "leader_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "roster", default: ""
     t.string "mode"
     t.string "lanes"
     t.string "comp"
@@ -97,7 +93,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_151215) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "ads", "users"
+  add_foreign_key "ads", "teams"
   add_foreign_key "invitations", "users"
   add_foreign_key "invitations", "users"
   add_foreign_key "invitations", "users", column: "friend_id"

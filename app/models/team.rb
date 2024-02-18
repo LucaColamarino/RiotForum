@@ -1,6 +1,7 @@
 class Team < ApplicationRecord
     belongs_to :leader, class_name: "User"
     #has_many :members, class_name: "User"
+    has_one :ad, dependent: :destroy
 
     serialize :lanes, type: Array, coder: JSON
     serialize :comp, type: Hash, coder: JSON
@@ -10,12 +11,13 @@ class Team < ApplicationRecord
     def initialize(attributes = nil)
 
         super
-        @comp = Hash.new
-        @comp["Top"] = nil
-        @comp["Jungle"] = nil
-        @comp["Mid"] = nil
-        @comp["Adc"] = nil
-        @comp["Support"] = nil
+        @comp = {
+            "Top" => nil,
+            "Jungle" => nil,
+            "Mid" => nil,
+            "Adc" => nil,
+            "Support" => nil
+        }
     end
 
 end

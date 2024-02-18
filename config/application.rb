@@ -7,6 +7,9 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 module Forum
+
+  LANES = %w[Top Jungle Mid Adc Support]
+
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
