@@ -218,21 +218,28 @@ class PagesController < ApplicationController
   
   #--------------------------------
   def edit_profile 
-    if request.get? && !params[:inputType].present?
+    if request.get? && !params[:username].present?
       # Affinchè non mi dia errore quando apro la pagina per la prima volta
       return
     end
 
     if !params[:username].nil?     
-       updateBy_username(params[:username]) 
+      updateBy_username(params[:username]) 
+    else
+      flash.now[:error] = "Inserisci un nome"
     end
 
   end
 
   def updateBy_username(username)
     if username_valid?(username)
-      current_user.update(username: username)
-      redirect_to profile_path(user: username)
+      if !username_exists?(username)
+        current_user.update(username: username)
+        redirect_to profile_path(user: username)
+      else
+        flash.now[:error] = "Username già in questo sito. Riprova"
+        render :edit_profile
+      end
     else
       flash.now[:error] = "Username inesistente. Riprova"
       render :edit_profile
@@ -264,6 +271,7 @@ class PagesController < ApplicationController
   end
 
   def your_messages
+    @messages=Message.where(receiver_id: current_user.id)
     render partial: 'your_messages'
   end
   
@@ -399,6 +407,7 @@ class PagesController < ApplicationController
     summoner = self.find_summoner(username)
     if summoner[:code] == 200
       summoner_name = summoner[:body]["name"]
+
       return summoner_name == username
     end
   end

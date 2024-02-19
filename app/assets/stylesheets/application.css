@@ -92,6 +92,7 @@
   
   #iconaNotifica {
     outline: 1px solid gray;
+    margin-right:10px;
   }
 
   #iconaNotifica:hover {

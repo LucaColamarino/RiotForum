@@ -12,6 +12,7 @@ class MessagesController < ActionController::Base
         if @message.receiver_id != current_user.id
             redirect_to profile_path
         end
+              
     end
 
     def new
