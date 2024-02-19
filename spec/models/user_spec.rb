@@ -6,8 +6,13 @@ RSpec.describe 'Permessi User', type: :system do
 
 
     scenario "Registrarsi senza inserire username" do
-        sign_up :user
+        sign_up user
         expect(page).to have_content user.email
         expect(page).to have_link 'Log out'
+    end
+
+    scenario "Accedere a profilo senza username" do
+        sign_up :user
+        ex
     end
 end

@@ -1,50 +1,174 @@
-<%= @team.mode %>
+<div class="show-team-container">
+    <div class="tabella-team">
+        <span class="titolo-mode w3-center"><%= @team.mode %></span>
 
-<br>
+        <br>
+        <div class="team-interface-container">
+            <% Forum::LANES.each do |lane| %>
+                
+                <% if !@team.lanes.include?(lane) %>
 
-<% Forum::LANES.each do |lane| %>
-    
-    <% if not @team.lanes.include?(lane) %>
+                    <% player = nil %>
+                    <% @lane_class = "lane_non_disponibile" %>
+                <% elsif @team.comp[lane].nil? %>
 
-        <% player = nil %>
-        <% @lane_class = "lane_non_disponibile" %>
-    <% elsif @team.comp[lane].nil? %>
+                    <% player = nil %>
+                    <% @lane_class = "lane_disponibile" %>
+                <% else %>
 
-        <% player = nil %>
-        <% @lane_class = "lane_disponibile" %>
-    <% else %>
+                    <% player = User.find(@team.comp[lane]).username %>
+                    <% @lane_class = "lane_occupata" %>
+                <% end %>
+                <div class="container-lane <%=lane%>Lane">
+                    <div style="color:white !important; border-left:none !important;margin-right:15px"><%=lane%></div>
+                    <%= image_tag("positions/" + lane + ".png", class: "stato_#{@lane_class} small-icon #{lane}-img") %>
+                    <div style="height:100%"><%= player %></div>
+                </div>
 
-        <% player = User.find(@team.comp[lane]).username %>
-        <% @lane_class = "lane_occupata" %>
-    <% end %>
+                
+            <% end %>
+        </div>
+    </div>
 
-    <%= image_tag("positions/" + lane + ".png", class: @lane_class) %>
-    <%= player %>
+    <div class="bottoni-gestione-team" style="margin-top:15px">
+        <div>
+            <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light",style:"padding:20px" %>
+        </div>
+        
+        <div>
+        <% if @team.leader_id == current_user.id%>
+            <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-dark", style:"padding:30px" %>
+        <% else %>
 
-    <br>
-<% end %>
+            <%= form_with url: team_path(@team.id), method: :patch do |f|%>
+                <%= f.hidden_field :team_id , value: @team.id%>
+                <%= f.hidden_field :user_id, value: nil %>
+                <% @team.comp.key(current_user.id) => position %>
+                <%= f.hidden_field :position, value: position %>
+                <button type= "Submit" class= "btn btn-danger">Esci dal Team</button>
+            <% end %>
+        <% end %>
+        </div>
+        <div>
+        <% if Messaggioteam.find_by(team_id: @team.id).nil? %>
+            <%= link_to "teams/messaggioteams/new/"+@team.id.to_s do %>
+                <button class="btn btn-warning" style="padding:20px">Crea chat team</button>
+            <%end%>
+        <% else %>
+            <%= link_to "Invia messaggio al team", "teams/messaggioteams/"+@team.id.to_s+"/edit" %>
+            <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %>
+        <% end %>
+        </div>
+    </div>
+</div>
 
-<%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light" %>
-<br>
-<% if @team.leader_id == current_user.id%>
+<style>
+    .titolo-mode {
+        padding:20px;
+        font-weight:900; 
+        background-color: white;
+        margin-bottom:50px;
+        border-top-left-radius: 0.9em;
+        border-top-right-radius: 0.9em;
+    }
 
-    <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>
-<% else %>
+    .show-team-container {
+        
+        height: 100vh;
 
-    <%= form_with url: team_path(@team.id), method: :patch do |f|%>
-        <%= f.hidden_field :team_id , value: @team.id%>
-        <%= f.hidden_field :user_id, value: nil %>
-        <% @team.comp.key(current_user.id) => position %>
-        <%= f.hidden_field :position, value: position %>
-        <button type= "Submit" class= "btn btn-warning">Esci dal Team</button>
-    <% end %>
-<% end %>
+        display:flex;
+        flex-direction:column;
 
-<% if Messaggioteam.find_by(team_id: @team.id).nil? %>
-   <%= link_to "Crea chat team", "teams/messaggioteams/new/"+@team.id.to_s %>
-<% else %>
-   <%= link_to "Invia messaggio al team", "teams/messaggioteams/"+@team.id.to_s+"/edit" %>
-   <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %>
+        background-image: url('/assets/riot-profile.jpeg');
+        background-size: cover; 
+        background-repeat: no-repeat;
 
-<% end %>
+    }
 
+    .tabella-team {
+        display:flex;
+        flex-direction:column;
+        border:2px solid white;
+        margin-left:50px;
+        margin-right:50px;
+        margin-top: 50px;
+        border-radius: 1em;
+        background-color: rgba(0, 100, 255, 0.333);
+    }
+
+    .team-interface-container {
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+
+    }
+
+
+    .container-lane {
+        
+        padding: 20px;
+    }
+
+    .container-lane div {
+        font-weight: bold;
+        color: lightskyblue;
+        margin-left:5px;
+        padding-left:15px;
+        border-left: 2px solid white;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        
+    }
+
+    .stato_lane_non_disponibile  {/* lane non richiesta */
+         background-color:black;
+         border: 5px solid black;
+    }
+
+    .stato_lane_disponibile {
+        filter: brightness(1.3) !important;
+    }
+
+    .stato_lane_occupata {
+        filter: brightness(1.5);
+        box-shadow: 0 0 5px 5px goldenrod;
+        background-color:white;
+    }
+
+    .TopLane, .JungleLane {
+
+        width:50%;
+
+        display:flex;
+        justify-content: center;
+    }
+
+    .MidLane {
+
+        width:100%;
+
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .AdcLane, .SupportLane {
+
+        width:50%;
+
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        margin-bottom: 50px;
+        
+    }
+
+    .bottoni-gestione-team {
+        display:flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items:center;
+    }
+</style>

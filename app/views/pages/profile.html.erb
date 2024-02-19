@@ -28,6 +28,9 @@
                 <%= link_to edit_profile_path do %>
                     <button class="btn btn-danger">Cambia profilo</button>
                 <%end%>
+                <br>
+                <%= link_to "Cancella account", registration_path(current_user), data: { confirm: "Sei sicuro di voler cancellare l'account?" },method: :delete, style: 'color:blue' %>
+
             
                 <div> 
                     email: <%= current_user.email%>

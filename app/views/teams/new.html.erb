@@ -8,7 +8,7 @@
     <%= form_with(model: @team, url: teams_new_path, class:"team-creation-form") do |form| %>
 
         <div class="field d-flex flex-column">
-          <%= form.label :mode, 'Per quale modalità' %>
+          <%= form.label :mode, 'Modalità' %>
           <%= form.select :mode, options_for_select(['Normal', 'Ranked', 'Flex']) %>
           <br>
         </div>

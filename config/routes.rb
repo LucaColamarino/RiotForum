@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   delete 'requests/:id', to: 'requests#destroy', as: 'request'
 
 
+
   get '/teams/messaggioteams/:team_id', to: 'messaggioteams#show', constraints: {team_id: /\d+/}, as: 'chat_team'
   get '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#new', as:'chat_team_new'
   post '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#create'
@@ -55,6 +56,8 @@ Rails.application.routes.draw do
   resources :ads
 
   resources :invitations
+
+
  
   get 'search_player', to: 'pages#search_player'
   get 'search_user', to: 'pages#search_user'
