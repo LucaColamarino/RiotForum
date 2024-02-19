@@ -105,9 +105,16 @@
             <%= link_to search_player_path(summonerName: @found_user.username) do%>
                 <button class="btn btn-danger stats-btn">Vedi stats</button>
             <%end%>
+            <% if @found_user.team_id? %>
             <div class="user-team-info">
-                Non è in nessun team
+                è in un team
             </div>
+            <% end %>
+            <% unless @found_user.team_id? %>
+            <div class="user-team-info">
+                non è in nessun team
+            </div>
+            <% end %>
         </div>
     </div>
 
