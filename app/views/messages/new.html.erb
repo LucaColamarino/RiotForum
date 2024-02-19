@@ -13,7 +13,7 @@
     </div>
 
     <div>
-      <%= form.label :subject, 'Soggetto' %><br>
+      <%= form.label :subject, 'Oggetto' %><br>
       <%= form.text_field :subject %>
       <% @message.errors.full_messages_for(:subject).each do |message| %>
         <div><%= @message %></div>

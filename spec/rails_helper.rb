@@ -35,9 +35,14 @@ RSpec.configure do |config|
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
   ]
+  # Capybara.register_driver :selenium_firefox do |app|
+  #   Capybara::Selenium::Driver.new(app, browser: :firefox)
+  # end
+
   Capybara.register_driver :selenium_firefox do |app|
-    Capybara::Selenium::Driver.new(app, browser: :firefox)
+    Capybara::Selenium::Driver.new(app, browser: :firefox, options: Selenium::WebDriver::Firefox::Options.new(headless: true))
   end
+  
   
   Capybara.server = :puma, { Silent: true }
   Capybara.javascript_driver = :selenium_firefox

@@ -1,0 +1,59 @@
+  .team-creation-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url('/assets/LOL-bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+  }
+
+  .team-creation-form {
+    display:flex;
+    flex-direction:column;
+    color:white;
+    font-weight: 700;
+
+    background-color: rgba(0, 191, 255, 0.5);
+    border-radius: 0.5em;
+
+    padding: 50px;
+    height: 60%;
+  }
+  .team-creation-form > * {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  .lane-checkbox {
+    display: none;
+  }
+
+  .leader-lane, .lanes-checkbox {
+    filter:brightness(0.3);
+  }
+
+  .leader-lane:hover, .lanes-checkbox:hover {
+    filter:none;
+  }
+
+  .selected-lane {
+    filter:brightness(1.2);
+    outline: 5px solid goldenrod;
+  }
+  .leader-selected-lane {
+    filter:brightness(1.2);
+    outline: 5px solid crimson;
+  }
+
+  .leader-lane, .lanes-checkbox {
+    width: 50px; 
+    height: 50px; 
+  }

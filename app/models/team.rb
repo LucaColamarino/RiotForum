@@ -4,6 +4,8 @@ class Team < ApplicationRecord
     has_one :ad, dependent: :destroy
     has_one :messaggioteam
 
+    has_many :request, dependent: :destroy
+
     serialize :lanes, type: Array, coder: JSON
     serialize :comp, type: Hash, coder: JSON
     

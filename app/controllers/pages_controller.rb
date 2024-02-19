@@ -188,6 +188,21 @@ class PagesController < ApplicationController
         @friendships_sent = Invitation.where(confirmed: true).where(user_id: current_user.id)
         @friendships_received = Invitation.where(confirmed: true).where(friend_id: current_user.id)
 
+
+        #proprie candidature
+
+          @myRequests = Request.where(user_id: current_user.id).limit(5)
+        #
+
+        #candidature team
+          query_team = Team.find_by(leader_id: current_user.id)
+          if query_team
+            @team = query_team.limit(5)
+          else 
+            @team=nil
+          end
+        #
+
       else
         redirect_to edit_profile_path #aggiorna solo l'username
       end
@@ -253,6 +268,7 @@ class PagesController < ApplicationController
     @game = session[:game];
 
     @annunci = Ad.order(updated_at: :desc).all
+    @request = Request.new
 
   end
 

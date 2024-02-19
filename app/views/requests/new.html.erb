@@ -1,0 +1,107 @@
+<div class="team-creation-container">
+
+  <h1 class="mb-3" style="color:white">CREAZIONE TEAM</h1>
+
+    <%= form_with(model: @team, url: teams_new_path, class:"team-creation-form") do |form| %>
+
+        <div class="field mt-3">
+          <%= form.label :lane, 'Il tuo ruolo' %>
+          <br>
+          <div id="lane">
+            <% lanes = Forum::LANES %>
+            <% lanes.each do |lane| %>
+                <% if @team.lanes.include(lane) && @team.comp[lane].nil? %>
+                    <%= image_tag "/assets/positions/"+lane+".png", class: 'lane', data: { lane: lane } %>
+                <% else %>
+                    <%= image_tag "/assets/positions/"+lane+".png", class: 'disabled-lane'%>
+                <% end %>
+              <% end %>
+            <%= form.hidden_field :lane %>
+        </div>
+        </div>
+
+        <div class="mt-4">
+          <button type="submit" class="btn btn-dark"> Pubblica </button>
+        </div>
+    <% end %>
+
+</div>
+
+
+<script>
+  $(document).ready(function() {
+      $('.lane').on('click', function() {
+        $('.lane').removeClass('selected-lane');
+        
+        $(this).addClass('selected-lane');
+
+        var lane = $(this).data('lane');
+        $('input[name="team[lane]"]').val(lane);
+      });
+      
+  });
+
+
+</script>
+
+<style>
+
+  .team-creation-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url('/assets/LOL-bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+  }
+  
+
+  .team-creation-form {
+    display:flex;
+    flex-direction:column;
+    color:white;
+    font-weight: 700;
+
+    background-color: rgba(0, 191, 255, 0.5);
+    border-radius: 0.5em;
+
+    padding: 50px;
+    height: 60%;
+  }
+  .team-creation-form > * {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+  }
+
+  .lane-checkbox {
+    display: none;
+  }
+
+  .lane, .lanes-checkbox {
+    filter:brightness(0.3);
+  }
+
+  .lane:hover, .lanes-checkbox:hover {
+    filter:none;
+  }
+
+  .selected-lane {
+    filter:brightness(1.2);
+    outline: 5px solid goldenrod;
+  }
+
+  .disabled-lane{
+
+  filter:brightness(0.3);
+  outline: 5px solid blue;
+}
+
+</style>

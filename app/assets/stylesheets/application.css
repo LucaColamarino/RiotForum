@@ -18,6 +18,11 @@
     width: 64px;
     height: 64px;
  }
+ 
+ .x-small-icon {
+	width: 48px;
+    height: 48px;
+ }
 
  body {
     padding: 0;

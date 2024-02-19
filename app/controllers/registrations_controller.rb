@@ -14,6 +14,11 @@ class RegistrationsController < Devise::RegistrationsController
       end
     end
 
+    def delete_account
+      @user= User.find(current_user.id)
+      @user.destroy
+      redirect_to root_path
+    end
     # def edit
     #     @user = current_user
     #     if resource.is_a?(User) && params[:username].present?
