@@ -19,6 +19,13 @@ class RegistrationsController < Devise::RegistrationsController
       @user.destroy
       redirect_to root_path
     end
+
+    def destroy
+        current_user.destroy
+        sign_out(current_user)
+        redirect_to root_path, notice: "Account cancellato"   
+    end
+
     # def edit
     #     @user = current_user
     #     if resource.is_a?(User) && params[:username].present?
