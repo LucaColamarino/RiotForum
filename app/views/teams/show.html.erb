@@ -5,24 +5,44 @@
         <br>
         <div class="team-interface-container">
             <% Forum::LANES.each do |lane| %>
+
+                <% playerName = nil %>
                 
                 <% if !@team.lanes.include?(lane) %>
 
-                    <% player = nil %>
                     <% @lane_class = "lane_non_disponibile" %>
+
                 <% elsif @team.comp[lane].nil? %>
 
-                    <% player = nil %>
                     <% @lane_class = "lane_disponibile" %>
+
                 <% else %>
 
-                    <% player = User.find(@team.comp[lane]).username %>
+                    <% player = User.find(@team.comp[lane]) %>
+                    <% playerName = player.username %>
                     <% @lane_class = "lane_occupata" %>
+
                 <% end %>
+                
                 <div class="container-lane <%=lane%>Lane">
                     <div style="color:white !important; border-left:none !important;margin-right:15px"><%=lane%></div>
                     <%= image_tag("positions/" + lane + ".png", class: "stato_#{@lane_class} small-icon #{lane}-img") %>
-                    <div style="height:100%"><%= player %></div>
+                    <div style="height:100%"><%= playerName %></div>
+
+                    <!-- se utente è leader permette di eliminare i membri diversi da se stessi -->
+                    <% if !player.nil? && (current_user.id == @team.leader_id && current_user.id != player.id) %>
+
+                        <%= form_with url: team_path(@team.id), method: :patch do |f|%>
+                            <%= f.hidden_field :team_id , value: @team.id %>
+                            <%= f.hidden_field :user_id, value: "" %>
+                            <%= f.hidden_field :target, value: player.id %>
+                            <% @team.comp.key(player.id) => position %>
+                            <%= f.hidden_field :position, value: position %>
+                            <button type= "Submit" class= "btn btn-danger">X</button>
+                        <% end %>
+
+                    <% end %>
+                    
                 </div>
 
                 
@@ -41,11 +61,12 @@
         <% else %>
 
             <%= form_with url: team_path(@team.id), method: :patch do |f|%>
-                <%= f.hidden_field :team_id , value: @team.id%>
-                <%= f.hidden_field :user_id, value: nil %>
+                <%= f.hidden_field :team_id , value: @team.id %>
+                <%= f.hidden_field :user_id, value: "" %>
+                <%= f.hidden_field :target, value: current_user.id %>
                 <% @team.comp.key(current_user.id) => position %>
                 <%= f.hidden_field :position, value: position %>
-                <button type= "Submit" class= "btn btn-danger">Esci dal Team</button>
+                <button type= "Submit" class= "btn btn-warning">Esci dal Team</button>
             <% end %>
         <% end %>
         </div>

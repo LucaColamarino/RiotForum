@@ -94,7 +94,7 @@
                         RICHIESTE PER IL TEAM
                     </div>
                     <!-- if !team.full -->
-                        <% @teamRequests = Request.where(team_id: @team.id)%>
+                        <% @teamRequests = Request.where(team_id: @team.id).limit(5)%>
                         <% for teamRequest in @teamRequests %>
                             <div class="richiesta">
 
