@@ -27,8 +27,10 @@
 <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light" %>
 <br>
 <% if @team.leader_id == current_user.id%>
+
     <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>
 <% else %>
+
     <%= form_with url: team_path(@team.id), method: :patch do |f|%>
         <%= f.hidden_field :team_id , value: @team.id%>
         <%= f.hidden_field :user_id, value: nil %>
@@ -37,3 +39,12 @@
         <button type= "Submit" class= "btn btn-warning">Esci dal Team</button>
     <% end %>
 <% end %>
+
+<% if Messaggioteam.find_by(team_id: @team.id).nil? %>
+   <%= link_to "Crea chat team", "teams/messaggioteams/new/"+@team.id.to_s %>
+<% else %>
+   <%= link_to "Invia messaggio al team", "teams/messaggioteams/"+@team.id.to_s+"/edit" %>
+   <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %>
+
+<% end %>
+

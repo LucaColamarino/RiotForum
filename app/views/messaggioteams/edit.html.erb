@@ -1,0 +1,10 @@
+<%= form_with(model: @messageteam, url:chat_team_edit_path) do |form| %>
+    <p><strong>Messaggio esistente:</strong></p>
+    <%= form.text_area :text, value: @messageteam.text, readonly: true %>
+    
+    <p><strong>Aggiungi testo al messaggio:</strong></p>
+    <%= text_area_tag 'additional_text', nil, placeholder: 'Aggiungi del testo aggiuntivo...', rows: 3 %>
+    
+    <%= form.submit "Salva aggiunte" %>
+<% end %>
+

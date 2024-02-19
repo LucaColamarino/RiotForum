@@ -10,7 +10,7 @@ class SessionsController < Devise::SessionsController
           sign_in(resource_name, resource)
           respond_with resource, location: after_sign_in_path_for(resource)
         end
-      end
+    end
 
     def set_session
         if (params[:value])
@@ -19,5 +19,5 @@ class SessionsController < Devise::SessionsController
             session[:game] = 'VALO'
         end
         redirect_to home_path
-    end
+    end  
 end

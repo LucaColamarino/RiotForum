@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post 'news/newpost', to: 'newpost#create'
   get 'news/:id/edit', to: 'newpost#edit'
   patch 'news/:id' , to: 'newpost#update'
-  delete 'news/:id', to: 'newpost#destroy'
+  delete 'news/:id', to: 'newpost#destroy', as:'delete_newpost'
 
   get 'messages/new_admin_message', to: 'messages#new_admin_message'
   post 'messages/new_admin_message', to: 'messages#create_admin_message'
@@ -44,6 +44,11 @@ Rails.application.routes.draw do
   delete 'requests/:id', to: 'requests#destroy', as: 'request'
 
 
+  get '/teams/messaggioteams/:team_id', to: 'messaggioteams#show', constraints: {team_id: /\d+/}, as: 'chat_team'
+  get '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#new', as:'chat_team_new'
+  post '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#create'
+  get '/teams/messaggioteams/:team_id/edit', to: 'messaggioteams#edit', as: 'chat_team_edit'
+  patch '/teams/messaggioteams/:team_id/edit' , to: 'messaggioteams#update'
 
   resources :messages
 

@@ -18,8 +18,21 @@
                 Livello <%= @summoner_level %>
             </div>
 
-            <div class="stats">
-                
+            <div class="stats d-flex flex-column">
+                <%for k in 0...@queueLength do%>
+                <div class="stats-per-queue">
+                    <div>
+                        <%=@stats_queue[k][:queueType]%>
+                    </div>
+                    <div>
+                        <%=@stats_queue[k][:tier]%> <%=@stats_queue[k][:rank]%>
+                        <%=image_tag "/assets/ranks/Rank="+@stats_queue[k][:tier]+".png", class:"small-icon"%>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <span style="color:green">W <%=@stats_queue[k][:wins]%></span> | <span style="color:red"><%=@stats_queue[k][:losses]%> L</span>
+                    </div>
+                </div>
+                <%end%>
             </div>
 
         </div>
@@ -67,14 +80,14 @@
                         <div class="playerIcon">
 
                             <div class="champProfile">
-                                <div>
+                                <div class="immagineChamp">
                                     <%= image_tag 'https://ddragon.leagueoflegends.com/cdn/14.2.1/img/champion/'+@players[i][index][:champion]+'.png', class:'champImg responsive',alt: @players[i][index][:champion] %>
                                 </div>
-                                <!--
+                                
                                 <div class="nomeChamp">
                                     <%=@players[i][index][:champion]%>
                                 </div>
-                                -->
+
                             </div>
                             
                             <div class="inventory">

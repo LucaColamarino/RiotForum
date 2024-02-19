@@ -73,9 +73,11 @@ class NewpostController < ApplicationController
         @newpost = Newpost.find(params[:id])
     
         if @newpost.update(post_params)
+          flash[:alert]="La notizia è stata modificata"
           redirect_to '/news'
         else
-          render :edit, status: :unprocessable_entity
+          flash[:alert]="La notizia non è stata modificata, parametri non validi"
+          redirect_to '/news'
         end
     end
 
@@ -83,10 +85,13 @@ class NewpostController < ApplicationController
      if current_user.id== Newpost.find(params[:id]).user_id
       @newpost = Newpost.find(params[:id])
       @newpost.destroy
+
   
-      redirect_to '/news', status: :see_other
+      redirect_to '/news'
+      flash[:alert]='La notizia è stata cancellata'
      else
       redirect_to '/news'
+      flash[:alert]='La notizia non è stata cancellata, non hai i permessi'
      end
     end
 
@@ -100,7 +105,7 @@ class NewpostController < ApplicationController
 
     def check_admin
       if !(current_user.has_role?(:moderator))
-        flash[:alert] = 'You must be admin to create a post'
+        flash[:alert] = 'You must be admin to create,delete or update a post'
 
         redirect_to '/news'
       end

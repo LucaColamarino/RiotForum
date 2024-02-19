@@ -1,0 +1,5 @@
+<%= form_with(model: @messageteam, url:chat_team_new_path) do |form| %>
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+    <%= form.submit "Invia messaggio" %>
+  <% end %>
