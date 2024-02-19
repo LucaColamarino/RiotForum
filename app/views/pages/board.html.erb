@@ -87,10 +87,6 @@
                                      <%= form.hidden_field :leader_lane %>
                                      <%= form.hidden_field :team_id, value: team.id %>
                                      <%= form.hidden_field :user_id, value: current_user.id %>
-                                    <%else %>
-                                     <script>
-                                       window.location.href = '<%= user_session_path %>';
-                                     </script>
                                     <%end%>
                                 </div>
 
