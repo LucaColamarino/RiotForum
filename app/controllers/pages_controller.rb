@@ -130,6 +130,10 @@ class PagesController < ApplicationController
   end
 #---------------------------------------------------
   def search_user
+    if request.get? && !params[:search].present?
+      # Affinchè non mi dia errore quando apro la pagina per la prima volta
+      return
+    end
     @search_query = params[:search]
     @found_user = User.find_by(username: @search_query)
     if @found_user
@@ -300,17 +304,17 @@ class PagesController < ApplicationController
       @invitation = Invitation.create(user_id: current_user.id, friend_id: friend.id)
       if @invitation.save
         flash[:notice] = "Inviata richiesta a #{friend.username}"
-        redirect_to search_user_path
+        redirect_back(fallback_location: search_user_path)
       else
         if @invitation.errors[:user_id].include?("has already been taken")
-          # Handle duplicate invitation error
+          
           flash[:alert] = "You already sent an invitation to this friend."
-          redirect_to search_user_path
+          redirect_back(fallback_location: search_user_path)
         else
           flash[:alert] = "Failed to send invitation."
-          redirect_to search_user_path
+          redirect_back(fallback_location: search_user_path)
         end
-        # Redirect or render appropriate response
+
       end
     end
   end
