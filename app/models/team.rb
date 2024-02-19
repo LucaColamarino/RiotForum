@@ -3,7 +3,7 @@ class Team < ApplicationRecord
     belongs_to :leader, class_name: "User",dependent: :destroy
     #has_many :members, class_name: "User"
     has_one :ad, dependent: :destroy
-    has_one :messaggioteam
+    has_one :messaggioteam, dependent: :destroy
 
     has_many :request, dependent: :destroy
 
@@ -12,6 +12,7 @@ class Team < ApplicationRecord
     
     validates :leader, presence: true
     
+
 
 
 
