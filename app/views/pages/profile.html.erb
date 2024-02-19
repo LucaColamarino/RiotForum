@@ -64,54 +64,57 @@
 
         <div class="candidature-team">
 
-
             <div class="container-candidature">
                 <div class="w3-panel w3-round-xlarge w3-center">
                     LE MIE CANDIDATURE
                 </div>
 
-                <div class="candidatura">
-                    <div class="user owner">
-                        riotId,rank
-                    </div>  
-                    <div class="ruolo">
-                        ruolo,img
+                <% for myRequest in @myRequests %>
+                    <div class="candidatura">
+                        <div class="user owner">
+                            <%= User.find(Team.find(myRequest.team_id).leader_id).username %>
+                        </div>  
+                        <div class="ruolo">
+                        <%= image_tag "/assets/positions/"+myRequest.position+".png", class: "x-small-icon" %>
+                        </div>
+                        <div class="buttons">
+                            <%= button_to "Annulla", request_path(myRequest.id), method: :delete, class: "btn btn-light"%>
+                        </div>
                     </div>
-                    <div class="buttons">
-                        <%= link_to profile_path do %>
-                            <button class="btn btn-light">Annulla</button>
-                        <%end%>
-                    </div>
-                </div>
+                <% end %>
             </div>
 
             <!--------------------------->
-
-            <div class="container-richieste">
-                <div class="w3-panel w3-round-xlarge w3-center">
-                    RICHIESTE PER IL TEAM
-                    <h6>(0/10)</h6>
-                </div>
-
-                <!-- if !team.full -->
-                <!-- for sulle richieste-->
-                <div class="richiesta">
-
-                    <div class="user richiedente">
-                        <%= link_to 'nome tizio ', profile_path %>
-                    </div>
-                    <div class="buttons">
-                        <%= link_to profile_path, style: 'margin-right:5px;' do %>
-                            <button class="btn btn-success">Accetta</button>
-                        <%end%>
-                        <%= link_to profile_path do %>
-                            <button class="btn btn-danger">Rifiuta</button>
-                        <%end%>
-                    </div>
-                </div>
-                <!--else-->
                 
-            </div>
+            <% if !@team.nil? && @team.leader_id == current_user.id %>
+                <div class="container-richieste">
+                    <div class="w3-panel w3-round-xlarge w3-center">
+                        RICHIESTE PER IL TEAM
+                    </div>
+                    <!-- if !team.full -->
+                        <% @teamRequests = Request.where(team_id: @team.id)%>
+                        <% for teamRequest in @teamRequests %>
+                            <div class="richiesta">
+
+                                <div class="user richiedente">
+                                    <%= User.find(teamRequest.user_id).username %>
+                                </div>
+                                <div class="user richiedente">
+                                    <%= image_tag "/assets/positions/"+teamRequest.position+".png", class: "x-small-icon" %>
+                                </div>
+                                <div class="buttons">
+                                    <%= form_with url: team_path(@team.id), method: :patch do |f|%>
+                                        <button type = "submit" class="btn btn-success" style= 'margin-right:5px;'>Accetta </button> 
+                                        <%= f.hidden_field :team_id , value: teamRequest.team_id%>
+                                        <%= f.hidden_field :user_id, value: teamRequest.user_id %>
+                                        <%= f.hidden_field :position, value: teamRequest.position %>
+                                    <% end %>
+                                    <%= button_to "Rifiuta", request_path(teamRequest.id), method: :delete, class: "btn btn-danger"%>
+                                </div>
+                            </div>
+                        <% end %>                    
+                </div>
+            <% end %>
 
         </div>
 

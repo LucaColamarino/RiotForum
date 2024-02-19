@@ -3,6 +3,8 @@ class Team < ApplicationRecord
     #has_many :members, class_name: "User"
     has_one :ad, dependent: :destroy
 
+    has_many :request, dependent: :destroy
+
     serialize :lanes, type: Array, coder: JSON
     serialize :comp, type: Hash, coder: JSON
     

@@ -35,7 +35,14 @@ Rails.application.routes.draw do
   get 'teams/', to: 'teams#show'
   get 'teams/new', to: 'teams#new'
   post 'teams/new', to: 'teams#create'
+  patch 'teams/:id' , to: 'teams#update', as: 'team'
   delete 'teams/', to: 'teams#destroy'
+
+  get 'requests/new', to: 'requests#new'
+  #get 'requests/:id', to: 'requests#show'
+  post 'requests/new', to: 'requests#create'
+  delete 'requests/:id', to: 'requests#destroy', as: 'request'
+
 
 
   resources :messages

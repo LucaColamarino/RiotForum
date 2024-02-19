@@ -26,4 +26,14 @@
 
 <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light" %>
 <br>
-<%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>
+<% if @team.leader_id == current_user.id%>
+    <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>
+<% else %>
+    <%= form_with url: team_path(@team.id), method: :patch do |f|%>
+        <%= f.hidden_field :team_id , value: @team.id%>
+        <%= f.hidden_field :user_id, value: nil %>
+        <% @team.comp.key(current_user.id) => position %>
+        <%= f.hidden_field :position, value: position %>
+        <button type= "Submit" class= "btn btn-warning">Esci dal Team</button>
+    <% end %>
+<% end %>

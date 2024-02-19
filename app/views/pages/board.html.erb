@@ -3,12 +3,45 @@
 <%= stylesheet_link_tag "board", "data-turbo-track": "reload" %>
 
     <style>
-        <%if (session[:game]=="LOL") %>
-        .sfondo-bacheca {
-                background-color: #4169e1;
-        }
-        <% end %>
+    .leader-lane {
+        filter:brightness(0.3);
+    }
+
+    .leader-lane:hover{
+        filter:none;
+    }
+
+    .leader-selected-lane {
+        filter:brightness(1.2);
+        outline: 5px solid goldenrod;
+    }
+
+    .leader-lane {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .disabled-lane{
+
+        filter:brightness(0.3);
+        outline: 5px solid blue;
+    }
+
     </style>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.leader-lane').on('click', function() {
+                $('.leader-lane').removeClass('leader-selected-lane');
+                
+                $(this).addClass('leader-selected-lane');
+
+                var lane = $(this).data('lane');
+                $('input[name="request[leader_lane]"]').val(lane);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -30,30 +63,41 @@
                 <!-- annunci -->
                 <% for annuncio in @annunci do%>
                     <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
+                    <% team = Team.find(annuncio.team_id)%>
                     <% mode = Team.find( annuncio.team_id ).mode%>
-                    <div class="annuncio">
-                     <%if user.present?%>
-                        <div class="owner">
-                            <span><%= user.username %></span>
-                            <img src="1.jpg" alt="Rank">
+                    <%= form_with(model: @request, url: requests_new_path, class:"team-creation-form") do |form| %>
+                        <div class="annuncio">
+                            <%if user.present?%>
+                                <div class="owner">
+                                    <span><%= user.username %></span>
+                                    <h4><%= mode %></h4>
+                                </div>
+                                <div class="roles">
+                                    
+                                <div id="leader_lane">
+                                    <% lanes = Forum::LANES %>
+                                    <% lanes.each do |lane| %>
+                                        <% if team.lanes.include?(lane) && team.comp[lane].nil? %>
+                                            <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
+                                        <% else %>
+                                            <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                                        <% end %>
+                                    <% end %>
+                                    <%= form.hidden_field :leader_lane %>
+                                    <%= form.hidden_field :team_id, value: team.id %>
+                                    <%= form.hidden_field :user_id, value: current_user.id %>
+                                </div>
+
+                                </div>
+                                <div class="minRank">
+                                    <%= image_tag "/assets/ranks/Rank="+annuncio.minRank+".png", class: "small-icon" %>
+                                </div>
+                                <div class="apply_for">
+                                    <button type="submit" class="btn btn-dark">Candidati</button>
+                                </div>
+                            <%end%>
                         </div>
-                     <%end%>
-                        <div class="roles">
-                            <h4>
-                                <%= mode %>
-                            </h4>
-                        </div>
-                        <div class="minRank">
-                            <%=annuncio.minRank%>
-                            <img src="1.jpg" alt="minRank">
-                        </div>
-                        <div class="apply_for">
-                            <h6 class="scadenza">scadenza</h6>
-                            <button class="btn btn-dark">Candidati</button>
-                        </div>
-                    </div>
-                    <!-- <h3><%= user %></h3> 
-                        <img src="1.jpg" alt="Ruoli 1"> -->
+                    <% end %>
                 <%end%>
             </div>
 
