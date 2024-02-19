@@ -1,7 +1,7 @@
 <%= form_with(model: @messageteam, url:chat_team_edit_path) do |form| %>
 <div class="text-center">
 
-    <p class="mt-4"><strong>Messaggi esistenti:</strong></p>
+    <p class="mt-4"><strong>Messaggi del team:</strong></p>
     <!--<%= form.text_area :text, value: @messageteam.text, readonly: true %><br> -->
 
 
@@ -13,7 +13,7 @@
   <%words = riga.split(/\s+/)%>
        <% last_word = words.last %> 
 <strong><%= last_word %></strong><br>
-        <% line_without_last_word = words[0..-2].join(' ') %>
+        <% line_without_last_word = words[0..-3].join(' ') %>
     <%= line_without_last_word %>
     <div style="border-top: 1px solid black; margin: 10px 0;"></div>
   <% end %>
