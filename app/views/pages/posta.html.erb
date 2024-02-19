@@ -22,13 +22,6 @@
 
     $(document).ready(function() {
     
-    $.ajax({   //Per mostrare del contenuto di default
-            url: '/your_notifications',
-            type: 'GET',
-            success: function(response) {
-                $('#posta-content').html(response);
-            }
-        });
         
 
     $('#msg-btn').click(function() {

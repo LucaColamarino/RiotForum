@@ -4,6 +4,18 @@ RSpec.describe 'Crea Notizia', type: :system do
   let(:user) {create(:user)}
   before {user.add_role(:moderator)}
 
+  scenario 'Utente moderatore inserisce post correttamente' do
+    login_as(user, scope: :user)
+    visit 'news/newpost'
+    fill_in 'Title', with: 'title'
+    fill_in 'Content', with: 'content'
+    click_button "Create Newpost"
+
+    expect(Newpost.last.user_id).to eq(user.id)
+    expect(Newpost.last.title).to eq('title')
+    expect(Newpost.last.content).to eq('content')
+  end
+
 
   scenario 'Utente non loggato' do
     visit 'news/newpost' 

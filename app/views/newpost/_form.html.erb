@@ -1,22 +1,65 @@
-<%= form_with(model: newpost, url: '/news/newpost') do |form| %>
-    <div>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
-      <% newpost.errors.full_messages_for(:title).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-  
-    <div>
-      <%= form.label :content %><br>
-      <%= form.text_area :content %><br>
-      <% newpost.errors.full_messages_for(:body).each do |message| %>
-        <div><%= message %></div>
-      <% end %>
-    </div>
-  
-    <div>
-      <%= form.submit %>
-    </div>
+<div class="newpost-container">
+  <h1 style="color:white;">CREAZIONE POST NOTIZIA</h1>
+
+  <%= form_with(model: newpost, url: '/news/newpost', class: 'newpost-form') do |form| %>
+      <div>
+        <%= form.label :title %><br>
+        <%= form.text_field :title, maxlength: 40, placeholder: 'Titolo' %>
+        <% newpost.errors.full_messages_for(:title).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+    
+      <div>
+        <%= form.label :content %><br>
+        <%= form.text_area :content, maxlength: 500, rows:10, cols:60, placeholder: 'Scrivi notizia...' %><br>
+        <% newpost.errors.full_messages_for(:body).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+    
+      <div class= "submit-newpost">
+        <%= form.submit %>
+      </div>
   <% end %>
-  
+</div>
+
+<style>
+  textarea {
+    resize: none;
+    overflow-y: auto; 
+  }
+
+  .newpost-container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url('/assets/sfondo-newpost.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+
+  .newpost-form {
+    background-color: deepskyblue;
+    border: 5px groove dodgerblue;
+    border-radius:1.5em;
+    padding: 40px;
+    color:white;
+    font-weight:900;
+
+    display:flex;
+    flex-direction:column;
+  }
+
+  .submit-newpost {
+    display:flex;
+    flex-direction:row;
+    justify-content:center; 
+  }
+
+
+</style>
