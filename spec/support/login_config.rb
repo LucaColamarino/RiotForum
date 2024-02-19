@@ -17,8 +17,8 @@ RSpec.configure do |config|
     end
 
     def sign_up_full(user)
-        visit new_registration_path
-        fill_in :username, with: user.username
+        visit 'users/sign_up'
+        fill_in 'Nome evocatore', with: user.username
         fill_in 'Email', with: user.email
         fill_in 'Password', with: user.password
         fill_in 'Password confirmation', with: user.password
