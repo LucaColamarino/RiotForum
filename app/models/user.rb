@@ -1,10 +1,10 @@
 class User < ApplicationRecord
   rolify
   
-  has_many :newposts
+  has_many :newposts, dependent: :destroy
   #amicizie
-  has_many :invitations
-  has_many :pending_invitations, -> {where confirmed: false}, class_name: "Invitation", foreign_key: "friend_id"
+  has_many :invitations, dependent: :destroy
+  has_many :pending_invitations, -> {where confirmed: false}, class_name: "Invitation", foreign_key: "friend_id", dependent: :destroy
 
   
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -28,10 +28,8 @@ class User < ApplicationRecord
   end
 
   def friends
-    friendship_sent = Invitation.where(user_id: id, confirmed: false).pluck(:friend_id)
-    friendship_received = Invitation.where(friend_id: id, confirmed: false).pluck(:user_id)
-    ids = friendship_sent + friendship_received
-    User.where(id: ids)
+    friend_ids = Invitation.where(user_id:id,confirmed: true).pluck(:friend_id) + Invitation.where(friend_id:id,confirmed: true).pluck(:user_id)
+    User.where(id: friend_ids)
   end
 
   def friend_with?(user)

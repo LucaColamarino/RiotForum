@@ -211,6 +211,7 @@
                                 justify-content: center;
                                 align-items: center;
                                 font-weight:800;
+                                flex:1;
 
                                 color: goldenrod
                             }

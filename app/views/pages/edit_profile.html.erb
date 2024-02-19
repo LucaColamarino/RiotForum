@@ -1,10 +1,11 @@
-<form class="w3-center" action="<%= edit_profile_path %>" method="get">
+<form class="w3-center mt-3" action="<%= edit_profile_path %>" method="get">
 
   <% if flash.now[:error] %>
-      <div class="alert alert-danger" role="alert">
-        <%= flash.now[:error] %>
-      </div>
-    <% end %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash.now[:error] %>
+    </div>
+  <% end %>
+
   <!--
   <div class="form-group" >
     <label>Scegli cosa usare:</label><br>
@@ -17,11 +18,8 @@
   -->
   
   <div id="username-form" class="form-group">
-  <%= debug current_user.username%>
     <label for="inputUsername">Nome Evocatore</label>
     <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Inserisci un nome Evocatore" autofocus>
-    
-    <%= hidden_field_tag 'inputType', 'username' %>
   </div>
 
   <!--

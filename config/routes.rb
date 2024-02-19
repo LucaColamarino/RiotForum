@@ -67,7 +67,8 @@ Rails.application.routes.draw do
 
 
   get 'posta', to: 'pages#posta'
-  get '/your_messages', to: 'messages#index'
+  get '/your_messages', to: 'pages#your_messages'
+  #get '/your_messages', to: 'messages#index'
   get '/your_notifications', to: 'pages#your_notifications'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

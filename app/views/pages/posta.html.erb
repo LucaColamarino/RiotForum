@@ -1,6 +1,6 @@
 <head>
-    <title> Cerca Utente - RiotGuild</title>
-    
+    <title> Posta - RiotGuild</title>
+    <%= stylesheet_link_tag "posta", "data-turbo-track": "reload" %>
 </head>
 
 <body>
@@ -9,7 +9,7 @@
         <div>
             <div class="justify-content-start posta-buttons">  
                 <button id="msg-btn" class="btn-lg">Messaggi</button>
-                <button id="nots-btn" class="btn-lg selected">Notifiche</button>
+                <button id="nots-btn" class="btn-lg selected-posta-tab">Notifiche</button>
             </div>
             <div id="posta-content" class="d-flex flex-column justify-content-center align-items-center">
                 
@@ -32,8 +32,8 @@
         
 
     $('#msg-btn').click(function() {
-        $('#nots-btn').removeClass("selected")
-        $('#msg-btn').addClass("selected")
+        $('#nots-btn').removeClass("selected-posta-tab")
+        $('#msg-btn').addClass("selected-posta-tab")
         $.ajax({
             url: '/your_messages',
             type: 'GET',
@@ -44,8 +44,8 @@
     });
 
     $('#nots-btn').click(function() {
-        $('#msg-btn').removeClass("selected")
-        $('#nots-btn').addClass("selected")
+        $('#msg-btn').removeClass("selected-posta-tab")
+        $('#nots-btn').addClass("selected-posta-tab")
         $.ajax({
             url: '/your_notifications',
             type: 'GET',
