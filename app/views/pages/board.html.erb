@@ -83,9 +83,15 @@
                                             <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
                                         <% end %>
                                     <% end %>
-                                    <%= form.hidden_field :leader_lane %>
-                                    <%= form.hidden_field :team_id, value: team.id %>
-                                    <%= form.hidden_field :user_id, value: current_user.id %>
+                                    <%if user_signed_in? %>
+                                     <%= form.hidden_field :leader_lane %>
+                                     <%= form.hidden_field :team_id, value: team.id %>
+                                     <%= form.hidden_field :user_id, value: current_user.id %>
+                                    <%else %>
+                                     <script>
+                                       window.location.href = '<%= user_session_path %>';
+                                     </script>
+                                    <%end%>
                                 </div>
 
                                 </div>
