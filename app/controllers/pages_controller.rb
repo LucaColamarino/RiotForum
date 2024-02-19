@@ -273,10 +273,13 @@ class PagesController < ApplicationController
   
   #--------------------------------
   def board
-    @game = session[:game];
-
-    @annunci = Ad.order(updated_at: :desc).all
-    @request = Request.new
+    #@game = session[:game];
+    if user_signed_in?
+      @annunci = Ad.order(updated_at: :desc).all
+      @request = Request.new
+    else
+      redirect_to new_user_session_path
+    end
 
   end
 

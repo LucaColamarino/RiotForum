@@ -75,8 +75,10 @@ class TeamsController < ApplicationController
 
     @team = Team.find(params[:team_id])
     @team.comp[params[:position]] = params[:user_id].to_i
-    if @team.save
 
+    if @team.save!
+
+      #se params[:user_id] è nil viene gestita come cancellazione di un membro dal team
       if params[:user_id].nil? || params[:user_id].empty?
 
         @user = User.find(params[:target])
@@ -86,34 +88,68 @@ class TeamsController < ApplicationController
         @team.save
         @user.save
 
+        ad = Ad.find_by(team_id: params[:team_id])
+        #se l'ad non esiste ed il team non è pieno, allora l'annuncio viene creato
+        if ad.nil? && !team_full? 
+          ad = Ad.new
+          ad.team_id = params[:team_id]
+          ad.minRank = @team.minRank
+          ad.save
+        end
+
+      #altrimenti il membro con l'id corrispondente viene aggiunto alla lane selezionata
       else
-        Request.find_by(user_id: params[:user_id]).destroy
+        Request.where(user_id: params[:user_id]).destroy_all
 
         @user = User.find(params[:user_id])
-        @user.team_id = params[:team_id]
-        if @user.save
-          
-          counter = 0
 
-          for lane in @team.lanes
-            unless @team.comp[lane].nil?
-                counter += 1
-            end
-          end
+        #l'utente viene rimosso dal team corrente
 
-          if counter >= @team.lanes.length
-            Request.where(user_id: params[:user_id], team_id: params[:team_id]).destroy_all
+        unless @user.team_id.nil?
+
+          old_team = Team.find(@user.team_id)
+
+          old_team.comp.key(@user.id) => old_position
+          old_team.comp[old_position] = nil
+          old_team.save!
+        end
+
+        #ed inserito in quello nuovo
+        @user.team_id = @team.id
+        if @user.save!
+
+        #rimuove le candidature dei giocatori
+        Request.where(user_id: @team.leader_id, team_id: params[:team_id]).destroy_all
+
+          #se il team è pieno l'annuncio correlato viene rimosso
+          if team_full?
+            ad = Ad.find_by(team_id: params[:team_id])
+            ad.destroy
           end
         end
       end
     end
-    redirect_to root_path
+    redirect_back(fallback_location: teams_path)
   end
 
   private
 
   def teams_params
 
-    params.require(:team).permit(:mode, lanes: [])
+    params.require(:team).permit(:mode, :minRank, lanes: [])
   end
+
+  def team_full?
+
+    counter = 0
+
+    for lane in @team.lanes
+      unless @team.comp[lane].nil?
+          counter += 1
+      end
+    end
+
+    counter >= @team.lanes.length
+  end
+
 end
