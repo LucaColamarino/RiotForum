@@ -1,18 +1,15 @@
 require 'rails_helper'
 
-RSpec.describe 'Permessi User', type: :system do
-    let(:user) { create(:user) }        #non ha l'username
-    let(:full_user) { create(:user31) } #ha l'username
+RSpec.feature 'Permessi User', type: :feature do
+    let(:user) { build(:user30) }        #non ha l'username
+    let(:full_user) { build(:user31) } #ha l'username
 
 
-    scenario "Registrarsi senza inserire username" do
+    scenario "Registrarsi senza inserire username rimanda a edit_profile" do
         sign_up user
-        expect(page).to have_content user.email
-        expect(page).to have_link 'Log out'
+        fill_in "Nome Evocatore", with: user.username
+        click_button 'Cerca'
+        expect(page).to have_content 'username: '+user.username
     end
 
-    scenario "Accedere a profilo senza username" do
-        sign_up :user
-        ex
-    end
 end
