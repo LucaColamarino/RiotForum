@@ -21,7 +21,8 @@ class MessagesController < ActionController::Base
     def create
         receiver = User.find_by(email: params_msg[:receive_email])
         if receiver.nil?
-            redirect_to profile_path
+            flash[:alert]='Il destinatario non esiste o hai sbagliato ad inserire l email'
+            redirect_to '/profile'
             return
         end
 
@@ -29,18 +30,29 @@ class MessagesController < ActionController::Base
         @message.sender_id = current_user.id
         @message.receiver_id = receiver.id
 
+        if (@message.subject=='')||(@message.body)==''
+            flash[:alert]='Inserire un titolo e un contenuto valido'
+            redirect_to '/profile'
+            return
+        end
+
 
         if @message.save
-            redirect_to profile_path
+            flash[:alert]='Il messaggio è stato inviato'
+            redirect_to '/profile'
+            return
         else
-            render :new
+            flash[:alert]="C'è stato un errore"
+            redirect_to  '/profile'
+            return
         end
     end
 
     def destroy
          @message = Message.find(params[:id]).delete
+         flash[:alert]="Messaggio cancellato con successo"
      
-         redirect_to '/messages', status: :see_other
+         redirect_to '/profile', status: :see_other
     end
 
 
@@ -97,7 +109,6 @@ class MessagesController < ActionController::Base
                 message=Message.new(segnala_msg)
                 message.sender_id=user
                 message.receiver_id=admin.id
-                #message.subject= non so cosa mettere
                 message.save
             end
         end
