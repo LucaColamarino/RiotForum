@@ -4,15 +4,20 @@ class MessaggioteamsController < ActionController::Base
 
 
     def show
-        @team=Team.find(params[:team_id])
-        if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
-          @messageteam=Messaggioteam.find_by(team_id: (params[:team_id]))
-        else
+        team_exists = Team.exists?(params[:team_id])
+        if team_exists
+         @team=Team.find(params[:team_id])
+         if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
+           @messageteam=Messaggioteam.find_by(team_id: (params[:team_id]))
+         else
             flash[:alert]= "Non fai parte del team per accedere alla chat"
             redirect_to "/profile"
+         end
+        else
+            flash[:alert]='Non esiste il team'
+            redirect_to "/profile" 
         end
     end
-    
     def new
         params[:team_id] = params[:team_id]
         @messageteam=Messaggioteam.new
@@ -30,11 +35,17 @@ class MessaggioteamsController < ActionController::Base
     end
 
     def edit
-        @team=Team.find(params[:team_id])
-        if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
-          @messageteam = Messaggioteam.find_by(team_id: (params[:team_id]))
-        else
+        team_exists = Team.exists?(params[:team_id])
+        if team_exists
+         @team=Team.find(params[:team_id])
+         if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
+           @messageteam = Messaggioteam.find_by(team_id: (params[:team_id]))
+         else
             flash[:alert]= "Non fai parte del team per accedere alla chat"
+            redirect_to "/profile"
+         end
+        else
+            flash[:alert]="Non esiste il team"
             redirect_to "/profile"
         end
         # Verifica se il messaggio appartiene all'utente corrente
