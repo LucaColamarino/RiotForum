@@ -25,15 +25,17 @@
 
             <img src="/assets/miniatura-LOL.png" width="45%" height="60%">
 
-
+            <% if params[:noSummoner] %>
+                <div class="alert alert-danger" role="alert">
+                    <%= flash.now[:alert] %>
+                </div>
+            <% end %>
             <div class="search">
                 <form action="<%= search_player_path %>" method="get" class="form-inline">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca Giocatore..." name="summonerName">
                     <button class="btn btn-success my-2 my-sm-0" type="submit">Cerca</button>
                 </form>
             </div>
-            
-           
 
             <% if not user_signed_in? %>
                 <%= button_to "Crea Team", new_user_session_path, method: :get, class: "btn btn-lg btn-primary"%>
@@ -83,6 +85,13 @@
         <div class="news-section center-block">
 
             <h1> NEWS </h1>
+            <div class="champ-rotation">
+                    <% for champid in @rotation_champs do %>
+                        <%= image_tag "champions/"+champid.to_s+".png", width:80,height:80, class:'champImg' %>
+                    <% end %>
+            </div>
+
+
             
 
             <div class="news-container">

@@ -60,9 +60,7 @@ class PagesController < ApplicationController
           }
         end
 
-        
-      end
-      #-------------------------------#
+        #-------------------------------#
       summoner_matchlist = RiotGamesApi.getMatchList(@puuid)
       if summoner_matchlist[:code] == 200
         @matchlist = summoner_matchlist[:body]
@@ -123,6 +121,12 @@ class PagesController < ApplicationController
           flash[:alert] = 'Error in loading match history'
         end
       end
+
+      else
+        flash[:alert] = 'Evocatore inesistente'
+        redirect_to root_path(noSummoner: params[:summonerName])
+      end
+      
 
     else
       redirect_to root_path
