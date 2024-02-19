@@ -28,5 +28,19 @@ FactoryBot.define do
       # Altri attributi dell'utente1, se necessario
     end
 
+    factory :looper90, class: 'User' do
+      email { 'looper90@example.com' }
+      password { 'password' }
+      username { 'Looper90' }
+      # Altri attributi dell'utente1, se necessario
+    end
+
+    factory :sithscorpion, class: 'User' do
+      email { 'sithscorpion@example.com' }
+      password { 'password' }
+      username { 'sithscorpion' }
+      # Altri attributi dell'utente1, se necessario
+    end
+
   end
   

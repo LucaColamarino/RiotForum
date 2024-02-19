@@ -1,16 +1,55 @@
-<%= form_with model: @message, url: messages_new_admin_message_path do |form| %>
-    <div>
-      <%= form.label :subject %><br>
-      <%= form.text_field :subject %>
-    </div>
-    
-    <div>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %>
-    </div>
-    
-    <div>
-      <%= form.submit "Invia a tutti gli utenti " %>
-    </div>
+<div class="broadcast-container">
+  <%= form_with model: @message, url: messages_new_admin_message_path, class:'broadcast-form' do |form| %>
+      <div>
+        <%= form.label :subject %><br>
+        <%= form.text_field :subject, maxlength: 40, placeholder: 'Oggetto broadcast...' %>
+      </div>
+      
+      <div>
+        <%= form.label :body %><br>
+        <%= form.text_area :body, maxlength: 500, rows:10, cols:60, placeholder: 'Corpo messaggio' %>
+      </div>
+      
+      <div class= "submit-broadcast">
+        <%= form.submit "Invia a tutti gli utenti", class:'btn btn-danger mt-1' %>
+      </div>
   <% end %>
-  
+</div>
+
+<style>
+  textarea {
+    resize: none;
+    overflow-y: auto; 
+  }
+
+  .broadcast-container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url('/assets/sfondo-broadcast.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+
+  .broadcast-form {
+    background-color: peru;
+    border: 5px double brown;
+    border-radius:1.5em;
+    padding: 40px;
+    color:white;
+    font-weight:900;
+
+    display:flex;
+    flex-direction:column;
+  }
+
+  .submit-broadcast {
+    display:flex;
+    flex-direction:row-reverse; 
+  }
+
+</style>
