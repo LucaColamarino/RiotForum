@@ -37,6 +37,11 @@ Rails.application.routes.draw do
   post 'teams/new', to: 'teams#create'
   delete 'teams/', to: 'teams#destroy'
 
+  get '/teams/messaggioteams/:team_id', to: 'messaggioteams#show', constraints: {team_id: /\d+/}, as: 'chat_team'
+  get '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#new', as:'chat_team_new'
+  post '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#create'
+  get '/teams/messaggioteams/:team_id/edit', to: 'messaggioteams#edit', as: 'chat_team_edit'
+  patch '/teams/messaggioteams/:team_id/edit' , to: 'messaggioteams#update'
 
   resources :messages
 

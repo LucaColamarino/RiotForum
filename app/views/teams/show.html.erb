@@ -27,3 +27,11 @@
 <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light" %>
 <br>
 <%= button_to "Smantella Team", teams_path, method: :delete, class: "btn btn-warning" %>
+<% if Messaggioteam.find_by(team_id: @team.id).nil? %>
+   <%= link_to "Crea chat team", "teams/messaggioteams/new/"+@team.id.to_s %>
+<% else %>
+   <%= link_to "Invia messaggio al team", "teams/messaggioteams/"+@team.id.to_s+"/edit" %>
+   <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %>
+
+<% end %>
+
