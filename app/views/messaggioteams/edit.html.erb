@@ -1,10 +1,31 @@
 <%= form_with(model: @messageteam, url:chat_team_edit_path) do |form| %>
 <div class="text-center">
-    <p><strong>Messaggio esistente:</strong></p>
-    <%= form.text_area :text, value: @messageteam.text, readonly: true %>
-    
-    <p><strong>Aggiungi testo al messaggio:</strong></p>
-    <%= text_area_tag 'additional_text', nil, placeholder: 'Aggiungi del testo aggiuntivo...', rows: 3 %> <br>
+
+    <p class="mt-4"><strong>Messaggi esistenti:</strong></p>
+    <!--<%= form.text_area :text, value: @messageteam.text, readonly: true %><br> -->
+
+
+<div class="overflow-auto" style="height: 600px;width: 600px;background-color: lightblue;display: inline-block; padding:10px;">
+
+
+<% @messageteam.text.split("\n").each do |riga| %>
+  <% unless riga.strip.empty? %>
+  <%words = riga.split(/\s+/)%>
+       <% last_word = words.last %> 
+<strong><%= last_word %></strong><br>
+        <% line_without_last_word = words[0..-2].join(' ') %>
+    <%= line_without_last_word %>
+    <div style="border-top: 1px solid black; margin: 10px 0;"></div>
+  <% end %>
+<% end %>
+</div>
+
+
+
+
+
+<%= text_area_tag 'additional_text', nil, placeholder: 'Scrivi un messaggio...', rows: 3, class: 'form-control mx-auto', style: 'resize: none; width: 600px;' %>
+ <br>
     
     <%= form.submit "Salva aggiunte",class:"btn btn-primary" %>
     </div>
