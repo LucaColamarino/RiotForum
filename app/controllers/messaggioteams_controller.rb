@@ -1,4 +1,5 @@
 class MessaggioteamsController < ActionController::Base
+    layout 'application'
     before_action :authenticate_user!
 
 
