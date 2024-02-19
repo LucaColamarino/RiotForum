@@ -1,11 +1,11 @@
 <%= form_with model: @message, url: messages_new_support_message_path do |form| %>
 
     
-    <div>
-      <%= form.text_area :body %>
+    <div class="text-center col-md-6 mx-auto mt-5 mb-4">
+      <%= form.text_area :body,class:"form-control", style: "resize: none;" %>
     </div>
     
-    <div>
-      <%= form.submit "Invia Ticket ai moderatori " %>
+    <div class="text-center">
+      <%= form.submit "Invia Ticket ai moderatori ",class:"btn btn-primary" %>
     </div>
   <% end %>

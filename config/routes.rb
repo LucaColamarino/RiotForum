@@ -50,6 +50,7 @@ Rails.application.routes.draw do
   post '/teams/messaggioteams/new/:team_id', to: 'messaggioteams#create'
   get '/teams/messaggioteams/:team_id/edit', to: 'messaggioteams#edit', as: 'chat_team_edit'
   patch '/teams/messaggioteams/:team_id/edit' , to: 'messaggioteams#update'
+  delete '/teams/messaggioteams/:team_id', to: 'messaggioteams#destroy'
 
   resources :messages
 

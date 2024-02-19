@@ -4,10 +4,20 @@ class MessaggioteamsController < ActionController::Base
 
 
     def show
-        params[:team_id]=params[:team_id]
-        @messageteam=Messaggioteam.find_by(params[:team_id])
+        team_exists = Team.exists?(params[:team_id])
+        if team_exists
+         @team=Team.find(params[:team_id])
+         if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
+           @messageteam=Messaggioteam.find_by(team_id: (params[:team_id]))
+         else
+            flash[:alert]= "Non fai parte del team per accedere alla chat"
+            redirect_to "/profile"
+         end
+        else
+            flash[:alert]='Non esiste il team'
+            redirect_to "/profile" 
+        end
     end
-    
     def new
         params[:team_id] = params[:team_id]
         @messageteam=Messaggioteam.new
@@ -25,23 +35,41 @@ class MessaggioteamsController < ActionController::Base
     end
 
     def edit
-        @messageteam = Messaggioteam.find_by(params[:team_id])
+        team_exists = Team.exists?(params[:team_id])
+        if team_exists
+         @team=Team.find(params[:team_id])
+         if(current_user.id == @team.leader_id)||(@team.comp.has_value?(current_user.id)) 
+           @messageteam = Messaggioteam.find_by(team_id: (params[:team_id]))
+         else
+            flash[:alert]= "Non fai parte del team per accedere alla chat"
+            redirect_to "/profile"
+         end
+        else
+            flash[:alert]="Non esiste il team"
+            redirect_to "/profile"
+        end
         # Verifica se il messaggio appartiene all'utente corrente
     end
 
     def update
-        @messageteam = Messaggioteam.find_by(params[:team_id])
+        @messageteam = Messaggioteam.find_by(team_id: (params[:team_id]))
         # Verifica se il messaggio appartiene all'utente corrente
       
         # Aggiorna il messaggio esistente aggiungendo del testo aggiuntivo
         additional_text = params[:additional_text].strip
         if additional_text.present?
-          @messageteam.text += "\n#{additional_text}"+"   "+current_user.username+"\n"
+          @messageteam.text += "\n #{additional_text}"+" - "+current_user.username+"\n"
           @messageteam.save
         end
       
-        redirect_to '/teams', notice: "Aggiunte salvate con successo."
-      end
+        redirect_to '/teams/messaggioteams/:team_id'
+    end
+
+    def destroy
+        @messageteam = Message.find_by(team_id: (params[:team_id])).delete
+        flash[:alert]="Chat cancellata con successo"
+        redirect_to '/teams'
+    end
 
 
 

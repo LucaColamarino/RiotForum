@@ -20,18 +20,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
-    window.onload = function() {
-        $.ajax({   //Per mostrare del contenuto di default
+    $(document).ready(function() {
+    
+    $.ajax({   //Per mostrare del contenuto di default
             url: '/your_notifications',
             type: 'GET',
             success: function(response) {
                 $('#posta-content').html(response);
             }
         });
-    };
-
-    $(document).ready(function() {
-
         
 
     $('#msg-btn').click(function() {

@@ -199,12 +199,8 @@ class PagesController < ApplicationController
         #
 
         #candidature team
-          query_team = Team.find_by(leader_id: current_user.id)
-          if query_team
-            @team = query_team.limit(5)
-          else 
-            @team=nil
-          end
+          @team = Team.find_by(leader_id: current_user.id)
+
         #
 
       else

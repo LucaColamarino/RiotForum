@@ -74,30 +74,36 @@ class TeamsController < ApplicationController
   def update
 
     @team = Team.find(params[:team_id])
-    @team.comp[params[:position]] = params[:user_id]
+    @team.comp[params[:position]] = params[:user_id].to_i
     if @team.save
-      
-      unless params[:user_id].nil?
 
+      if params[:user_id].nil? || params[:user_id].empty?
+
+        @user = User.find(params[:target])
+        @user.team_id = nil
+        @team.comp.delete(params[:position])
+
+        @team.save
+        @user.save
+
+      else
         Request.find_by(user_id: params[:user_id]).destroy
-      end
 
-      @user = User.find(params[:user_id])
-      @user.team_id = params[:team_id]
-      if @user.save
-        
-        redirect_to profile_path
+        @user = User.find(params[:user_id])
+        @user.team_id = params[:team_id]
+        if @user.save
+          
+          counter = 0
 
-        for lane in @team.lanes
-          unless @team.comp[lane].nil?
-              counter += 1
+          for lane in @team.lanes
+            unless @team.comp[lane].nil?
+                counter += 1
+            end
           end
-        end
 
-        counter >= lanes.length
-
-        if @team.is_full?
-          Request.where(user_id: params[:user_id], team_id: params[:team_id]).destroy_all
+          if counter >= @team.lanes.length
+            Request.where(user_id: params[:user_id], team_id: params[:team_id]).destroy_all
+          end
         end
       end
     end

@@ -14,7 +14,7 @@ RSpec.describe 'Crea Messaggio', type: :system do
     user1=create(:user1)
     visit 'messages/new'
     fill_in 'A', with: 'user1@example.com'
-    fill_in 'Soggetto', with: 'Questo è un test'
+    fill_in 'Oggetto', with: 'Questo è un test'
     fill_in 'Messaggio', with: 'Questo è un test'
     click_button "Invia"
     expect(page).to have_content('Il messaggio è stato inviato') 
@@ -25,7 +25,7 @@ RSpec.describe 'Crea Messaggio', type: :system do
     user1=create(:user1)
     visit 'messages/new'
     fill_in 'A', with: ''
-    fill_in 'Soggetto', with: ''
+    fill_in 'Oggetto', with: ''
     fill_in 'Messaggio', with: ''
     click_button "Invia"
     expect(page).to have_content('Il destinatario non esiste o hai sbagliato ad inserire l email') 
@@ -35,7 +35,7 @@ RSpec.describe 'Crea Messaggio', type: :system do
     user1=create(:user1)
     visit 'messages/new'
     fill_in 'A', with: 'user1@example.com'
-    fill_in 'Soggetto', with: ''
+    fill_in 'Oggetto', with: ''
     fill_in 'Messaggio', with: 'AAA'
     click_button "Invia"
     expect(page).to have_content('Inserire un titolo e un contenuto valido')
@@ -45,7 +45,7 @@ RSpec.describe 'Crea Messaggio', type: :system do
     user1=create(:user1)
     visit 'messages/new'
     fill_in 'A', with: 'user1@example.com'
-    fill_in 'Soggetto', with: 'AAA'
+    fill_in 'Oggetto', with: 'AAA'
     fill_in 'Messaggio', with: ''
     click_button "Invia"
     expect(page).to have_content('Inserire un titolo e un contenuto valido')
