@@ -55,17 +55,19 @@
             
             <div class="annuncio-container">
                 <% for annuncio in @annunci_home do%>
-                  <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
-                   <% if user.present?%>
-                    <div class="annuncio_home">
-                        <div class="owner">
-                        <span><%= user.username %></span> 
-                        </div>
-                        <div class="roles">
-                            icone ruoli 
-                        </div>
-                    </div>
-                   <%end%>
+                    <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
+                    <% if current_user.nil? || current_user.team_id != annuncio.team_id%>
+                        <% if user.present?%>
+                            <div class="annuncio_home">
+                                <div class="owner">
+                                    <span><%= user.username %></span> 
+                                </div>
+                            <div class="roles">
+                                icone ruoli 
+                            </div>
+                            </div>
+                        <%end%>
+                    <% end %>
                 <%end%>
             </div>
 
