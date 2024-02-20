@@ -1,6 +1,7 @@
 RSpec.configure do |config|
     config.include Devise::Test::IntegrationHelpers, type: :feature
     config.include Devise::Test::IntegrationHelpers, type: :controller
+    config.include Devise::Test::IntegrationHelpers, type: :system
 
     def sign_in(user)
         visit new_user_session_path
