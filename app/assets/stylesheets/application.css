@@ -89,7 +89,9 @@
     align-items: center;
     width: 25%;
   }
-  
+  .alert.notice {
+    display: none;
+  }
   #iconaNotifica {
     outline: 1px solid gray;
     margin-right:10px;
