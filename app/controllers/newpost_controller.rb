@@ -50,10 +50,10 @@ class NewpostController < ApplicationController
         else
         
         redirect_to '/news'
-        flash[:alert]='Parametri vuoti non sono accettati'
+        flash[:warning]='Parametri vuoti non sono accettati'
         end
       else
-        flash[:alert] = 'You must be logged in to create a post.'
+        flash[:warning] = 'You must be logged in to create a post.'
         redirect_to '/news/'
       end
 
@@ -73,10 +73,10 @@ class NewpostController < ApplicationController
         @newpost = Newpost.find(params[:id])
     
         if @newpost.update(post_params)
-          flash[:alert]="La notizia è stata modificata"
+          flash[:warning]="La notizia è stata modificata"
           redirect_to '/news'
         else
-          flash[:alert]="La notizia non è stata modificata, parametri non validi"
+          flash[:warning]="La notizia non è stata modificata, parametri non validi"
           redirect_to '/news'
         end
     end
@@ -88,10 +88,10 @@ class NewpostController < ApplicationController
 
   
       redirect_to '/news'
-      flash[:alert]='La notizia è stata cancellata'
+      flash[:warning]='La notizia è stata cancellata'
      else
       redirect_to '/news'
-      flash[:alert]='La notizia non è stata cancellata, non hai i permessi'
+      flash[:warning]='La notizia non è stata cancellata, non hai i permessi'
      end
     end
 
@@ -105,7 +105,7 @@ class NewpostController < ApplicationController
 
     def check_admin
       if !(current_user.has_role?(:moderator))
-        flash[:alert] = 'You must be admin to create,delete or update a post'
+        flash[:warning] = 'You must be admin to create,delete or update a post'
 
         redirect_to '/news'
       end

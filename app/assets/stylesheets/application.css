@@ -92,6 +92,9 @@
   .alert.notice {
     display: none;
   }
+  .warning.notice{
+    display: none;
+  }
   #iconaNotifica {
     outline: 1px solid gray;
     margin-right:10px;
@@ -153,15 +156,3 @@
   text-indent: -9999px; 
 }
 
-.lane_disponibile{
-	
-	image-size
-}
-.lane_occupata{
-	filter: blur(15px);
-}
-
-.lane_non_disponibile{
-
-	opacity: 30%;
-}

@@ -1,18 +1,62 @@
-<%= @newpost.title %>
-
+<div class="newpost-container">
+<div class="text-center mx-auto" style="height: 600px;width: 600px;background-color: lightblue; padding:10px;">
+<h1><strong><%= @newpost.title %></strong></h1>
+    <div style="border-top: 1px solid black; margin: 10px 0;"></div>
 <br>
 
 <%= @newpost.content %>
 <br>
 <br>
+    <div style="border-top: 1px solid black; margin: 10px 0;"></div>
 
-<h1>
-<a href="/news"> TORNA INDIETRO</a>
-</h1>
 
-<a href=<%='/news/'+@newpost.id.to_s+'/edit'%>>
-MODIFICA POST
+
+<a href=<%='/news/'+@newpost.id.to_s+'/edit'%> class="btn btn-primary mt-4 mb-2">
+Modifica post
 </a>
 
 
-<%= button_to 'delete', delete_newpost_path(@newpost),method: :delete%>
+<%= button_to 'delete', delete_newpost_path(@newpost),method: :delete,class:"btn btn-light"%>
+</div>
+<a href="/news" class="ml-3 mt-3 btn btn-light">Indietro</a>
+</div>
+ 
+<style>
+  textarea {
+    resize: none;
+    overflow-y: auto; 
+  }
+
+  .newpost-container {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url('/assets/sfondo-newpost.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+  }
+
+  .newpost-form {
+    background-color: deepskyblue;
+    border: 5px groove dodgerblue;
+    border-radius:1.5em;
+    padding: 40px;
+    color:white;
+    font-weight:900;
+
+    display:flex;
+    flex-direction:column;
+  }
+
+  .submit-newpost {
+    display:flex;
+    flex-direction:row;
+    justify-content:center; 
+  }
+
+
+</style>
