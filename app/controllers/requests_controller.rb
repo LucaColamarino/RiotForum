@@ -8,6 +8,13 @@ class RequestsController < ApplicationController
         @request.team_id = params[:request][:team_id]
         @request.user_id = params[:request][:user_id]
 
+        old_request = Request.find_by(user_id: @request.user_id, team_id: @request.team_id)
+        
+        unless old_request.nil?
+
+            old_request.destroy
+        end
+
         @request.save
 
         redirect_to board_path
