@@ -17,7 +17,7 @@ class RequestsController < ApplicationController
 
         @request.save
 
-        redirect_to board_path
+        redirect_to profile_path
 
     end
 

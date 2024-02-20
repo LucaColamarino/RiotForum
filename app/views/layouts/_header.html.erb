@@ -37,7 +37,8 @@
             <% else %>
             <span class="w3-bar-item w3-button" style="color: grey; pointer-events: none;">Il tuo team</span>
             <% end %>
-          
+            <a href="/board" class="w3-bar-item w3-button">Bacheca</a>
+
             <hr class="w3-border">
             <div class="w3-center">
               <%= button_to "Logout", destroy_user_session_path, method: :delete, form_class: "d-inline" , class: "btn btn-primary ", style: "background-color: #df7e23;" %>

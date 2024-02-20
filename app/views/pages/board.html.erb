@@ -23,7 +23,7 @@
 
     .disabled-lane{
 
-        filter:brightness(0.3);
+        filter:brightness(1);
         outline: 5px solid blue;
     }
 
@@ -78,8 +78,10 @@
                             <div class="annuncio">
                                 <%if user.present?%>
                                     <div class="owner">
-                                        <span><%= user.username %></span>
-                                        <h4><%= mode %></h4>
+                                        <%=link_to search_user_path(search: user.username) do%>
+                                            <h5><%= user.username %></h5>
+                                        <%end%>
+                                        <span><%= mode %></span>
                                     </div>
                                     <div class="roles">
                                         
@@ -92,7 +94,7 @@
                                                     <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
                                                 <% end %>
                                             <% end %>
-                                        <% end %>
+                                <% end %>
                                         <%if user_signed_in? %>
                                             <%= form.hidden_field :leader_lane %>
                                             <%= form.hidden_field :team_id, value: team.id %>
