@@ -76,8 +76,8 @@
                 <button class="btn btn-warning" style="padding:20px">Crea chat team</button>
             <%end%>
         <% else %>
-            <%= link_to "Invia messaggio al team", "teams/messaggioteams/"+@team.id.to_s+"/edit" %>
-            <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %>
+            <%= link_to "Chat del team", "teams/messaggioteams/"+@team.id.to_s+"/edit",class:"btn btn-light" %>
+          <!--  <%= link_to "Vedi Chat", "teams/messaggioteams/"+@team.id.to_s %> -->
         <% end %>
         </div>
     </div>
