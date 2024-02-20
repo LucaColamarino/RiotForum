@@ -61,7 +61,7 @@ class TeamsController < ApplicationController
         @user = User.find(@team.comp[lane])
         @user.team_id = nil
         @team.comp[lane] = nil
-        @user.save
+        @user.save!
       end
     end
 

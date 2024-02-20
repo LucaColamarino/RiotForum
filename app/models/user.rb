@@ -11,7 +11,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_one :team, foreign_key: 'leader_id', dependent: :destroy
+  has_one :team, foreign_key: 'leader_id', dependent: :destroy, inverse_of: :leader
   belongs_to :team, optional: true
 
   has_many :request, dependent: :destroy

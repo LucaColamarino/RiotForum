@@ -40,6 +40,13 @@
                 var lane = $(this).data('lane');
                 $('input[name="request[leader_lane]"]').val(lane);
             });
+
+            $('.team-creation-form').on('submit', function(event) {
+                var selectedLane = $('.leader-lane.leader-selected-lane');
+                if (selectedLane.length === 0) {
+                    event.preventDefault(); // Prevent form submission
+                }
+            });
         });
     </script>
 </head>
@@ -63,32 +70,39 @@
                 <!-- annunci -->
                 <% for annuncio in @annunci do%>
                     <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
-                    <% team = Team.find(annuncio.team_id)%>
-                    <% mode = Team.find( annuncio.team_id ).mode%>
-                    <%= form_with(model: @request, url: requests_new_path, class:"team-creation-form") do |form| %>
-                        <div class="annuncio">
-                            <%if user.present?%>
-                                <div class="owner">
-                                    <span><%= user.username %></span>
-                                    <h4><%= mode %></h4>
-                                </div>
-                                <div class="roles">
-                                    
-                                <div id="leader_lane">
-                                    <% lanes = Forum::LANES %>
-                                    <% lanes.each do |lane| %>
-                                        <% if team.lanes.include?(lane) && team.comp[lane].nil? %>
-                                            <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
-                                        <% else %>
-                                            <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                    <% if current_user.nil? || current_user.team_id != annuncio.team_id%>
+
+                        <% team = Team.find(annuncio.team_id)%>
+                        <% mode = Team.find( annuncio.team_id ).mode%>
+                        <%= form_with(model: @request, url: requests_new_path, class:"team-creation-form") do |form| %>
+                            <div class="annuncio">
+                                <%if user.present?%>
+                                    <div class="owner">
+                                        <span><%= user.username %></span>
+                                        <h4><%= mode %></h4>
+                                    </div>
+                                    <div class="roles">
+                                        
+                                    <div id="leader_lane">
+                                        <% lanes = Forum::LANES %>
+                                            <% lanes.each do |lane| %>
+                                                <% if team.lanes.include?(lane) && team.comp[lane].nil? %>
+                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
+                                                <% else %>
+                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                                                <% end %>
+                                            <% end %>
                                         <% end %>
-                                    <% end %>
-                                    <%if user_signed_in? %>
-                                     <%= form.hidden_field :leader_lane %>
-                                     <%= form.hidden_field :team_id, value: team.id %>
-                                     <%= form.hidden_field :user_id, value: current_user.id %>
-                                    <%end%>
-                                </div>
+                                        <%if user_signed_in? %>
+                                            <%= form.hidden_field :leader_lane %>
+                                            <%= form.hidden_field :team_id, value: team.id %>
+                                            <%= form.hidden_field :user_id, value: current_user.id %>
+                                        <%else %>
+                                            <script>
+                                                window.location.href = '<%= user_session_path %>';
+                                            </script>
+                                        <%end%>
+                                    </div>
 
                                 </div>
                                 <div class="minRank">
