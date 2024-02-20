@@ -5,15 +5,17 @@
 
 <body>
 
-        <% flash.each do |key, value| %>
-            <div class="alert <%= key %>">
-        <%= value %>
-            </div>
-        <% end %>  
+ 
 
 
     <div class="container-bacheca-news">
         <div class="sfondo-bacheca-news">
+        <% flash.each do |key, value| %>
+            <div class="alert <%= key %>">
+        <%= value %>
+            </div>
+        <% end %>
+
 
             <div id="titolo-bacheca-news" class="w3-panel w3-center w3-white w3-round-medium">
                 <span>
