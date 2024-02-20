@@ -1,4 +1,8 @@
+<div class="text-center">
 <%= form_with(url: profile_page_to_ban_path, method: "post") do |form| %>
-    <%= form.text_field :username, placeholder: "Username da bannare" %>
-    <%= form.submit "Banna utente" %>
+    <%= form.text_field :username, placeholder: "Username da bannare", class:"mt-4 form-control mx-auto", style: 'resize: none; width: 600px;' %>
+ 
+    <br>
+    <%= form.submit "Banna utente", class:"btn btn-warning mt-2" %>
   <% end %>
+  </div>
