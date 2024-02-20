@@ -1,5 +1,5 @@
 FactoryBot.define do
-    factory :user do
+    factory :user, class: 'User' do
       email { 'test@example.com' }
       password { 'password' }
       username {'PippoBaudo'}
@@ -15,6 +15,7 @@ FactoryBot.define do
     end
 
     factory :user30, class: 'User' do
+      id {30}
       email { 'user30@example.com' }
       password { 'password' }
       username { 'aristotele' }
@@ -42,5 +43,12 @@ FactoryBot.define do
       # Altri attributi dell'utente1, se necessario
     end
 
+    factory :member1, class: 'User' do
+      email { 'member1@example.com' }
+      password { 'password' }
+      username { 'member1' }
+      team_id {1}
+      # Altri attributi dell'utente1, se necessario
+    end
   end
   

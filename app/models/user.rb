@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :newposts, dependent: :destroy
   #amicizie
   has_many :invitations, dependent: :destroy
-  has_many :pending_invitations, -> {where confirmed: false}, class_name: "Invitation", foreign_key: "friend_id", dependent: :destroy
+  #has_many :pending_invitations, -> {where confirmed: false}, class_name: "Invitation", foreign_key: "friend_id", dependent: :destroy
 
   
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -52,6 +52,10 @@ class User < ApplicationRecord
     banned
   end
 
+  def has_team?
+    !team_id.nil?
+  end
+  
   private 
   #tutti i metodi definiti sotto saranno privati
 

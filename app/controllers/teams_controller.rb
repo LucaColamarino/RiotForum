@@ -1,5 +1,9 @@
 class TeamsController < ApplicationController
   def new
+    if current_user.has_team?
+      redirect_to root_path
+      return
+    end
     @team = Team.new
   end
 

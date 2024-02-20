@@ -3,13 +3,13 @@ class InvitationsController < ApplicationController
     def update
       invitation = Invitation.find(params[:id])
       invitation.update(confirmed: true)
-      redirect_to invitations_path, notice: User.find(params[:id]).pluck('username')+'è ora tuo amico.'
+      redirect_to request.fullpath
     end
 
     def destroy
         @invitation = Invitation.find(params[:id])
         @invitation.destroy
-        redirect_to invitations_path
+        redirect_to request.fullpath
       end
 
 end

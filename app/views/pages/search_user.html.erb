@@ -105,7 +105,7 @@
 
         <div class="interactions-user">
             <%= link_to search_player_path(summonerName: @found_user.username) do%>
-                <button class="btn btn-danger stats-btn">Vedi stats</button>
+                <button class="btn btn-danger stats-btn" style="border:5px outset crimson">Vedi stats</button>
             <%end%>
             <% if @found_user.team_id? %>
             <div class="user-team-info">
