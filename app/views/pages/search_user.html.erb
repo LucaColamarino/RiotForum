@@ -66,6 +66,8 @@
                     <%if current_user.friend_with?(@found_user)%>
                         <%invitation = Invitation.find_invitation(current_user.id,@found_user.id)%>
                         <%= button_to "Rimuovi amico", invitation_path(id:invitation), method: :delete, class:"btn btn-danger" %>
+                    <%elsif current_user.pending_sent?(@found_user)%>
+                        Richiesta in corso
                     <%else%>
                      <!--AGGIUNGI AMICO-->
                         <%= form_with(url: send_friend_request_path, method: "post") do |form| %>

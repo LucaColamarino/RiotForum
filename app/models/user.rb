@@ -40,6 +40,14 @@ class User < ApplicationRecord
     Invitation.new(user_id: current_user.id, friend_id: user.id)
   end
 
+  def pending_sent?(user)
+    id1 = id
+    id2 = user.id
+    case1 = !Invitation.where(user_id: id1, friend_id: id2, confirmed: false).empty?
+    case2 = !Invitation.where(user_id: id2, friend_id: id1, confirmed: false).empty?
+    case1 || case2
+  end
+
   def banned?
     banned
   end
