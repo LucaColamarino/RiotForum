@@ -30,7 +30,7 @@ class MessaggioteamsController < ActionController::Base
         @messageteam.text += " - #{current_user.username}"
 
         if @messageteam.save
-            redirect_to '/teams'
+            redirect_to request.fullpath
         end
     end
 

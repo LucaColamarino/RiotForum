@@ -9,12 +9,14 @@
 
 
 <% @messageteam.text.split("\n").each do |riga| %>
+  <div class="msgTeam">
   <% unless riga.strip.empty? %>
   <%words = riga.split(/\s+/)%>
        <% last_word = words.last %> 
-<strong><%= last_word %></strong><br>
+<strong><%= last_word %>: </strong><br>
         <% line_without_last_word = words[0..-3].join(' ') %>
     <%= line_without_last_word %>
+  </div>
     <div style="border-top: 1px solid black; margin: 10px 0;"></div>
   <% end %>
 <% end %>
@@ -31,3 +33,11 @@
     </div>
 <% end %>
 
+
+<style>
+  .msgTeam {
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+  }
+</style>
