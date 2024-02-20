@@ -303,7 +303,7 @@ class PagesController < ApplicationController
    if current_user.has_role?(:moderator)
     username = params[:username]
     user_to_ban = User.find_by(username: username)
-
+      if user_to_ban.present?
         if !(user_to_ban.has_role?(:moderator))
           if user_to_ban.banned
             user_to_ban.update(banned: false)
@@ -319,6 +319,7 @@ class PagesController < ApplicationController
           flash[:error] = "Impossibile trovare l'utente."
           redirect_back(fallback_location: '/profile')
         end
+      end
    else
     redirect_to '/profile'
    end
