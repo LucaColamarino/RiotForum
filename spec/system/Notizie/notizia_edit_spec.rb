@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Modifica Notizia', type: :system do
+RSpec.describe 'Modifica Notizia', type: :feature do
   
   let(:user) {create(:user)}
   let(:user1) {create(:user)}

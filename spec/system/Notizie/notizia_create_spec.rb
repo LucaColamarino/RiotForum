@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Crea Notizia', type: :system do
+RSpec.describe 'Crea Notizia', type: :feature do
   let(:user) {create(:user)}
   before {user.add_role(:moderator)}
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Cancella Notizia', type: :system do
+RSpec.describe 'Cancella Notizia', type: :feature do
   
   let(:user) {create(:user)}
   before {user.add_role(:moderator)}

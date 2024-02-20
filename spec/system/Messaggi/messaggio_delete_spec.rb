@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Crea Messaggio', type: :system do
+RSpec.describe 'Crea Messaggio', type: :feature do
   let(:user) {create(:user)}
   let(:user1) {create(:user)}
 
