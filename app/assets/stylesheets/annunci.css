@@ -38,6 +38,7 @@
 
   .leader-lane, .lanes-checkbox {
     filter:brightness(0.3);
+    border-radius:1em;
   }
 
   .leader-lane:hover, .lanes-checkbox:hover {

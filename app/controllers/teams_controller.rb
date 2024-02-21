@@ -9,17 +9,24 @@ class TeamsController < ApplicationController
 
   def create
     @team = Team.new(teams_params)
+
     @team.leader_id = current_user.id
-    @team.lanes = params[:team][:lanes] || {}
-
-    @leader_lane = params[:team][:leader_lane]
-
-    unless @team.lanes.include?(@leader_lane)
-
-      @team.lanes << @leader_lane
+    @team.lanes = params[:selected_lanes] || []
+    unless @team.lanes.include?(params[:leader])
+      @team.lanes << params[:leader]  #serve solo per lo show, ma aggiunge un controllo in board
+    end
+    @team.leader_lane = params[:leader]
+    leader_lane = @team.leader_lane
+    if !@team.comp[leader_lane].present?
+    @team.comp[leader_lane] = @team.leader_id
     end
 
-    @team.comp[@leader_lane] = @team.leader_id
+    # unless @team.lanes.include?(@leader_lane)
+
+    #   @team.lanes << @leader_lane
+    # end
+
+    #@team.comp[@leader_lane] = @team.leader_id
 
     if @team.save
 
@@ -44,12 +51,14 @@ class TeamsController < ApplicationController
     end
   end
 
+
   def show
     if !current_user.team_id.nil?
-
       @team = Team.find(current_user.team_id)
+      lead = User.find(@team.leader_id)
+      @leader = lead.username
+      @leader_lane = @team.leader_lane 
     else
-
       redirect_to root_path
     end
   end
@@ -78,7 +87,9 @@ class TeamsController < ApplicationController
   def update
 
     @team = Team.find(params[:team_id])
+    if !@team.comp[params[:position]].present?
     @team.comp[params[:position]] = params[:user_id].to_i
+    end
 
     if @team.save!
 
@@ -139,8 +150,7 @@ class TeamsController < ApplicationController
   private
 
   def teams_params
-
-    params.require(:team).permit(:mode, :minRank, lanes: [])
+    params.require(:team).permit( :mode, :minRank, :leader, lanes: [])
   end
 
   def team_full?

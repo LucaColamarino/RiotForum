@@ -5,9 +5,10 @@
     <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
 </head>
 
+
+
 <body>
-     <% if(session[:game]=="LOL"); @parentclass="LOL-home" end %>
-     <% if(session[:game]=="VALO"); @parentclass="VALO-home" end %>
+     
     <div class="parent", id="LOL-home">
 
         
@@ -60,22 +61,23 @@
                         <% team = Team.find(annuncio.team_id)%>
                         <% mode = Team.find( annuncio.team_id ).mode%>
                         <% if user.present?%>
+
                             <div class="annuncio_home">
                                 <div class="owner">
                                     <span><%= user.username %></span> 
                                 </div>
                            
                                 <div class="roles">
-                                    <% lanes = Forum::LANES %>
-                                    <% lanes.each do |lane| %>
-                                        <% if team.lanes.include?(lane) && team.comp[lane].nil? %>
-                                            <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon", data: { lane: lane } %>
+                                    <% team.lanes.each do |lane| %>
+                                        <% if team.comp[lane].present?  %>
+                                            <%= image_tag "/assets/positions/"+lane+".png", class: "x-small-icon", data: { lane: lane }, style: "filter: drop-shadow(16px 16px 20px red) invert(60%);" %>
                                         <% else %>
-                                            <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                                            <%= image_tag "/assets/positions/"+lane+".png", class: "x-small-icon" %>
                                         <% end %>
                                     <% end %> 
                                 </div>
                             </div>
+                            
                         <%end%>
                     <% end %>
                 <%end%>

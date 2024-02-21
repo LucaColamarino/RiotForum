@@ -1,56 +1,44 @@
 <div class="show-team-container">
     <div class="tabella-team">
-        <span class="titolo-mode w3-center"><%= @team.mode %></span>
+        <span class="titolo-mode w3-center">
+            <span style="color:gray">Team #<%=@team.id%></span>,
+            <span style="color:gray"><%=User.where(id: @team.leader_id).pluck('username').first%></span>
+            | 
+            <%= @team.mode %>
+        </span>
 
         <br>
         <div class="team-interface-container">
-            <% Forum::LANES.each do |lane| %>
-
-                <% playerName = nil %>
+            
+            <% @team.lanes.each do |lane| %>
                 
-                <% if !@team.lanes.include?(lane) %>
+                <% if lane == @leader_lane
+                    lane_cont = "capo"
+                    lane_class = "leaderPlace"
+                    player = @leader
+                elsif @team.comp[lane].present?
+                    member = User.find(@team.comp[lane])
+                    lane_cont="giocatore"
+                    lane_class= ""
+                    player = member.username
+                else
+                    lane_class = ""
+                    player = nil
+                end%>
 
-                    <% @lane_class = "lane_non_disponibile" %>
+                <div class="container-lane <%=lane%>Lane <%=lane_cont.to_s%>">
+                    <%=image_tag "/assets/positions/"+lane.to_s+".png", class:"img-lane x-small-icon "+lane_class.to_s %>
+                    <div class="player"><%=player%></div>
+                    <!-- se utente è leader permette di eliminare i membri diversi da se stessi --> 
 
-                <% elsif @team.comp[lane].nil? %>
-
-                    <% @lane_class = "lane_disponibile" %>
-
-                <% else %>
-
-                    <% player = User.find(@team.comp[lane]) %>
-                    <% playerName = player.username %>
-                    <% @lane_class = "lane_occupata" %>
-
-                <% end %>
-                
-                <div class="container-lane <%=lane%>Lane">
-                    <div style="color:white !important; border-left:none !important;margin-right:15px"><%=lane%></div>
-                    <%= image_tag("positions/" + lane + ".png", class: "stato_#{@lane_class} small-icon #{lane}-img") %>
-                    <div style="height:100%"><%= playerName %></div>
-
-                    <!-- se utente è leader permette di eliminare i membri diversi da se stessi -->
-                    <% if !player.nil? && (current_user.id == @team.leader_id && current_user.id != player.id) %>
-
-                        <%= form_with url: team_path(@team.id), method: :patch do |f|%>
-                            <%= f.hidden_field :team_id , value: @team.id %>
-                            <%= f.hidden_field :user_id, value: "" %>
-                            <%= f.hidden_field :target, value: player.id %>
-                            <% @team.comp.key(player.id) => position %>
-                            <%= f.hidden_field :position, value: position %>
-                            <button type= "Submit" class= "btn btn-danger">X</button>
-                        <% end %>
-
-                    <% end %>
-                    
                 </div>
-
                 
             <% end %>
+            
         </div>
     </div>
 
-    <div class="bottoni-gestione-team" style="margin-top:15px">
+    <div class="bottoni-gestione-team">
         <div>
             <%= button_to "Torna Indietro", root_path, method: :get, class: "btn btn-light",style:"padding:20px" %>
         </div>
@@ -92,105 +80,95 @@
         padding:20px;
         font-weight:900; 
         background-color: white;
-        margin-bottom:50px;
         border-top-left-radius: 0.9em;
         border-top-right-radius: 0.9em;
     }
 
     .show-team-container {
+        background-image: url('/assets/sfondo-team.jpg'); 
+        background-size: cover; 
+        background-repeat: no-repeat;
         
         height: 100vh;
 
         display:flex;
         flex-direction:column;
 
-        background-image: url('/assets/riot-profile.jpeg');
-        background-size: cover; 
-        background-repeat: no-repeat;
-
     }
 
     .tabella-team {
+        flex:3;
+
         display:flex;
         flex-direction:column;
         border:2px solid white;
-        margin-left:50px;
-        margin-right:50px;
-        margin-top: 50px;
         border-radius: 1em;
-        background-color: rgba(0, 100, 255, 0.333);
+        background-color: rgba(0, 100, 255, 0.666);
+
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 30px;
     }
 
     .team-interface-container {
-        display:flex;
-        flex-direction:row;
-        flex-wrap:wrap;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 20px; 
 
     }
 
+    .TopLane { grid-area: 2 / 2 / 4 / 4; }
+    .JungleLane { grid-area: 2 / 6 / 4 / 8; }
+    .MidLane { grid-area: 4 / 4 / 6 / 6; }
+    .AdcLane { grid-area: 6 / 2 / 8 / 4; }
+    .SupportLane { grid-area: 6 / 6 / 8 / 8; } 
+
+    .player {
+        color:white;
+        text-decoration:underline;
+        margin-left:15px;
+    }
 
     .container-lane {
         
-        padding: 20px;
-    }
-
-    .container-lane div {
-        font-weight: bold;
-        color: lightskyblue;
-        margin-left:5px;
-        padding-left:15px;
-        border-left: 2px solid white;
-
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        
-    }
-
-    .stato_lane_non_disponibile  {/* lane non richiesta */
-         background-color:black;
-         border: 5px solid black;
-    }
-
-    .stato_lane_disponibile {
-        filter: brightness(1.3) !important;
-    }
-
-    .stato_lane_occupata {
-        filter: brightness(1.5);
-        box-shadow: 0 0 5px 5px goldenrod;
-        background-color:white;
-    }
-
-    .TopLane, .JungleLane {
-
-        width:50%;
-
-        display:flex;
-        justify-content: center;
-    }
-
-    .MidLane {
-
-        width:100%;
-
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .AdcLane, .SupportLane {
-
-        width:50%;
+        border-radius: 1em;
+        background-color: rgba(127, 255, 212, 0.333);
 
         display:flex;
         flex-direction:row;
-        justify-content: center;
-        margin-bottom: 50px;
-        
+        align-items:center;
+        justify-content:center;
+
+        padding:10px;
+        font-weight: 700;
     }
 
+    .img-lane {
+         border-radius:1em;
+    }
+
+    .leaderPlace {
+        filter: brightness(1.2);
+        box-shadow: 0 0 3px 4px goldenrod;
+        background-color: rgba(255,255,255,0.555);
+    }
+    .capo {
+        background-color: rgba(218,165,32,0.777); /* giallo */
+        border:2px ridge white;
+        
+    }
+    .giocatore {
+        background-color:rgba(240,69,0,0.480);  /* rosso */
+    }
+
+
     .bottoni-gestione-team {
+        flex: 1;
+
         display:flex;
         flex-direction: row;
         justify-content:space-around;

@@ -4,7 +4,7 @@
 
     <style>
     .leader-lane {
-        filter:brightness(0.3);
+        filter:brightness(0.7);
     }
 
     .leader-lane:hover{
@@ -22,9 +22,7 @@
     }
 
     .disabled-lane{
-
-        filter:brightness(1);
-        outline: 5px solid blue;
+        filter: drop-shadow(16px 16px 20px red) invert(60%);
     }
 
     </style>
@@ -44,7 +42,7 @@
             $('.team-creation-form').on('submit', function(event) {
                 var selectedLane = $('.leader-lane.leader-selected-lane');
                 if (selectedLane.length === 0) {
-                    event.preventDefault(); // Prevent form submission
+                    event.preventDefault();
                 }
             });
         });
@@ -70,10 +68,11 @@
                 <!-- annunci -->
                 <% for annuncio in @annunci do%>
                     <% user = User.find( Team.find( annuncio.team_id ).leader_id ) %>
-                    <% if current_user.nil? || current_user.team_id != annuncio.team_id%>
-
-                        <% team = Team.find(annuncio.team_id)%>
-                        <% mode = Team.find( annuncio.team_id ).mode%>
+                    <% team = Team.find(annuncio.team_id)%>
+                    <% mode = Team.find( annuncio.team_id ).mode%>
+                    
+                    <% if !current_user.nil? && current_user.team_id != annuncio.team_id && !current_user.candidato?(team.id)%>
+                        
                         <%= form_with(model: @request, url: requests_new_path, class:"team-creation-form") do |form| %>
                             <div class="annuncio">
                                 <%if user.present?%>
@@ -86,12 +85,12 @@
                                     <div class="roles">
                                         
                                     <div id="leader_lane">
-                                        <% lanes = Forum::LANES %>
-                                            <% lanes.each do |lane| %>
-                                                <% if team.lanes.include?(lane) && team.comp[lane].nil? %>
-                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
-                                                <% else %>
+                                            <% team.lanes.each do |lane| %>
+                                            
+                                                <% if team.comp[lane].present?  %>
                                                     <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                                                <% else %>
+                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
                                                 <% end %>
                                             <% end %>
                                 <% end %>
@@ -111,7 +110,9 @@
                                     <%= image_tag "/assets/ranks/Rank="+annuncio.minRank+".png", class: "small-icon" %>
                                 </div>
                                 <div class="apply_for">
-                                    <button type="submit" class="btn btn-dark">Candidati</button>
+                                    
+                                        <button type="submit" class="btn btn-dark">Candidati</button>
+                                   
                                 </div>
                             <%end%>
                         </div>

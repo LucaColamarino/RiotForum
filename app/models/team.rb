@@ -17,12 +17,13 @@ class Team < ApplicationRecord
 
         super
         @comp = {
-            "Top" => nil,
-            "Jungle" => nil,
-            "Mid" => nil,
-            "Adc" => nil,
-            "Support" => nil
+            "Top" => -1,
+            "Jungle" => -1,
+            "Mid" => -1,
+            "Adc" => -1,
+            "Support" => -1
         }
+        
     end
     private
     def update_related_records

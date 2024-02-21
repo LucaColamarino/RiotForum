@@ -55,6 +55,19 @@ class User < ApplicationRecord
   def has_team?
     !team_id.nil?
   end
+
+  def isLeader?(team)
+    if team.is_a?(Team)
+      team_id == team.id
+    end
+  end
+
+  def candidato?(teamid)
+    if teamid.is_a?(Integer)
+      return Request.find_by(user_id:id,team_id:teamid)
+    end
+    false
+  end
   
   private 
   #tutti i metodi definiti sotto saranno privati

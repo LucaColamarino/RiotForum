@@ -17,19 +17,22 @@
           <%= form.label :minRank, 'Rank minimo' %>
           <%= form.select :minRank, options_for_select(['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond', 'Master', 'Grandmaster', 'Challenger']) %>
         </div>
-
+        <!--LEADER-->
         <div class="field mt-3">
           <%= form.label :leader_lane, 'Il tuo ruolo' %>
           <br>
           <div id="leader_lane">
             <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
-              <%= image_tag "/assets/positions/"+lane.capitalize+".png", class: 'leader-lane', data: { lane: lane } %>
+              <label>
+                <%= radio_button_tag(:leader, lane, id: "lane_#{lane}", class: "hidden") %>
+                <%= image_tag "/assets/positions/"+lane+".png", class: 'leader-lane', data: { lane: lane } %>
+              </label>
             <% end %>
-            <%= form.hidden_field :leader_lane %>
+            <%= form.hidden_field 'leader_lane' %>
           </div>
         </div>
-
+        <!--RUOLI RICHIESTI-->
         <div class="field mt-3">
           <%= form.label :lanes, 'Ruoli richiesti' %>
           <br>
@@ -37,8 +40,8 @@
           <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <label>
-                <%= form.check_box :lanes, { multiple: true, class: 'lane-checkbox' }, lane, lane %>
-                <%= image_tag "/assets/positions/#{lane.capitalize}.png", class: 'lanes-checkbox', data: { lane: lane } %>
+                <%= check_box_tag 'selected_lanes[]', lane, false, class: 'lane-checkbox' %>
+                <%= image_tag "/assets/positions/#{lane}.png", class: 'lanes-checkbox', data: { lane: lane } %>
               </label>
             <% end %>
           </div>
@@ -60,7 +63,7 @@
       $(this).addClass('leader-selected-lane');
 
       var lane = $(this).data('lane');
-      $('input[name="team[leader_lane]"]').val(lane);
+      $('#lane_'+lane).checked = true;
     });
     //----------------------------------------
     $('.lanes-checkbox').on('click', function() {
@@ -77,5 +80,10 @@
       
   });
 
-
 </script>
+
+ <style>
+    .hidden {
+      display:none;
+    }
+  </style>
