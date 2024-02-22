@@ -10,15 +10,19 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(teams_params)
 
+    @team.lanes = []
+
     @team.leader_id = current_user.id
-    @team.lanes = params[:selected_lanes] || []
+    if params[:selected_lanes]
+      @team.lanes = params[:selected_lanes]
+    end
     unless @team.lanes.include?(params[:leader])
       @team.lanes << params[:leader]  #serve solo per lo show, ma aggiunge un controllo in board
     end
     @team.leader_lane = params[:leader]
     leader_lane = @team.leader_lane
     if !@team.comp[leader_lane].present?
-    @team.comp[leader_lane] = @team.leader_id
+      @team.comp[leader_lane] = @team.leader_id
     end
 
     # unless @team.lanes.include?(@leader_lane)
@@ -74,6 +78,7 @@ class TeamsController < ApplicationController
         @user = User.find(@team.comp[lane])
         @user.team_id = nil
         @team.comp[lane] = nil
+        @team.lanes = nil
         @user.save!
       end
     end

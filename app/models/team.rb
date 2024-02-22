@@ -17,11 +17,11 @@ class Team < ApplicationRecord
 
         super
         @comp = {
-            "Top" => -1,
-            "Jungle" => -1,
-            "Mid" => -1,
-            "Adc" => -1,
-            "Support" => -1
+            "Top" => nil,
+            "Jungle" => nil,
+            "Mid" => nil,
+            "Adc" => nil,
+            "Support" => nil
         }
         
     end

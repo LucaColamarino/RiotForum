@@ -55,8 +55,8 @@
   .footer {
     background-color:beige;
 
-    position: relative;
-    bottom: 0;
+    /* position: relative;   commentati il 21/02/24
+    bottom: 0; */
     height: 36px;
     
   }

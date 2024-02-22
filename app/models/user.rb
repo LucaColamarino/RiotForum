@@ -58,7 +58,7 @@ class User < ApplicationRecord
 
   def isLeader?(team)
     if team.is_a?(Team)
-      team_id == team.id
+      id == team.leader_id 
     end
   end
 

@@ -4,6 +4,10 @@ class RequestsController < ApplicationController
     end
     def create
         @request = Request.new()
+        if !params[:request][:leader_lane].present? #affinchè non crei una richiesta senza lane scelta
+            redirect_to board_path
+            return
+        end
         @request.position = params[:request][:leader_lane]
         @request.team_id = params[:request][:team_id]
         @request.user_id = params[:request][:user_id]

@@ -14,6 +14,14 @@ FactoryBot.define do
       # Altri attributi dell'utente1, se necessario
     end
 
+    factory :user8, class: 'User' do
+      email { 'user8@example.com' }
+      password { 'password' }
+      username {'Pierino2'}
+      id {8}
+      # Altri attributi dell'utente1, se necessario
+    end
+
     factory :user30, class: 'User' do
       id {30}
       email { 'user30@example.com' }

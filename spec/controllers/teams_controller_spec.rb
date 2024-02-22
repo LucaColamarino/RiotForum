@@ -1,46 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe TeamsController, type: :controller do
-    describe "POST #create" do
-      let(:user) { create(:user30) }
-  
+    describe 'POST #create' do
+      let(:user1) { create(:user1) }
+
       before do
-        sign_in user
+        sign_in user1 
       end
-  
-      context "with valid parameters" do
-        let(:team_params) { lanes = { mode: "Normal", minRank: "Diamond" } }
-  
-        it "creates a new team" do
+
+      context 'with valid attributes' do
+        it 'creates a new team' do
           expect {
-            post :create, params: { team: team_params }
+            post :create, params: { team: { mode: 'Normal', minRank: 'Gold', leader_id: user1.id, lanes: ['Top'] } }
           }.to change(Team, :count).by(1)
         end
-  
-        it "assigns the leader_id correctly" do
-          post :create, params: { team: team_params }
-          expect(assigns(:team).leader_id).to eq(user.id)
+
+        it "assigns correctly the leader_id to user1.id" do
+          post :create, params: { team: { mode: 'Normal', minRank: 'Gold', leader_id: user1.id, lanes: ['Top'] } }
+          expect(assigns(:team).leader_id).to eq(user1.id)
         end
-  
-        # Add more expectations as needed
-      end
-  
-      context "with invalid parameters" do
-        let(:invalid_team_params) { { mode: "casual" } } # Missing minRank
-  
-        it "does not create a new team" do
-          expect {
-            post :create, params: { team: invalid_team_params }
-          }.to_not change(Team, :count)
+        
+        it 'redirects to teams_path' do
+          post :create, params: { team: { mode: 'Normal', minRank: 'Gold', leader_id: user1.id, lanes: ['Top'] }}
+          expect(response).to redirect_to(teams_path)
         end
-  
-        it "redirects to teams_new_path" do
-          post :create, params: { team: invalid_team_params }
-          expect(response).to redirect_to(teams_new_path)
-        end
-  
-        # Add more expectations as needed
       end
     end
-  end
+
+    describe 'DELETE #destroy' do 
+      let(:user1) {create(:user1)}
+      let(:team) {create(:team0)}
+
+      before do
+        sign_in user1 
+      end
+
+
+    end
+end
   

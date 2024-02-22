@@ -6,12 +6,6 @@
         <span class="sito">RiotGuild</span>
         </a>
         <% unless request.fullpath == '/' %>
-
-      <div>
-
-  </div>
- 
-
       </div>
     <% end %>
 
@@ -35,7 +29,7 @@
             <% if !current_user.team_id.nil? %>
               <a href="/teams" class="w3-bar-item w3-button">Il tuo team</a>
             <% else %>
-            <span class="w3-bar-item w3-button" style="color: grey; pointer-events: none;">Il tuo team</span>
+              <span class="w3-bar-item w3-button" style="color: grey; pointer-events: none;">Il tuo team</span>
             <% end %>
             <a href="/board" class="w3-bar-item w3-button">Bacheca</a>
 

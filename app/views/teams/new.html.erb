@@ -25,7 +25,7 @@
             <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <label>
-                <%= radio_button_tag(:leader, lane, id: "lane_#{lane}", class: "hidden") %>
+                <%= radio_button_tag(:leader, lane, id: "lane_#{lane}", class: "hidden", checked: false) %>
                 <%= image_tag "/assets/positions/"+lane+".png", class: 'leader-lane', data: { lane: lane } %>
               </label>
             <% end %>
@@ -37,10 +37,9 @@
           <%= form.label :lanes, 'Ruoli richiesti' %>
           <br>
           <div id="lanes">
-          <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <label>
-                <%= check_box_tag 'selected_lanes[]', lane, false, class: 'lane-checkbox' %>
+                <%= check_box_tag 'selected_lanes[]', lane, checked: false, class: 'lane-checkbox' %>
                 <%= image_tag "/assets/positions/#{lane}.png", class: 'lanes-checkbox', data: { lane: lane } %>
               </label>
             <% end %>
@@ -48,7 +47,7 @@
         </div>
 
         <div class="mt-4">
-          <button type="submit" class="btn btn-dark"> Pubblica </button>
+          <button type="submit" class="btn btn-light"> Pubblica </button>
         </div>
     <% end %>
 
@@ -57,6 +56,8 @@
 
 <script>
   $(document).ready(function() {
+
+
     $('.leader-lane').on('click', function() {
       $('.leader-lane').removeClass('leader-selected-lane');
       
@@ -66,7 +67,7 @@
       $('#lane_'+lane).checked = true;
     });
     //----------------------------------------
-    $('.lanes-checkbox').on('click', function() {
+    /* $('.lanes-checkbox').on('click', function() {
       $(this).toggleClass('selected-lane');
 
       var checkboxId = $(this).prev('.lane-checkbox').attr('id');
@@ -74,8 +75,19 @@
       $('#' + checkboxId).prop('checked', function(_, checked) {
         return !checked;
       });
-    });
+    }); */
 
+
+    $('.lanes-checkbox').on('click',function(){
+      var checkboxId = $(this).prev('.lane-checkbox').attr('id');
+      $(this).toggleClass('selected-lane');
+      if($(this).is(':checked')) {
+        $('#' + checkboxId).checked = true;
+      }
+      else {
+        $('#' + checkboxId).checked = false;
+      }
+    })
 
       
   });

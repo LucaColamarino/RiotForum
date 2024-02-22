@@ -13,23 +13,45 @@
             <% @team.lanes.each do |lane| %>
                 
                 <% if lane == @leader_lane
+                    player = User.find(@team.leader_id)
                     lane_cont = "capo"
                     lane_class = "leaderPlace"
-                    player = @leader
+                    member = @leader
                 elsif @team.comp[lane].present?
-                    member = User.find(@team.comp[lane])
+                    player = User.find(@team.comp[lane])
                     lane_cont="giocatore"
                     lane_class= ""
-                    player = member.username
+                    member = player.username
                 else
                     lane_class = ""
                     player = nil
                 end%>
 
+                
+
                 <div class="container-lane <%=lane%>Lane <%=lane_cont.to_s%>">
                     <%=image_tag "/assets/positions/"+lane.to_s+".png", class:"img-lane x-small-icon "+lane_class.to_s %>
-                    <div class="player"><%=player%></div>
-                    <!-- se utente è leader permette di eliminare i membri diversi da se stessi --> 
+                    <div class="player"><%=member%></div>
+                    <!-- se utente è leader permette di eliminare i membri diversi da se stessi -->
+                     <% if !player.nil? && (current_user.id == @team.leader_id && current_user.id != player.id) %>
+                        <div class="btn-group dropright">
+                            <button type="button" class="btn btn-light  btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropright</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <%= form_with url: team_path(@team.id), method: :patch do |f|%>
+                                    <%= f.hidden_field :team_id , value: @team.id %>
+                                    <%= f.hidden_field :user_id, value: "" %>
+                                    <%= f.hidden_field :target, value: player.id %>
+                                    <% @team.comp.key(player.id) => position %>
+                                    <%= f.hidden_field :position, value: position %>
+                                    <button class="dropdown-item" type="Submit" class= "btn btn-danger">Espelli</button>
+                                <% end %>
+                            </div>
+                        </div>
+                    <%end%>
+                
+                     
 
                 </div>
                 
@@ -65,10 +87,7 @@
             <%end%>
         <% else %>
             <%= link_to "teams/messaggioteams/"+@team.id.to_s+"/edit" do%>
-                <button class="btn btn-success btn-sm" style="padding:10px">Invia messaggio al team</button>
-            <%end%>
-            <%= link_to "teams/messaggioteams/"+@team.id.to_s do%>
-             <button class="btn btn-dark btn-sm" style="padding:10px">Vedi Chat</button>
+                <button class="btn btn-success" style="padding:10px">Chat</button>
             <%end%>
         <% end %>
         </div>
@@ -141,7 +160,7 @@
         display:flex;
         flex-direction:row;
         align-items:center;
-        justify-content:center;
+        justify-content:space-around;
 
         padding:10px;
         font-weight: 700;

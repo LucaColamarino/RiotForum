@@ -1,30 +1,31 @@
 require 'rails_helper'
 
-RSpec.feature "Teams", type: :system do
+RSpec.feature "Teams", type: :feature do
 
   let(:user) { create(:user1) }
 
-  scenario "user crea un team" do
+  before do
+    sign_in user
+  end
 
-    login_as(user, scope: :user)
-    visit root_path
-    click_button 'Crea Team'
+  scenario "User creates a new team" do
+    visit '/teams/new'
 
-    select 'Ranked', from: 'team_mode'
-    select 'Bronze', from: 'team_minRank'
+    # Fill out the form fields
+    select "Normal", from: "team_mode"
+    select "Gold", from: "team_minRank"
 
-    lane = find('leader-lane')
+    # Choose leader lane
+    choose "Top"  # Or select the appropriate radio button for the leader lane
 
-    accept_friend_button = within(lane) do
-      find('img[data-lane="Top"]').click
-    end
+    # Select desired lanes
+    check "selected_lanes[]", option: "Mid"  # For example, check the "Mid" lane
 
-    check "jungle-checkbox"
-    check "mid-checkbox"
-    check "adc-checkbox"
-    check "support-checkbox"
+    # Submit the form
+    click_button "Pubblica"
 
-    click_button 'Pubblica'
-
+    # Expectations after form submission
+    
+    expect(Team.count).to eq(1)  # Assuming your application creates a new Team record upon form submission
   end
 end

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Invitation, type: :model do
+
   describe "POST #create" do
     it "creates a friend request" do
       user1 = create(:user)

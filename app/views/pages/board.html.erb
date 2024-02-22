@@ -73,7 +73,8 @@
                     
                     <% if !current_user.nil? && current_user.team_id != annuncio.team_id && !current_user.candidato?(team.id)%>
                         
-                        <%= form_with(model: @request, url: requests_new_path, class:"team-creation-form") do |form| %>
+                        <%= form_with(model: @request, url: requests_new_path) do |form| %>
+                            
                             <div class="annuncio">
                                 <%if user.present?%>
                                     <div class="owner">
@@ -85,19 +86,19 @@
                                     <div class="roles">
                                         
                                     <div id="leader_lane">
-                                            <% team.lanes.each do |lane| %>
-                                            
-                                                <% if team.comp[lane].present?  %>
-                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
-                                                <% else %>
-                                                    <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
-                                                <% end %>
+                                        <% team.lanes.each do |lane| %>
+                                        
+                                            <% if team.comp[lane].present? || !current_user.team_id.nil? %>
+                                                <%= image_tag "/assets/positions/"+lane+".png", class: "disabled-lane x-small-icon" %>
+                                            <% else %>
+                                                <%= image_tag "/assets/positions/"+lane+".png", class: "leader-lane x-small-icon", data: { lane: lane } %>
                                             <% end %>
+                                        <% end %>
                                 <% end %>
                                         <%if user_signed_in? %>
                                             <%= form.hidden_field :leader_lane %>
                                             <%= form.hidden_field :team_id, value: team.id %>
-                                            <%= form.hidden_field :user_id, value: current_user.id %>
+                                            <%= form.hidden_field :user_id, value: current_user.id  %>
                                         <%else %>
                                             <script>
                                                 window.location.href = '<%= user_session_path %>';
@@ -110,12 +111,17 @@
                                     <%= image_tag "/assets/ranks/Rank="+annuncio.minRank+".png", class: "small-icon" %>
                                 </div>
                                 <div class="apply_for">
-                                    
-                                        <button type="submit" class="btn btn-dark">Candidati</button>
-                                   
+                                    <%if current_user.team_id.nil?
+                                        disabled_candidati = ''
+                                    else
+                                        disabled_candidati = 'disabled'
+                                    end
+                                    %>
+                                    <button type="submit" class="btn btn-dark" <%=disabled_candidati%>>Candidati</button>
                                 </div>
-                            <%end%>
-                        </div>
+                            </div>
+
+                        <%end%>
                     <% end %>
                 <%end%>
             </div>

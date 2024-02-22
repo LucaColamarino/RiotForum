@@ -2,6 +2,12 @@ class MessaggioteamsController < ActionController::Base
     layout 'application'
     before_action :authenticate_user!
 
+    def index
+        if params[:team_id].present?
+            @messages = Messaggioteam.where(team_id: params[:team_id]).order(:created_at ).all
+        end
+    end
+
 
     def show
         team_exists = Team.exists?(params[:team_id])
@@ -26,11 +32,12 @@ class MessaggioteamsController < ActionController::Base
 
     def create
         @messageteam=Messaggioteam.new(messaggio_params)
-        @messageteam.team_id=params[:team_id]
+        @messageteam.team_id=params[:team_id] 
+        @messageteam.sender = params[:sender]
         @messageteam.text += " - #{current_user.username}"
 
         if @messageteam.save
-            redirect_to request.fullpath
+            redirect_to '/teams'
         end
     end
 
@@ -79,7 +86,7 @@ class MessaggioteamsController < ActionController::Base
     private
 
     def messaggio_params
-        params.require(:messaggioteam).permit(:text)
+        params.require(:messaggioteam).permit(:sender, :text, :team_id)
     end
 
 

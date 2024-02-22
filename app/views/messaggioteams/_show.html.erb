@@ -1,0 +1,29 @@
+<div class="text-center">
+
+    <p class="mt-4"><strong>Messaggi del team:</strong></p>
+    
+
+
+    <div class="overflow-auto" style="height: 600px;width: 600px;background-color: lightblue;display: inline-block; padding:10px;">
+
+    <div class="msgTeam d-flex flex-column">
+    <% @messageteam.text.split("\n").each do |riga| %>
+        <% unless riga.strip.empty? %>
+            <%words = riga.split(/\s+/)%>
+                <% last_word = words.last %>
+                <div class="d-flex flex-column align-items-start" style="border: 1px solid black; font-size:small; width:100%;">
+                
+                <div style="align-self: flex-end; color: gray; outline:1px solid black; width:100%;"><%=@messageteam.created_at%></div>
+
+                
+                    <strong><%= last_word %>: </strong> <!--nome-->   
+                    <% line_without_last_word = words[0..-3].join(' ') %>
+                    <%= line_without_last_word %> <!--messaggio-->
+                
+                
+                </div> 
+            </div>
+        <% end %>
+    <% end %>
+    </div>
+</div>
