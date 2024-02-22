@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Teams", type: :feature do
+RSpec.feature "Teams", type: :system do
 
   let(:user) { create(:user1) }
 

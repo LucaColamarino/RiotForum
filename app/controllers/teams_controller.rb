@@ -14,18 +14,19 @@ class TeamsController < ApplicationController
     @team.lanes = []
 
     @team.leader_id = current_user.id
-    if params[:selected_lanes]
-      @team.lanes = params[:selected_lanes]
+    if params[:team][:selected_lanes]
+      @team.lanes = params[:team][:selected_lanes]
     end
-    unless @team.lanes.include?(params[:leader])
-      @team.lanes << params[:leader]  #serve solo per lo show, ma aggiunge un controllo in board
+    unless @team.lanes.include?(params[:team][:leader_lane])
+      @team.lanes << params[:team][:leader_lane]  #serve solo per lo show, ma aggiunge un controllo in board
     end
-    @team.leader_lane = params[:leader]
-    leader_lane = @team.leader_lane
-    if !@team.comp[leader_lane].present?
-      @team.comp[leader_lane] = @team.leader_id
+    @team.leader_lane = params[:team][:leader_lane]
+    @leader_lane = @team.leader_lane
+    unless @team.comp[@leader_lane].present?
+      @team.comp[@leader_lane] = @team.leader_id
     end
     @minRank = @team.minRank
+    @leader = @team.leader_id
 
     # unless @team.lanes.include?(@leader_lane)
     #   @team.lanes << @leader_lane
@@ -162,7 +163,7 @@ class TeamsController < ApplicationController
   private
 
   def teams_params
-    params.require(:team).permit( :mode, :minRank, :leader, lanes: [])
+    params.require(:team).permit( :mode, :minRank, :leader_lane, lanes: [])
   end
 
   def team_full?

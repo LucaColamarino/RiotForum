@@ -25,11 +25,10 @@
             <% lanes = Forum::LANES %>
             <% lanes.each do |lane| %>
               <label>
-                <%= radio_button_tag(:leader, lane, id: "lane_#{lane}", class: "hidden", checked: false) %>
+              <%= radio_button(:team, :leader_lane, lane, id: "lane_#{lane}", class: "hidden", required: 'required', checked: false) %>
                 <%= image_tag "/assets/positions/"+lane+".png", class: 'leader-lane', data: { lane: lane } %>
               </label>
             <% end %>
-            <%= form.hidden_field 'leader_lane' %>
           </div>
         </div>
         <!--RUOLI RICHIESTI-->
@@ -39,7 +38,7 @@
           <div id="lanes">
             <% lanes.each do |lane| %>
               <label>
-                <%= check_box_tag 'selected_lanes[]', lane, checked: false, class: 'lane-checkbox' %>
+                <%= check_box_tag 'team[selected_lanes][]', lane, checked: false, class: 'lane-checkbox' %>
                 <%= image_tag "/assets/positions/#{lane}.png", class: 'lanes-checkbox', data: { lane: lane } %>
               </label>
             <% end %>
@@ -76,18 +75,6 @@
         return !checked;
       });
     }); */
-  
-    //-Rende obbligatorio compilare il campo leader-lane 
-    $('form').on('submit', function(event) {
-      var leaderLane = $('input[name="team[leader_lane]"]').val();
-
-      if (!leaderLane) {
-        event.preventDefault();
-        alert('Please select a leader lane.');
-        return false;
-      }
-    });
-
 
     $('.lanes-checkbox').on('click',function(){
       var checkboxId = $(this).prev('.lane-checkbox').attr('id');
