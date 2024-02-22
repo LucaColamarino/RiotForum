@@ -76,6 +76,17 @@
         return !checked;
       });
     }); */
+  
+    //-Rende obbligatorio compilare il campo leader-lane 
+    $('form').on('submit', function(event) {
+      var leaderLane = $('input[name="team[leader_lane]"]').val();
+
+      if (!leaderLane) {
+        event.preventDefault();
+        alert('Please select a leader lane.');
+        return false;
+      }
+    });
 
 
     $('.lanes-checkbox').on('click',function(){
