@@ -12,19 +12,20 @@ class Team < ApplicationRecord
     
     validates :leader, presence: true
 
+    after_initialize :set_default_comp_values, unless: :persisted?
 
-    def initialize(attributes = nil)
+    private
 
-        super
-        @comp = {
-            "Top" => nil,
-            "Jungle" => nil,
-            "Mid" => nil,
-            "Adc" => nil,
-            "Support" => nil
+    def set_default_comp_values
+        self.comp ||= {
+          "Top" => nil,
+          "Jungle" => nil,
+          "Mid" => nil,
+          "Adc" => nil,
+          "Support" => nil
         }
     end
-    private
+
     def update_related_records
 
       User.where(team_id: self.id).update_all(team_id: nil)

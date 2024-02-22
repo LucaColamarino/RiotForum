@@ -8,11 +8,14 @@ class TeamsController < ApplicationController
   end
 
   def create
+
     @team = Team.new(teams_params)
+
     @team.leader_id = current_user.id
     @team.lanes = params[:team][:lanes] || {}
 
     @leader_lane = params[:team][:leader_lane]
+    @minRank = params[:team][:minRank]
 
     unless @team.lanes.include?(@leader_lane)
 
@@ -21,6 +24,12 @@ class TeamsController < ApplicationController
 
     @team.comp[@leader_lane] = @team.leader_id
 
+    unless @team.lanes.length > 0 && @team.mode.present? && @minRank.present? && @leader_lane.present? 
+
+      redirect_to teams_new_path
+      return
+    end
+
     if @team.save
 
       current_user.team_id = @team.id
@@ -28,7 +37,7 @@ class TeamsController < ApplicationController
 
       @ad = Ad.new
       @ad.team_id = @team.id
-      @ad.minRank = params[:team][:minRank]
+      @ad.minRank = @minRank
 
       if@ad.save
 
