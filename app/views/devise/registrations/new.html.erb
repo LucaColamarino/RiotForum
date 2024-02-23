@@ -10,17 +10,6 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <% if params[:error].present? && params[:error] == "unknown" %>
-    <div class="alert alert-danger" role="alert">
-      username non esistente
-    </div>
-  <% end %>
-  <% if params[:error].present? && params[:error] == "existing" %>
-    <div class="alert alert-danger" role="alert">
-      username già usato nel sito
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :username, 'Nome Evocatore'%><br />
     <%= f.text_field :username %>

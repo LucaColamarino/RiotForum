@@ -10,29 +10,6 @@ class RegistrationsController < Devise::RegistrationsController
       super do |resource|
         if resource.is_a?(User)
           resource.add_role(:user)
-
-
-          if request.get? && !resource.username.present?
-            # Affinchè non mi dia errore quando apro la pagina per la prima volta
-            return
-          end
-          username = resource.username
-          if username_valid?(username)
-            if !username_exists?(username)
-              resource.update(username: username)
-              
-            else
-              flash.now[:error] = "Username già in questo sito. Riprova"
-              redirect_to new_user_registration_path(error: 'existing')
-              return
-            end
-          else
-            flash.now[:error] = "Username inesistente. Riprova"
-            redirect_to new_user_registration_path(error: 'unknown')
-            return
-          end
-
-
         end
       end
     end
