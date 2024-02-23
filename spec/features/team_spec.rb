@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Teams", type: :system do
+RSpec.feature "Teams", type: :feature do
 
   let(:user) { create(:user1) }
 
@@ -15,17 +15,15 @@ RSpec.feature "Teams", type: :system do
     select "Normal", from: "team_mode"
     select "Gold", from: "team_minRank"
 
-    # Choose leader lane
-    choose "Top"  # Or select the appropriate radio button for the leader lane
+    find('.leader-lane[data-lane="Top"]').click  
 
-    # Select desired lanes
-    check "selected_lanes[]", option: "Mid"  # For example, check the "Mid" lane
+    check "team[selected_lanes][]", option: "Mid"  
 
-    # Submit the form
     click_button "Pubblica"
 
     # Expectations after form submission
     
     expect(Team.count).to eq(1)  # Assuming your application creates a new Team record upon form submission
+    expect(Team.last.mode).to eq('Normal')
   end
 end
