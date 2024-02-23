@@ -1,0 +1,4 @@
+<% @blocked_user.each do |blocked_user| %>
+    <%=User.find_by(id: blocked_user.blocked_id).username%>
+    <br>
+<%end%>

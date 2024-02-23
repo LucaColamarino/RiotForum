@@ -43,6 +43,11 @@ Rails.application.routes.draw do
   post 'requests/new', to: 'requests#create'
   delete 'requests/:id', to: 'requests#destroy', as: 'request'
 
+  get '/blocked_user', to: 'blockedusers#index'
+  #get '/blocked_user/:id', to: 'blockedusers#new', as: 'blocked_user'
+  post '/blocked_user/:id', to: 'blockedusers#create'
+  delete '/blocked_user/:id', to: 'blockedusers#destroy'
+
 
 
   get '/teams/messaggioteams/:team_id', to: 'messaggioteams#show', constraints: {team_id: /\d+/}, as: 'chat_team'
