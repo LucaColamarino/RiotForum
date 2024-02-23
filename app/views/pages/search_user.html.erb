@@ -59,6 +59,28 @@
                 </div>
                 
                 <%= link_to "Segnala Utente", "search_user/new_segnala_utente/"+@found_user.username, style:"color:red"%>
+                <!-- app/views/blocked_users/new.html.erb -->
+
+
+
+                <%@bloccato=BlockedUser.find_by(user_id: current_user.id)%>
+
+                <% if current_user.id != @found_user.id %>
+                 <% if @bloccato.nil? || @bloccato.blocked_id != @found_user.id %>
+                  <%= form_with model: @blocked_user, url: 'blocked_user/'+@found_user.id.to_s, method: "post" do |form| %>
+                    <%= form.hidden_field :user_id, value: current_user.id %>
+                    <%= form.hidden_field :blocked_id, value: @found_user.id %>
+                    <%= form.submit "Blocca Utente" %>
+                  <% end %>
+                 <% else %>
+                  <%= form_with model: @blocked_user, url: 'blocked_user/'+@found_user.id.to_s, method: "delete" do |form| %>
+                    <%= form.hidden_field :user_id, value: current_user.id %>
+                    <%= form.hidden_field :blocked_id, value: @found_user.id %>
+                    <%= form.submit "Sblocca Utente" %>
+                  <% end %>
+                 <% end %>
+                <% end %>
+
                 
                 <!--AMICIZIA-->
                 <div>

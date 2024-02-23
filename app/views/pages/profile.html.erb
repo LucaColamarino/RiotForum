@@ -45,7 +45,11 @@
                 <div style="text-align:center">
                 <%= button_to "Ban Utente", 'profile/page_to_ban', method: :get, class: "btn btn-primary"%>
                 </div>  
-                <%end%>  
+                <%end%> 
+                
+                <div style="text-align:center">
+                <%= button_to "Utenti Bloccati", '/blocked_user', method: :get, class: "btn btn-warning"%>
+                </div>
                 <div class="cerca-utenti w3-center">
                 
                     <% if flash.now[:alert] %>

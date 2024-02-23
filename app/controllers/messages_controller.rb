@@ -20,6 +20,7 @@ class MessagesController < ActionController::Base
     end
 #receive email sarà da cambiare con username forse RICORDA
     def create
+        
         receiver = User.find_by(email: params_msg[:receive_email])
         if receiver.nil?
             flash[:alert]='Il destinatario non esiste o hai sbagliato ad inserire l email'
@@ -30,9 +31,19 @@ class MessagesController < ActionController::Base
         @message= Message.new(params_msg)
         @message.sender_id = current_user.id
         @message.receiver_id = receiver.id
+        @bloccato=BlockedUser.find_by(user_id: @message.receiver_id,blocked_id: @message.sender_id)
+
+
+
 
         if (@message.subject=='')||(@message.body)==''
             flash[:alert]='Inserire un titolo e un contenuto valido'
+            redirect_to '/profile'
+            return
+        end
+
+        if @bloccato != nil
+            flash[:alert]="Il destinatario ti ha bloccato"
             redirect_to '/profile'
             return
         end

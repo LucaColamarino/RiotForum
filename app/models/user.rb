@@ -15,6 +15,8 @@ class User < ApplicationRecord
   belongs_to :team, optional: true
 
   has_many :request, dependent: :destroy
+  has_many :blocked_users, foreign_key: :user_id
+  has_many :blocked_by_users, class_name: 'BlockedUser', foreign_key: :blocked_id
 
   #---------------------------#
   before_create :generate_uid

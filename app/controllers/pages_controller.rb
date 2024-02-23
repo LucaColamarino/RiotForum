@@ -134,6 +134,7 @@ class PagesController < ApplicationController
   end
 #---------------------------------------------------
   def search_user
+    @blocked_user=BlockedUser.new()
     if request.get? && !params[:search].present?
       # Affinchè non mi dia errore quando apro la pagina per la prima volta
       return
