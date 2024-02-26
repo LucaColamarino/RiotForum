@@ -57,9 +57,9 @@
                             <%= flash.now[:alert] %>
                         </div>
                     <% end %>
-                    <form action="<%= search_user_path %>" method="get" class="form-inline w3-center">
+                    <form action="<%= search_user_path %>" method="get" class="form-inline cerca-utenti-form">
                         <%= text_field_tag :search, params[:search], placeholder: "Cerca utente del sito", name: "search" %>
-                        <%= submit_tag "Cerca" %>
+                        <button class="btn btn-success my-2" type="submit">Cerca</button>
                     </form>
                 </div>
             </div> 
@@ -84,7 +84,7 @@
                         <%= image_tag "/assets/positions/"+myRequest.position+".png", class: "x-small-icon" %>
                         </div>
                         <div class="buttons">
-                            <%= button_to "Annulla", request_path(myRequest.id), method: :delete, class: "btn btn-light"%>
+                            <%= button_to "Annulla", request_path(myRequest.id), method: :delete, class: "btn btn-danger"%>
                         </div>
                     </div>
                 <% end %>

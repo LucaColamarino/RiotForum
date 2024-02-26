@@ -260,17 +260,19 @@ class PagesController < ApplicationController
   end
 
   def posta
-  end
-
-  def your_notifications
     @friend_requests = Invitation.where(friend_id: current_user.id, confirmed: false)
-    render partial: 'your_notifications'
+    @messages = Message.where(receiver_id: current_user.id)
   end
 
-  def your_messages
-    @messages=Message.where(receiver_id: current_user.id)
-    render partial: 'your_messages'
-  end
+  # def your_notifications
+  #   @friend_requests = Invitation.where(friend_id: current_user.id, confirmed: false)
+  #   render partial: 'your_notifications'
+  # end
+
+  # def your_messages
+  #   @messages=Message.where(receiver_id: current_user.id)
+  #   render partial: 'your_messages'
+  # end
   
   #--------------------------------
   def board

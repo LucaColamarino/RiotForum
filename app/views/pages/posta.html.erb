@@ -13,39 +13,145 @@
             </div>
             <div id="posta-content" class="d-flex flex-column justify-content-center align-items-center">
                 
+                <div id="notifiche">
+                    <%if @friend_requests.empty?%>
+                        <div class="w3-center" style="border:none">Non hai richieste d'amicizia :)</div>
+                    <%else%>
+                        <%for request in @friend_requests do%>
+                            <div class="friend-request">
+                                <div>
+                                    <%requester = User.where(id: request.user_id).first%>
+                                    <span style="color: goldenrod;"><%= requester.username %></span> vuole esserti amico
+                                </div>
+                                <div class="d-flex flex-row">
+                                    <div class="d-flex flex-row amicizia-buttons" style="margin-right: 20px;">
+                                        <%= button_to "Accetta", invitation_path(id:request), method: :patch, class:"accetta-amicizia" %>
+                                        <%= button_to "Rifiuta", invitation_path(id:request), method: :delete, class:"rifiuta-amicizia" %>
+                                    </div>
+                                    
+                                    <div class="giorno-invio">
+                                        inviata il <%=request.created_at.strftime("%d/%m/%Y, %H:%M")%>
+                                    </div>
+                                </div>
+                            </div>
+                        <%end%>
+                    <%end%>
+                </div>
+
+                <div id="messaggi" class="hidden">
+                    <h1> MESSAGGI RICEVUTI </h1>
+
+                    <% flash.each do |key, value| %>
+                    <div class="alert <%= key %>">
+                    <%= value %>
+                    </div>
+                    <% end %>  
+
+                    <% @messages.each do |message| %>
+                    <% if message.present? %>
+                    <a href=<%='/messages/'+message.id.to_s%>>
+                        <%= message.subject %>
+                    </a>
+                        <%= User.find_by(id: message.sender_id).email %>
+                    
+                    <br>
+                    <% end %>
+                    <%end%>
+
+                    <%= button_to "Invia un messaggio", '/messages/new', method: :get, class: "btn btn-primary" %>
+
+                    <% if current_user.has_role?(:moderator)%>
+                        <%= button_to "Scrivi un messaggio a tutti", '/messages/new_admin_message', method: :get, class: "btn btn-warning" %>
+
+                    <%end%>
+                </div>
+
             </div>
         </div>
     </div>
+
+
+
+    <style>
+        .hidden{display:none;}
+
+        .friend-request {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            border: 2px solid black;
+            padding: 20px;
+
+        }
+
+        .giorno-invio {
+            color: gray;
+            margin-right: 10px;
+        }
+
+        .accetta-amicizia {
+            border: 2px solid green;
+            background-color: white;
+            margin-right: 5px;
+        }
+        .rifiuta-amicizia {
+            border: 2px solid red;
+            background-color: white;
+        }
+
+        .accetta-amicizia:hover {
+            color: white;
+            background-color: green;
+        }
+        .rifiuta-amicizia:hover {
+            color: white;
+            background-color: red;
+        }
+    </style>
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
     $(document).ready(function() {
+
+
     
-        
 
     $('#msg-btn').click(function() {
+
+        $('#notifiche').addClass('hidden');
+        $('#messaggi').removeClass('hidden');
+
         $('#nots-btn').removeClass("selected-posta-tab")
         $('#msg-btn').addClass("selected-posta-tab")
-        $.ajax({
-            url: '/your_messages',
-            type: 'GET',
-            success: function(response) {
-                $('#posta-content').html(response);
-            }
-        });
+        // $.ajax({
+        //     url: '/your_messages',
+        //     type: 'GET',
+        //     success: function(response) {
+        //         $('#posta-content').html(response);
+        //     }
+        // });
     });
 
     $('#nots-btn').click(function() {
+
+        
+           $('#messaggi').addClass('hidden');
+           $('#notifiche').removeClass('hidden');
+
         $('#msg-btn').removeClass("selected-posta-tab")
         $('#nots-btn').addClass("selected-posta-tab")
-        $.ajax({
-            url: '/your_notifications',
-            type: 'GET',
-            success: function(response) {
-                $('#posta-content').html(response);
-            }
-        });
+        // $.ajax({
+        //     url: '/your_notifications',
+        //     type: 'GET',
+        //     success: function(response) {
+        //         $('#posta-content').html(response);
+        //     }
+        // });
     });
 
     

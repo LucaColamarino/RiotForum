@@ -37,9 +37,17 @@
             margin-top: 1em;
         }
         
-        	.profile-info .cerca-utenti {
-        	    margin-top: 4em;
+        	.cerca-utenti-form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                min-height: 100px;
         	}
+            .cerca-utenti-form > :first-child {
+                border: 2px solid orangered;
+                border-radius: 0.3em;
+            }
 
     
     .candidature-team {
